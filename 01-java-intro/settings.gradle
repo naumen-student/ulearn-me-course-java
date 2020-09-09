@@ -1,0 +1,2 @@
+rootProject.name = 'java-intro'
+include 'task01'
