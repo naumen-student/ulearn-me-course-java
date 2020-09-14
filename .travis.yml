@@ -1,0 +1,22 @@
+language: java
+jdk: openjdk11
+script:
+  - |
+    diff=$(git diff --name-only $TRAVIS_BRANCH...HEAD | awk -F/ '{print $1, $2}' | sort -u | grep task)
+    count=`echo $diff | wc -w`
+    if [ "$count" == "0" ];
+    then
+      echo "Nothing to check"
+      exit 1
+    fi
+    if [ $count != 2 ];
+    then
+      echo "Only single task is allowed"
+      exit 1
+    fi
+    slot=`echo $diff | cut -f1 -d' '`
+    task=`echo $diff | cut -f2 -d' '`
+    echo "Checking $task"
+    cmd="./gradlew :$task:clean :$task:check"
+    cd $slot
+    $cmd
