@@ -7,7 +7,7 @@ public class Task12 {
 
     public static BigDecimal benefit(BigDecimal sum, BigDecimal percent) {
         for (int i = 0; i <= 12; i++) {
-            sum = sum.add(sum.multiply(percent).setScale(9, RoundingMode.HALF_UP));
+            sum = sum.add(sum.multiply(percent).setScale(9, BigDecimal.ROUND_HALF_UP));
         }
         return sum;
     }
