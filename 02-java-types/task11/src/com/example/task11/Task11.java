@@ -4,9 +4,7 @@ public class Task11 {
 
     public static float benefit(float sum, float percent) {
         final int monthCount = 12;
-        final float powPercent = 1.0f + percent;
-
-        return sum * (float) Math.pow(powPercent, monthCount);
+        return (float)(sum * Math.pow(1.0 + percent, monthCount));
     }
 
     public static void main(String[] args) {
