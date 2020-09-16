@@ -6,7 +6,7 @@ public class Task06 {
 
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
 
-        return Integer.toString(x+y).length();
+        return Integer.toString(Math.abs(x+y)).length();
     }
 
     public static void main(String[] args) {
