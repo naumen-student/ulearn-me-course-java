@@ -11,10 +11,8 @@ public class Task04 {
                 return a - b;
             case ("/"):
                 return (float) a / b ;
-            case ("*"):
-                return (float) a * b;
         }
-        return 0;
+        return a * b;
     }
 
     public static void main(String[] args) {
