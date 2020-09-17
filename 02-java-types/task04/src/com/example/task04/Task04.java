@@ -11,7 +11,7 @@ public class Task04 {
             case ("*"):
                 return a * b;
             case ("/"):
-                return a / b;
+                return (float)(a / b);
 
         }
         return 0;
