@@ -6,8 +6,8 @@ public class Task10 {
 
         if (Float.isNaN(a) && Float.isNaN(b))
             return true;
-        if (Float.isInfinite(a) && Float.isInfinite(b) && a == b)
-            return true;
+        if (Float.isInfinite(a) || Float.isInfinite(b))
+            return a == b;
         return Math.abs(a - b) < Math.pow(0.1, precision);
 
     }
