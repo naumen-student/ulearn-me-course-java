@@ -8,8 +8,7 @@ public class Task05 {
         {
             if (x % 2 == 1)
                 return "FALSE";
-            else
-                x/=10;
+            x/=10;
         }
         return "TRUE";
     }
