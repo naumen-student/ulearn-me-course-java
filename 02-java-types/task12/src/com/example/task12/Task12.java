@@ -24,4 +24,5 @@ public class Task12 {
         System.out.println("Сумма на счете через год: " + sum);
 
     }
+}
 
