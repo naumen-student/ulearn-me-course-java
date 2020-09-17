@@ -11,6 +11,7 @@ public class Task11 {
             sum += sum * percent;
         }
         return sum;
+        return  (float) (sum * Math.pow(percent + 1.0, 12));
     }
 
     public static void main(String[] args) {
