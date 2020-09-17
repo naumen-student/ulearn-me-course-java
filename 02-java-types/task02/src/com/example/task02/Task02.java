@@ -6,16 +6,23 @@ public class Task02 {
 
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
 
-        return "";
+        String type = "int";
+        long typeInput = Long.parseLong(input);
+        if (typeInput >= -128 && typeInput <= 127) {
+            type = "byte";
+        } else if (typeInput >= -32768 && typeInput <= 32767) {
+            type = "short";
+        } else if (typeInput >= -Math.pow(2, 31) && typeInput <= Math.pow(2, 31) - 1) {
+            type = "int";
+        } else if (typeInput >= -Math.pow(2, 63) && typeInput <= Math.pow(2, 63) - 1) {
+            type = "long";
+        }
+        return type;
     }
 
     public static void main(String[] args) {
-        // Здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
         String result = solution("12345");
         System.out.println(result);
-         */
     }
 
 }
