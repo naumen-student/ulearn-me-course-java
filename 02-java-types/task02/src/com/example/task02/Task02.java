@@ -3,10 +3,14 @@ package com.example.task02;
 public class Task02 {
 
     public static String solution(String input) {
-
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
-        return "";
+        long parseInput = Long.parseLong(input);
+        if (parseInput >= -128 && parseInput <= 127)
+            return "byte";
+        else if (parseInput >= -32768 && parseInput <= 32767)
+            return "byte";
+        else if (parseInput >= -2147483648 && parseInput <= 2147483647)
+            return "byte";
+        return "long";
     }
 
     public static void main(String[] args) {
