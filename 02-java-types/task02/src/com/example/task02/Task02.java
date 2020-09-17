@@ -8,9 +8,9 @@ public class Task02 {
         if (longInput <= Byte.MAX_VALUE && longInput >= Byte.MIN_VALUE)
             return "byte";
         if (longInput <= Short.MAX_VALUE && longInput >= Short.MIN_VALUE)
-            return "byte";
+            return "short";
         if (longInput <= Integer.MAX_VALUE && longInput >= Integer.MIN_VALUE)
-            return "byte";
+            return "int";
         else return "long";
     }
 
