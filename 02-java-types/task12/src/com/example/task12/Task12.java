@@ -18,6 +18,12 @@ public class Task12 {
         */
 
         return BigDecimal.ZERO;
+        int monthCount = 12;
+        return new BigDecimal(1)
+                .add(percent)
+                .pow(monthCount)
+                .multiply(sum)
+                .setScale(9,BigDecimal.ROUND_HALF_UP);
     }
 
     public static void main(String[] args) {
