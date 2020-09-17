@@ -11,6 +11,7 @@ public class Task02 {
             return "short";
         if (Integer.MAX_VALUE >= fromString && Integer.MIN_VALUE <= fromString)
             return "int";
+
         return "long";
     }
 
