@@ -1,12 +1,21 @@
 package com.example.task04;
 
+import jdk.nashorn.internal.runtime.regexp.joni.exception.ValueException;
+
 public class Task04 {
 
     public static float calculate(int a, int b, String operation) {
-
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
-        return 0;
+        switch (operation){
+            case "+":
+                return a + b;
+            case "-":
+                return a - b;
+            case "*":
+                return a * b;
+            case "/":
+                return (float) a / b;
+        }
+        throw new ValueException("Wrong operation!");
     }
 
     public static void main(String[] args) {
