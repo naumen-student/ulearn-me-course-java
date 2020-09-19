@@ -3,6 +3,7 @@ package com.example.task02;
 public class Task02 {
 
     public static String solution(String input) {
+        
         long x = Long.parseLong(input);
         if (-128 <= x && x <= 127)
             return "byte";
