@@ -3,9 +3,6 @@ package com.example.task02;
 public class Task02 {
 
     public static String solution(String input) {
-
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
         long x = Long.parseLong(input);
         if (-128 <= x && x <= 127)
             return "byte";
