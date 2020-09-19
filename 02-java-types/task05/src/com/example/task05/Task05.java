@@ -2,9 +2,21 @@ package com.example.task05;
 
 public class Task05 {
 
+    private static boolean ContainsOnlyEven(int number) {
+        while(number != 0){
+            if ((number % 10) % 2 != 0){
+                return false;
+            }
+            number /= 10;
+        }
+        return true;
+    }
+
     public static String solution(int x) {
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
+        if(ContainsOnlyEven(x)){
+            return "TRUE";
+        }
 
         return "FALSE";
     }
