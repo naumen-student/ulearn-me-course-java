@@ -3,10 +3,9 @@ package com.example.task07;
 public class Task07 {
 
     public static int solution(int n, int m, int k) {
-
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
-        return 0;
+        //Немножечко костылей =)
+        long result = (long) (n - n % k) * (m - m % k) / (k * k);
+        return (int) result;
     }
 
     public static void main(String[] args) {
