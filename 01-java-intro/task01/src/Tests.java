@@ -33,7 +33,7 @@ public class Tests {
                 modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
                 try {
                     field.set(System.class, new PrintStream(baos));
-                    main.invoke(clazz, new Object[]{ new String[0] });
+                    main.invoke(clazz, new Object[]{new String[0]});
                 } finally {
                     field.set(System.class, sout);
                 }
