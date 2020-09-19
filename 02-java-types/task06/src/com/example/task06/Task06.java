@@ -2,11 +2,17 @@ package com.example.task06;
 
 public class Task06 {
 
+    private static int digitsCount(int number){
+        int count = 0;
+        while (number != 0){
+            count++;
+            number /= 10;
+        }
+        return count != 0 ? count : 1;
+    }
+
     public static int solution(int x, int y) {
-
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
-        return 0;
+        return digitsCount(x + y);
     }
 
     public static void main(String[] args) {
