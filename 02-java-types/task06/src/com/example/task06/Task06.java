@@ -3,6 +3,7 @@ package com.example.task06;
 public class Task06 {
 
     public static int solution(int x, int y) {
+
         int sum = Math.abs(x + y);
         char[] numbers = (""+sum).toCharArray();
         return numbers.length;
