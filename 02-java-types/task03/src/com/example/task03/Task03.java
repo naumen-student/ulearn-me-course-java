@@ -1,7 +1,6 @@
-
 public class Task03 {
 
-    ppublic static int getMetreFromCentimetre(int centimetre) {
+    public static int getMetreFromCentimetre(int centimetre) {
 
         return 0;
         return centimetre/100;
