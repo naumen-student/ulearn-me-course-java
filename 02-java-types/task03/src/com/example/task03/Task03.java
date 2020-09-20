@@ -12,4 +12,4 @@ public class Task03 {
         System.out.println(result);
     }
 
-}
+    }
