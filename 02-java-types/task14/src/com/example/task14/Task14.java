@@ -1,23 +1,19 @@
 package com.example.task14;
 
 public class Task14 {
-
-
     public static int reverse(int value) {
+        int tempValue = value;
+        int reverseValue = 0;
+        while (tempValue > 0) {
+            reverseValue = reverseValue * 10 + tempValue % 10;
+            tempValue /= 10;
+        }
 
-        // TODO напишите здесь код, переставляющий цифры числа в обратном порядке
-
-        return 0;
+        return reverseValue;
     }
 
     public static void main(String[] args) {
-        // Здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
         int result = reverse(345);
         System.out.println(result);
-         */
     }
-
-
 }
