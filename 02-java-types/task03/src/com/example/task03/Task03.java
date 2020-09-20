@@ -2,6 +2,7 @@ public class Task03 {
 
     public static int getMetreFromCentimetre(int centimetre) {
 
+        return 0;
         return centimetre / 100;
     }
 
