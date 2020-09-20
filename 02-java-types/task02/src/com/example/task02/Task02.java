@@ -5,11 +5,11 @@ public class Task02 {
     public static String solution(String input) {
         
         long x = Long.parseLong(input);
-        if (-128 <= x && x <= 127)
+        if (Byte.MIN_VALUE <= x && x <= Byte.MAX_VALUE)
             return "byte";
-        else if (-Math.pow(2,15) <= x && x <= Math.pow(2,15) - 1)
+        else if (Short.MIN_VALUE <= x && x <= Short.MAX_VALUE)
             return "short";
-        else if (-Math.pow(2,31) <= x && x <= Math.pow(2,31) - 1)
+        else if (Integer.MIN_VALUE <= x && x <= Integer.MAX_VALUE)
             return "int";
         else
             return "long";
