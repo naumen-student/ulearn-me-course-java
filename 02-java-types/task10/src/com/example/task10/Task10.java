@@ -1,7 +1,6 @@
 package com.example.task10;
 
 public class Task10 {
-
     public static boolean compare(float a, float b, int precision) {
         double threshold = Math.pow(0.1, precision);
         if (Float.isInfinite(a) && Float.isInfinite(b))
