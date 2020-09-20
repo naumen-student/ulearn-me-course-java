@@ -8,7 +8,7 @@ public class Task03 {
 
     public static void main(String[] args) {
 
-        int result = getMetreFromCentimetre(345);
+        int result = getMetreFromCentimetre(200);
         System.out.println(result);
     }
 
