@@ -16,7 +16,7 @@ public class Task02 {
 
     public static void main(String[] args) {
 
-        String result = solution("123456");
+        String result = solution("12345");
         System.out.println(result);
     }
 
