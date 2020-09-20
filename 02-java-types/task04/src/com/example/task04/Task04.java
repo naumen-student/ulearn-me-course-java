@@ -3,18 +3,17 @@ package com.example.task04;
 public class Task04 {
 
     public static float calculate(int a, int b, String operation) {
-        float result = 0.0f;
-        float a1 = a * 1.0f;
-        float b1 = b * 1.0f;
-        if (operation.equals("+"))
-            result = a1 + b1;
-        if (operation.equals("-"))
-            result = a1 - b1;
-        if (operation.equals("/"))
-            result = a1 / b1;
-        if (operation.equals("*"))
-            result = a1 * b1;
-        return result;
+        switch (operation){
+            case "+":
+                return (float)a + (float)b;
+            case "-":
+                return (float)a - (float)b;
+            case "*":
+                return (float)a * (float)b;
+            case "/":
+                return (float)a / (float)b;
+        }
+        return 0;
     }
 
     public static void main(String[] args) {
