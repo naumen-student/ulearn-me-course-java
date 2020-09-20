@@ -17,7 +17,7 @@ public class Task05 {
     }
 
     public static void main(String[] args) {
-        System.out.print(solution(8888881));
+        System.out.print(solution(8828881));
     }
 
 }
