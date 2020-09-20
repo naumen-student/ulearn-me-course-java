@@ -11,8 +11,7 @@ public class Task02 {
             return "short";
         else if (Integer.MIN_VALUE <= x && x <= Integer.MAX_VALUE)
             return "int";
-        else
-            return "long";
+        return "long";
     }
 
     public static void main(String[] args) {
