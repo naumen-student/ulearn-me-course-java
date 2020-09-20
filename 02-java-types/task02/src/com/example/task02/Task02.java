@@ -4,12 +4,12 @@ public class Task02 {
 
     public static String solution(String input) {
 
-        long number = Long.parseLong(input);
-        if (number <= Byte.MAX_VALUE && number >= Byte.MIN_VALUE)
+        long num = Long.parseLong(input);
+        if (num <= Byte.MAX_VALUE && num >= Byte.MIN_VALUE)
             return "byte";
-        if (number <= Short.MAX_VALUE && number >= Short.MIN_VALUE)
+        if (num <= Short.MAX_VALUE && num >= Short.MIN_VALUE)
             return  "short";
-        if (number <= Integer.MAX_VALUE && number >= Integer.MIN_VALUE)
+        if (num <= Integer.MAX_VALUE && num >= Integer.MIN_VALUE)
             return "int";
         return "long";
 
