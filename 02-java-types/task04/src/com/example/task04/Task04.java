@@ -17,3 +17,4 @@ public class Task04 {
         }
         return 0;
     }
+}
