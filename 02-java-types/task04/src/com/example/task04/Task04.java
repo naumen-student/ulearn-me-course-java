@@ -1,22 +1,21 @@
 package com.example.task04;
 
-import javax.naming.OperationNotSupportedException;
 
 public class Task04 {
 
-    public static float calculate(int a, int b, String operation) throws OperationNotSupportedException {
+    public static float calculate(int a, int b, String operation) {
+
         switch (operation) {
             case "+":
-                return a + b;
+                return (float)a + b;
             case "-":
-                return a - b;
+                return (float)a - b;
             case "*":
-                return a * b;
+                return (float)a * b;
             case "/":
-                return a / b;
-            default:
-                throw new OperationNotSupportedException();
+                return (float)a /  b;
         }
+        return 0;
     }
 
     public static void main(String[] args) {
