@@ -1,6 +1,5 @@
-package com.example.task01;
 
-public class Task01 {
+public class Task03 {
 
     public static String solution() {
 
