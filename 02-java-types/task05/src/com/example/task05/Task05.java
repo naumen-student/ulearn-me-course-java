@@ -3,19 +3,11 @@ package com.example.task05;
 public class Task05 {
 
     public static String solution(int x) {
-
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
-        return "FALSE";
+        boolean result = String.valueOf(x).matches("[^1+|3+|5+|7+|9+]+");
+        return String.valueOf(result).toUpperCase();
     }
 
     public static void main(String[] args) {
-        // Здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
-        String result = solution(1234);
-        System.out.println(result);
-        */
     }
 
 }
