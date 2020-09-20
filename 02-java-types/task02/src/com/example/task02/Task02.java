@@ -4,13 +4,15 @@ public class Task02 {
 
     public static String solution(String input) {
         long number = Long.parseLong(input);
+        int MaxShort = (int) Math.pow(2, 15);
+        long MaxInt = (long) Math.pow(2, 31);
         if(number <= 127 && number >= -128) {
             return "byte";
         }
-        else if(number <= Math.pow(2 ,15) - 1 && number >= -1 * Math.pow(2, 15)){
+        else if(number <= MaxShort - 1 && number >= -1 * MaxShort){
             return "short";
         }
-        else if (number <= Math.pow(2, 31) - 1 && number >= -1 * Math.pow(2, 31)){
+        else if (number <= MaxInt - 1 && number >= -1 * MaxInt){
             return "int";
         }
         return "long";
