@@ -4,9 +4,14 @@ public class Task05 {
 
     public static String solution(int x) {
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
+        String str = Integer.toString(x);
+        char[] ss = str.toCharArray();
+        for (char a : ss) {
+            if((int)a % 2 != 0)
+                return "FALSE";
+        }
 
-        return "FALSE";
+        return "TRUE";
     }
 
     public static void main(String[] args) {
