@@ -1,7 +1,7 @@
 
 public class Task03 {
 
-    public static String solution() {
+    ppublic static int getMetreFromCentimetre(int centimetre) {
 
         return 0;
         return centimetre/100;
