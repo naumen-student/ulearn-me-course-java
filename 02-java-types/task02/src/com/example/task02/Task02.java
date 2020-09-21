@@ -3,51 +3,14 @@ package com.example.task02;
 public class Task02 {
 
     public static String solution(String input) {
-        if (checkForByte(input))
+        long inputNumber = Long.parseLong(input);
+        if (inputNumber >= Byte.MIN_VALUE && inputNumber <= Byte.MAX_VALUE)
             return "byte";
-        if (checkForShort(input))
+        if (inputNumber >= Short.MIN_VALUE && inputNumber <= Short.MAX_VALUE)
             return "short";
-        if (checkForInt(input))
+        if (inputNumber >= Integer.MIN_VALUE && inputNumber <= Integer.MAX_VALUE)
             return "int";
-        if (checkForLong(input))
-            return "long";
-        return "Unknown type";
-    }
-
-    private static boolean checkForByte(String input) {
-        try {
-            Byte.parseByte(input);
-            return true;
-        } catch (NumberFormatException e) {
-            return false;
-        }
-    }
-
-    private static boolean checkForInt(String input) {
-        try {
-            Integer.parseInt(input);
-            return true;
-        } catch (NumberFormatException e) {
-            return false;
-        }
-    }
-
-    private static boolean checkForShort(String input) {
-        try {
-            Short.parseShort(input);
-            return true;
-        } catch (NumberFormatException e) {
-            return false;
-        }
-    }
-
-    private static boolean checkForLong(String input) {
-        try {
-            Long.parseLong(input);
-            return true;
-        } catch (NumberFormatException e) {
-            return false;
-        }
+        return "long";
     }
 
     public static void main(String[] args) {
