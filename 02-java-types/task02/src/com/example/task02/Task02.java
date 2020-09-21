@@ -12,7 +12,7 @@ public class Task02 {
             return "int";
         if(value <= Math.pow(2, 63) && value >= -Math.pow(2, 63))
             return "long";
-        return "";
+        return "некорректный ввод";
     }
 
     public static void main(String[] args) {
