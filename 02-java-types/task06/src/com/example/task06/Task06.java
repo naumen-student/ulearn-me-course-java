@@ -13,8 +13,7 @@ public class Task06 {
                 break;
             count++;
         }
-       // String result = Long.toString(a);
-       // return result.length() ;
+
         return count;
     }
 
