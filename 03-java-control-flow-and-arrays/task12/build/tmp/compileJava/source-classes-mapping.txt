@@ -1,0 +1,4 @@
+com.example.task12/Task12Main.java
+ com.example.task12.Task12Main
+com.example.task12/Tests.java
+ com.example.task12.Tests
