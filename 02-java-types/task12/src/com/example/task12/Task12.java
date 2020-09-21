@@ -2,7 +2,7 @@ package com.example.task12;
 
 import java.math.BigDecimal;
 
-public class    Task12 {
+public class Task12 {
 
     public static BigDecimal benefit(BigDecimal sum, BigDecimal percent) {
 
