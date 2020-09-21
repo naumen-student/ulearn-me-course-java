@@ -4,9 +4,18 @@ public class Task06 {
 
     public static int solution(int x, int y) {
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
 
-        return 0;
+        long a = x+y;
+        int count = 1;
+        while(true) {
+            a /= 10;
+            if(a == 0)
+                break;
+            count++;
+        }
+       // String result = Long.toString(a);
+       // return result.length() ;
+        return count;
     }
 
     public static void main(String[] args) {
