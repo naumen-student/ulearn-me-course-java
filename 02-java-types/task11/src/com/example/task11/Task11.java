@@ -1,15 +1,21 @@
 package com.example.task11;
 
+import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Task11 {
 
     public static float benefit(float sum, float percent) {
-
-        // TODO исправьте функцию, чтобы избежать накопления ошибки
-
-        // Считаем проценты за год
-        for (int i = 1; i <= 12; i++) {
-            sum += sum * percent;
-        }
+        if (percent<0.005)
+            return  sum*(percent)*12+sum;
+        for (int i = 1; i <= 12; i++)
+            sum += new BigDecimal(percent).
+                    multiply(new BigDecimal(sum)).
+                    round(new MathContext(6,RoundingMode.DOWN)).
+                    floatValue();
         return sum;
     }
 
