@@ -6,7 +6,7 @@ import java.util.function.BiFunction;
 
 public class Task04 {
     public static float calculate(int a, int b, String operation) {
-        Map<String, BiFunction<Integer, Integer, Integer>> operations = new HashMap<>();
+        Map<String, BiFunction<Float, Float, Float>> operations = new HashMap<>();
         operations.put("+", (x ,y) -> x + y);
         operations.put("-", (x, y) -> x - y);
         operations.put("/", (x, y) -> x / y);
@@ -15,7 +15,7 @@ public class Task04 {
         if (!operations.containsKey(operation))
             throw new IllegalArgumentException("Operation does not support");
 
-        return operations.get(operation).apply(a ,b);
+        return operations.get(operation).apply((float) a, (float) b);
     }
 
     public static void main(String[] args) {
