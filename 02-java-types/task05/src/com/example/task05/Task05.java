@@ -7,7 +7,7 @@ public class Task05 {
         return "FALSE";
         for(int i=0;i<st.length();i++){
             char c = st.charAt(i);
-            if (c=='1' && c=='3' && c=='5' && c=='7' &&c=='9'){
+            if (c=='1' || c=='3' || c=='5' || c=='7' || c=='9'){
                     return "FALSE";
             }
         }
