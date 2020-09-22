@@ -10,7 +10,7 @@ public class Task04 {
             return (float) a-b;
         if (operation.equals("*"))
             return (float) a*b;
-        if (operation.equals("/"))
+        if (operation.equals("="))
             return (float) a/b;
         return 0;
     }
