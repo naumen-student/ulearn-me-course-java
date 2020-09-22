@@ -5,7 +5,7 @@ public class Task06 {
     public static int solution(int x, int y) {
 
         int z = x+y;
-        String sum = String.valueOf(a);
+        String sum = String.valueOf(z);
         if (z < 0)
             return sum.length() - 1;
         else
