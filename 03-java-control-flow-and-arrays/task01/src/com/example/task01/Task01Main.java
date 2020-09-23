@@ -15,6 +15,7 @@ public class Task01Main {
     static boolean canGetDriverLicense(int age) {
         if (age<=0)
             throw new InvalidParameterException("age<=0");
+
         return age>=18;
     }
 }
