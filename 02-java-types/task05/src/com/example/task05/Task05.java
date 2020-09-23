@@ -3,7 +3,6 @@ package com.example.task05;
 public class Task05 {
 
     public static String solution(int x) {
-        public static String solution(int x) {
             String string = Integer.toString(x);
             for (int i = 0; i < string.length(); i++) {
                 char c = string.charAt(i);
