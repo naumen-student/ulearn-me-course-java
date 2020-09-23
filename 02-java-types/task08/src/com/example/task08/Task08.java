@@ -4,7 +4,7 @@ public class Task08 {
 
     public static boolean solution() {
         int x = 100;
-        float x = Float.POSITIVE_INFINITY;
+        double x = 1.0 / 0.0;
         return x == x + 1;
     }
 
