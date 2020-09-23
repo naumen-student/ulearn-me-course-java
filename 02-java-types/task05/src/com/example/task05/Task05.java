@@ -3,10 +3,14 @@ package com.example.task05;
 public class Task05 {
 
     public static String solution(int x) {
-
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
-        return "FALSE";
+        public static String solution(int x) {
+            String string = Integer.toString(x);
+            for (int i = 0; i < string.length(); i++) {
+                char c = string.charAt(i);
+                if (c % 2 != 0)
+                    return "FALSE";
+            }
+            return "TRUE";
     }
 
     public static void main(String[] args) {
