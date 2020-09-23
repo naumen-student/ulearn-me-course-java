@@ -3,10 +3,9 @@ package com.example.task07;
 public class Task07 {
 
     public static int solution(int n, int m, int k) {
-
+        return 0;
         int s = n/k;
         int z = m/k
-
         return s*z;
     }
 
