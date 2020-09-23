@@ -10,6 +10,7 @@ public class Task11 {
         for (int i = 1; i <= 12; i++) {
             sum += sum * percent;
         }
+        sum = (float)(sum * Math.pow(1.0+percent,12.0));
         return sum;
     }
 
