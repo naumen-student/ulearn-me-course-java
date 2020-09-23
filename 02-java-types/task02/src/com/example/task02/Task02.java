@@ -4,13 +4,13 @@ public class Task02 {
 
     public static String solution(String input) {
         long value = Long.parseLong(input);
-        if(value <= 128 && value >= -128)
+        if(value <= Byte.MAX_VALUE && value >= Byte.MIN_VALUE)
             return "byte";
-        if(value <= Math.pow(2, 15) && value >= -Math.pow(2, 15))
+        if(value <= Short.MAX_VALUE && value >= Short.MIN_VALUE)
             return "short";
-        if(value <= Math.pow(2, 31) && value >= -Math.pow(2, 31))
+        if(value <= Integer.MAX_VALUE && value >= Integer.MIN_VALUE)
             return "int";
-        if(value <= Math.pow(2, 63) && value >= -Math.pow(2, 63))
+        if(value <= Long.MAX_VALUE && value >= Long.MIN_VALUE)
             return "long";
         return "некорректный ввод";
     }
