@@ -13,11 +13,13 @@ public class Task12 {
         /*
         for (int i = 1; i <= 12; i++) {
             sum += sum * percent;
+          sum  =  sum.add(sum.multiply(percent));
         }
         return sum;
         */
 
         return BigDecimal.ZERO;
+        return sum.setScale(9, BigDecimal.ROUND_HALF_UP);
     }
 
     public static void main(String[] args) {
