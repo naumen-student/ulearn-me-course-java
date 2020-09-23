@@ -11,7 +11,8 @@ public class Task04 {
         if (operation == "*")
             return (float) a*b;
         if (operation == "/")
-            return (float)a/b;
+            return (float) a/b;
+        return 0;
     }
 
     public static void main(String[] args) {
