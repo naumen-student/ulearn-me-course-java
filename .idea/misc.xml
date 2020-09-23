@@ -5,4 +5,5 @@
     <file type="web" url="file://$PROJECT_DIR$/01-java-intro" />
     <file type="web" url="file://$PROJECT_DIR$/02-java-types" />
   </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="openjdk-15" project-jdk-type="JavaSDK" />
 </project>

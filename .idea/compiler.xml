@@ -41,9 +41,6 @@
       <module name="3-java-control-flow-and-arrays.task13" target="1.8" />
       <module name="3-java-control-flow-and-arrays.task13.main" target="1.8" />
       <module name="3-java-control-flow-and-arrays.task13.test" target="1.8" />
-      <module name="java-intro.task01" target="1.8" />
-      <module name="java-intro.task01.main" target="1.8" />
-      <module name="java-intro.task01.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
