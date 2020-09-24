@@ -24,9 +24,8 @@ public class Task12Main {
                     minIn = j;
                 }
             }
-            int tempArr = arr[i];
             arr[i] = min;
-            arr[minIn] = tempArr;
+            arr[minIn] = arr[i];
         }
     }
 }
