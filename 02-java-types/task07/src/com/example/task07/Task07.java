@@ -7,6 +7,7 @@ public class Task07 {
         int leftCount = n / k;
         int buttomCount = m / k;
         int result = leftCount * buttomCount;
+        
         return result;
     }
 
