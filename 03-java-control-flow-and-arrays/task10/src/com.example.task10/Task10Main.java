@@ -11,8 +11,11 @@ public class Task10Main {
     }
 
     static int numMin(int[] arr) {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
-        return 0;
+        int res = 0;
+        for (int i = 0; i < arr.length - 1; i++)
+            if (arr[i + 1] <= arr[i])
+                res = i + 1;
+        return res;
     }
 
 }
