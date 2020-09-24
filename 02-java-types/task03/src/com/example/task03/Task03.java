@@ -4,18 +4,17 @@ public class Task03 {
 
     public static int getMetreFromCentimetre(int centimetre) {
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
+        if (centimetre < 100) return 0;
+        else centimetre /= 100;
+        return centimetre;
 
-        return 0;
     }
 
     public static void main(String[] args) {
-        // Здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
-        int result = getMetreFromCentimetre(345);
+
+        int result = getMetreFromCentimetre(14595);
         System.out.println(result);
-         */
+
     }
 
 }
