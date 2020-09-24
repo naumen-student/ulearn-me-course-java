@@ -53,13 +53,13 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/02-java-types" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.example.task04.Tests&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.example.task05.Tests&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":task04:test" />
+            <option value=":task05:test" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -69,6 +69,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests" />
         <item itemvalue="Gradle.Tests" />
         <item itemvalue="Gradle.Tests" />
         <item itemvalue="Gradle.Tests" />
@@ -84,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600936262361</updated>
       <workItem from="1600936274360" duration="328000" />
-      <workItem from="1600940481903" duration="3741000" />
+      <workItem from="1600940481903" duration="4370000" />
     </task>
     <servers />
   </component>
@@ -92,21 +93,21 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1600950425600">
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1600951078691">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1600950425600" />
-    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1600950425600">
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1600951078691" />
+    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1600951078691">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1600950425600" />
-    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1600950425600">
+    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1600951078691" />
+    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1600951078691">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1600950425600" />
-    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1600950425600">
+    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1600951078691" />
+    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1600951078691">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1600950425600" />
+    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1600951078691" />
   </component>
 </project>

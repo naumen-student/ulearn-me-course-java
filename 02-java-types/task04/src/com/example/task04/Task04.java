@@ -7,7 +7,7 @@ public class Task04 {
         float result = 0;
         float number1 = (float)a;
         float number2 = (float)b;
-        
+
         if (operation == "*")
             result = number1 * number2;
         else if (operation == "/")
