@@ -13,10 +13,12 @@ public class Task13Main {
     }
 
     static int[] removeMoreThen1000(int[] arr) {
+        if (arr == null)
+            return null;
         ArrayList <Integer> newArr = new ArrayList<>();
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < 1000) {
-                newArr.add(arr[i]);
+        for (int j : arr) {
+            if (j <= 1000) {
+                newArr.add(j);
             }
         }
         int[] res = new int[newArr.size()];
@@ -24,13 +26,4 @@ public class Task13Main {
             res[i] = newArr.get(i);
         return res;
     }
-
-    public static int[] convertIntegers(ArrayList<Integer> integers)
-    {
-        int[] res = new int[integers.size()];
-        for (int i=0; i < res.length; i++)
-            res[i] = integers.get(i);
-        return res;
-    }
-
 }
