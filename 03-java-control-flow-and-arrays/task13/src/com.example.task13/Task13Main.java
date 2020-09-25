@@ -9,7 +9,7 @@ public class Task13Main {
         // например вот так:
         int[] arr = {1001, 1100, 7, 8};
         removeMoreThen1000(arr);
-        System.out.println(java.util.Arrays.toString(arr));
+        System.out.println(java.util.Arrays.toString(removeMoreThen1000(arr)));
     }
 
     static int[] removeMoreThen1000(int[] arr) {
@@ -23,7 +23,7 @@ public class Task13Main {
         }
         int[] res = new int[newArr.size()];
         for (int i=0; i < res.length; i++) {
-            res[i] = newArr.get(i).intValue();
+            res[i] = newArr.get(i);
         }
         arr = res;
         return arr;
