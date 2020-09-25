@@ -14,6 +14,7 @@ public class Task12Main {
     static void selectionSort(int[] arr) {
         if (arr == null || arr.length == 0)
             return;
+
         int arrLen = arr.length;
         for (int i = 0; i < arrLen; i++) {
             int min = arr[i];
