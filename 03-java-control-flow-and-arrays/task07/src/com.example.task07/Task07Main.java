@@ -12,8 +12,8 @@ public class Task07Main {
 
     static int sum(int[] arr) {
         int a = 0;
-        for(int i = 0; i < arr.length; i++){
-            a+=arr[i];
+        for (int j : arr) {
+            a += j;
         }
         return a;
     }
