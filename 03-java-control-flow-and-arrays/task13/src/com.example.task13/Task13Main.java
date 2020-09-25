@@ -22,8 +22,10 @@ public class Task13Main {
             }
         }
         int[] res = new int[newArr.size()];
-        for (int i=0; i < res.length; i++)
-            res[i] = newArr.get(i);
-        return res;
+        for (int i=0; i < res.length; i++) {
+            res[i] = newArr.get(i).intValue();
+        }
+        arr = res;
+        return arr;
     }
 }
