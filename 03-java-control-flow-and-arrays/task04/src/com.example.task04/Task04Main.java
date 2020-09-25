@@ -10,7 +10,9 @@ public class Task04Main {
     }
 
     static void from0to10000() {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        for (int num = 0; num < 10000; num++) {
+            System.out.println(num);
+        }
     }
 
 }
