@@ -21,7 +21,6 @@ public class Task06 {
 
         int result = solution(-1, 1);
         System.out.println(result);
-
     }
 
 }
