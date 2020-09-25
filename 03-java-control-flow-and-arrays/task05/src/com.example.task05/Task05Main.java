@@ -9,7 +9,7 @@ public class Task05Main {
          */
     }
 
-    static int getMin(int a, int b, int c) {
+    static int getMin(int a, int b, int c){
         return Math.min(a, Math.min(b, c));
     }
 }
