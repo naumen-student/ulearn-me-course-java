@@ -10,7 +10,7 @@ public class Task11Main {
     static void swap(int[] arr) {
         int min = Integer.MAX_VALUE;
         int numOfMin = -1;
-        if (arr == null && arr.length == 0) return;
+        if (arr == null || arr.length == 0) return;
         for (int i = 0; i < arr.length; i++) {
             if (min > arr[i]) {
                 min = arr[i];
