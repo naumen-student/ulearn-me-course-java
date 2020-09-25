@@ -16,11 +16,11 @@ public class Task08Main {
         if (arr.length == 0) {
             return 0;
         }
-        long mul = 1;
+        long mult = 1;
         for (int i : arr) {
-            mul *= i;
+            mult *= i;
         }
-        return mul;
+        return mult;
     }
 
 }
