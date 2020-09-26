@@ -3,9 +3,6 @@ package com.example.task13;
 public class Task13Main {
     public static void main(String[] args) {
 
-        int[] arr = null;
-        System.out.println(java.util.Arrays.toString(removeMoreThen1000(arr)));
-
     }
 
     static int[] removeMoreThen1000(int[] arr) {
