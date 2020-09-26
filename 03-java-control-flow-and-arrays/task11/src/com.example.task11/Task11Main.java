@@ -2,17 +2,20 @@ package com.example.task11;
 
 public class Task11Main {
     public static void main(String[] args) {
-        //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
-        int[] arr = {7, 5, 9};
-        swap(arr);
-        System.out.println(java.util.Arrays.toString(arr));
-         */
     }
 
     static void swap(int[] arr) {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        int valueMin = Integer.MAX_VALUE;
+        int indexMin = 0;
+        if(arr != null && arr.length > 0) {
+            for (int index = 0; index < arr.length; index++) {
+                if (arr[index] < valueMin) {
+                    valueMin = arr[index];
+                    indexMin = index;
+                }
+            }
+            arr[indexMin] = arr[0];
+            arr[0] = valueMin;
+        }
     }
-
 }
