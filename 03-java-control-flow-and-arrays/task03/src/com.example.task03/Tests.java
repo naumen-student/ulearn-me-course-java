@@ -14,6 +14,7 @@ public class Tests {
         Assert.assertEquals("5 - пятница", "пятница", Task03Main.getNameOfWeekDays(5));
         Assert.assertEquals("6 - суббота", "суббота", Task03Main.getNameOfWeekDays(6));
         Assert.assertEquals("7 - воскресенье", "воскресенье", Task03Main.getNameOfWeekDays(7));
+        Assert.assertEquals("8 - не существует", "такого дня недели не существует", Task03Main.getNameOfWeekDays(8));
     }
 
 }
