@@ -2,7 +2,6 @@ package com.example.task12;
 
 public class Task12Main {
     public static void main(String[] args) {
-
     }
 
     static void selectionSort(int[] arr) {
