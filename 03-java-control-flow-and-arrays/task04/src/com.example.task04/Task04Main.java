@@ -16,5 +16,4 @@ public class Task04Main {
             i++;
         }
     }
-
 }
