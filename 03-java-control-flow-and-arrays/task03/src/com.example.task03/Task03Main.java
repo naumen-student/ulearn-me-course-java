@@ -12,7 +12,7 @@ public class Task03Main {
     static String getNameOfWeekDays(int weekDaysNumber) {
         switch(weekDaysNumber) {
             case (1):
-                return "понедкльник";
+                return "понедельник";
             case (2):
                 return "вторник";
             case (3):
