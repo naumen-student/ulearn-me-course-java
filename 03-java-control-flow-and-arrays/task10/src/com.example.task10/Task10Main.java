@@ -1,5 +1,10 @@
 package com.example.task10;
 
+import com.sun.tools.javac.code.Attribute;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Task10Main {
     public static void main(String[] args) {
         //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
@@ -11,8 +16,14 @@ public class Task10Main {
     }
 
     static int numMin(int[] arr) {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
-        return 0;
+        int min = Integer.MAX_VALUE;
+        int index = 0;
+        for (int i = 0; i < arr.length; i++)
+            if (arr[i] <= min) {
+                min = arr[i];
+                index = i;
+            }
+        return index;
     }
 
 }
