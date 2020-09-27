@@ -25,7 +25,6 @@ public class Task13Main {
         for (int i=0; i < res.length; i++) {
             res[i] = newArr.get(i);
         }
-        arr = res;
-        return arr;
+        return res;
     }
 }
