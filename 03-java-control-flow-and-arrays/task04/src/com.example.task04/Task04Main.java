@@ -10,7 +10,11 @@ public class Task04Main {
     }
 
     static void from0to10000() {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        int i = 0;
+        while (i < 10000) {
+            System.out.println(i);
+            i++;
+        }
     }
 
 }
