@@ -1,5 +1,8 @@
 package com.example.task12;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Task12Main {
     public static void main(String[] args) {
         //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
@@ -12,7 +15,24 @@ public class Task12Main {
     }
 
     static void selectionSort(int[] arr) {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        if (arr == null || arr.length == 0)
+        {
+            return;
+        }
+        for (int i = 0; i < arr.length; i++){
+            int min = arr[i];
+            int index = i;
+            for (int j = i + 1; j < arr.length; j++){
+                if (arr[j] < min){
+                    min = arr[j];
+                    index = j;
+                }
+            }
+            int swap;
+            swap = arr[i];
+            arr[i] = min;
+            arr[index] = swap;
+        }
     }
 
 }
