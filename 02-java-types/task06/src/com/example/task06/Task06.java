@@ -4,9 +4,16 @@ public class Task06 {
 
     public static int solution(int x, int y) {
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
-        return 0;
+        int summ = Math.abs(x + y);
+        if(summ == 0)
+            return 1;
+        int numberCount = 0;
+        while (summ > 0)
+        {
+            summ /= 10;
+            numberCount++;
+        }
+        return numberCount;
     }
 
     public static void main(String[] args) {
