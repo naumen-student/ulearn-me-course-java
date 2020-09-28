@@ -9,12 +9,20 @@ public class Task06Main {
         /*
         System.out.println(getMax(1, 2, 3, 4));
          */
+        System.out.println(getMax(0, 0, 7, 7));
     }
 
     static int getMax(int a, int b, int c, int d) {
         //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
         return 0;
-        return Collections.max(Arrays.asList( a,b,c,d ));
+        if (a>b && a>c && a>d)
+            return a;
+        if (b>a && b>c && b>d)
+            return b;
+        if (c>b && c>a && c>d)
+            return c;
+        else
+            return d;
     }
 
 }
