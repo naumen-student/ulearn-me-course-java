@@ -2,20 +2,21 @@ package com.example.task04;
 
 public class Task04 {
 
-    public static float calculate(int a, int b, String operation) {
+    public static float calculate(int firstNumber, int secondNumber, String operation) {
+        if (operation.equals("+"))
+            return firstNumber + secondNumber;
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
+        if (operation.equals("-"))
+            return firstNumber - secondNumber;
 
-        return 0;
+        if (operation.equals("/"))
+            return (float) firstNumber / secondNumber;
+
+        return firstNumber * secondNumber;
     }
 
     public static void main(String[] args) {
-        // Здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
-        float result = calculate(-25, 5, "/");
-        System.out.println(result);
-        */
+
     }
 
 }
