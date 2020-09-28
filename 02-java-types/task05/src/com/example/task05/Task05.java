@@ -4,18 +4,22 @@ public class Task05 {
 
     public static String solution(int x) {
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
+        while(x % 2 == 0) {
+           if (x == 0)
+               return "TRUE";
+           x = x / 10;
+
+        }
+
 
         return "FALSE";
     }
 
     public static void main(String[] args) {
-        // Здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
-        String result = solution(1234);
+
+        String result = solution(5235);
         System.out.println(result);
-        */
+
     }
 
 }
