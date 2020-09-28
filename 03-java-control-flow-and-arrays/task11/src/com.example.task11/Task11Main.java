@@ -12,7 +12,17 @@ public class Task11Main {
     }
 
     static void swap(int[] arr) {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        if (arr == null || arr.length == 0)
+            return;
+        int indexOfMin = 0;
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < arr[indexOfMin]) {
+                indexOfMin = i;//todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+            }
+        }
+        int i = arr[0];
+        arr[0] = arr[indexOfMin];
+        arr[indexOfMin] = i;
     }
 
 }
