@@ -1,4 +1,5 @@
 package com.example.task07;
+import java.util.stream.IntStream;
 
 public class Task07Main {
     public static void main(String[] args) {
@@ -17,6 +18,7 @@ public class Task07Main {
     static int sum(int[] arr) {
         //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
         return 0;
+        return IntStream.of(arr).sum();
     }
 
 }
