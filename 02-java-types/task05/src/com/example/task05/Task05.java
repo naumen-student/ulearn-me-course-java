@@ -5,7 +5,11 @@ public class Task05 {
     public static String solution(int x) {
 
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
+        if (x % 2 == 0
+                && x / 10 % 2 == 0
+                && x / 100 % 2 == 0
+                && x / 10000 % 2 == 0)
+            return "TRUE";
         return "FALSE";
     }
 
