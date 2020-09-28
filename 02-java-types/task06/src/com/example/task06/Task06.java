@@ -5,6 +5,8 @@ public class Task06 {
     public static int solution(int x, int y) {
         int result = x+y;
         int i=0;
+        if (result==0)
+            return 1;
         for(int k = 0;result!=0;k++) {
             result = result / 10;
             i = i + 1;
