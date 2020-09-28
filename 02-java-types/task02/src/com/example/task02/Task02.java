@@ -14,4 +14,5 @@ public class Task02 {
         String result = solution("12345");
         System.out.println(result);
     }
+
 }
