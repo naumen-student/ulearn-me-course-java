@@ -15,21 +15,20 @@ public class Task13Main {
     }
 
     static int[] removeMoreThen1000(int[] arr) {
-        if (arr == null || arr.length == 0)
-        {
-            return arr;
-        }
-        ArrayList<Integer> list = new ArrayList<>();
-        for (int i : arr) {
-            if (i <= 1000)
-                list.add(i);
-        }
-        int[] result = new int[list.size()];
-        for (int i = 0; i < list.size(); i++) {
-            result[i] = list.get(i);
-        }
-        return result;
-
+        if (arr == null) return null;
+        if (arr.length == 0) return arr;
+        int countMore1000 = 0;
+        for(int i = 0; i < arr.length; i++)
+            if (arr[i] > 1000)
+                countMore1000++;
+        int[] newArr = new int[arr.length - countMore1000];
+        int indexNewArr = 0;
+        for(int i = 0; i < arr.length; i++)
+            if (arr[i] < 1000) {
+                newArr[indexNewArr] = arr[i];
+                indexNewArr++;
+            }
+        return newArr;
     }
 
 }
