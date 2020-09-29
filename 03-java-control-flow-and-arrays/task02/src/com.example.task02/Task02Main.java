@@ -20,6 +20,6 @@ public class Task02Main {
             return "лето";
         if (monthNumber<=11)
             return "осень";
-        throw  new InvalidParameterException("monthNumber is not valid");
+        throw  new InvalidParameterException("month number is not valid");
     }
 }
