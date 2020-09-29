@@ -18,7 +18,7 @@ public class Task08Main {
             return 0;
         }
         else {
-            for(int i=0;i <= arr.length-1 ; i++) {
+            for(int i=0;i < arr.length; i++) {
                 result = result * arr[i];
             }
 
