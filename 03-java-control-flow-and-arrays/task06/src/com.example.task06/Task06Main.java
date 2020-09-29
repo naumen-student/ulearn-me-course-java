@@ -12,7 +12,7 @@ public class Task06Main {
 
     static int getMax(int a, int b, int c, int d) {
 
-        // Не бейте пожайлуста за такое решение, я понимаю что через условия будет быстрее
+        // Не бейте пожалуйста за такое решение, я понимаю что через условия будет быстрее
 
         int max = Integer.MIN_VALUE;
         for(int current : new int[] {a, b, c, d}) {
