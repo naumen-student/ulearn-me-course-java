@@ -1,5 +1,7 @@
 package com.example.task01;
 
+import java.security.InvalidParameterException;
+
 public class Task01Main {
     public static void main(String[] args) {
         //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
@@ -11,6 +13,8 @@ public class Task01Main {
     }
 
     static boolean canGetDriverLicense(int age) {
-        return true;//todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        if(age<=0)
+            throw new InvalidParameterException("age<=0");
+        return  age>=18;
     }
 }
