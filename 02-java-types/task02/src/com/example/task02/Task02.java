@@ -1,5 +1,4 @@
 package com.example.task02;
-
 import java.util.Scanner;
 
 public class Main {
