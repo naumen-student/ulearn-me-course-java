@@ -2,11 +2,19 @@ package com.example.task13;
 
 public class Task13Main {
     static int[] removeMoreThen1000(int[] arr) {
-        int[] result;
-        for (int i = 0; i < arr.length; i++){
-            arr
+        if (arr == null) return null;
+        int count = 0;
+        for (int number: arr){
+            if (number <= 1000) count++;
         }
-        return  null;
+        int[] result = new int[count];
+        int item = 0;
+        for (int number: arr){
+            if (number <= 1000) {
+                result[item] = number;
+                item++;
+            }
+        }
+        return result;
     }
-
 }
