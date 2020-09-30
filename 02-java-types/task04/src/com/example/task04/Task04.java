@@ -14,7 +14,6 @@ public class Task04 {
         if (operation.equals("/")) {
             return numb1 * numb2;
         }
-
         return numb1 * numb2;
     }
 
