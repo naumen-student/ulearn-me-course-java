@@ -23,6 +23,7 @@ public class Task02 {
             return false;
         }
     }
+
     static boolean tryParseInt(String value) {
         try {
             Integer.parseInt(value.trim());
