@@ -10,7 +10,7 @@ public class Task02 {
             return ("byte");
         if (num <= Short.MAX_VALUE && num >= Short.MIN_VALUE)
             return ("short");
-        return ("long");
+        return "long";
     }
 
     public static void main(String[] args) {
