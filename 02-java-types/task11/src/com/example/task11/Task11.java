@@ -6,18 +6,13 @@ public class Task11 {
 
         // TODO исправьте функцию, чтобы избежать накопления ошибки
 
-        double a = 0d;
-        // Считаем проценты за год
-        for (int i = 1; i <= 12; i++) {
-            a += sum * percent;
-        }
-        return (float)a+sum;
+        return (float) (sum * Math.pow(percent + 1.0, 12));
     }
 
     public static void main(String[] args) {
 
-        float sum = 222f; // 500 руб. на счете
-        float percent = 0.00000179f; // 0.000001% ежемесячно
+        float sum = 500f; // 500 руб. на счете
+        float percent = 0.000001f; // 0.000001% ежемесячно
 
         sum = benefit(sum, percent);
 
