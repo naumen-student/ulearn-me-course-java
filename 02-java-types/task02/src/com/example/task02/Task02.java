@@ -1,7 +1,7 @@
 package com.example.task02;
 import java.util.Scanner;
 
-public class Main {
+public class Task02 {
 
     public static String solution(String input) {
         long num = Long.parseLong(input);
