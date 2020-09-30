@@ -14,11 +14,9 @@ public class Task02 {
     }
 
     public static void main(String[] args) {
-        Scanner console = new Scanner(System.in);
-        System.out.println("Введите число ");
-        String num = console.nextLine();
-        String result = solution(num);
-        System.out.println("Тип ");
+        /*
+        String result = solution("12345");
         System.out.println(result);
+         */
     }
 }
