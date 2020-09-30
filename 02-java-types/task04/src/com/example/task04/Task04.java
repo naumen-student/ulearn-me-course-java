@@ -6,15 +6,15 @@ public class Task04 {
         float result;
         float numb1 = (float) a;
         float numb2 = (float) b;
-        if (operand.equals("+")) {
+        if (operation.equals("+")) {
             result = numb1 + numb2;
             return result;
         }
-        if (operand.equals("-")) {
+        if (operation.equals("-")) {
             result = numb1 - numb2;
             return result;
         }
-        if (operand.equals("/")) {
+        if (operation.equals("/")) {
             result = numb1 * numb2;
             return result;
         }
