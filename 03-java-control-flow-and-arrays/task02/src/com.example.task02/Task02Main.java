@@ -1,11 +1,11 @@
 package com.example.task02;
 
-public class Task02Main {
+public class Task03Main {
     public static void main(String[] args) {
 
     }
 
-    static String getSeason(int monthNumber) {
+    static String getNameOfWeekDays(int weekDaysNumber) {
         switch (weekDaysNumber) {
             case 1:
                 return "понедельник";
