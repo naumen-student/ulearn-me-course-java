@@ -10,7 +10,8 @@ public class Task05Main {
     }
 
     static int getMin(int a, int b, int c) {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
-        return 0;
+        int d = Integer.min(a,b);
+        int e =Integer.min(d,c);
+        return Integer.min(d,e);
     }
 }
