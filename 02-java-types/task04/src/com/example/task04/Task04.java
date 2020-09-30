@@ -2,11 +2,24 @@ package com.example.task04;
 
 public class Task04 {
 
-    public static float calculate(int a, int b, String operation) {
+    public static float calculate(int number1, int number2, String operand) {
+        float result;
+        float numb1 = (float) number1;
+        float numb2 = (float) number2;
+        if (operand.equals("+")) {
+            result = numb1 + numb2;
+            return result;
+        }
+        if (operand.equals("-")) {
+            result = numb1 - numb2;
+            return result;
+        }
+        if (operand.equals("/")) {
+            result = numb1 * numb2;
+            return result;
+        }
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
-        return 0;
+        return numb1 * numb2;
     }
 
     public static void main(String[] args) {
