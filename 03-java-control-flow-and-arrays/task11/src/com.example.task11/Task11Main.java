@@ -10,9 +10,24 @@ public class Task11Main {
         System.out.println(java.util.Arrays.toString(arr));
          */
     }
-
+    static int numMin(int[] arr) {
+        int number=0;
+        int lastvalue=Integer.MAX_VALUE;
+        for (int i=0;i<arr.length;i++){
+            if(arr[i]<=lastvalue){
+                number=i;
+                lastvalue=arr[i];
+            }
+        }
+        return number;
+    }
     static void swap(int[] arr) {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        if(arr==null||arr.length==0)
+            return;
+        int minNumber=numMin(arr);
+        int firstValue=arr[0];
+        arr[0]=arr[minNumber];
+        arr[minNumber]=firstValue;
     }
 
 }
