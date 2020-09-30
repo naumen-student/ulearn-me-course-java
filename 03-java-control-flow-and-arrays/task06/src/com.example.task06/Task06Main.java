@@ -6,6 +6,6 @@ public class Task06Main {
     }
 
     static int getMax(int a, int b, int c, int d) {
-        return Math.min(a, Math.min(b, Math.min(c, d)));
+        return Math.max(a, Math.max(b, Math.max(c, d)));
     }
 }
