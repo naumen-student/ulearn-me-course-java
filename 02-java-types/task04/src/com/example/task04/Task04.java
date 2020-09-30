@@ -2,10 +2,10 @@ package com.example.task04;
 
 public class Task04 {
 
-    public static float calculate(int number1, int number2, String operand) {
+    public static float calculate(int a, int b, String operation) {
         float result;
-        float numb1 = (float) number1;
-        float numb2 = (float) number2;
+        float numb1 = (float) a;
+        float numb2 = (float) b;
         if (operand.equals("+")) {
             result = numb1 + numb2;
             return result;
