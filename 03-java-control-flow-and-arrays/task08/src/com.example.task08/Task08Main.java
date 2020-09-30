@@ -9,10 +9,15 @@ public class Task08Main {
     }
 
     static long mult(int[] arr) {
-        int result = 0;
-        for (int i = 0; i < arr.length; i++)
-            result *= arr[i];
-        return result;
+        try {
+            long result = arr[0];
+            for (int i = 1; i < arr.length; i++)
+                result *= arr[i];
+            return result;
+        }
+        catch (NullPointerException | IndexOutOfBoundsException e) {
+            return 0L;
+        }
     }
 
 }
