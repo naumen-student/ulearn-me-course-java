@@ -11,6 +11,6 @@ public class Task04Main {
             actual.append(i);
             actual.append(System.lineSeparator());
         }
-        System.out.println(actual);
+        System.out.print(actual);
     }
 }
