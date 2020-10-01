@@ -12,7 +12,7 @@ public class Task11Main {
         int count = 0;
         int num = Integer.MAX_VALUE;
         for(int i = 0; i < arr.length; i++) {
-            if (arr[i] <= num) {
+            if (arr[i] < num) {
                 num = arr[i];
                 count = i;
             }
