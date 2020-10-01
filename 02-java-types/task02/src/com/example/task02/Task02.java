@@ -5,13 +5,13 @@ public class Task02 {
     public static String solution(String input) {
 
         long a = Long.parseLong(input);
-        if (a<=127 && a>=-128)
+        if (a<=Byte.MAX_VALUE && a>=Byte.MIN_VALUE)
             return "byte";
         else
-            if (a>=Math.pow(-2,15) && a<-128 || a>127 && a<=Math.pow(2,15)-1)
+            if (a>=Short.MIN_VALUE && a<=Short.MAX_VALUE)
                 return "short";
             else
-                if (a>=Math.pow(-2,31) && a<Math.pow(-2,15) || a>Math.pow(2,15)-1 && a<=Math.pow(2,31)-1)
+                if (a>=Integer.MIN_VALUE &&  a<=Integer.MAX_VALUE)
                     return "int";
                 else
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
