@@ -8,7 +8,7 @@ public class Task11Main {
     }
 
     static void swap(int[] arr) {
-        int temp;
+        if (arr == null || arr.length == 0) return;
         int count = 0;
         int num = Integer.MAX_VALUE;
         for(int i = 0; i < arr.length; i++) {
@@ -17,9 +17,8 @@ public class Task11Main {
                 count = i;
             }
         }
-        temp = arr[count];
         arr[count] = arr[0];
-        arr[0] = temp;
+        arr[0] = num;
     }
 
 }
