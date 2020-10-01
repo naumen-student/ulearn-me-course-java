@@ -11,7 +11,7 @@ public class Task06 {
             result++;
             number /= 10;
         }
-        if (number == 0)
+        if (result == 0)
             result++;
         return result;
     }
