@@ -10,6 +10,13 @@ public class Task03Main {
     }
 
     static String getNameOfWeekDays(int weekDaysNumber) {
-        return "";//todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        if (weekDaysNumber == 1) return "понедельник";
+        else if (weekDaysNumber == 2) return "вторник";
+        else if (weekDaysNumber == 3) return "среда";
+        else if (weekDaysNumber == 4) return "четверг";
+        else if (weekDaysNumber == 5) return "пятница";
+        else if (weekDaysNumber == 6) return "суббота";
+        else if (weekDaysNumber == 7) return "воскресенье";
+        else return "такого дня недели не существует";
     }
 }
