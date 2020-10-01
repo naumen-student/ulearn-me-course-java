@@ -6,8 +6,6 @@ public class Task05Main {
     }
 
     static int getMin(int a, int b, int c) {
-        if ((a < b) && (b > c)) return a;
-        else if ((b < a) && (a > c)) return b;
-        else return c;
+        return Math.min(Math.min(a,b),c);
     }
 }
