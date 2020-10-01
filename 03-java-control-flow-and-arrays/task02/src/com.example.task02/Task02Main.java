@@ -6,21 +6,8 @@ public class Task02Main {
     }
 
     static String getSeason(int monthNumber) {
-        switch (monthNumber) {
-            case 12:
-            case 1:
-            case 2:
-                return "зима";
-            case 3:
-            case 4:
-            case 5:
-                return "весна";
-            case 6:
-            case 7:
-            case 8:
-                return "лето";
-            default:
-                return "осень";
-        }
+
+        return new String[]{"зима", "зима", "весна", "весна", "весна", "лето",
+                "лето", "лето", "осень", "осень", "осень", "зима"}[monthNumber - 1];
     }
 }
