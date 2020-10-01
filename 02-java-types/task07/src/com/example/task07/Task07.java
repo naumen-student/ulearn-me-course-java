@@ -4,10 +4,7 @@ public class Task07 {
 
     public static int solution(int n, int m, int k) {
 
-        int s1 = n * m;
-        int s2 = k * k;
-
-        return s1 / s2;
+        return (n / k) * (m / k);
     }
 
     public static void main(String[] args) {
