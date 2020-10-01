@@ -7,7 +7,7 @@ public class Task03 {
     }
 
     public static void main(String[] args) {
-        int result = getMetreFromCentimetre(199);
+        int result = getMetreFromCentimetre(201);
         System.out.println(result);
     }
 }
