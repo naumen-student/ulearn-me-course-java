@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/01-java-intro.iml" filepath="$PROJECT_DIR$/.idea/modules/01-java-intro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/02-java-types.iml" filepath="$PROJECT_DIR$/.idea/modules/02-java-types.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/03-java-control-flow-and-arrays.iml" filepath="$PROJECT_DIR$/.idea/modules/03-java-control-flow-and-arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/4-java-oop-basic.iml" filepath="$PROJECT_DIR$/.idea/modules/4-java-oop-basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task01/4-java-oop-basic.task01.iml" filepath="$PROJECT_DIR$/.idea/modules/task01/4-java-oop-basic.task01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task01/4-java-oop-basic.task01.main.iml" filepath="$PROJECT_DIR$/.idea/modules/task01/4-java-oop-basic.task01.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task01/4-java-oop-basic.task01.test.iml" filepath="$PROJECT_DIR$/.idea/modules/task01/4-java-oop-basic.task01.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task02/4-java-oop-basic.task02.iml" filepath="$PROJECT_DIR$/.idea/modules/task02/4-java-oop-basic.task02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task02/4-java-oop-basic.task02.main.iml" filepath="$PROJECT_DIR$/.idea/modules/task02/4-java-oop-basic.task02.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task02/4-java-oop-basic.task02.test.iml" filepath="$PROJECT_DIR$/.idea/modules/task02/4-java-oop-basic.task02.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task03/4-java-oop-basic.task03.iml" filepath="$PROJECT_DIR$/.idea/modules/task03/4-java-oop-basic.task03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task03/4-java-oop-basic.task03.main.iml" filepath="$PROJECT_DIR$/.idea/modules/task03/4-java-oop-basic.task03.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task03/4-java-oop-basic.task03.test.iml" filepath="$PROJECT_DIR$/.idea/modules/task03/4-java-oop-basic.task03.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task04/4-java-oop-basic.task04.iml" filepath="$PROJECT_DIR$/.idea/modules/task04/4-java-oop-basic.task04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task04/4-java-oop-basic.task04.main.iml" filepath="$PROJECT_DIR$/.idea/modules/task04/4-java-oop-basic.task04.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task04/4-java-oop-basic.task04.test.iml" filepath="$PROJECT_DIR$/.idea/modules/task04/4-java-oop-basic.task04.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task05/4-java-oop-basic.task05.iml" filepath="$PROJECT_DIR$/.idea/modules/task05/4-java-oop-basic.task05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task05/4-java-oop-basic.task05.main.iml" filepath="$PROJECT_DIR$/.idea/modules/task05/4-java-oop-basic.task05.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task05/4-java-oop-basic.task05.test.iml" filepath="$PROJECT_DIR$/.idea/modules/task05/4-java-oop-basic.task05.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ulearn-me-course-java.iml" filepath="$PROJECT_DIR$/.idea/ulearn-me-course-java.iml" />
+    </modules>
+  </component>
+</project>
