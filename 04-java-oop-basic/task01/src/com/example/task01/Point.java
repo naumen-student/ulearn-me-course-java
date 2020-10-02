@@ -10,10 +10,9 @@ public class Point {
     }
 
     void flip(){
-        int x1 = this.x;
-        int y1 = this.y;
-        this.x = -y1;
-        this.y = -x1;
+        int z = x;
+        x = -y;
+        y = -z;
     }
 
     double distance(Point point){
