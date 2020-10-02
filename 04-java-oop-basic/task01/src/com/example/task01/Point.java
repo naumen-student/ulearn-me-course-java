@@ -1,8 +1,8 @@
 package com.example.task01;
 
 public class Point {
-    int x;
-    int y;
+    private int x;
+    private int y;
 
     void flip() {
         int temp = x;
@@ -16,5 +16,10 @@ public class Point {
 
     public String toString() {
         return String.format("(%d, %d)", x, y);
+    }
+
+    Point(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 }
