@@ -9,14 +9,14 @@ public class Point {
         this.y = y;
     }
 
-    public void flip(){
+    void flip(){
         int x1 = this.x;
         int y1 = this.y;
         this.x = -y1;
         this.y = -x1;
     }
 
-    public double distance(Point point){
+    double distance(Point point){
         return Math.sqrt(Math.pow((point.x - this.x), 2) + Math.pow((point.y - this.y), 2));
     }
 
