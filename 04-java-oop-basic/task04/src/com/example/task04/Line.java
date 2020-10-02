@@ -27,6 +27,6 @@ public class Line {
     public boolean isCollinearLine(Point p) {
         float x = (float) (p.x - p1.x) / (p2.x - p1.x);
         float y = (float) (p.y - p1.y) / (p2.y - p1.y);
-        return Math.abs(x-y) < 1e-4;
+        return Math.abs(x - y) < 1e-4;
     }
 }
