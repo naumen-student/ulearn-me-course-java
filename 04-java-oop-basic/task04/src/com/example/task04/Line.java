@@ -19,9 +19,7 @@ public class Line {
     }
 
     public String toString() {
-        String p1ToString = String.format("(%d, %d)", p1.x, p1.y);
-        String p2ToString = String.format("(%d, %d)", p2.x, p2.y);
-        return p1ToString + " - " + p2ToString;
+        return p1.toString() + " - " + p2.toString();
     }
 
     public boolean isCollinearLine(Point p) {
