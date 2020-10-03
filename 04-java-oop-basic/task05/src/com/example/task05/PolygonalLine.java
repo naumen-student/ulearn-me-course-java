@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class PolygonalLine {
 
-    private ArrayList<Point> points = new ArrayList<>();
+    private final ArrayList<Point> points = new ArrayList<>();
 
     public void setPoints(Point[] points) {
         for (Point point : points) {
