@@ -22,7 +22,7 @@ public class PolygonalLine {
 
     public double getLength() {
         double length = 0;
-        for(int i = 0; i < points.size(); i++) {
+        for(int i = 1; i < points.size(); i++) {
             length += points.get(i).getLength(points.get(i - 1));
         }
         return length;
