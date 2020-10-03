@@ -44,10 +44,19 @@ class TimeSpan{
     }
 
     public void subtract(TimeSpan time) {
+        TimeSpan temp = this;
         hours -= time.hours;
         minutes -= time.minutes;
         seconds -= time.seconds;
-        redistribution();
+        if (redistribution()) {
+            System.out.println("Преобразование выполнено успешно");
+        }
+        else {
+            System.out.println("Преобразование невозможно и не будет выполнено");
+            hours = temp.hours;
+            minutes = temp.minutes;
+            seconds = temp.seconds;
+        }
     }
 
     public String toString() {
