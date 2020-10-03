@@ -3,8 +3,6 @@ package com.example.task02;
 public class Task02 {
 
     public static String solution(String input) {
-
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
         long number = Long.parseLong(input);
         if (Byte.MAX_VALUE >= number & number >= Byte.MIN_VALUE)
             return "byte";
