@@ -5,8 +5,8 @@ public class Task01 {
     public static String solution() {
 
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-        String s = "Я думаю, быть программистом - это круто";
-        return s;
+        String text = "Я думаю, быть программистом - это круто";
+        return text;
     }
 
     public static void main(String[] args) {
