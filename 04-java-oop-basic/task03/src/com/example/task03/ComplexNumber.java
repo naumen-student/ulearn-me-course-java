@@ -22,4 +22,9 @@ public class ComplexNumber {
         Integer newComplexPart = realPart*value.complexPart+value.realPart*complexPart;
         return  new ComplexNumber(newRealPart, newComplexPart);
     }
+
+    @Override
+    public String toString() {
+        return   String.valueOf(realPart) + complexPart +"i";
+    }
 }
