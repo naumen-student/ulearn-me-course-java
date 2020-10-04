@@ -13,7 +13,6 @@ public class Task04 {
             num = a + b;
         if (operation.trim().equals("-"))
             num = a - b;
-
         return num;
     }
 
