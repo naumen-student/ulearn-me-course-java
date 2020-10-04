@@ -6,8 +6,8 @@ import java.math.BigDecimal;
 public class Task12 {
 
     public static float benefit(float sum, float percent) {
-        final BigDecimal decPercent = new BigDecimal(percent);
-        return sum.multiply(decPercent.pow(12)).setScale(9, RoundingMode.HALF_UP);
+        BigDecimal percents = percent.add(BigDecimal.valueOf(1)).pow(12);
+        return sum.multiply(percents).setScale(9, BigDecimal.ROUND_HALF_UP);
     }
 
     public static void main(String[] args) {
