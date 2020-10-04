@@ -1,87 +1,88 @@
 package com.example.task02;
 public class TimeSpan {
-    private int timeFromSeconds;
-    private int timeFromMinutes;
-    private int timeFromHours;
+    private int hours;
+    private int minutes;
+    private int seconds;
 
-    public TimeSpan( int timeFromHours, int timeFromMinutes, int timeFromSeconds){
-        this.timeFromHours = timeFromHours;
-        this.timeFromMinutes = timeFromMinutes;
-        this.timeFromSeconds = timeFromSeconds;
+    public TimeSpan(int hours, int minutes, int seconds){
+        this.hours = hours;
+        this.minutes = minutes;
+        this.seconds = seconds;
         balanceSeconds();
         balanceMinutes();
     }
 
-    private void balanceMinutes() {
-        int countHoursInMinutes = timeFromMinutes / 60;
-        if (countHoursInMinutes > 0){
-            timeFromHours += countHoursInMinutes;
-            timeFromMinutes -= countHoursInMinutes * 60;
-        }
-    }
-
-    private void balanceSeconds() {
-        int countMinutesInSeconds = timeFromSeconds / 60;
-        if (countMinutesInSeconds > 0){
-            this.timeFromMinutes += countMinutesInSeconds;
-            this.timeFromSeconds -= countMinutesInSeconds * 60;
-        }
-    }
-
     public int getSeconds(){
-        return timeFromSeconds;
+        return seconds;
     }
 
     public int getMinutes(){
-        return timeFromMinutes;
+        return minutes;
     }
 
     public int getHours(){
-        return timeFromHours;
+        return hours;
     }
 
     public void setSeconds(int seconds){
-        timeFromSeconds += seconds;
+        this.seconds += seconds;
         balanceSeconds();
         balanceMinutes();
     }
 
     public void setMinutes(int minutes){
-        timeFromMinutes += minutes;
+        this.minutes += minutes;
         balanceMinutes();
     }
 
     public void setHours(int hours){
-        timeFromHours += hours;
+        this.hours += hours;
     }
 
     public void add(TimeSpan time){
-        timeFromSeconds += time.getSeconds();
-        timeFromMinutes += time.getMinutes();
-        timeFromHours += time.getHours();
+        seconds += time.getSeconds();
+        minutes += time.getMinutes();
+        hours += time.getHours();
         balanceSeconds();
         balanceMinutes();
     }
 
     public void subtract(TimeSpan time){
-        if (timeFromSeconds < time.getSeconds()) {
-            timeFromMinutes -= 1;
-            timeFromSeconds = 0;
+        if (seconds < time.getSeconds()) {
+            minutes -= 1;
+            seconds = 0;
         }
-        else timeFromSeconds -= time.getSeconds();
+        else seconds -= time.getSeconds();
 
-        if (timeFromMinutes < time.getMinutes()) {
-            timeFromHours -= 1;
-            timeFromMinutes = 0;
+        if (minutes < time.getMinutes()) {
+            hours -= 1;
+            minutes = 0;
         }
         else
-            timeFromMinutes -= time.getMinutes();
-        timeFromHours -= time.getHours();
+            minutes -= time.getMinutes();
+        hours -= time.getHours();
         balanceSeconds();
         balanceMinutes();
     }
 
     public String toString(){
-        return String.format("%d:%d:%d", timeFromHours, timeFromMinutes, timeFromSeconds);
+
+        return String.format("%d:%d:%d", hours, minutes, seconds);
+    }
+
+    private void balanceMinutes() {
+        int countHoursInMinutes = minutes / 60;
+        if (countHoursInMinutes > 0){
+            hours += countHoursInMinutes;
+            minutes -= countHoursInMinutes * 60;
+        }
+    }
+
+    private void balanceSeconds() {
+        int countMinutesInSeconds = seconds / 60;
+        if (countMinutesInSeconds > 0){
+            this.minutes += countMinutesInSeconds;
+            this.seconds -= countMinutesInSeconds * 60;
+        }
     }
 }
