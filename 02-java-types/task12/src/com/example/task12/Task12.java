@@ -1,6 +1,5 @@
 package com.example.task12;
 
-import java.math.RoundingMode;
 import java.math.BigDecimal;
 
 public class Task12 {
