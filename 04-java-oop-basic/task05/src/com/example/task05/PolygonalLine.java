@@ -25,7 +25,7 @@ public class PolygonalLine {
      * @param point точка, которую нужно добавить к ломаной
      */
     public void addPoint(Point point) {
-        points.add(point);
+        this.points.add(point);
         calculateLength();
     }
 
@@ -36,7 +36,7 @@ public class PolygonalLine {
      * @param y координата по оси ординат
      */
     public void addPoint(double x, double y) {
-        points.add(new Point(x, y));
+        this.points.add(new Point(x, y));
         calculateLength();
     }
 
