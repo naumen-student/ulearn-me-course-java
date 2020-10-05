@@ -10,9 +10,19 @@ public class Task02 {
             s = "short";
         else if (tryParseInt(input))
             s = "int";
-        else
+        else if (tryParseLong(input))
             s = "long";
+        else s = "Wrong input. ";
         return s;
+    }
+
+    static boolean tryParseLong(String value) {
+        try {
+            Long.parseLong(value.trim());
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 
     static boolean tryParseShort(String value) {
