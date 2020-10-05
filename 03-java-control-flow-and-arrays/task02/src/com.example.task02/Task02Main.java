@@ -3,14 +3,14 @@ package com.example.task02;
 public class Task02Main {
     static String getSeason(int monthNumber) {
         if (1 <= monthNumber && monthNumber <= 2 || monthNumber == 12)
-            return "Зима";
+            return "зима";
         if (3 <= monthNumber && monthNumber <= 5) {
-            return "Весна";
+            return "весна";
         }
         if (6 <= monthNumber && monthNumber <= 8) {
-            return "Лето";
+            return "лето";
         }
-        return "Осень";
+        return "осень";
     }
 
     public static void main(String[] args) {
