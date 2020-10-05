@@ -9,7 +9,7 @@ public class Task13Main {
     }
 
     static int[] removeMoreThen1000(int[] arr) {
-        if (arr == null || arr.length == 0)
+        if (arr == null)
             return null;
         return Arrays.stream(arr).filter(element -> element <= 1000).toArray();
     }
