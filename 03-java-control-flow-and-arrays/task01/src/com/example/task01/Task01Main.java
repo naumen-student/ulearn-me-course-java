@@ -6,6 +6,7 @@ public class Task01Main {
     }
 
     static boolean canGetDriverLicense(int age) {
-        return age >=18;
+        boolean result = age >=18;
+        return result;
     }
 }
