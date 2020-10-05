@@ -9,7 +9,7 @@ public class Task04Main {
 
     static void from0to10000() {
         int i = 0;
-        while (i == 0 || i < 10000) {
+        while (i < 10000) {
             System.out.println(i);
             i++;
         }
