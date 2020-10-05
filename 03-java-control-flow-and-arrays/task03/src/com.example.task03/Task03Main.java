@@ -28,7 +28,7 @@ public class Task03Main {
                 return "суббота";
 
             case 7:
-                return "воскресение";
+                return "воскресенье";
 
             default:
                 return "такого дня недели не существует";
