@@ -13,6 +13,7 @@ public class Task02 {
         else if (tryParseLong(input))
             s = "long";
         else s = "Wrong input. ";
+
         return s;
     }
 
