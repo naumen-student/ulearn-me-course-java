@@ -11,7 +11,6 @@ public class Task03 {
         // например вот так:
         /*
         int result = getMetreFromCentimetre(345);
-        
         System.out.println(result);
          */
     }
