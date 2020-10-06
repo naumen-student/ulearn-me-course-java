@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class PolygonalLine {
 
-    private ArrayList<Point> points = new ArrayList<>();
+    private ArrayList<Point> listAllPoints = new ArrayList<>();
 
     public void setPoints(Point[] points) {
         for (Point point : points) {
@@ -18,14 +18,16 @@ public class PolygonalLine {
 
     public void addPoint(double x, double y) {
         Point secondPoint = new Point(x, y);
-        addPoint(secondPoint);
+        listAllPoints.add(secondPoint);
     }
 
     public double getLength() {
-        double result = 0;
-        for (int i = 0; i < points.size()-1; i++)
-            result += points.get(i).getLength(points.get(i+1));
-        return result;
+        double brokenLineLength = 0;
+        // Перебираем все элементы листа: каждый элемент листа отправляем в метод getLength класса Point...
+        // ...вместе со следующе-стоящим элементом листа. Расстояние полученное из getLength добавляем в brokenLineLength
+        for (int index = 0; index < listAllPoints.size() - 1; index++)
+            brokenLineLength += listAllPoints.get(index).getLength(listAllPoints.get(index + 1));
+        return brokenLineLength;
     }
 
 }
