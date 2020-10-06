@@ -1,46 +1,31 @@
 package com.example.task05;
 
-/**
- * Ломаная линия
- */
+import java.util.ArrayList;
+
 public class PolygonalLine {
 
-    /**
-     * Устанавливает точки ломаной линии
-     *
-     * @param points массив точек, которыми нужно проинициализировать ломаную линию
-     */
+    private ArrayList<Point> points = new ArrayList<>();
+
     public void setPoints(Point[] points) {
-        // TODO: реализовать
+        for (Point point : points) {
+            addPoint(point);
+        }
     }
 
-    /**
-     * Добавляет точку к ломаной линии
-     *
-     * @param point точка, которую нужно добавить к ломаной
-     */
     public void addPoint(Point point) {
-        // TODO: реализовать
+        addPoint(point.getX(), point.getY());
     }
 
-    /**
-     * Добавляет точку к ломаной линии
-     *
-     * @param x координата по оси абсцисс
-     * @param y координата по оси ординат
-     */
     public void addPoint(double x, double y) {
-        // TODO: реализовать
+        Point secondPoint = new Point(x, y);
+        addPoint(secondPoint);
     }
 
-    /**
-     * Возвращает длину ломаной линии
-     *
-     * @return длину ломаной линии
-     */
     public double getLength() {
-        // TODO: реализовать
-        throw new AssertionError();
+        double result = 0;
+        for (int i = 0; i < points.size()-1; i++)
+            result += points.get(i).getLength(points.get(i+1));
+        return result;
     }
 
 }
