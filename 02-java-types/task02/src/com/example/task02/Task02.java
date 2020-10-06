@@ -18,6 +18,7 @@ public class Task02 {
         // например вот так:
         /*
         String result = solution("12345");
+
         System.out.println(result);
          */
     }
