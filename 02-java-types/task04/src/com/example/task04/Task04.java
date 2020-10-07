@@ -4,9 +4,20 @@ public class Task04 {
 
     public static float calculate(int a, int b, String operation) {
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
-        return 0;
+        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующе
+        switch(operation)
+        {
+            case "+":
+                return a + b;
+            case "-":
+                return a - b;
+            case "*":
+                return a * b;
+            case "/":
+                return (float) a / b;
+            default:
+                throw new IllegalArgumentException("Указан неверный оператор");
+        }
     }
 
     public static void main(String[] args) {
