@@ -19,7 +19,7 @@ public class ComplexNumber {
     }
 
     public String toString() {
-        return String.format("%d + %s", real, imaginary);
+        return String.format("(%d + %s)", real, imaginary);
     }
 
     void print() {
