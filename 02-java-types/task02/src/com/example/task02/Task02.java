@@ -3,19 +3,17 @@ package com.example.task02;
 public class Task02 {
 
     public static String solution(String input) {
-
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
-        return "";
+        float realInput = Float.parseFloat(input);
+        if(realInput >= -128 && realInput <= 127)
+            return "byte";
+        if(realInput >= -32768 && realInput <= 32767)
+            return "short";
+        if(realInput >= -2147483648 && realInput <= 2147483647)
+            return "int";
+        return "long";
     }
 
     public static void main(String[] args) {
-        // Здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
-        String result = solution("12345");
-        System.out.println(result);
-         */
+        System.out.print(solution("50000000000000000"));
     }
-
 }
