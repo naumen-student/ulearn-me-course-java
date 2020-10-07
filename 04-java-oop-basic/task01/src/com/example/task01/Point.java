@@ -6,19 +6,19 @@ package com.example.task01;
 public class Point {
     int x, y;
 
-    Point() {
+    public Point() {
     }
 
-    Point(int x, int y) {
+    public Point(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    void print() {
+    public void print() {
         System.out.println(toString());
     }
 
-    void flip() {
+    public void flip() {
         int temp = x;
         x = -y;
         y = -temp;
@@ -28,7 +28,7 @@ public class Point {
         return String.format("(%d, %d)", x, y);
     }
 
-    double distance(Point point) {
+    public double distance(Point point) {
         return Math.sqrt(Math.pow(x - point.x, 2) + Math.pow(y - point.y, 2));
     }
 }
