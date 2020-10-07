@@ -1,46 +1,40 @@
 package com.example.task05;
+import java.util.ArrayList;
 
-/**
- * Ломаная линия
- */
-public class PolygonalLine {
+public class PolygonalLine
+{
+    private ArrayList<Point> List;
 
-    /**
-     * Устанавливает точки ломаной линии
-     *
-     * @param points массив точек, которыми нужно проинициализировать ломаную линию
-     */
-    public void setPoints(Point[] points) {
-        // TODO: реализовать
+    public PolygonalLine()
+    {
+        this.List = new ArrayList<>();
     }
 
-    /**
-     * Добавляет точку к ломаной линии
-     *
-     * @param point точка, которую нужно добавить к ломаной
-     */
-    public void addPoint(Point point) {
-        // TODO: реализовать
+    public void setPoints(Point[] points)
+    {
+        for (Point point: points)
+        {
+            this.addPoint(point);
+        }
     }
 
-    /**
-     * Добавляет точку к ломаной линии
-     *
-     * @param x координата по оси абсцисс
-     * @param y координата по оси ординат
-     */
-    public void addPoint(double x, double y) {
-        // TODO: реализовать
+    public void addPoint(Point point)
+    {
+        List.add(new Point(point.getX(), point.getY()));
     }
 
-    /**
-     * Возвращает длину ломаной линии
-     *
-     * @return длину ломаной линии
-     */
-    public double getLength() {
-        // TODO: реализовать
-        throw new AssertionError();
+    public void addPoint(double x, double y)
+    {
+        List.add(new Point(x, y));
     }
 
+    public double getLength()
+    {
+        double length = 0.0;
+        for (int i = 0; i < this.List.size() - 1; i++)
+        {
+            length += this.List.get(i).getLength(this.List.get(i + 1));
+        }
+        return length;
+    }
 }
