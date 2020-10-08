@@ -26,5 +26,4 @@ public class Line {
         return (((double) (p1.getX() - p.getX())) / (p1.getX() - p2.getX()))
                 == (((double) (p1.getY() - p.getY())) / (p1.getY() - p2.getY()));
     }
-
 }
