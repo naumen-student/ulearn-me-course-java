@@ -14,7 +14,10 @@ public class Point {
 
     public void flip(){
         x -= 2*x;
-        y -= 2*x;
+        y -= 2*y;
+        int tx = x;
+        x = y;
+        y = tx;
     }
 
     public double distance(Point p){
