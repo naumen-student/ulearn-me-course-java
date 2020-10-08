@@ -18,6 +18,14 @@ public class Point {
         System.out.println(pointToString);
     }
 
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
     public String toString() {
         return String.format("(%1$,%2$)", x, y);
     }
