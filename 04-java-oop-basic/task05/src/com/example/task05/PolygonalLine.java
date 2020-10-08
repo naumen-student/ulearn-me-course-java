@@ -5,13 +5,16 @@ package com.example.task05;
  */
 public class PolygonalLine {
 
+    private Point[] points;
     /**
      * Устанавливает точки ломаной линии
      *
      * @param points массив точек, которыми нужно проинициализировать ломаную линию
      */
     public void setPoints(Point[] points) {
-        // TODO: реализовать
+        this.points=new Point[points.length];
+        for (int i=0;i< points.length;i++)
+            this.points[i]=new Point(points[i].getX(),points[i].getY());
     }
 
     /**
@@ -20,7 +23,14 @@ public class PolygonalLine {
      * @param point точка, которую нужно добавить к ломаной
      */
     public void addPoint(Point point) {
-        // TODO: реализовать
+        if(points!=null) {
+            Point[] bufPoints = points;
+            points = new Point[points.length + 1];
+            for (int i = 0; i < bufPoints.length; i++)
+                points[i] = bufPoints[i];
+            points[points.length - 1] = new Point(point.getX(), point.getY());
+        }
+        else points=new Point[]{new Point(point.getX(),point.getY())};
     }
 
     /**
@@ -30,7 +40,7 @@ public class PolygonalLine {
      * @param y координата по оси ординат
      */
     public void addPoint(double x, double y) {
-        // TODO: реализовать
+       addPoint(new Point(x,y));
     }
 
     /**
@@ -39,8 +49,10 @@ public class PolygonalLine {
      * @return длину ломаной линии
      */
     public double getLength() {
-        // TODO: реализовать
-        throw new AssertionError();
+        double length=0;
+        for (int i=1;i< points.length;i++)
+            length+=points[i-1].getLength(points[i]);
+        return length;
     }
 
 }
