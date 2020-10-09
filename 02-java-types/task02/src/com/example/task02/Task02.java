@@ -6,10 +6,10 @@ public class Task02 {
         long number = Long.parseLong(input);
         if (Byte.MAX_VALUE >= number & number >= Byte.MIN_VALUE)
             return "byte";
-        else if (Integer.MAX_VALUE >= number & number >= Integer.MIN_VALUE)
-            return "int";
         else if (Short.MAX_VALUE >= number & number >= Short.MIN_VALUE)
             return "short";
+        else if (Integer.MAX_VALUE >= number & number >= Integer.MIN_VALUE)
+            return "int";
         else return "long";
     }
 
