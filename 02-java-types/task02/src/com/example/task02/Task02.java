@@ -12,6 +12,7 @@ public class Task02 {
         else if (Integer.MAX_VALUE >= number && Integer.MIN_VALUE <= number)
             return "int";
         else return "long";
+
     }
     public static void main(String[] args) {
         String result = solution("12345");
