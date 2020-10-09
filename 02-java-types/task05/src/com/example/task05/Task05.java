@@ -7,7 +7,7 @@ public class Task05 {
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
 
         while (x != 0) {
-            if(x % 10 == 1)  return "FALSE";
+            if(x % 2 == 1)  return "FALSE";
             x /= 10;
         }
         return "TRUE";
