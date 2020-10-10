@@ -17,7 +17,12 @@ public class Task02 {
         return Long.parseLong(input) <= Short.MAX_VALUE && Long.parseLong(input) >= Short.MIN_VALUE;
     }
 
-        return "";
+    public static boolean isByt(String input){
+        return Long.parseLong(input) <= Byte.MAX_VALUE && Long.parseLong(input) >= Byte.MIN_VALUE;
+    }
+
+    public static boolean isIn(String input){
+        return Long.parseLong(input) <= Integer.MAX_VALUE && Long.parseLong(input) >= Integer.MIN_VALUE;
     }
 
     public static void main(String[] args) {
