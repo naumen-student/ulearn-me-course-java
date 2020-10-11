@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Task05Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         String pathToFile = args[0]; // "/home/user/file.txt"
 
         try {
