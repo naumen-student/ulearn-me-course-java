@@ -23,7 +23,7 @@ public class Logger {
     }
 
     public static Logger getLogger(String name) {
-        if (loggers.containsKey("name"))
+        if (loggers.containsKey(name))
             return loggers.get(name);
         return new Logger(name);
     }
