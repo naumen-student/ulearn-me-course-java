@@ -7,6 +7,30 @@ public class Point {
     int x;
     int y;
 
+    public Point(){ }
+
+    public Point(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
+
+    public void flip(){
+        x = x + y;
+        y = x - y;
+        x = -(x - y);
+        y *= -1;
+    }
+
+    double distance(Point point){
+        int dX = point.x - x;
+        int dY = point.y - y;
+        return Math.sqrt(dX * dX + dY * dY);
+    }
+
+    public String toString() {
+        return String.format("(%d %d)", x, y);
+    }
+
     void print() {
         String pointToString = String.format("(%d, %d)", x, y);
         System.out.println(pointToString);
