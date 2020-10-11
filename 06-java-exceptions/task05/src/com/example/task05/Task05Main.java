@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class Task05Main {
     public static void main(String[] args) {
-        String pathToFile = "/home/user/file.txt";
+        String pathToFile = args[0]; // "/home/user/file.txt"
         try {
             String s = readFile(pathToFile);
             System.out.println(s);
