@@ -15,6 +15,5 @@ public class Task02Main {
                 : monthNumber == 12 || monthNumber >= 1 && monthNumber <= 2 ? "зима"
                 : monthNumber >= 9 && monthNumber <= 11 ? "осень"
                 : "число выходит за рамки";
-
     }
 }
