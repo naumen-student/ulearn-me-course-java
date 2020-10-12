@@ -3,9 +3,8 @@ package com.example.task05;
 public class Task05 {
 
     public static String solution(int x) {
-
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
+        if (x % 2 == 0)
+            return "TRUE";
         return "FALSE";
     }
 
