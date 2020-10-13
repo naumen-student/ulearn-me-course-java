@@ -12,6 +12,7 @@ public class Logger {
 
     public Logger(String name) {
         this.name = name;
+        logs.put(name, this);
     }
 
     public void log(Level level, String message) {
@@ -46,9 +47,7 @@ public class Logger {
     public static Logger getLogger(String logName) {
         if (logs.containsKey(logName))
             return logs.get(logName);
-        Logger log = new Logger(logName);
-        logs.put(logName, log);
-        return log;
+        throw new IllegalArgumentException("Logger с таким именем не существует");
     }
 
     public void debug(String message) {
