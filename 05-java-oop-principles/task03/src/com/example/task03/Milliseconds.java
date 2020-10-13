@@ -3,7 +3,7 @@ package com.example.task03;
 /**
  * Интервал в миллисекундах
  */
-public class Milliseconds implements TimeUnit {
+public class Milliseconds implements TimeUnit{
 
     private final long amount;
 
@@ -18,11 +18,15 @@ public class Milliseconds implements TimeUnit {
 
     @Override
     public long toSeconds() {
-        return amount / 1000;
+        return Math.round((double) amount / 1000);
     }
 
     @Override
     public long toMinutes() {
-        return amount / 1000 * 60;
+       return Math.round((double) amount / 1000 / 60);
+    }
+
+    public long toHours() {
+        return Math.round((double) amount / 1000 / 60 / 60);
     }
 }
