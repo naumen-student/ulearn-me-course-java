@@ -6,10 +6,10 @@ import java.util.HashMap;
 
 public class Logger {
     public String name;
-    private Level level = Level.DEBUG;
+    private Levels level = Levels.DEBUG;
     private static final HashMap<String, Logger> loggers = new HashMap<>();
 
-    private enum Level {
+    public enum Levels {
         DEBUG,
         INFO,
         WARNING,
@@ -33,47 +33,47 @@ public class Logger {
         return logger;
     }
 
-    public void setLevel(Level level) {
+    public void setLevel(Levels level) {
         this.level = level;
     }
 
-    public Level getLevel() {
+    public Levels getLevel() {
         return this.level;
     }
 
     public void debug(String massage) {
-        log(Level.DEBUG, massage);
+        log(Levels.DEBUG, massage);
     }
 
     public void debug(String template, Object... args) {
-        log(Level.DEBUG, template, args);
+        log(Levels.DEBUG, template, args);
     }
 
     public void info(String massage) {
-        log(Level.INFO, massage);
+        log(Levels.INFO, massage);
     }
 
     public void info(String template, Object... args) {
-        log(Level.INFO, template, args);
+        log(Levels.INFO, template, args);
     }
 
     public void warning(String massage) {
-        log(Level.WARNING, massage);
+        log(Levels.WARNING, massage);
     }
 
     private void warning(String template, Object... args) {
-        log(Level.WARNING, template, args);
+        log(Levels.WARNING, template, args);
     }
 
     public void error(String massage) {
-        log(Level.ERROR, massage);
+        log(Levels.ERROR, massage);
     }
 
     public void error(String template, Object... args) {
-        log(Level.ERROR, template, args);
+        log(Levels.ERROR, template, args);
     }
 
-    public void log(Level level, String massage) {
+    public void log(Levels level, String massage) {
         if (getLevel().ordinal() > level.ordinal()) {
             return;
         }
@@ -85,7 +85,7 @@ public class Logger {
         System.out.println(result);
     }
 
-    public void log(Level level, String template, Object... args) {
+    public void log(Levels level, String template, Object... args) {
         log(level, String.format(template, args));
     }
 }
