@@ -14,7 +14,7 @@ public class Task04 {
                 return (float)a * b;
         }
 
-        return 0;
+        return 0.f;
     }
 
     public static void main(String[] args) {
