@@ -5,6 +5,13 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+enum Level {
+    DEBUG,
+    INFO,
+    WARNING,
+    ERROR
+}
+
 public class Logger {
     String name;
     Level level;
@@ -16,6 +23,8 @@ public class Logger {
     }
 
     public void log(Level level, String message) {
+        if(this.level != null && level.ordinal() < this.level.ordinal())
+            return;
         Date date = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy.MM.d");
         SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm:ss");
@@ -32,6 +41,14 @@ public class Logger {
         log(lvl, String.format(template, args));
     }
 
+    public static Logger getLogger(String logName) {
+        if (logs.containsKey(logName))
+            return logs.get(logName);
+        Logger logger = new Logger(logName);
+        logs.put(logName, logger);
+        return logger;
+    }
+
     public Level getLevel() {
         return level;
     }
@@ -42,12 +59,6 @@ public class Logger {
 
     public String getName() {
         return name;
-    }
-
-    public static Logger getLogger(String logName) {
-        if (logs.containsKey(logName))
-            return logs.get(logName);
-        throw new IllegalArgumentException("Logger с таким именем не существует");
     }
 
     public void debug(String message) {
@@ -81,11 +92,4 @@ public class Logger {
     public void error(String template, Object... args) {
         log(Level.ERROR, String.format(template, args));
     }
-}
-
-enum Level {
-    DEBUG,
-    INFO,
-    WARNING,
-    ERROR
 }
