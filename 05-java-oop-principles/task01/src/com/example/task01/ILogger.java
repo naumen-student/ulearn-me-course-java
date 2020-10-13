@@ -10,16 +10,16 @@ public abstract class ILogger {
         this.name=name;
     }
 
-    public String GetName ()
+    public String getName ()
     {
         return name;
     }
 
-    public int GetLevel() {
+    public int getLevel() {
         return level;
     }
 
-    public void SetLevel(int level)
+    public void setLevel(int level)
     {
         if (level>3)
             throw  new UnsupportedOperationException("level"+level+" is invalid");

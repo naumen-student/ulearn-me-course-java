@@ -84,16 +84,16 @@ public class Logger extends ILogger {
     }
 
     public void setLevel(int level){
-        this.SetLevel(level);
+        super.setLevel(level);
     }
 
     public int getLevel(){
-        return this.GetLevel();
+        return super.getLevel();
     }
 
     public  String getName()
     {
-        return this.GetName();
+        return super.getName();
     }
 
     public  void log(int logLvl, String message)
