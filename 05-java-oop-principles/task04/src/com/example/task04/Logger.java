@@ -86,21 +86,21 @@ public class Logger {
         log(Levels.ERROR, template, args);
     }
 
-    public void log(Levels level, String message) {
-        Date dateNow = new Date();
-        SimpleDateFormat formatForDate = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");
-        String template = "[%s] %s %s - %s";
-        log(level, template, level, formatForDate.format(dateNow), name, message);
-    }
-
-    public void log(Levels level, String template, Object... args) {
+    public void log(Levels level, String massage) {
         if (this.level.ordinal() > level.ordinal()) {
             return;
         }
         setLevel(level);
-        String message = String.format(template, args);
+        Date dateNow = new Date();
+        SimpleDateFormat formatForDate = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");
+        String template = "[%s] %s %s - %s";
+        String message = String.format(template, level, formatForDate.format(dateNow), name, massage);
         for (MessageHandler messageHandler : handlers) {
             messageHandler.handleMassage(message);
         }
+    }
+
+    public void log(Levels level, String template, Object... args) {
+        log(level, String.format(template, args));
     }
 }
