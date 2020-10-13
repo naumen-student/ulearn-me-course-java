@@ -14,7 +14,7 @@ public class MemoryHandler implements MessageHandler {
     }
 
     @Override
-    public void handleMassage(String message) {
+    public void handleMessage(String message) {
         buffer.add(message);
         if (buffer.size() >= capacity) {
             handle();
@@ -23,7 +23,7 @@ public class MemoryHandler implements MessageHandler {
 
     public void handle() {
         for (String message : buffer) {
-            messageHandler.handleMassage(message);
+            messageHandler.handleMessage(message);
         }
         buffer.clear();
     }

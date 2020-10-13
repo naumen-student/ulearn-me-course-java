@@ -12,7 +12,7 @@ public class FileHandler implements MessageHandler {
     }
 
     @Override
-    public void handleMassage(String message) {
+    public void handleMessage(String message) {
         try (FileWriter fileWriter = new FileWriter(path, true)) {
             fileWriter.write(message);
             fileWriter.flush();

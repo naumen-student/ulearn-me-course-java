@@ -16,9 +16,9 @@ public class RotationFileHandler implements MessageHandler {
     }
 
     @Override
-    public void handleMassage(String message) {
+    public void handleMessage(String message) {
         String timeNow = LocalDateTime.now().truncatedTo(chronoUnit).format(DateTimeFormatter.ofPattern("yyyy_MM_dd_hh_mm"));
         FileHandler fileHandler = new FileHandler(MessageFormat.format("{0}_{1}.txt", path, timeNow));
-        fileHandler.handleMassage(message);
+        fileHandler.handleMessage(message);
     }
 }

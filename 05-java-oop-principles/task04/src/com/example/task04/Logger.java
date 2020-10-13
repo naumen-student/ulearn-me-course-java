@@ -86,7 +86,7 @@ public class Logger {
         log(Levels.ERROR, template, args);
     }
 
-    public void log(Levels level, String massage) {
+    public void log(Levels level, String message) {
         if (this.level.ordinal() > level.ordinal()) {
             return;
         }
@@ -94,9 +94,9 @@ public class Logger {
         Date dateNow = new Date();
         SimpleDateFormat formatForDate = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");
         String template = "[%s] %s %s - %s";
-        String message = String.format(template, level, formatForDate.format(dateNow), name, massage);
+        String result = String.format(template, level, formatForDate.format(dateNow), name, message);
         for (MessageHandler messageHandler : handlers) {
-            messageHandler.handleMassage(message);
+            messageHandler.handleMessage(result);
         }
     }
 
