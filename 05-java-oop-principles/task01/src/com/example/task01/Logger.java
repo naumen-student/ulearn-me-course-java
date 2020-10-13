@@ -74,7 +74,7 @@ public class Logger {
     }
 
     public void log(Levels level, String massage) {
-        if (getLevel().ordinal() > level.ordinal()) {
+        if (this.level.ordinal() > level.ordinal()) {
             return;
         }
         setLevel(level);
