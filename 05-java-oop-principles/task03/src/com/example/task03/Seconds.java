@@ -1,28 +1,30 @@
 package com.example.task03;
 
-/**
- * Интервал в секундах
- */
 public class Seconds implements TimeUnit {
 
-    private final long amount;
+    private final long num;
 
-    public Seconds(long amount) {
-        this.amount = amount;
+    public Seconds(long num) {
+        this.num = num;
     }
 
     @Override
     public long toMillis() {
-        return amount * 1000;
+        return num * 1000;
     }
 
     @Override
     public long toSeconds() {
-        return amount;
+        return num;
     }
 
     @Override
     public long toMinutes() {
-        return Math.round(amount / 60);
+        return Math.round((double) num / 60);
+    }
+
+    @Override
+    public long getHours() {
+        return Math.round((double) num / 60 / 60);
     }
 }
