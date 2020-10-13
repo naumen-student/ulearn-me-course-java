@@ -1,19 +1,31 @@
 package com.example.task01;
+/**
+ * Класс точки на плоскости
+ */
+public class Point {
+    int x;
+    int y;
+    private int x;
+    private int y;
 
-public class Task01Main {
-    public static void main(String[] args) {
-        Point p1 = new Point();
-        p1.x = 10;
-        p1.y = 45;
-        Point p2 = new Point();
-        p2.x = 78;
-        p2.y = 12;
+    public Point(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
 
-        System.out.println("Point 1:");
-        p1.print();
-        System.out.println(p1);
-        System.out.println("Point 2:");
-        p2.print();
-        System.out.println(p2);
+        void flip() {
+            int tmp = x;
+            x = -y;
+            y = -tmp;
+        }
+
+        double distance(Point point) {
+            int dx = point.x - x;
+            int dy = point.y - y;
+            return Math.sqrt(dx * dx + dy * dy);
+        }
+
+        public String toString() {
+            return String.format("(%d, %d)", x, y);
+        }
     }
-}
