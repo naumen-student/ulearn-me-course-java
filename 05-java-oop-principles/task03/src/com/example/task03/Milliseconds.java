@@ -6,11 +6,13 @@ public class Milliseconds implements TimeUnit {
 
     public Milliseconds(long amount) {
         this.amount = amount;
+
     }
 
     @Override
     public long toMillis() {
         return amount;
+
     }
 
     @Override

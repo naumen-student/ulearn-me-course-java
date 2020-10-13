@@ -6,16 +6,19 @@ public class Seconds implements TimeUnit {
 
     public Seconds(long amount) {
         this.amount = amount;
+
     }
 
     @Override
     public long toMillis() {
         return amount * 1000;
+
     }
 
     @Override
     public long toSeconds() {
         return amount;
+
     }
 
     @Override

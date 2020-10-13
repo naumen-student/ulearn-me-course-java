@@ -5,6 +5,7 @@ public class TimeUnitUtils {
     public static Milliseconds toMillis(Seconds seconds) {
         return new Milliseconds(seconds.toMillis());
     }
+
     public static Minutes toMinutes(Seconds seconds) {
         return new Minutes(seconds.toMinutes());
     }
