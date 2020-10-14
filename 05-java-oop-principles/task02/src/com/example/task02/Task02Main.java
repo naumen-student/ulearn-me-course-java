@@ -1,5 +1,24 @@
 package com.example.task02;
 
+class DiscountBill extends Bill{
+    public double discount;
+
+    public double getDiscount(){
+        return discount * 100;
+    }
+
+    public double getAbsoluteValueDiscount(){
+        return Math.abs(super.getPrice() - getPrice());
+    }
+
+    public long getPrice(){
+        long price = super.getPrice();
+        return super.getPrice() - price * (long)discount;
+    }
+
+}
+
+
 public class Task02Main {
 
     private static final Item ITEM1 = new Item("Товар 1", 10);
