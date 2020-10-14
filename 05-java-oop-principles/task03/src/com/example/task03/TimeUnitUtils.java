@@ -1,8 +1,5 @@
 package com.example.task03;
 
-/**
- * Класс, в котором собраны методы для работы с {@link TimeUnit}
- */
 public class TimeUnitUtils {
 
     /**
@@ -15,13 +12,15 @@ public class TimeUnitUtils {
         return new Milliseconds(seconds.toMillis());
     }
 
-    /**
-     * Конвертирует интервал в миллисекундах в интервал в секундах
-     *
-     * @param millis интервал в миллисекундах
-     * @return интервал в секундах
-     */
     public static Seconds toSeconds(Milliseconds millis) {
         return new Seconds(millis.toSeconds());
+    }
+
+    public static Minutes toMinutes(Minutes minutes) {
+        return new Minutes(minutes.toMinutes());
+    }
+
+    public static Hours toHours(Hours hours) {
+        return new Hours(hours.toHours());
     }
 }
