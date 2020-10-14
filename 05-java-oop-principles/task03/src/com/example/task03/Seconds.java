@@ -9,7 +9,7 @@ public class Seconds implements TimeUnit {
 
     public Seconds(long seconds) {
         if (seconds < 0)
-            throw new IllegalArgumentException("Seconds cannot be less than 0");
+            throw new IllegalArgumentException("Value cannot be less than 0");
         this.seconds = seconds;
     }
 
@@ -30,6 +30,6 @@ public class Seconds implements TimeUnit {
 
     @Override
     public long getHours() {
-        return toMinutes() / 60;
+        return Math.round(toMinutes() / 60.0);
     }
 }

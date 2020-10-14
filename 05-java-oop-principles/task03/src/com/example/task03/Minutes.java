@@ -5,7 +5,7 @@ public class Minutes implements TimeUnit {
 
     public Minutes(long minutes) {
         if (minutes < 0)
-            throw new IllegalArgumentException("Minutes cannot be less than 0");
+            throw new IllegalArgumentException("Value cannot be less than 0");
         this.minutes = minutes;
     }
 

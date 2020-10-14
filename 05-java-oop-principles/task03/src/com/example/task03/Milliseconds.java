@@ -9,7 +9,7 @@ public class Milliseconds implements TimeUnit {
 
     public Milliseconds(long milliseconds) {
         if (milliseconds < 0)
-            throw new IllegalArgumentException("Milliseconds cannot be less than 0");
+            throw new IllegalArgumentException("Value cannot be less than 0");
         this.milliseconds = milliseconds;
     }
 
@@ -25,11 +25,11 @@ public class Milliseconds implements TimeUnit {
 
     @Override
     public long toMinutes() {
-        return toSeconds() * 60;
+        return Math.round(milliseconds / 1000.0 / 60.0);
     }
 
     @Override
     public long getHours() {
-        return 0;
+        return Math.round(toMinutes() / 60.0);
     }
 }
