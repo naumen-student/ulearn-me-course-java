@@ -14,4 +14,5 @@ public class Task02Main {
             throw new IllegalArgumentException("monthNumber -5 is invalid, month number should be between 1..12");
         return seasons.get(monthNumber == 12 ? 0 : monthNumber / 3);
     }
+
 }
