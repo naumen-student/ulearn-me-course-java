@@ -1,16 +1,17 @@
 package com.example.task02;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Task02Main {
 
     public static void main(String[] args) {
-        //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
-        System.out.println(getSeason(-5));
-         */
     }
 
     static String getSeason(int monthNumber) {
-        return "";//todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        List<String> seasons = Arrays.asList("зима", "весна", "лето", "осень");
+        if (monthNumber < 0 || monthNumber > 12)
+            throw new IllegalArgumentException("monthNumber -5 is invalid, month number should be between 1..12");
+        return seasons.get(monthNumber == 12 ? 0 : monthNumber / 3);
     }
 }
