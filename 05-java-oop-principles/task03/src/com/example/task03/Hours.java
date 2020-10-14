@@ -9,12 +9,12 @@ public class Hours implements TimeUnit {
 
     @Override
     public long toMillis() {
-        return amount * 120 * 1000;
+        return amount * 60 * 60 * 1000;
     }
 
     @Override
     public long toSeconds() {
-        return amount * 120;
+        return amount * 60 * 60;
     }
 
     @Override
@@ -24,10 +24,6 @@ public class Hours implements TimeUnit {
 
     @Override
     public long getHours() {
-        return 0;
-    }
-
-    public long toHours() {
         return amount;
     }
 }
