@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Logger extends ILogger {
-    private final ArrayList<MessageHandler> handlers = new ArrayList();
+    private final ArrayList<MessageHandler> handlers = new ArrayList<MessageHandler>();
 
     public Logger(String name) {
         super(name);

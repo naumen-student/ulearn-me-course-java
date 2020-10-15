@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MemoryHandler extends MessageHandler {
+public class MemoryHandler implements MessageHandler {
 
     private final int maxLength;
     private final List<String> messagesBuffer = new ArrayList();

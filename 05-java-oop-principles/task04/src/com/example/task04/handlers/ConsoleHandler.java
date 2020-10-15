@@ -1,6 +1,6 @@
 package com.example.task04.handlers;
 
-public class ConsoleHandler extends MessageHandler
+public class ConsoleHandler implements MessageHandler
 {
 
     public void execute(String message) {

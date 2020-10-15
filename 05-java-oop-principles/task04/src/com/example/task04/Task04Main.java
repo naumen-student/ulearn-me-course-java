@@ -1,5 +1,6 @@
 package com.example.task04;
 
+import com.example.task04.enums.LogLevel;
 import com.example.task04.handlers.ConsoleHandler;
 import com.example.task04.handlers.MemoryHandler;
 
@@ -14,5 +15,13 @@ public class Task04Main {
         myLogger.debug("123");
         System.out.println("secondLogging");
         myLogger.debug("456");
+
+
+        myLogger.removeAllHandlers();
+        myLogger.setLevel(LogLevel.Error);
+        myLogger.addHandler(new ConsoleHandler());
+
+        myLogger.debug("IDebug");
+        myLogger.error("IError");
     }
 }

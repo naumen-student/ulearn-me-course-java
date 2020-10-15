@@ -5,14 +5,13 @@ import com.example.task04.enums.LogLevel;
 import java.util.HashMap;
 
 public abstract class ILogger {
-    public static final String format = "[%s] %s %s %s - %s";
     private static final HashMap<String, Logger> AllLoggers = new HashMap();
     private final String name;
     private LogLevel level;
 
     public static Logger getLogger(String name) {
         if (AllLoggers.containsKey(name)) {
-            return (Logger)AllLoggers.get(name);
+            return AllLoggers.get(name);
         } else {
             Logger current = new Logger(name);
             AllLoggers.put(name, current);

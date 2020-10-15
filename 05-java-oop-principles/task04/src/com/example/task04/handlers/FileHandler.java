@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class FileHandler extends MessageHandler
+public class FileHandler implements MessageHandler
 {
     private String path;
 
