@@ -59,8 +59,6 @@ public class Logger {
     }
 
     public String log(Level level, String message) {
-        LocalDate date = LocalDate.now();
-        LocalTime time = LocalTime.now();
         return String.format(" [%s] %d %s - %s", new SimpleDateFormat("yyyy.MM.dd hh:mm:ss").format(new Date()), this.name, message);
     }
 
