@@ -1,13 +1,14 @@
 package com.example.task14;
 
+import java.io.Console;
+
 public class Task14 {
 
 
     public static int reverse(int value) {
 
-        // TODO напишите здесь код, переставляющий цифры числа в обратном порядке
-
-        return 0;
+        String out = new StringBuilder(String.valueOf(value)).reverse().toString();
+        return Integer.parseInt(out);
     }
 
     public static void main(String[] args) {
