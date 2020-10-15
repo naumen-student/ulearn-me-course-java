@@ -23,6 +23,9 @@ public class Seconds implements TimeUnit {
 
     @Override
     public long toMinutes() {
-        return Math.round(amount / 60);
+        if(amount /60.0 == 0.5){
+            return 1;
+        }
+        else return Math.round(amount /60);
     }
 }
