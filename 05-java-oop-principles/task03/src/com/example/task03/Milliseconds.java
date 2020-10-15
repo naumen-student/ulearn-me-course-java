@@ -28,6 +28,6 @@ public class Milliseconds implements TimeUnit {
 
     @Override
     public long toHours() {
-        return Math.round(amount / 1000d / 120d);
+        return Math.round(amount / 1000d / 3600d);
     }
 }
