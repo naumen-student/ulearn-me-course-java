@@ -2,24 +2,24 @@ package com.example.task04;
 
 import jdk.nashorn.internal.runtime.regexp.joni.exception.ValueException;
 
-import java.text.MessageFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Logger {
-    private final String name;
-    private static final ArrayList<String> levels = new ArrayList<>(
-            Arrays.asList(
-                    "DEBUG",
-                    "INFO",
-                    "WARNING",
-                    "ERROR"));
+    private enum Level {
+        DEBUG,
+        INFO,
+        WARNING,
+        ERROR
+    }
 
-    private String level;
+    private final String name;
+    private Level level;
+
     private static final ArrayList<Logger> copies = new ArrayList<>();
-    private ArrayList<MessageHandler> handlers = new ArrayList<>();
+    private final ArrayList<MessageHandler> handlers = new ArrayList<>();
 
     private Logger(String name) {
         this.name = name;
@@ -40,22 +40,23 @@ public class Logger {
         return new Logger(name);
     }
 
-    public void setLevel(String level) {
-        if (levels.contains(level)) {
-            this.level = level;
-            return;
+    public void setLevel(String level_name) {
+        for (Level level: Level.values()){
+            if (level.name().equals(level_name)) {
+                this.level = level;
+            }
         }
 
         throw new ValueException(String.format("Level %s doesn't exist!", level));
     }
 
     public String getLevel() {
-        return level;
+        return level.name();
     }
 
     public void addHandler(MessageHandler handler) {
         if(!handlers.contains(handler)) {
-            handlers.add((handler));
+            handlers.add(handler);
         }
     }
 
@@ -96,7 +97,7 @@ public class Logger {
     }
 
     private void log(String level, String message) {
-        if(levels.indexOf(level) >= levels.indexOf(this.level)) {
+        if(this.level.ordinal() <= Level.valueOf(level).ordinal()) {
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy.MM.dd HH:mm:ss");
             LocalDateTime now = LocalDateTime.now();
             for (MessageHandler handler: handlers) {
