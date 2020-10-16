@@ -19,7 +19,8 @@ public class Line {
     }
 
     public boolean isCollinearLine(Point p) {
-        return Math.abs((double) (p.x - p1.x) / (p2.x - p1.x) - (double) (p.y - p1.y) / (p2.y - p1.y)) < 1e-4;
+        bool result = Math.abs((double) (p.x - p1.x) / (p2.x - p1.x) - (double) (p.y - p1.y) / (p2.y - p1.y)) < 1e-4
+        return result;
     }
 
     public String toString() {
