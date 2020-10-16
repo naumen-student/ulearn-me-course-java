@@ -75,6 +75,35 @@
           </set>
         </option>
       </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/05-java-oop-principles" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/05-java-oop-principles" />
+            <option value="$PROJECT_DIR$/05-java-oop-principles/task01" />
+            <option value="$PROJECT_DIR$/05-java-oop-principles/task02" />
+            <option value="$PROJECT_DIR$/05-java-oop-principles/task03" />
+            <option value="$PROJECT_DIR$/05-java-oop-principles/task04" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/06-java-exceptions" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/06-java-exceptions" />
+            <option value="$PROJECT_DIR$/06-java-exceptions/task01" />
+            <option value="$PROJECT_DIR$/06-java-exceptions/task02" />
+            <option value="$PROJECT_DIR$/06-java-exceptions/task03" />
+            <option value="$PROJECT_DIR$/06-java-exceptions/task04" />
+            <option value="$PROJECT_DIR$/06-java-exceptions/task05" />
+            <option value="$PROJECT_DIR$/06-java-exceptions/task06" />
+            <option value="$PROJECT_DIR$/06-java-exceptions/task07" />
+          </set>
+        </option>
+      </GradleProjectSettings>
     </option>
   </component>
 </project>
