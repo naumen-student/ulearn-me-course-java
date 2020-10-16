@@ -2,7 +2,8 @@ package com.example.task05;
 
 public class Task05Main {
     public static void main(String[] args) {
-        Point[] points = {
+        Point[] points;
+        points = new Point[]{
                 new Point(0, 0),
                 new Point(0, 1),
                 new Point(1, 1)

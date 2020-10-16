@@ -19,7 +19,7 @@ public class PolygonalLine {
 
     public double getLength() {
         double length = 0;
-        for (int i = 0; i < points.size() - 1; i++)
+        for (int i = points.size() - 2; i >= 0; i--)
             length += points.get(i).getLength(points.get(i + 1));
         return length;
     }

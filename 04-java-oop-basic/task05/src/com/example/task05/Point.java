@@ -19,8 +19,10 @@ public class Point {
     }
 
     public double getLength(Point point) {
-        double lenghtX = this.x - point.x;
-        double lenghtY = this.y - point.y;
+        double lenghtX;
+        lenghtX = this.x - point.x;
+        double lenghtY;
+        lenghtY = this.y - point.y;
         return Math.sqrt(lenghtX * lenghtX + lenghtY * lenghtY);
     }
 
