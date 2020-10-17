@@ -1,43 +1,9 @@
 package com.example.task04;
 
-class Point {
-    int x;
-    int y;
+ class Line {
 
-    public Point(){
-        x = 0;
-        y = 0;
-    }
-
-    public Point(int x, int y){
-        this.x = x;
-        this.y = y;
-    }
-
-    double distance(Point point){
-        int dX = point.x - x;
-        int dY = point.y - y;
-        return Math.sqrt(dX * dX + dY * dY);
-    }
-
-    public String toString() {
-        return String.format("(%d, %d)", x, y);
-    }
-
-    void print() {
-        String pointToString = String.format("(%d, %d)", x, y);
-        System.out.println(pointToString);
-    }
-}
-
-public class Line {
-    private final Point p1, p2;
-
-
-    public Line () {
-        p1 = new Point();
-        p2 = new Point();
-    }
+    private Point p1;
+    private Point p2;
 
     public Line(Point p1, Point p2) {
         this.p1 = p1;
@@ -52,13 +18,35 @@ public class Line {
         return p2;
     }
 
-    public String toString () {
-        return String.format("P1: %s, P2 %s", p1, p2);
+    public boolean isCollinearLine(Point p) {
+        return Math.abs((double) (p.x - p1.x) / (p2.x - p1.x) - (double) (p.y - p1.y) / (p2.y - p1.y)) < 1e-4;
     }
 
-    public boolean isCollinearLine(Point p) {
-        return  this.p1.x * (this.p2.y - p.y) +
-                this.p2.x * (p.y - this.p1.y) +
-                p.x * (this.p1.y - this.p2.y) == 0;
+    public String toString() {
+        return String.format("Endpoint1: p1(%d, %d); Endpoint2: p2(%d, %d)", p1.x, p1.y, p2.x, p2.y);
+    }
+}
+
+ class Point {
+
+    final int x;
+    final int y;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    void print() {
+        String pointToString = String.format("(%d, %d)", x, y);
+        System.out.println(pointToString);
+    }
+
+    double distance(Point point) {
+        return Math.sqrt((x - point.x) * (x - point.x) + (y - point.y) * (y - point.y));
+    }
+
+    public String toString() {
+        return String.format("(%d, %d)", x, y);
     }
 }
