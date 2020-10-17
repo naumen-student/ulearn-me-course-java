@@ -4,9 +4,9 @@ public class DiscountBill extends Bill
 {
     private final double discountInPercent;
 
-    public DiscountBill(double discountInPcts)
+    public DiscountBill(double discountInPercent)
     {
-        this.discountInPercent = discountInPcts;
+        this.discountInPercent = discountInPercent;
     }
 
     public double getDiscountInPercent()
