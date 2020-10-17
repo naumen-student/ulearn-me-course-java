@@ -1,7 +1,7 @@
 package com.example.task02;
 
 public class DiscountBill extends Bill{
-    private double discount;
+    private final double discount;
 
     public DiscountBill(double discountPercent){
         this.discount = discountPercent;
