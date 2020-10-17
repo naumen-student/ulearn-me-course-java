@@ -19,9 +19,9 @@ class Point
 
 class Line
 {
-    private Point p1;
-    private Point p2;
-    private double length;
+    private final Point p1;
+    private final Point p2;
+    private final double length;
 
     public Line(Point p1, Point p2)
     {
@@ -34,25 +34,3 @@ class Line
     {
         return p1;
     }
-
-    public Point getP2()
-    {
-        return p2;
-    }
-
-    public String toString()
-    {
-        return String.format("[%str, %str] - length: %str", p1.toString(), p2.toString(), length);
-    }
-
-    public boolean isCollinearLine(Point p)
-    {
-        int dx1 = p2.x - p1.x;
-        int dy1 = p2.y - p1.y;
-        int dx = p.x - p1.x;
-        int dy = p.y - p1.y;
-        int s = dx1 * dy - dx * dy1;
-        return s == 0;
-    }
-}
-
