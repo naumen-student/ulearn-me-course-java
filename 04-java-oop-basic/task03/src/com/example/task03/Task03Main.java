@@ -1,34 +1,51 @@
 package com.example.task03;
 
-public class Complex {
-    protected double real, imag;
+ class Complex {
+    private double re, im;
 
     public Complex() { }
 
-    public Complex(double real, double imag) {
-        this.real = real;
-        this.imag = imag;
+    public Complex(double realNum, double imNum) {
+        this.im = imNum;
+        this.re = realNum;
+    }
+
+    public Complex add(Complex complexNum) {
+        return new Complex(this.re + complexNum.re, this.im + complexNum.im);
+    }
+
+    public Complex multiply(Complex complexNum) {
+        return new Complex(re * complexNum.re - im * complexNum.im,
+                re * complexNum.im + complexNum.re * im);
+    }
+
+    public double getIm() {
+        return this.im;
+    }
+
+    public void setIm(double im) {
+        this.im = im;
+    }
+
+    public double getRe() {
+        return this.re;
+    }
+
+    public void setRe(double re) {
+        this.re = re;
     }
 
     public String toString() {
-        if (imag >= 0)
-            return real + "+" + imag + "i";
-        else
-            return real + "-" + -imag + "i";
+        return String.format("%s + %si", re, im);
     }
+}
 
-    public Complex Add(Complex complexPart) {
-        Complex sum = new Complex();
-        sum.real = real + complexPart.real;
-        sum.imag = imag + complexPart.imag;
-        return (sum);
+public class Task03Main {
+    public static void main(String[] args) {
+
+        Complex a = new Complex(1, 2);
+        Complex b = new Complex(3, 5);
+        Complex c = a.add(b);
+        System.out.println(c);
     }
-
-    public Complex Mult(Complex complexPart) {
-        Complex res = new Complex();
-        res.real = real * complexPart.real - imag * complexPart.imag;
-        res.imag = imag * complexPart.real + real * complexPart.imag;
-        return (res);
-    }
-
 }
