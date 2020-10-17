@@ -16,7 +16,7 @@ public class FileHandler implements MessageHandler{
 
     @Override
     public void log(Level severityLevel, String message) {
-        try(FileWriter writer = new FileWriter(filePath, true)) {
+        try(FileWriter writer = new FileWriter(filePath, false)) {
             writer.write(String.format("[%s] %s %s - %s%n", severityLevel.toString()
                     , new SimpleDateFormat("yyyy.MM.dd hh:mm:ss").format(new Date()), name, message));
             writer.flush();

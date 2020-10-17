@@ -1,6 +1,5 @@
 package com.example.task04;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
@@ -21,7 +20,7 @@ public class RotationFileHandler implements MessageHandler{
     @Override
     public void log(Level severityLevel, String message) {
         try {
-            new FileHandler(name, String.format("%s%s%s", filePath, DateTimeFormatter.ofPattern("yyyy.MM.dd hh:mm:ss")
+            new FileHandler(name, String.format("%s%s%s", filePath, DateTimeFormatter.ofPattern("yyyy.MM.dd hh.mm.ss")
                     .format(LocalDateTime.now()
                             .truncatedTo(rotationInterval)), fileExtension)).log(severityLevel, message);
         }
