@@ -1,5 +1,9 @@
 package com.example.task01;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Task01Main {
     public static void main(String[] args) {
         //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
@@ -10,6 +14,8 @@ public class Task01Main {
     }
 
     static void codeWithNPE() {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        HashMap<String, Integer> map = null;
+        map.put("", new Integer(1));
+        //throw new NullPointerException();
     }
 }
