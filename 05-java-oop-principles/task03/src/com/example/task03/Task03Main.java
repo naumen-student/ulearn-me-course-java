@@ -1,7 +1,5 @@
 package com.example.task03;
 
-import java.sql.Time;
-
 public class Task03Main {
     public static void main(String[] args) {
         TimeUnit unit1 = new Seconds(4);
