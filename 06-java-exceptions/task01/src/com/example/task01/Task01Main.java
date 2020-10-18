@@ -9,7 +9,7 @@ public class Task01Main {
          */
     }
 
-    static void codeWithNPE() throws NullPointerException {
-        throw new NullPointerException();
+    static void codeWithNPE() {
+        zz
     }
 }
