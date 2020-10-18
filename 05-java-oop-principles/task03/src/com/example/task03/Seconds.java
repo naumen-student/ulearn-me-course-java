@@ -28,6 +28,6 @@ public class Seconds implements TimeUnit {
 
     @Override
     public long toHours() {
-        return Math.round(amount /  (double) (60 * 60));
+        return Math.round(amount / (double) (60 * 60));
     }
 }
