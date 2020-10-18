@@ -9,7 +9,7 @@ public class Task01Main {
          */
     }
 
-    static void codeWithNPE() {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+    static void codeWithNPE() throws NullPointerException {
+        throw new NullPointerException();
     }
 }
