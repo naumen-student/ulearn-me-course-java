@@ -11,10 +11,12 @@ public class Task05Main {
         try {
             String s = readFile(pathToFile);
             System.out.println(s);
-        } catch (FileNotFoundException e) {
-            System.out.println(String.format("файл %s не найден", pathToFile));
-        } catch (IOException e) {
-            System.out.println(String.format("произошла ошибка при чтении файла %s", pathToFile));
+        }
+        catch (FileNotFoundException e) {
+            System.out.printf("файл \"%s\" не найден", pathToFile);
+        }
+        catch (Exception e) {
+            System.out.printf("произошла ошибка при чтении файла \n%s", pathToFile);
         }
     }
 
