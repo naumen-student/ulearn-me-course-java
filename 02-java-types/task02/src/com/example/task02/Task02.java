@@ -3,19 +3,30 @@ package com.example.task02;
 public class Task02 {
 
     public static String solution(String input) {
+        if (isByte(input))
+            return "byte";
+        else if(isShort(input))
+            return "short";
+        else if (isInt(input))
+            return "int";
+        return "long";
+    }
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
+    public static boolean isShort(String input){
+        return Long.parseLong(input) <= Short.MAX_VALUE && Long.parseLong(input) >= Short.MIN_VALUE;
+    }
 
-        return "";
+    public static boolean isByte(String input){
+        return Long.parseLong(input) <= Byte.MAX_VALUE && Long.parseLong(input) >= Byte.MIN_VALUE;
+    }
+    
+    public static boolean isInt(String input){
+        return Long.parseLong(input) <= Integer.MAX_VALUE && Long.parseLong(input) >= Integer.MIN_VALUE;
     }
 
     public static void main(String[] args) {
-        // Здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
-        String result = solution("12345");
+        String result = solution("-127");
         System.out.println(result);
-         */
     }
 
 }
