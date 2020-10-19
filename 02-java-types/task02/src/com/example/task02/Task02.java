@@ -3,19 +3,58 @@ package com.example.task02;
 public class Task02 {
 
     public static String solution(String input) {
+        String s;
+        if (tryParseByte(input))
+            s = "byte";
+        else if (tryParseShort(input))
+            s = "short";
+        else if (tryParseInt(input))
+            s = "int";
+        else if (tryParseLong(input))
+            s = "long";
+        else s = "Wrong input. ";
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
+        return s;
+    }
 
-        return "";
+    static boolean tryParseLong(String value) {
+        try {
+            Long.parseLong(value.trim());
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+
+    static boolean tryParseShort(String value) {
+        try {
+            Short.parseShort(value.trim());
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+
+    static boolean tryParseInt(String value) {
+        try {
+            Integer.parseInt(value.trim());
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+
+    static boolean tryParseByte(String value) {
+        try {
+            Byte.parseByte(value.trim());
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 
     public static void main(String[] args) {
-        // Здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
         String result = solution("12345");
         System.out.println(result);
-         */
     }
-
 }
