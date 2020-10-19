@@ -13,7 +13,7 @@ public class Task05Main {
             System.out.println(s);
         } catch (FileNotFoundException e) {
             System.out.printf("файл \"%s\" не найден\n", pathToFile);
-        } catch (IOException e) {
+        } catch (Exception e) {
             System.out.printf("произошла ошибка при чтении файла %s\n", pathToFile);
         }
     }
