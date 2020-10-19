@@ -15,7 +15,7 @@ public class Task05Main {
         catch (FileNotFoundException e) {
             System.out.printf("файл \"%s\" не найден", pathToFile);
         }
-        catch (Exception e) {
+        catch (IOException e) {
             System.out.printf("произошла ошибка при чтении файла %s", pathToFile);
         }
     }
