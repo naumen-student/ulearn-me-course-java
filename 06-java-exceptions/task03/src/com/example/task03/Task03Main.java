@@ -9,6 +9,5 @@ public class Task03Main {
 
     public static void throwCheckedException() throws IOException {
         throw new IOException() ;
-
     }
 }
