@@ -12,7 +12,6 @@ public class Task07Main {
     public Processor processor;
 
     public String getExceptionType() throws Exception {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
         try {
             processor.process();
         } catch (RuntimeException e) {
