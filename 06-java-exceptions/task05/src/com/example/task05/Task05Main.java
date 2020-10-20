@@ -16,7 +16,6 @@ public class Task05Main {
             System.out.printf("произошла ошибка при чтении файла \"%s\"\n", pathToFile);
         }
     }
-    }
 
     public static String readFile(String pathToFile) throws IOException {
         FileReader fileReader = new FileReader(pathToFile);
