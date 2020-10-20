@@ -13,8 +13,8 @@ public class Task03Main {
     }
 
     public static void throwCheckedException() throws IOException {
-        FileInputStream fis = null;
-        fis = new FileInputStream(new File(""));
-        fis.close();
+        FileInputStream fileI = null;
+        fileI = new FileInputStream(new File(""));
+        fileI.close();
     }
 }
