@@ -6,6 +6,6 @@ public class Task06Main {
     }
 
     void printMethodName() {
-        System.out.println(Thread.currentThread().getStackTrace()[2].getMethodName());
+        System.out.print(Thread.currentThread().getStackTrace()[2].getMethodName());
     }
 }
