@@ -1,4 +1,3 @@
-
  com.example.task04.MyException
 com/example/task04/Task04Main.java
  com.example.task04.Task04Main
