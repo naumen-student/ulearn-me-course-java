@@ -1,6 +1,7 @@
 package com.example.task05;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.text.MessageFormat;
@@ -12,9 +13,9 @@ public class Task05Main {
         try {
             String s = readFile(pathToFile);
             System.out.println(s);
-        } catch (IOException e) {
+        } catch (FileNotFoundException e) {
             System.out.println(MessageFormat.format("файл \"{0}\" не найден", pathToFile));
-        } catch (Exception e) {
+        } catch (IOException e) {
             System.out.println(MessageFormat.format("произошла ошибка при чтении файла \"{0}\"", pathToFile));
         }
     }
