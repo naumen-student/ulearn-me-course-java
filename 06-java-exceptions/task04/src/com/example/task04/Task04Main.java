@@ -4,7 +4,7 @@ public class Task04Main {
 
     public static void main(String[] args) {
 
-        System.out.println(getSeason(-1));
+        //System.out.println(getSeason(-1));
 
     }
 
