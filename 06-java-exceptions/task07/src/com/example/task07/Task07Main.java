@@ -13,9 +13,11 @@ public class Task07Main {
 
     public String getExceptionType() {
         //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
-        try {
+        try
+        {
             processor.process();
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             if (e instanceof RuntimeException)
                 return UNCHECKED;
             return CHECKED;
