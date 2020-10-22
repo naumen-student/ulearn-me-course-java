@@ -6,8 +6,4 @@ public class MyException extends IllegalArgumentException
     {
         super(message);
     }
-    @Override
-    public String getMessage() {
-        return super.getMessage();
-    }
 }
