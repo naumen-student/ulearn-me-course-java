@@ -22,6 +22,8 @@ public class RotationFileHandler implements MessageHandler{
         File file = new File(directory + interval + ".txt");
         file.createNewFile();
         FileWriter writer = new FileWriter(file);
-        writer.write(log + "/n");
+        writer.append(log).append("/n");
+        writer.flush();
+        writer.close();
     }
 }

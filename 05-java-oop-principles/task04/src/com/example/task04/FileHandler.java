@@ -16,6 +16,8 @@ public class FileHandler implements MessageHandler {
     @Override
     public void handleLog(String log) throws IOException {
         FileWriter writer = new FileWriter(file);
-        writer.write(log + "/n");
+        writer.append(log).append("/n");
+        writer.flush();
+        writer.close();
     }
 }
