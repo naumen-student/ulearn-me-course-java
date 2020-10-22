@@ -1,7 +1,6 @@
 package com.example.task01;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 
 enum Level {
@@ -29,7 +28,7 @@ public class Logger {
         log(Level.DEBUG, message);
     }
 
-    public void debug(String format, Object... args){
+    public void debug(String format, Object... args) {
         log(Level.DEBUG, format, args);
     }
 
@@ -57,13 +56,13 @@ public class Logger {
         log(Level.ERROR, format, args);
     }
 
-    public String log(Level level, String message) {
-        if(level.compareTo(this.level)>=0)
-         System.out.println(String.format(" [%s] %d %s - %s", new SimpleDateFormat("yyyy.MM.dd hh:mm:ss").format(new Date()), this.name, message));
+    public void log(Level level, String message) {
+        if (level.compareTo(this.level) >= 0)
+            System.out.println(String.format(" [%s] %d %s - %s", new SimpleDateFormat("yyyy.MM.dd hh:mm:ss").format(new Date()), this.name, message));
     }
 
     public void log(Level level, String format, Object... args) {
-       log(level, String.format(format, level.name(), args));
+        log(level, String.format(format, level.name(), args));
     }
 
     public Level getLevel() {
