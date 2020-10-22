@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-enum Level {
+enum Level  {
     DEBUG,
     INFO,
     WARNING,
