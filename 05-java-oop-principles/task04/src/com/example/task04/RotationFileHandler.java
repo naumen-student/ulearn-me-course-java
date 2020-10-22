@@ -18,7 +18,7 @@ public class RotationFileHandler implements MessageHandler {
     public void handle(String message) {
         LocalDateTime now = LocalDateTime.now().truncatedTo(rotation);
         try {
-            FileWriter fileWriter = new FileWriter(String.format("log %1$.txt", now), false);
+            FileWriter fileWriter = new FileWriter(String.format("log %s.txt", now), false);
             fileWriter.append(message + "\n");
             fileWriter.flush();
         } catch (IOException x) {
