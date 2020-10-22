@@ -27,45 +27,44 @@ public class Logger {
     }
 
     public void debug(String message) {
-        System.out.println(log(Level.DEBUG, message));
+        log(Level.DEBUG, message);
     }
 
-    public void debug(String format, Object... args) {
-        System.out.println(String.format(format, args));
+    public void debug(String format, Object... args){
+        log(Level.DEBUG, format, args);
     }
 
     public void info(String message) {
-        System.out.println(log(Level.INFO, message));
+        log(Level.INFO, message);
     }
 
     public void info(String format, Object... args) {
-        System.out.println(String.format(format, args));
+        log(Level.INFO, format, args);
     }
 
     public void warning(String message) {
-        System.out.println(log(Level.WARNING, message));
+        log(Level.WARNING, message);
     }
 
     public void warning(String format, Object... args) {
-        System.out.println(String.format(format, args));
+        log(Level.WARNING, format, args);
     }
 
     public void error(String message) {
-        System.out.println(log(Level.ERROR, message));
+        log(Level.ERROR, message);
     }
 
     public void error(String format, Object... args) {
-        System.out.println(String.format(format, args));
+        log(Level.ERROR, format, args);
     }
 
     public String log(Level level, String message) {
         if(level.compareTo(this.level)>=0)
-        return String.format(" [%s] %d %s - %s", new SimpleDateFormat("yyyy.MM.dd hh:mm:ss").format(new Date()), this.name, message);
-        return "";
+         System.out.println(String.format(" [%s] %d %s - %s", new SimpleDateFormat("yyyy.MM.dd hh:mm:ss").format(new Date()), this.name, message));
     }
 
-    public String log(Level level, String format, Object... args) {
-        return String.format(format, level.name(), args);
+    public void log(Level level, String format, Object... args) {
+       log(level, String.format(format, level.name(), args));
     }
 
     public Level getLevel() {
