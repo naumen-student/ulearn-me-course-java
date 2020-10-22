@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class MemoryHandler implements MessageHandler {
     private final long size;
     private final ArrayList<String> messages = new ArrayList<>();
-    private final  MessageHandler handler;
+    private final MessageHandler handler;
 
     public MemoryHandler(long size, MessageHandler handler) {
         this.size = size;

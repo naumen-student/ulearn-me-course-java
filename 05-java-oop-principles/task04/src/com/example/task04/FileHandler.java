@@ -7,7 +7,7 @@ public class FileHandler implements MessageHandler {
     private final String path;
 
     public FileHandler(String path) {
-        this.path  = path;
+        this.path = path;
     }
 
     @Override

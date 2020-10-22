@@ -7,7 +7,7 @@ import java.time.temporal.ChronoUnit;
 
 public class RotationFileHandler implements MessageHandler {
     String filePath;
-    ChronoUnit  rotation;
+    ChronoUnit rotation;
 
     public RotationFileHandler(String filepath, ChronoUnit rotation) throws IOException {
         this.filePath = filepath;

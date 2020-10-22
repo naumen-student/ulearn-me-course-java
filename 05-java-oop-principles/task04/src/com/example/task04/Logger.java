@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-enum Level  {
+enum Level {
     DEBUG,
     INFO,
     WARNING,
@@ -12,9 +12,9 @@ enum Level  {
 }
 
 public class Logger {
+    private final ArrayList<MessageHandler> handlers = new ArrayList<>();
     private Level level;
     private String name;
-    private final ArrayList<MessageHandler> handlers = new ArrayList<>();
 
     public static Logger getLogger(String name) {
         Logger logger = new Logger();
