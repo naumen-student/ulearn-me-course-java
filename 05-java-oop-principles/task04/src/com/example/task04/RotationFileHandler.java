@@ -21,7 +21,7 @@ public class RotationFileHandler implements MessageHandler {
             FileWriter fileWriter = new FileWriter(String.format("log %1$.txt", now), false);
             fileWriter.append(message + "\n");
             fileWriter.flush();
-        } catch (IOException x) {
+        } catch (IOException x){
             System.out.print(x.toString());
         }
     }
