@@ -59,7 +59,9 @@ public class Logger {
     }
 
     public String log(Level level, String message) {
+        if(level.compareTo(this.level)>=0)
         return String.format(" [%s] %d %s - %s", new SimpleDateFormat("yyyy.MM.dd hh:mm:ss").format(new Date()), this.name, message);
+        return "";
     }
 
     public String log(Level level, String format, Object... args) {
