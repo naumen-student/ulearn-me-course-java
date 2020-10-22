@@ -14,7 +14,7 @@ enum Level {
 public class Logger {
     private Level level;
     private String name;
-    private ArrayList<MessageHandler> handlers = new ArrayList<>();
+    private final ArrayList<MessageHandler> handlers = new ArrayList<>();
 
     public static Logger getLogger(String name) {
         Logger logger = new Logger();
@@ -23,7 +23,7 @@ public class Logger {
     }
 
     public void addHandler(MessageHandler handler) {
-        if(!handlers.contains(handler)) {
+        if (!handlers.contains(handler)) {
             handlers.add((handler));
         }
     }
@@ -36,7 +36,7 @@ public class Logger {
         log(Level.DEBUG, message);
     }
 
-    public void debug(String format, Object... args){
+    public void debug(String format, Object... args) {
         log(Level.DEBUG, format, args);
     }
 
@@ -65,13 +65,13 @@ public class Logger {
     }
 
     public void log(Level level, String message) {
-        if(level.compareTo(this.level)>=0)
-            for (MessageHandler handler: handlers)
+        if (level.compareTo(this.level) >= 0)
+            for (MessageHandler handler : handlers)
                 handler.handle(String.format(" [%s] %d %s - %s", new SimpleDateFormat("yyyy.MM.dd hh:mm:ss").format(new Date()), this.name, message));
     }
 
     public void log(Level level, String format, Object... args) {
-       log(level, String.format(format, level.name(), args));
+        log(level, String.format(format, level.name(), args));
     }
 
     public Level getLevel() {
