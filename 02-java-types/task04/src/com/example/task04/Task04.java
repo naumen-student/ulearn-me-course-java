@@ -4,6 +4,14 @@ public class Task04 {
 
     public static float calculate(int a, int b, String operation) {
 
+        if (operation == "+")
+            return (float)a+b;
+        if (operation == "-")
+            return (float)a-b;
+        if (operation == "*")
+            return (float)a*b;
+        if (operation == "/")
+            return (float)a/b;
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
 
         return 0;
