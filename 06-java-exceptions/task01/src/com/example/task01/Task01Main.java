@@ -10,7 +10,7 @@ public class Task01Main {
     }
 
     static void codeWithNPE() {
-        int[] array=new int[2];
+        int[] array=null;
         int value=array[3];
     }
 }
