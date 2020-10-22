@@ -1,16 +1,16 @@
 package com.example.task11;
 
+import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Task11 {
 
     public static float benefit(float sum, float percent) {
+        return (float)((Math.pow(1.0+percent,12)*sum));
 
-        // TODO исправьте функцию, чтобы избежать накопления ошибки
-
-        // Считаем проценты за год
-        for (int i = 1; i <= 12; i++) {
-            sum += sum * percent;
-        }
-        return sum;
     }
 
     public static void main(String[] args) {
