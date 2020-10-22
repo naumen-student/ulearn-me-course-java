@@ -7,11 +7,8 @@ import java.io.IOException;
 
 public class Task05Main {
     public static void main(String[] args) {
-        String pathToFile = args[0]; // "/home/user/file.txt"
-
-        String s =null;
         try {
-              s = readFile(pathToFile);
+            System.out.println( readFile(args[0]));
         }
         catch (FileNotFoundException e) {
             String message= ("\""+args[0]+"\"");
@@ -20,9 +17,6 @@ public class Task05Main {
         catch (IOException e) {
             System.out.println("произошла ошибка при чтении файла "+ args[0]);
         }
-
-        if (s!=null)
-            System.out.println(s);
     }
 
     public static String readFile(String pathToFile) throws IOException {
