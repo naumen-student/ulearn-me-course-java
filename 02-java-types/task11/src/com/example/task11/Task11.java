@@ -9,14 +9,8 @@ import java.util.List;
 public class Task11 {
 
     public static float benefit(float sum, float percent) {
-        if (percent<0.005)
-            return  sum*(percent)*12+sum;
-        for (int i = 1; i <= 12; i++)
-            sum += new BigDecimal(percent).
-                    multiply(new BigDecimal(sum)).
-                    round(new MathContext(6,RoundingMode.DOWN)).
-                    floatValue();
-        return sum;
+        return (float)((Math.pow(1.0+percent,12)*sum));
+
     }
 
     public static void main(String[] args) {
