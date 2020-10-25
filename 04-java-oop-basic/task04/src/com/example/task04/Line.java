@@ -26,6 +26,6 @@ public class Line {
     }
 
     public String toString() {
-        return String.format("Line: P1%1$, P2%2$", P1, P2);
+        return String.format("Line: P1%1$, P2%2$; Length: length3$", P1, P2, length);
     }
 }
