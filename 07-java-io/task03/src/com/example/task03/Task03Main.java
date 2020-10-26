@@ -9,7 +9,7 @@ public class Task03Main {
         System.out.println(readAsString(new FileInputStream("07-java-io/task03/src/com/example/task03/input.test"), Charset.forName("KOI8-R")));
     }
 
-    public static String readAsString(InputStream inputStream, Charset charset) throws IOException {
+    public static String readAsString(InputStream inputStream, Charset charset) {
         if (inputStream == null || charset == null) throw new IllegalArgumentException();
         StringWriter result = new StringWriter();
         Scanner scanner = new Scanner(new InputStreamReader(inputStream, charset));
