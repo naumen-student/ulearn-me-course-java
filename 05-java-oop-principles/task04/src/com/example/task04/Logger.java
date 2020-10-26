@@ -6,15 +6,15 @@ import java.util.*;
 
 public class Logger {
 
-    private Logger(String name, MessageHandler messageHandler) {
+    private Logger(String name, MessageHandler... messageHandlers) {
         this.name = name;
-        this.messageHandler = messageHandler;
+        this.messageHandlers = messageHandlers;
     }
 
     private final String name;
     private int level;
     private static final String[] levels = new String[] { "DEBUG", "INFO", "WARNING", "ERROR" };
-    private MessageHandler messageHandler;
+    private final MessageHandler[] messageHandlers;
 
     public static Logger getLogger(String name, MessageHandler messageHandler) {
         if (LoggerManager.loggerExist(name)) {
@@ -39,7 +39,9 @@ public class Logger {
         String date = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
         String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
 
-        messageHandler.handleLog(String.format("[DEBUG] %s %s %s - %s%n", date, time, name, message));
+        for (MessageHandler mh: messageHandlers) {
+            mh.handleLog(String.format("[DEBUG] %s %s %s - %s%n", date, time, name, message));
+        }
     }
 
     public void debug(String pattern, Object... elements) throws IOException {
@@ -49,8 +51,9 @@ public class Logger {
 
         String date = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
         String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
-
-        messageHandler.handleLog(String.format("[INFO] %s %s %s - %s%n", date, time, name, String.format(pattern, elements)));
+        for (MessageHandler mh: messageHandlers) {
+            mh.handleLog(String.format("[INFO] %s %s %s - %s%n", date, time, name, String.format(pattern, elements)));
+        }
     }
 
     public void info(String message) throws IOException {
@@ -61,7 +64,9 @@ public class Logger {
         String date = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
         String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
 
-        messageHandler.handleLog(String.format("[DEBUG] %s %s %s - %s%n", date, time, name, message));
+        for (MessageHandler mh: messageHandlers) {
+            mh.handleLog(String.format("[DEBUG] %s %s %s - %s%n", date, time, name, message));
+        }
     }
 
     public void info(String pattern, Object... elements) throws IOException {
@@ -72,7 +77,9 @@ public class Logger {
         String date = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
         String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
 
-        messageHandler.handleLog(String.format("[INFO] %s %s %s - %s%n", date, time, name, String.format(pattern, elements)));
+        for (MessageHandler mh: messageHandlers) {
+            mh.handleLog(String.format("[INFO] %s %s %s - %s%n", date, time, name, String.format(pattern, elements)));
+        }
     }
 
     public void warning(String message) throws IOException {
@@ -83,7 +90,9 @@ public class Logger {
         String date = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
         String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
 
-        messageHandler.handleLog(String.format("[DEBUG] %s %s %s - %s%n", date, time, name, message));
+        for (MessageHandler mh: messageHandlers) {
+            mh.handleLog(String.format("[DEBUG] %s %s %s - %s%n", date, time, name, message));
+        }
     }
 
     public void warning(String pattern, Object... elements) throws IOException {
@@ -94,35 +103,45 @@ public class Logger {
         String date = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
         String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
 
-        messageHandler.handleLog(String.format("[INFO] %s %s %s - %s%n", date, time, name, String.format(pattern, elements)));
+        for (MessageHandler mh: messageHandlers) {
+            mh.handleLog(String.format("[INFO] %s %s %s - %s%n", date, time, name, String.format(pattern, elements)));
+        }
     }
 
     public void error(String message) throws IOException {
         String date = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
         String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
 
-        messageHandler.handleLog(String.format("[DEBUG] %s %s %s - %s%n", date, time, name, message));
+        for (MessageHandler mh: messageHandlers) {
+            mh.handleLog(String.format("[DEBUG] %s %s %s - %s%n", date, time, name, message));
+        }
     }
 
     public void error(String pattern, Object... elements) throws IOException {
         String date = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
         String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
 
-        messageHandler.handleLog(String.format("[INFO] %s %s %s - %s%n", date, time, name, String.format(pattern, elements)));
+        for (MessageHandler mh: messageHandlers) {
+            mh.handleLog(String.format("[INFO] %s %s %s - %s%n", date, time, name, String.format(pattern, elements)));
+        }
     }
 
     public void log(String level, String message) throws IOException {
         String date = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
         String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
 
-        messageHandler.handleLog(String.format("[%s] %s %s %s - %s%n", level,date, time, name, message));
+        for (MessageHandler mh: messageHandlers) {
+            mh.handleLog(String.format("[%s] %s %s %s - %s%n", level, date, time, name, message));
+        }
     }
 
     public void log(String level, String pattern, Object... elements) throws IOException {
         String date = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
         String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
 
-        messageHandler.handleLog(String.format("[%s] %s %s %s - %s%n", level,date, time, name, String.format(pattern, elements)));
+        for (MessageHandler mh: messageHandlers) {
+            mh.handleLog(String.format("[%s] %s %s %s - %s%n", level, date, time, name, String.format(pattern, elements)));
+        }
     }
 
     public void setLevel(String level) {
@@ -148,7 +167,7 @@ public class Logger {
         }
     }
 
-    public static class LoggerManager {
+    private static class LoggerManager {
         public static HashMap<String, Logger> loggers = new HashMap<>();
 
         public static Boolean loggerExist(String name) {
