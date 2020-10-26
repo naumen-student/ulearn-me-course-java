@@ -11,17 +11,23 @@ enum Level {
 }
 
 public class Logger {
-    private String name;
+    private final String name;
     private Level level;
+    private static final HashMap<String, Logger> loggerHashMap = new HashMap<>();
+
+    public Logger(String name) {
+        this.name = name;
+        loggerHashMap.put(name,this);
+    }
 
     public String getName() {
         return name;
     }
 
     public static Logger getLogger(String name) {
-        Logger logger = new Logger();
-        logger.name=name;
-        return logger;
+        if (loggerHashMap.containsKey(name))
+            return loggerHashMap.get(name);
+        return new Logger(name);
     }
 
     public void debug(String message) {
@@ -64,7 +70,7 @@ public class Logger {
         this.level = level;
     }
 
-    public void log(Level level, String message) {
+    private void log(Level level, String message) {
         Date date = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");
         if (level.compareTo(this.level) >= 0) {
@@ -76,7 +82,7 @@ public class Logger {
         }
     }
 
-    public void log(Level level, String message, Object... args) {
+    private void log(Level level, String message, Object... args) {
         log(level,String.format(message, args));
     }
 }
