@@ -5,15 +5,11 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Task04Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in).useLocale(Locale.ENGLISH);
         double res = 0;
-        while (scanner.hasNext()) {
-            if (scanner.hasNextDouble()) {
-                res += scanner.nextDouble();
-            } else {
-                scanner.next();
-            }
+        while (scanner.hasNextDouble()) {
+            res += scanner.nextDouble();
         }
         scanner.close();
         System.out.printf(Locale.ENGLISH, "%.6f", res);
