@@ -1,12 +1,8 @@
 package com.example.task03;
 
-import sun.security.util.IOUtils;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.Charset;
-import java.util.Arrays;
-import java.util.List;
 
 public class Task03Main {
     public static void main(String[] args) throws IOException {
@@ -18,16 +14,16 @@ public class Task03Main {
         */
     }
 
-    public static String readAsString(InputStream inputStream, Charset charset) throws IOException {
+    public static String readAsString(InputStream inputStream, Charset charset) throws IOException
+    {
         if (inputStream==null || charset==null)
             throw new IllegalArgumentException();
 
-        int read;
         StringBuilder res= new StringBuilder();
+        byte[] buffer = new byte[1024];
 
-        while ((read=inputStream.read())!=-1)
-            res.append(new String(new byte[]{(byte) read}, charset.name()));
-
+        while ((inputStream.read(buffer))!=-1)
+            res.append((new String(buffer, charset.name())).trim());
 
         return res.toString();
     }
