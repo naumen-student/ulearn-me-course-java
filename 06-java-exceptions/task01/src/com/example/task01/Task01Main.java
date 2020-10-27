@@ -6,6 +6,7 @@ public class Task01Main {
     }
 
     static void codeWithNPE() {
-        throw new NullPointerException();
+        String a = null;
+        a.toCharArray();
     }
 }
