@@ -4,7 +4,7 @@ public class Task14 {
 
 
     public static int reverse(int value) {
-       String b = new StringBuilder(value).reverse().toString();
+       String b = new StringBuilder(Integer.toString(value)).reverse().toString();
        return Integer.parseInt(b);
     }
 
