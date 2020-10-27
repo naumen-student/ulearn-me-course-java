@@ -19,7 +19,6 @@ public class Task03Main {
         }
         byte[] arr = new byte[inputStream.available()];
         int inputChar = inputStream.read(arr);
-        inputStream.close();
         return new String(arr, charset);
     }
 }
