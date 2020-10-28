@@ -4,14 +4,14 @@ public class Task04 {
 
     public static float calculate(int a, int b, String operation) {
         float output = 0;
-        if (operation == "+")
+        if (operation.equals("+"))
             output = a + b;
-        if (operation == "-")
+        if (operation.equals("+"))
             output = a - b;
-        if (operation == "*")
+        if (operation.equals("+"))
             output = a * b;
-        if (operation == "/")
-            output = a / b;
+        if (operation.equals("+"))
+            output = (float)a / b;
         return output;
     }
 
