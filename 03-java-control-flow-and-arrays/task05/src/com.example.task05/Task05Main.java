@@ -1,5 +1,7 @@
 package com.example.task05;
 
+import java.util.Arrays;
+
 public class Task05Main {
     public static void main(String[] args) {
         //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
@@ -10,7 +12,8 @@ public class Task05Main {
     }
 
     static int getMin(int a, int b, int c) {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
-        return 0;
+        int[] numbers = {a, b, c};
+        Arrays.sort(numbers);
+        return numbers[0];
     }
 }
