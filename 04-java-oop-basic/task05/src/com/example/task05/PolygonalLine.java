@@ -1,18 +1,21 @@
 package com.example.task05;
 
+import java.util.ArrayList;
+
 public class PolygonalLine {
 
-    private Point[] points;
+    private ArrayList<Point> points = new ArrayList<Point>();
 
     public void setPoints(Point[] points) {
-        this.points = points;
+        if (points != null)
+            for (Point point : points){
+                this.points.add(new Point(point.getX(), point.getY()));
+            }
     }
 
     public void addPoint(Point point) {
-        Point[] newPoints = new Point[points.length+1];
-        for (int i = 0; i < points.length; i++) newPoints[i] = points[i];
-        newPoints[newPoints.length - 1] = point;
-        this.points = newPoints;
+        if (point != null)
+            this.points.add(new Point(point.getX(), point.getY()));
     }
 
     public void addPoint(double x, double y) {
@@ -21,8 +24,8 @@ public class PolygonalLine {
 
     public double getLength() {
         double length = 0;
-        for (int i = 0; i < points.length - 1; i++){
-            length += points[i].getLength(points[i + 1]);
+        for (int i = 0; i < points.size() - 1; i++) {
+            length += points.get(i).getLength(points.get(i + 1));
         }
         return length;
     }
