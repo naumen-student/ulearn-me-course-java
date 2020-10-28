@@ -15,11 +15,11 @@ public class Task05Main {
         }
 
         catch (FileNotFoundException e) {
-            System.out.println("файл \"" + args[0] + "\" не найден");
+            System.out.println(String.format("файл \"%s\" не найден", args[0]));
         }
 
         catch (IOException  e) {
-            System.out.println("произошла ошибка при чтении файла \"" + args[0] + "\"");
+            System.out.println(String.format("произошла ошибка при чтении файла \"%s\"", args[0]));
         }
     }
 
