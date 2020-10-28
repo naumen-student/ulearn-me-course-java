@@ -6,11 +6,11 @@ public class Task04 {
         float output = 0;
         if (operation.equals("+"))
             output = a + b;
-        if (operation.equals("+"))
+        if (operation.equals("-"))
             output = a - b;
-        if (operation.equals("+"))
+        if (operation.equals("*"))
             output = a * b;
-        if (operation.equals("+"))
+        if (operation.equals("/"))
             output = (float)a / b;
         return output;
     }
