@@ -13,8 +13,13 @@ public class Task03Main {
     public static String readAsString(InputStream inputStream, Charset charset) throws IOException {
         if (inputStream == null)
             throw new IllegalArgumentException();
+        StringBuilder result = new StringBuilder();
         Reader reader = new InputStreamReader(inputStream, charset);
         Scanner scanner = new Scanner(reader);
-        return scanner.hasNext() ? scanner.next() : null;
+        while (scanner.hasNext()) {
+            result.append(scanner.next());
+        }
+        return result.toString();
+
     }
 }
