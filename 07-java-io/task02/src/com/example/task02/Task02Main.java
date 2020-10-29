@@ -4,10 +4,18 @@ import java.io.IOException;
 
 public class Task02Main {
     public static void main(String[] args) throws IOException {
-        // чтобы протестировать свое решение, вам нужно:
-        // - направить файл input.test в стандартный ввод программы (в настройках запуска программы в IDE или в консоли)
-        // - направить стандартный вывод программы в файл output.test
-        // - запустить программу
-        // - и сравнить получившийся файл output.test с expected.test
+        int firstByte = System.in.read();
+        int secondByte = System.in.read();
+        while(firstByte != -1){
+            if(firstByte == 13 && secondByte == 10){
+                System.out.write(secondByte);
+                secondByte = System.in.read();
+            }
+            else{
+                System.out.write(firstByte);
+            }
+            firstByte = secondByte;
+            secondByte = System.in.read();
+        }
     }
 }
