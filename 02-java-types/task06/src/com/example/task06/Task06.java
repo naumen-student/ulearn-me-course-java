@@ -3,6 +3,7 @@ package com.example.task06;
 public class Task06 {
 
     public static int solution(int x, int y) {
+        if (x + y < 0) return (String.valueOf(x + y).length() - 1);
         return (String.valueOf(x + y).length());
     }
 
@@ -10,7 +11,7 @@ public class Task06 {
         // Здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
         // например вот так:
 
-        int result = solution(12, 88);
+        int result = solution(10, 90);
         System.out.println(result);
 
     }
