@@ -1,22 +1,26 @@
 package com.example.task02;
 
 public class DiscountBill extends Bill {
-    private double sale;
+    private int discount;
 
-    public double getPriceWithSale() {
-        long price = getPrice();
-        return price - price * sale;
+    public DiscountBill() {
+        super();
     }
 
-    public double getSaleAsPercent() {
-        return sale * 100;
+    public DiscountBill(int discount) {
+        super();
+        this.discount = discount;
     }
 
-    public double getSaleAsAbsolute() {
-        return getPrice() * sale;
+    public int getDiscount() {
+        return discount;
     }
 
-    public void setSale(double sale) {
-        this.sale = sale;
+    public long getDiscountAmount() {
+        return getPrice() - getTotalCost();
+    }
+
+    public long getTotalCost() {
+        return getPrice() * (100 - discount) / 100;
     }
 }
