@@ -19,6 +19,7 @@ public class Task01Main {
             sum = Integer.rotateLeft(sum, 1) ^ lastByte;
             lastByte = inputStream.read();
         }
+        inputStream.close();
         return sum;
     }
 }
