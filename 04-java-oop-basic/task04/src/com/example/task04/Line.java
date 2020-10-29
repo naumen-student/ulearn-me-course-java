@@ -1,20 +1,13 @@
 package com.example.task04;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
-import java.util.function.Function;
-
 public class Line {
     private Point start;
     private  Point end;
-    private  Function<Point, Boolean> LineEquation;
 
     public  Line(Point start,Point end)
     {
         this.start=start;
         this.end=end;
-        //уравнение прямой сопоставляется с точкой и возвращается результат
-        LineEquation = (point -> (point.x-start.x*1.0)/ (end.x- start.x)== (point.y- start.y*1.0)/ (end.y- start.y) );
     }
 
     public Point getP1()
@@ -35,8 +28,8 @@ public class Line {
                 '}';
     }
 
-    public boolean isCollinearLine(Point p)
+    public boolean isCollinearLine(Point point)
     {
-        return LineEquation.apply(p);
+        return (point.x-start.x*1.0)/ (end.x- start.x)== (point.y- start.y*1.0)/ (end.y- start.y);
     }
 }
