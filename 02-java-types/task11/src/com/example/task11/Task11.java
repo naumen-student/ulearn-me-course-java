@@ -9,8 +9,8 @@ public class Task11 {
 
     public static void main(String[] args) {
 
-        float sum = 500; // 500 руб. на счете
-        float percent = 0.00000001f; // 0.000001% ежемесячно
+        float sum = 500;
+        float percent = 0.0100077f;
 
         sum = benefit(sum, percent);
 
