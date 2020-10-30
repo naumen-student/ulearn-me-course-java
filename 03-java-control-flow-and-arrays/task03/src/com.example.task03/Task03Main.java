@@ -10,6 +10,7 @@ public class Task03Main {
     }
 
     static String getNameOfWeekDays(int weekDaysNumber) {
-        return "";//todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        String[] days = {"понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"};
+        return days[weekDaysNumber - 1];
     }
 }
