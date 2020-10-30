@@ -1,8 +1,5 @@
 package com.example.task03;
 
-/**
- * Интервал в миллисекундах
- */
 public class Milliseconds implements TimeUnit {
 
     private final long amount;
@@ -29,4 +26,5 @@ public class Milliseconds implements TimeUnit {
     @Override
     public long toHours() {
         return Math.round(amount / (double) (1000 * 60 * 60));
+    }
 }

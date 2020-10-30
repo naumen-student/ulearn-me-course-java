@@ -12,8 +12,5 @@ public class TimeUnitUtils {
     public static Minutes toMinutes(TimeUnit unitOfMeasurement) {
         return new Minutes(unitOfMeasurement.toMinutes());
     }
-    public static Hours toHours(TimeUnit unitOfMeasurement) {
-        return new Hours(unitOfMeasurement.toHours());
-    }
 }
 

@@ -1,8 +1,5 @@
 package com.example.task03;
 
-/**
- * Интервал в секундах
- */
 public class Seconds implements TimeUnit {
 
     private final long amount;
@@ -18,7 +15,6 @@ public class Seconds implements TimeUnit {
 
     @Override
     public long toSeconds() {
-        return amount;
         return this.amount;
     }
 
