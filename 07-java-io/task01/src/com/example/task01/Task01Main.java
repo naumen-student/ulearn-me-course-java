@@ -11,11 +11,18 @@ public class Task01Main {
         /*
         System.out.println(checkSumOfStream(new ByteArrayInputStream(new byte[]{0x33, 0x45, 0x01})));
         */
-
+        //C[n+1]=rotateLeft(C[n]) xor b[n+1]
     }
 
     public static int checkSumOfStream(InputStream inputStream) throws IOException {
-        // your implementation here
-        return 0;
+        if (inputStream == null)
+            throw new IllegalArgumentException();
+        int checkSum = 0;
+        int currentByte = inputStream.read();
+        while (currentByte != -1) {
+            checkSum = Integer.rotateLeft(checkSum, 1) ^ currentByte;
+            currentByte = inputStream.read();
+        }
+        return checkSum;
     }
 }
