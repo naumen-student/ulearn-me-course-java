@@ -1,7 +1,7 @@
 package com.example.task01;
 
 import java.io.*;
-import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Task01Main {
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -12,10 +12,10 @@ public class Task01Main {
         try {
             InputStream inputStream = Runtime.getRuntime().exec("ffprobe -v error -of flat -show_format " + file)
                     .getInputStream();
-            BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
+            Scanner scanner = new Scanner(inputStream);
             String str;
-            while ((str = br.readLine()) != null)
-                if (str.contains("format.tags.title")) res = str.split("\"")[1];
+            while (scanner.hasNextLine())
+                if ((str=scanner.nextLine()).contains("format.tags.title")) res = str.split("\"")[1];
             System.out.println();
         }catch (IOException e)
         {
