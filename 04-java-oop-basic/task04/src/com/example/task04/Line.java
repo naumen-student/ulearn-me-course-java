@@ -19,10 +19,11 @@ public class Line {
     }
 
     public String toString() {
-        return String.format("[p1 = %s; p2 = %s]", p1.toString(), p2.toString());
+        return String.format("[p1 = %s; p2 = %s]", this.p1.toString(), this.p2.toString());
     }
 
     public boolean isCollinearLine(Point p) {
-        return (p.x - p1.x)/(p2.x - p1.x) == (p.y - p1.y)/(p2.y - p1.y);
+        return (p.x - this.p1.x)/(this.p2.x - this.p1.x) -
+                (p.y - this.p1.y)/(this.p2.y - this.p1.y) == 0;
     }
 }
