@@ -23,14 +23,14 @@ class Logger {
         System.out.printf("[%s] %s %s - %s", level, dateFormat.format(date) , name , message);
     }
 
-    public Logger(String name) {
+    private Logger(String name) {
         this.name = name;
         loggersNamesDictionary.put(name, this);
     }
 
     public void debug(String message) {
         Level newLevel = Level.DEBUG;
-        if (level.ordinal() > newLevel.ordinal()) { return; }
+        if (level.ordinal() >= newLevel.ordinal()) { return; }
         level = newLevel;
         this.message = message;
         printMessage();
@@ -38,7 +38,7 @@ class Logger {
 
     public void debug(String pattern, Object...params) {
         Level newLevel = Level.DEBUG;
-        if (level.ordinal() > newLevel.ordinal()) { return; }
+        if (level.ordinal() >= newLevel.ordinal()) { return; }
         level = newLevel;
         this.message = String.format(pattern, params);
         printMessage();
@@ -46,7 +46,7 @@ class Logger {
 
     public void info(String message) {
         Level newLevel = Level.INFO;
-        if (level.ordinal() > newLevel.ordinal()) { return; }
+        if (level.ordinal() >= newLevel.ordinal()) { return; }
         level = newLevel;
         this.message = message;
         printMessage();
@@ -54,7 +54,7 @@ class Logger {
 
     public void info(String pattern, Object...params) {
         Level newLevel = Level.INFO;
-        if (level.ordinal() > newLevel.ordinal()) { return; }
+        if (level.ordinal() >= newLevel.ordinal()) { return; }
         level = newLevel;
         this.message = String.format(pattern, params);
         printMessage();
@@ -62,7 +62,7 @@ class Logger {
 
     public void warning(String message) {
         Level newLevel = Level.WARNING;
-        if (level.ordinal() > newLevel.ordinal()) { return; }
+        if (level.ordinal() >= newLevel.ordinal()) { return; }
         level = newLevel;
         this.message = message;
         printMessage();
@@ -70,7 +70,7 @@ class Logger {
 
     public void warning(String pattern, Object...params) {
         Level newLevel = Level.WARNING;
-        if (level.ordinal() > newLevel.ordinal()) { return; }
+        if (level.ordinal() >= newLevel.ordinal()) { return; }
         level = newLevel;
         this.message = String.format(pattern, params);
         printMessage();
