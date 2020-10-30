@@ -37,15 +37,18 @@ public class TimeUnitUtils {
     /**
      * Конвертирует интервал в миллисекундах в интервал в секундах
      *
+     * @param millis интервал в миллисекундах
+     * @return интервал в секундах
+     */
+    public static Seconds toSeconds(Milliseconds millis) {
+        return new Seconds(millis.toSeconds());
+    }
+
+    /**
+     * Конвертирует интервал в минутах в интервал в секундах
+     *
      * @param minutes интервал в минутах
      * @return интервал в секундах
-     * @@ -24,4 +44,84 @@ public static Milliseconds toMillis(Seconds seconds) {
-     * public static Seconds toSeconds(Milliseconds millis) {
-     * return new Seconds(millis.toSeconds());
-     * }
-     * <p>
-     * /**
-     * Конвертирует интервал в минутах в интервал в секундах
      */
     public static Seconds toSeconds(Minutes minutes) {
         return new Seconds(minutes.toSeconds());
