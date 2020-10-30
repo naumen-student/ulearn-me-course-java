@@ -16,7 +16,6 @@ public class Task01Main {
             String str;
             while (scanner.hasNextLine())
                 if ((str=scanner.nextLine()).contains("format.tags.title")) res = str.split("\"")[1];
-            System.out.println();
         }catch (IOException e)
         {
             e.printStackTrace();
