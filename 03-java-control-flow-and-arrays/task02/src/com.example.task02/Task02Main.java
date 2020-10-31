@@ -1,5 +1,7 @@
 package com.example.task02;
 
+import java.security.InvalidParameterException;
+
 public class Task02Main {
     public static void main(String[] args) {
         //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
@@ -10,6 +12,14 @@ public class Task02Main {
     }
 
     static String getSeason(int monthNumber) {
-        return "";//todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        if (monthNumber<=2 || monthNumber==12)
+            return "зима";
+        if (monthNumber<=5)
+            return "весна";
+        if (monthNumber<=8)
+            return "лето";
+        if (monthNumber<=11)
+            return "осень";
+        throw  new InvalidParameterException("month number is not valid");
     }
 }
