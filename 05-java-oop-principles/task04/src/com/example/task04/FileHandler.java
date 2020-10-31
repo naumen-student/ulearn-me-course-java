@@ -3,7 +3,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class FileHandler implements MessageHandler {
+public class FileHandler extends MessageHandler {
     private final String fullPath;
     public FileHandler(String fullPath) {
         this.fullPath = fullPath;
