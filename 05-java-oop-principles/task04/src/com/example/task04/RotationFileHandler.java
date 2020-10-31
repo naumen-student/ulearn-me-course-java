@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
-public class RotationFileHandler extends MessageHandler {
+public class RotationFileHandler implements MessageHandler {
     private final ChronoUnit amount;
     private final String fullPath;
 
