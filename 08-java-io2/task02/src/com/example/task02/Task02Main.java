@@ -10,20 +10,17 @@ public class Task02Main {
     public static List<Path> listFiles = new ArrayList<>();
 
     public static void main(String[] args) {
-        System.out.println(listFiles(Paths.get("C:\\Users\\petrd\\IdeaProjects\\ulearn-me-course-java\\08-java-io2\\task02\\src\\main\\resources")));
+        System.out.println(listFiles(Paths.get("08-java-io2/task02/src/main/resources/")));
     }
-    public static List<Path> listFiles(Path rootDirectory) {
+    public static List<Path> listFiles(Path rootDirectory){
         File rootDirFile = rootDirectory.toFile();
-        if (rootDirFile.isDirectory())
-            System.out.print("");
         return showFilesAndDirectoryes(rootDirFile);
     }
     public static List<Path> showFilesAndDirectoryes (File rootDirectory) {
         File[] files = rootDirectory.listFiles();
         for (File file : files) {
             if (!file.isDirectory()) {
-                Path path = Paths.get(file.getName());
-                listFiles.add(path);
+                listFiles.add(Paths.get(file.getPath()));
             }
             if (file.isDirectory ())
                 try {
