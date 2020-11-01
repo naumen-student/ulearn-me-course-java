@@ -7,9 +7,8 @@ public class Task02Main {
         int lastByte = System.in.read();
         while (lastByte != -1) {
             int nextByte = System.in.read();
-            if (!(lastByte == 13) && (nextByte == 10)) {
+            if (!(lastByte == 13 && nextByte == 10))
                 System.out.write(lastByte);
-            }
             lastByte = nextByte;
         }
         System.out.flush();
