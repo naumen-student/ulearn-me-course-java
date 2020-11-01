@@ -1,10 +1,11 @@
 package com.example.task07;
 
+import java.io.IOException;
+
 public class Processor {
 
-    public Object process() throws Exception {
-        //todo вы можете заменить реализацию этого метода для ручного дебага
-        return null;
+    public Object process() throws IOException {
+        throw new IOException();
     }
 
 }
