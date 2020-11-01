@@ -14,11 +14,15 @@ public class Task02Main {
     public static List<Path> listFiles(Path rootDirectory) {
         File directory = rootDirectory.toFile();
         File[] files = directory.listFiles();
-        for (File file : files) {
+        for (File file : files)
             if (!file.isDirectory())
-                listFiles.add(Paths.get(file.getPath()));
-            else listFiles(Paths.get(file.getPath()));
-        }
+                addFile(file);
+        for (File file : files)
+            if (file.isDirectory())
+                listFiles(Paths.get(file.getPath()));
         return listFiles;
+    }
+    public static void addFile (File file) {
+        listFiles.add(Paths.get(file.getPath()));
     }
 }
