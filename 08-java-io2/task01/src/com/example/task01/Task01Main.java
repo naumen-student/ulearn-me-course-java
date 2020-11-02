@@ -5,8 +5,12 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.ProcessBuilder.Redirect;
+import java.util.logging.Logger;
 
 public class Task01Main {
+
+    private static Logger log = Logger.getLogger(Task01Main.class.getName());
+
     public static void main(String[] args) throws IOException, InterruptedException {
         System.out.println(extractSoundName(new File("C:\\Users\\User\\Ulearn\\ulearn-me-course-java\\08-java-io2\\task01\\src\\main\\resources\\3726.mp3")));
     }
@@ -19,7 +23,7 @@ public class Task01Main {
         try(BufferedReader reader = new BufferedReader(
                 new InputStreamReader(process.getInputStream()))){
             for (Object s: reader.lines().toArray()) {
-                System.out.println("PRIVATELOG " + s.toString());
+                log.info(s.toString());
                 if(s.toString().startsWith("format.tags.title"))
                     return s.toString().replace("format.tags.title=", "");
             }
