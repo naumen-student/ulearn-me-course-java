@@ -19,6 +19,7 @@ public class Task01Main {
         try(BufferedReader reader = new BufferedReader(
                 new InputStreamReader(process.getInputStream()))){
             for (Object s: reader.lines().toArray()) {
+                System.out.println("PRIVATELOG " + s.toString());
                 if(s.toString().startsWith("format.tags.title"))
                     return s.toString().replace("format.tags.title=", "");
             }
