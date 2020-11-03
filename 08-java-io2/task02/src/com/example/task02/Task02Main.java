@@ -11,8 +11,7 @@ public class Task02Main {
     }
 
     public static List<Path> listFiles(Path rootDir) {
-        List<Path> result = new ArrayList<>();
-        return listFiles(result, rootDir);
+        return listFiles(new ArrayList<>(), rootDir);
     }
 
     private static List<Path> listFiles(List<Path> fileNames, Path dir) {
