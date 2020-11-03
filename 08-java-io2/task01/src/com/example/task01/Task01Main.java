@@ -30,8 +30,8 @@ public class Task01Main {
                     return line.substring(19, line.length() - 1);
                 }
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (IOException io) {
+            io.printStackTrace();
         }
         return null;
     }
