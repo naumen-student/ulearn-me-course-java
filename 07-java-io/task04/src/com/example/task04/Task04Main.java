@@ -1,6 +1,8 @@
 package com.example.task04;
 
 import java.io.IOException;
+import java.util.Locale;
+import java.util.Scanner;
 
 public class Task04Main {
     public static void main(String[] args) throws IOException {
@@ -9,6 +11,17 @@ public class Task04Main {
         // - запустить программу
         // - проверить, что получилось 351.731900
 
-        System.out.println("0.0");
+        Scanner inData = new Scanner(System.in)
+                .useDelimiter("\\n| ");
+        double result = 0;
+        while(inData.hasNext()) {
+            String e = inData.next();
+            try {
+                double n = Double.parseDouble(e);
+                result += n;
+            } catch (NumberFormatException ignore) { }
+        }
+        System.out.format(Locale.ENGLISH,"%.6f", result).flush();
+        inData.close();
     }
 }
