@@ -5,13 +5,14 @@ public class Task11Main {
         //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
         // например вот так:
 
-        int[] arr = {9, 11, 7, 8};
+        int[] arr = {};
         swap(arr);
         System.out.println(java.util.Arrays.toString(arr));
 
     }
 
     static void swap(int[] arr) {
+        if (arr == null || arr.length == 0) return;
         int number = 0;
         int min = Integer.MAX_VALUE;
         for(int i = 0; i < arr.length; i++) {
