@@ -21,11 +21,9 @@ public class Task01Main {
                 "-v", "error",
                 "-of", "flat",
                 "-show_format",
-                "file.mp3",
                 file.getAbsolutePath());
-        Process process = processBuilder.start();
         try (BufferedReader bufferedReader = new BufferedReader(
-                new InputStreamReader(process.getInputStream()))) {
+                new InputStreamReader(processBuilder.start().getInputStream()))) {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 if (line.contains("format.tags.title")) {
@@ -33,7 +31,7 @@ public class Task01Main {
                 }
             }
         } catch (Exception e) {
-            return e.getMessage();
+            e.printStackTrace();
         }
         return null;
     }
