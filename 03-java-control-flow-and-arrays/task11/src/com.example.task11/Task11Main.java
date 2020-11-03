@@ -4,15 +4,25 @@ public class Task11Main {
     public static void main(String[] args) {
         //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
         // например вот так:
-        /*
-        int[] arr = {7, 5, 9};
+
+        int[] arr = {9, 11, 7, 8};
         swap(arr);
         System.out.println(java.util.Arrays.toString(arr));
-         */
+
     }
 
     static void swap(int[] arr) {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        int number = 0;
+        int min = Integer.MAX_VALUE;
+        for(int i = 0; i < arr.length; i++) {
+            if (arr[i] <= min) {
+                min = arr[i];
+                number = i;
+            }
+        }
+        int a = arr[0];
+        arr[0] = arr[number];
+        arr[number] = a;
     }
 
 }
