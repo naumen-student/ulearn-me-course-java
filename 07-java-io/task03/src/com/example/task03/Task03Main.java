@@ -19,6 +19,10 @@ public class Task03Main {
             throw new IllegalArgumentException();
         Reader reader = new InputStreamReader(inputStream, charset);
         Scanner scanner = new Scanner(reader);
-        return scanner.hasNext() ? scanner.next() : null;
+        StringWriter sw = new StringWriter();
+        while (scanner.hasNext()) {
+            sw.write(scanner.nextLine());
+        }
+        return sw.toString();
     }
 }
