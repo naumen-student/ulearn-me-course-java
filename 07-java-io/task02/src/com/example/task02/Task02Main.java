@@ -19,5 +19,6 @@ public class Task02Main {
             }
             else System.out.write(inBytes[i]);
         }
+        System.out.flush();
     }
 }
