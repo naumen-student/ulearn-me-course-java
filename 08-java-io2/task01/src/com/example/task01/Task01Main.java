@@ -24,7 +24,7 @@ public class Task01Main {
                 file.getAbsolutePath());
         try (BufferedReader bufferedReader = new BufferedReader(
                 new InputStreamReader(processBuilder.start().getInputStream()))) {
-            String line;
+            String  line;
             while ((line = bufferedReader.readLine()) != null) {
                 if (line.contains("format.tags.title")) {
                     return line.substring(19, line.length() - 1);
