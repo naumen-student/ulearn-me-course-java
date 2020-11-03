@@ -7,8 +7,7 @@ import java.util.Scanner;
 public class Task01Main{
     public static String extractSoundName(File file) throws IOException, InterruptedException{
         ProcessBuilder processBuilder = new ProcessBuilder();
-        processBuilder.command("ffprobe", "-v", "error", "-of", "flat", "-show_format");
-        processBuilder.directory(file);
+        processBuilder.command("ffprobe", "-v", "error", "-of", "flat", "-show_format", file.getAbsolutePath());
         try (Scanner scanner = new Scanner(processBuilder.start().getInputStream())) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
