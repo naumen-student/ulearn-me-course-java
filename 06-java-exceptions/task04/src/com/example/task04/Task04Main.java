@@ -19,7 +19,7 @@ public class Task04Main {
             return "лето";
         if (monthNumber >= 9 && monthNumber <= 11)
             return "осень";
-        throw new CustomExeption(String.format("monthNumber %d is invalid, month number should be between 1..12", monthNumber));
+        throw new MyException(String.format("monthNumber %d is invalid, month number should be between 1..12", monthNumber));
     }
 
 }
