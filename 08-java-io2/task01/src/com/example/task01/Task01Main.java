@@ -1,32 +1,27 @@
 package com.example.task01;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.lang.ProcessBuilder.Redirect;
-import java.util.logging.Logger;
+import java.util.Scanner;
 
 public class Task01Main {
 
-    private static Logger log = Logger.getLogger(Task01Main.class.getName());
-
-    public static void main(String[] args) throws IOException, InterruptedException {
-        System.out.println(extractSoundName(new File("C:\\Users\\User\\Ulearn\\ulearn-me-course-java\\08-java-io2\\task01\\src\\main\\resources\\3726.mp3")));
+    public static void main(String[] args){
+        System.out.println(extractSoundName(new File("/home/user/Рабочий стол/ul/3724.mp3")));
     }
 
-    public static String extractSoundName(File file) throws IOException, InterruptedException {
+    public static String extractSoundName(File file){
         ProcessBuilder processBuilder = new ProcessBuilder();
         processBuilder.command("ffprobe", "-v", "error", "-of", "flat", "-show_format", file.getAbsolutePath())
-                .redirectOutput(Redirect.PIPE);
-        Process process = processBuilder.start();
-        try(BufferedReader reader = new BufferedReader(
-                new InputStreamReader(process.getInputStream()))){
-            for (Object s: reader.lines().toArray()) {
-                log.info(s.toString());
-                if(s.toString().startsWith("format.tags.title"))
-                    return s.toString().replace("format.tags.title=", "");
+                .redirectOutput(ProcessBuilder.Redirect.PIPE);
+        try(Scanner scanner = new Scanner(processBuilder.start().getInputStream())){
+            while(scanner.hasNext()){
+                String data = scanner.nextLine();
+                if(data.startsWith("format.tags.title"))
+                    return data.split("\"")[1];
             }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         return null;
     }
