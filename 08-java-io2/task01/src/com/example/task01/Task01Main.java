@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class Task01Main {
     public static void main(String[] args) throws IOException, InterruptedException {
-        System.out.println(extractSoundName(new File("task01/src/main/resources/3727.mp3")));
     }
 
     public static String extractSoundName(File file) throws IOException, InterruptedException {
