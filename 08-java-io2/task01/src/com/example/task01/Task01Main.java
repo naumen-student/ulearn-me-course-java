@@ -10,9 +10,8 @@ public class Task01Main {
         //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
         // например вот так:
 
-        /*
         System.out.println(extractSoundName(new File("task01/src/main/resources/3727.mp3")));
-        */
+
     }
 
     public static String extractSoundName(File file) throws IOException, InterruptedException {
@@ -24,10 +23,10 @@ public class Task01Main {
                 file.getAbsolutePath());
         try (BufferedReader bufferedReader = new BufferedReader(
                 new InputStreamReader(processBuilder.start().getInputStream()))) {
-            String  line;
+            String line;
             while ((line = bufferedReader.readLine()) != null) {
                 if (line.contains("format.tags.title")) {
-                    return line.substring(19, line.length() - 1);
+                    return line.split("\"")[1];
                 }
             }
         } catch (IOException io) {
