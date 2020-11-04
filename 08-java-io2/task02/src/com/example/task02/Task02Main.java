@@ -15,9 +15,9 @@ public class Task02Main {
 
     public static List<Path> listFiles(Path rootDir) throws IOException, InterruptedException {
         ArrayList<Path> result = new ArrayList<>();
-        DirectoryStream<Path> DirectoryStream = Files.newDirectoryStream(rootDir);
 
-        for(Path child: DirectoryStream) {
+        DirectoryStream<Path> dirStream = Files.newDirectoryStream(rootDir);
+        for(Path child: dirStream) {
             if(Files.isRegularFile(child)) {
                 result.add(child);
             }
