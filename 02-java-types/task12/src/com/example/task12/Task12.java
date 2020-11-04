@@ -17,7 +17,7 @@ public class Task12 {
         return sum;
         */
 
-        return BigDecimal.ZERO;
+        return new BigDecimal (sum.doubleValue() * Math.pow(1 + percent.doubleValue(), 12)).setScale(9,BigDecimal.ROUND_HALF_UP);
     }
 
     public static void main(String[] args) {
