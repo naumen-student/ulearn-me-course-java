@@ -7,15 +7,12 @@ import java.util.Scanner;
 public class Task01Main {
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        //System.out.println(extractSoundName(new File("08-java-io2/task01/src/main/resources/3727.mp3")));
-        System.out.println(extractSoundName(new File("8-java-io2/task01/src/main/resources/3727.mp3")));
+        System.out.println(extractSoundName(new File("08-java-io2/task01/src/main/resources/3727.mp3")));
     }
 
     public static String extractSoundName(File file) throws IOException, InterruptedException {
 
-        ProcessBuilder processBuilder = new ProcessBuilder();
-        processBuilder
-                .command("ffprobe", "-v", "error", "-of", "flat", "-show_format", file.getAbsolutePath());
+        ProcessBuilder processBuilder = new ProcessBuilder("ffprobe", "-v", "error", "-of", "flat", "-show_format" , file.getAbsolutePath());
 
         Scanner scanner = new Scanner(processBuilder.start().getInputStream());
         while (scanner.hasNextLine()) {
