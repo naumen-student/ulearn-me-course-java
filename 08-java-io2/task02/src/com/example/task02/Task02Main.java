@@ -20,15 +20,15 @@ public class Task02Main {
 
     public static List<Path> listFiles(Path rootDir) throws IOException, InterruptedException {
         ArrayList<Path> paths = new ArrayList<>();
-        FillFilesList(rootDir.toFile(), paths);
+        FillListFiles(rootDir.toFile(), paths);
         return paths;
     }
 
-    private static void FillFilesList(File rootDir, ArrayList<Path> paths) {
+    private static void FillListFiles(File rootDir, ArrayList<Path> paths) {
         for (File file : Objects.requireNonNull(rootDir.listFiles())) {
 
             if (file.isDirectory()) {
-                FillFilesList(file, paths);
+                FillListFiles(file, paths);
             } else {
                 paths.add(file.toPath());
             }
