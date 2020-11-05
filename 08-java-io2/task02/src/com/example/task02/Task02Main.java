@@ -20,9 +20,10 @@ public class Task02Main {
 
     public static List<Path> listFiles(Path rootDir) throws IOException, InterruptedException {
         ArrayList<Path> files = new ArrayList<>();
-        Files.walk(rootDir)
-                .filter(path -> Files.isRegularFile(path))
-                .forEach(e -> files.add(e));
+        for(Path path: Files.newDirectoryStream(rootDir)) {
+            if(Files.isRegularFile(path)) { files.add(path); }
+            else { files.addAll(listFiles(path)); }
+        }
         return files;
     }
 }
