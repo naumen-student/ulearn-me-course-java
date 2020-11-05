@@ -8,8 +8,7 @@ public class Task06Main {
 
     static int getMax(int a, int b, int c, int d) {
 
-        int result;
-        return (result = (result = a >= b ? a : b) >= c ? result : c) >= d ? result : d;
+        return Math.max(Math.max(a,b),Math.max(c,d));
     }
 
 }
