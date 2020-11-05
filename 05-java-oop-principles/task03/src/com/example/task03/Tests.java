@@ -7,8 +7,9 @@ public class Tests {
 
     /**
      * Проверяет ожидаемое значение интервала в различных единицах с реальными
-     * @param timeUnit временной интервал
-     * @param expectedMillis ожидаемое количество миллисекунд
+     *
+     * @param timeUnit        временной интервал
+     * @param expectedMillis  ожидаемое количество миллисекунд
      * @param expectedSeconds ожидаемое количество секунд
      * @param expectedMinutes ожидаемое количество минут
      */
@@ -19,6 +20,18 @@ public class Tests {
         Assert.assertEquals("Количество миллисекунд не соответствует ожидаемому", expectedMillis, actualMillis);
         Assert.assertEquals("Количество секунд не соответствует ожидаемому", expectedSeconds, actualSeconds);
         Assert.assertEquals("Количество минут не соответствует ожидаемому", expectedMinutes, actualMinutes);
+    }
+
+    public static Minutes toMinutes(Seconds seconds) {
+        return new Minutes(seconds.toMinutes());
+    }
+
+    public static Hours toHours(Seconds seconds) {
+        return new Hours(seconds.getHours());
+    }
+
+    public static Minutes toMinutes(Milliseconds millis) {
+        return new Minutes(millis.toMinutes());
     }
 
     @Test
