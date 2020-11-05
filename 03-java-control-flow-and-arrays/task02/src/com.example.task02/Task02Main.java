@@ -10,31 +10,12 @@ public class Task02Main {
     }
 
     static String getSeason(int monthNumber) {
-        String yearTime;
-        switch (monthNumber) {
-            case 12:
-            case 1:
-            case 2:
-                yearTime = "зима";
-                break;
-            case 3:
-            case 4:
-            case 5:
-                yearTime = "весна";
-                break;
-            case 6:
-            case 7:
-            case 8:
-                yearTime = "лето";
-                break;
-            case 9:
-            case 10:
-            case 11:
-                yearTime = "осень";
-                break;
-            default:
-                yearTime = "Неверный номер";
-        }
-        return yearTime;
+        if (monthNumber > 2 && monthNumber < 6)
+            return "весна";
+        else if (monthNumber > 5 && monthNumber < 9)
+            return "лето";
+        else if (monthNumber > 8 && monthNumber < 12)
+            return "осень";
+        else return "зима";
     }
 }
