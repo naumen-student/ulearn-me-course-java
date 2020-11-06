@@ -18,12 +18,12 @@ public class Task01Main {
 
     public static String extractSoundName(File file) throws IOException, InterruptedException {
         ProcessBuilder pb = new ProcessBuilder();
-        pb.command(String.format("ffprobe -v error -of flat -show_format %s",
-                file.getAbsolutePath()));
+        pb.command("ffprobe", "-v", "error", "-of", "flat", "-show_format",
+                file.getAbsolutePath());
 
         Process p = pb.start();
 
-        try (Scanner sc = new Scanner(new InputStreamReader(p.getInputStream()))) {
+        try (Scanner sc = new Scanner(p.getInputStream())) {
             while(sc.hasNextLine()) {
                 String l = sc.nextLine();
                 if (l.contains("format.tags.title"))
