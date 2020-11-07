@@ -8,15 +8,15 @@ public class Task01Main {
     public static void main(String[] args) {
     }
 
-    public static String extractSoundName(File file) throws IOException, InterruptedException {
+    public static String extractSoundName(File file) throws IOException {
         ProcessBuilder processBuilder = new ProcessBuilder();
         processBuilder.command("ffprobe", "-v", "error", "-of", "flat", "-show_format", file.getAbsolutePath());
         Scanner scanner = new Scanner(processBuilder.start().getInputStream());
         while (scanner.hasNextLine()){
-            String currentLine = scanner.nextLine();
-            if (currentLine.contains("format.tags.title"))
-                return currentLine.split("\"")[1];
+            String nextLine = scanner.nextLine();
+            if (nextLine.contains("format.tags.title"))
+                return nextLine.split("\"")[1];
         }
-        return null;
+        return "";
     }
 }
