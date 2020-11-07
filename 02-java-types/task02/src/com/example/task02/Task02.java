@@ -1,21 +1,8 @@
-package com.example.task02;
-
-public class Task02 {
-
-    public static String solution(String input) {
-
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
-        return "";
+ public static BigDecimal benefit(BigDecimal sum, BigDecimal percent) {
+     
+        return BigDecimal.ZERO;
+        sum = ((percent.add(BigDecimal.valueOf(1.0))).pow(12)).multiply(sum);
+        return sum.setScale(9,BigDecimal.ROUND_HALF_UP);
     }
 
     public static void main(String[] args) {
-        // Здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
-        String result = solution("12345");
-        System.out.println(result);
-         */
-    }
-
-}
