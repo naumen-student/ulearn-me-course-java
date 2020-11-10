@@ -54,6 +54,6 @@ public class SavedList<E extends Serializable> extends AbstractList<E> implement
             ObjectOutputStream outputStream = new ObjectOutputStream(fileOutputStream);
             outputStream.writeObject(this.list);
             outputStream.close();
-        } catch (Exception e){ }
+        } catch (Exception ignored){ }
     }
 }
