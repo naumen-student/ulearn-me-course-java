@@ -2,10 +2,10 @@ package com.example.task01;
 
 public class Task01Main {
     public static void main(String[] args) {
-        Point p1 = new Point();
+        Point p1 = new Point(10,54);
         p1.x = 10;
         p1.y = 45;
-        Point p2 = new Point();
+        Point p2 = new Point(4,30);
         p2.x = 78;
         p2.y = 12;
 
