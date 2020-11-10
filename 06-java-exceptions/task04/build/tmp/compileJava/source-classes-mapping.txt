@@ -1,4 +1,6 @@
-com/example/task04/Task04Main.java
- com.example.task04.Task04Main
 com/example/task04/Tests.java
  com.example.task04.Tests
+com/example/task04/MyException.java
+ com.example.task04.MyException
+com/example/task04/Task04Main.java
+ com.example.task04.Task04Main
