@@ -15,14 +15,3 @@ public class Seconds implements TimeUnit {
     public long toMillis() {
         return amount * 1000;
     }
-
-    @Override
-    public long toSeconds() {
-        return amount;
-    }
-
-    @Override
-    public long toMinutes() {
-        return Math.round(amount / 60);
-    }
-}
