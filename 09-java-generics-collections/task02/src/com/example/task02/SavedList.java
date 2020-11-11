@@ -8,11 +8,13 @@ public class SavedList<E extends Serializable> extends AbstractList<E> {
     private final File fileData;
 
 
-    public SavedList(File file) throws IOException, ClassNotFoundException {
+    public SavedList(File file) throws IOException {
         if(file.exists()){
             try (FileInputStream inputStream = new FileInputStream(file);
                  ObjectInputStream stream = new ObjectInputStream(inputStream)) {
                 data = (List<E>) stream.readObject();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
             }
         }else
             file.createNewFile();
