@@ -3,21 +3,25 @@ package com.example.task02;
 import java.io.*;
 import java.util.AbstractList;
 import java.util.ArrayList;
+import java.util.List;
 
 public class SavedList<E extends Serializable> extends AbstractList<E> {
-    private AbstractList<E> list = new ArrayList<>();
+    private List<E> list;
     private final File file;
 
-    public SavedList(File file) throws IOException {
+    public SavedList(File file) {
         this.file = file;
-        if (file.exists()) {
-            try (ObjectInputStream data = (new ObjectInputStream(new FileInputStream(file)))) {
-                list = (AbstractList<E>) data.readObject();
-            } catch (Exception ignored) {
+        boolean flag = false;
+        try {
+            FileInputStream inputFile = new FileInputStream(file);
+            try (ObjectInputStream stream = new ObjectInputStream(inputFile)) {
+                list = (List<E>) stream.readObject();
+                flag = true;
             }
-        } else {
-            this.file.createNewFile();
+        } catch (Exception ignored) {
         }
+        if (!flag)
+            list = new ArrayList<>();
     }
 
     @Override
