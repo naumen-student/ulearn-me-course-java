@@ -1,23 +1,28 @@
 package com.example.task02;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
-public class Task02Main {
-    public static void main(String[] args) throws IOException, InterruptedException {
-        //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
+public class Task02Main{
 
-        /*
-        System.out.println(listFiles(Paths.get("task02/src/main/resources/")));
-        */
-
+    public static List<Path> listFiles(Path rootDir) throws IOException, InterruptedException{
+        List<Path> paths = new ArrayList<>();
+        FillFilesList(rootDir.toFile(), paths);
+        return paths;
     }
 
-    public static List<Path> listFiles(Path rootDir) throws IOException, InterruptedException {
-        // your implementation here
-
-        return null;
+    private static void FillFilesList(File rootDirectory, List<Path> paths){
+        for (File file : Objects.requireNonNull(rootDirectory.listFiles())) {
+            if ( file.isDirectory() )
+                FillFilesList(file, paths);
+            else
+                paths.add(file.toPath());
+        }
     }
 }
