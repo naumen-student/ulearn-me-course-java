@@ -1,6 +1,6 @@
-import java.util.function.BiConsumer;
-
 package com.example.task01;
+
+import java.util.function.BiConsumer;
 
 public class Pair<T1, T2> {
 
