@@ -12,13 +12,14 @@ public class Task01Main {
     public static String extractSoundName(File file) throws IOException, InterruptedException {
         ProcessBuilder processBuilder = new ProcessBuilder();
         processBuilder.command("ffprobe", "-v", "error", "-of", "flat", "-show_format", file.getAbsolutePath());
+        String result = "";
 
         Scanner s = new Scanner(processBuilder.start().getInputStream());
         while (s.hasNextLine()) {
             String current = s.nextLine();
             if (current.startsWith("format.tags.title"))
-                return (current.replace("format.tags.title=", "")).substring(1, current.length() - 1);
+                result = current.replace("format.tags.title=", "");
         }
-        return null;
+        return result.substring(1, result.length() - 1);
     }
 }
