@@ -11,7 +11,6 @@ public class Task01Main {
 
     public static String extractSoundName(File file) throws IOException, InterruptedException {
         ProcessBuilder processBuilder = new ProcessBuilder("ffprobe", "-v", "error", "-of", "flat", "-show_format", file.getAbsolutePath());
-        String res = "";
 
         Scanner sc = new Scanner(processBuilder.start().getInputStream());
         while (sc.hasNextLine()) {
