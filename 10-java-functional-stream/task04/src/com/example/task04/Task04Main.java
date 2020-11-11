@@ -19,7 +19,7 @@ public class Task04Main{
         } catch (IOException ignored) {
         }
 
-        System.out.print(frequency.entrySet()
+        frequency.entrySet()
                 .stream()
                 .sorted((o1, o2) -> {
                     if ( o1.getValue().compareTo(o2.getValue()) == 0 )
@@ -29,7 +29,7 @@ public class Task04Main{
                 .map(Map.Entry::getKey)
                 .filter(x -> !x.equals(""))
                 .limit(10)
-                .collect(Collectors.joining("\n")));
+                .forEach(x -> System.out.printf("%s\n", x));
 
     }
 
