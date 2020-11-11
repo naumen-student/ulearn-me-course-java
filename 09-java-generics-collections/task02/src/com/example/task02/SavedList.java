@@ -6,22 +6,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SavedList<E extends Serializable> extends AbstractList<E> {
-    private List<E> list;
+    private List<E> list = new ArrayList<>();
     private final File file;
 
-    public SavedList(File file) {
+    public SavedList(File file) throws IOException {
+
         this.file = file;
-        boolean flag = false;
-        try {
-            FileInputStream inputFile = new FileInputStream(file);
-            try (ObjectInputStream stream = new ObjectInputStream(inputFile)) {
-                list = (List<E>) stream.readObject();
-                flag = true;
+        if (file.exists()) {
+            try (ObjectInputStream data = (new ObjectInputStream(new FileInputStream(file)))) {
+                list = (List<E>) data.readObject();
+            } catch (Exception ignored) {
             }
-        } catch (Exception ignored) {
+        } else {
+            this.file.createNewFile();
         }
-        if (!flag)
-            list = new ArrayList<>();
     }
 
     @Override
