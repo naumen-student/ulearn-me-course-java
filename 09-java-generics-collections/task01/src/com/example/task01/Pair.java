@@ -20,7 +20,7 @@ public class Pair<T1, T2> {
     }
 
     public boolean equals(Pair<T1, T2> pair){
-        return pair.first == this.first && pair.second == this.second;
+        return pair.first.equals(this.first) && pair.second.equals(this.second);
     }
 
     public int hashCode(){
