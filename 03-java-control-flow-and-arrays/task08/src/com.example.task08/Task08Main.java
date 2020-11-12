@@ -1,5 +1,9 @@
 package com.example.task08;
 
+import java.util.Arrays;
+import java.util.OptionalLong;
+import java.util.stream.Stream;
+
 public class Task08Main {
     public static void main(String[] args) {
         //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
@@ -14,7 +18,12 @@ public class Task08Main {
 
     static long mult(int[] arr) {
         //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
-        return 1;
+        OptionalLong result = Arrays.
+                stream(arr).
+                asLongStream().
+                reduce((x,y)->x*y);
+        return (result.isPresent())?result.getAsLong(): 0;
+
     }
 
 }
