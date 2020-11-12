@@ -1,5 +1,9 @@
 package com.example.task10;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class Task10Main {
     public static void main(String[] args) {
         //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
@@ -11,8 +15,9 @@ public class Task10Main {
     }
 
     static int numMin(int[] arr) {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
-        return 0;
+        List<Integer> list =Arrays.stream(arr).boxed().collect(Collectors.toList());
+        int min = Arrays.stream(arr).min().getAsInt();
+        return list.lastIndexOf(min);
     }
 
 }
