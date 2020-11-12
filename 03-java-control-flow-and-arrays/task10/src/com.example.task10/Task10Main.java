@@ -1,8 +1,8 @@
 package com.example.task10;
 
 import java.util.Arrays;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Task10Main {
     public static void main(String[] args) {
@@ -15,12 +15,9 @@ public class Task10Main {
     }
 
     static int numMin(int[] arr) {
-        IntStream stream = Arrays.stream(arr);
-        int min = stream.min().getAsInt();
-        for (int i = arr.length-1; i >=0 ; i--)
-            if (arr[i]==min)
-                return  i;
-        return  -1;
+        List<Integer> list =Arrays.stream(arr).boxed().collect(Collectors.toList());
+        int min = Arrays.stream(arr).min().getAsInt();
+        return list.lastIndexOf(min);
     }
 
 }
