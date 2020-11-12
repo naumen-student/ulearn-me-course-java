@@ -1,18 +1,30 @@
 package com.example.task12;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 public class Task12Main {
     public static void main(String[] args) {
-        //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
-        int[] arr = {9, 11, 7, 8};
-        selectionSort(arr);
-        System.out.println(java.util.Arrays.toString(arr));
-         */
+    }
+
+    private  static int getIndexOfMin(int[]  arr,int startIndex) {
+        List<Integer> list =Arrays.stream(arr).boxed().collect(Collectors.toList());
+        int min = Arrays.stream(arr).skip(startIndex).min().getAsInt();
+        return list.lastIndexOf(min);
+    }
+
+    static void swap(int[] arr,int startIndex) {
+        int minIndex = getIndexOfMin(arr,startIndex);
+        int temp = arr[startIndex];
+        arr[startIndex]=arr[minIndex];
+        arr[minIndex]=temp;
     }
 
     static void selectionSort(int[] arr) {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        if ((arr!=null&&arr.length!=0) )
+            for (int i = 0; i <arr.length ; i++)
+                swap(arr, i);
     }
-
 }
