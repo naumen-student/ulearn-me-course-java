@@ -1,5 +1,14 @@
 package com.example.task11;
 
+import com.sun.tools.javac.util.ArrayUtils;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
 public class Task11Main {
     public static void main(String[] args) {
         //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
@@ -11,8 +20,21 @@ public class Task11Main {
          */
     }
 
+    private  static  int getIndexOfMin(int[] arr)
+    {
+        List<Integer> list =Arrays.stream(arr).boxed().collect(Collectors.toList());
+        int min = Arrays.stream(arr).min().getAsInt();
+        return list.lastIndexOf(min);
+    }
+
     static void swap(int[] arr) {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        if (arr==null||arr.length==0 )
+            return;
+        int minIndex = getIndexOfMin((arr));
+
+        int temp = arr[0];
+        arr[0]=arr[minIndex];
+        arr[minIndex]=temp;
     }
 
 }
