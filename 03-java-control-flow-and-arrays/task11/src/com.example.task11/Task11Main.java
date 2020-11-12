@@ -1,7 +1,13 @@
 package com.example.task11;
 
+import com.sun.tools.javac.util.ArrayUtils;
+
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Task11Main {
     public static void main(String[] args) {
@@ -16,18 +22,16 @@ public class Task11Main {
 
     private  static  int getIndexOfMin(int[] arr)
     {
-        IntStream stream = Arrays.stream(arr);
-        int min = stream.min().getAsInt();
-        for (int i = arr.length-1; i >=0 ; i--)
-            if (arr[i]==min)
-                return  i;
-        return  -1;
+        List<Integer> list =Arrays.stream(arr).boxed().collect(Collectors.toList());
+        int min = Arrays.stream(arr).min().getAsInt();
+        return list.lastIndexOf(min);
     }
 
     static void swap(int[] arr) {
         if (arr==null||arr.length==0 )
             return;
-        int minIndex = getIndexOfMin(arr);
+        int minIndex = getIndexOfMin((arr));
+
         int temp = arr[0];
         arr[0]=arr[minIndex];
         arr[minIndex]=temp;
