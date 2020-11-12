@@ -1,5 +1,7 @@
 package com.example.task07;
 
+import java.util.Arrays;
+
 public class Task07Main {
     public static void main(String[] args) {
         int[] myArray = new int[4];
@@ -11,11 +13,7 @@ public class Task07Main {
     }
 
     static int sum(int[] arr) {
-        int result = 0;
-        for (int e : arr) {
-            result += e;
-        }
-        return result;
+        return Arrays.stream(arr).sum();
     }
 
 }
