@@ -2,24 +2,23 @@ package com.example.task05;
 
 public class Point {
 
-    private final double x;
-    private final double y;
+    private final double X, Y;
 
     public Point(double x, double y) {
-        this.x = x;
-        this.y = y;
+        this.X = x;
+        this.Y = y;
     }
 
     public double getX() {
-        return x;
+        return this.X;
     }
 
     public double getY() {
-        return y;
+        return this.Y;
     }
 
     public double getLength(Point point) {
-        return Math.sqrt(Math.pow(x - point.x, 2) + Math.pow(y - point.y, 2));
+        return Math.sqrt((point.X - this.X) * (point.X - this.X) + (point.Y - this.Y) * (point.Y - this.Y));
     }
 
 }
