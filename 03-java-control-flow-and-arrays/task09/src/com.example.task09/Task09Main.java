@@ -2,7 +2,6 @@ package com.example.task09;
 
 public class Task09Main {
     public static void main(String[] args) {
-
         int[] arr = new int[3];
         arr[0] = 2;
         arr[1] = -1;
@@ -11,13 +10,7 @@ public class Task09Main {
     }
 
     static int min(int[] arr) {
-
-        int min = Integer.MAX_VALUE;
-        for (int val:arr) {
-            if (val <= min)
-                min = val;
-        }
-        return min;
+        Arrays.sort(arr);
+        return arr[0];
     }
-
 }
