@@ -1,5 +1,7 @@
 package com.example.task10;
 
+import java.util.stream.IntStream;
+
 public class Task10Main {
     public static void main(String[] args) {
         int[] arr = {7, 5, 9};
@@ -7,15 +9,8 @@ public class Task10Main {
     }
 
     static int numMin(int[] arr) {
-        int min = arr[0];
-        int imin = 0;
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i] <= min) {
-                min = arr[i];
-                imin = i;
-            }
-        }
-        return imin;
+        return IntStream.range(0,arr.length)
+                .reduce((i,j) -> arr[i] >= arr[j] ? j : i)
+                .getAsInt();
     }
-
 }
