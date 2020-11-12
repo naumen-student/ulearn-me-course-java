@@ -12,7 +12,6 @@ import java.util.stream.Collectors;
 public class Task03Main {
 
     public static void main(String[] args) throws IOException {
-
         List<Set<String>> anagrams = findAnagrams(new FileInputStream("09-java-generics-collections/task03/resources/singular.txt"), Charset.forName("windows-1251"));
         for (Set<String> anagram : anagrams) {
             System.out.println(anagram);
