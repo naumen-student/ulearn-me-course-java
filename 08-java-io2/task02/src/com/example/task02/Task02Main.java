@@ -1,7 +1,10 @@
 package com.example.task02;
 
 import java.io.IOException;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Task02Main {
@@ -16,8 +19,11 @@ public class Task02Main {
     }
 
     public static List<Path> listFiles(Path rootDir) throws IOException, InterruptedException {
-        // your implementation here
-
-        return null;
+        ArrayList<Path> files = new ArrayList<>();
+        for(Path path: Files.newDirectoryStream(rootDir)) {
+            if(Files.isRegularFile(path)) { files.add(path); }
+            else { files.addAll(listFiles(path)); }
+        }
+        return files;
     }
 }
