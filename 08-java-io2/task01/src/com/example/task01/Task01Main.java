@@ -1,7 +1,10 @@
 package com.example.task01;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class Task01Main {
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -14,7 +17,20 @@ public class Task01Main {
     }
 
     public static String extractSoundName(File file) throws IOException, InterruptedException {
-        // your implementation here
-        return "sound name";
+        ProcessBuilder pb = new ProcessBuilder();
+        pb.command("ffprobe", "-v", "error", "-of", "flat", "-show_format",
+                file.getAbsolutePath());
+
+        Process p = pb.start();
+
+        try (Scanner sc = new Scanner(p.getInputStream())) {
+            while(sc.hasNextLine()) {
+                String l = sc.nextLine();
+                if (l.contains("format.tags.title"))
+                    return l.split("\"")[1];
+            }
+        }
+
+        throw new IllegalArgumentException();
     }
 }
