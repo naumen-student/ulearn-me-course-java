@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="2-java-types.task01" target="1.8" />
+      <module name="2-java-types.task01.main" target="1.8" />
+      <module name="2-java-types.task01.test" target="1.8" />
+      <module name="2-java-types.task02" target="1.8" />
+      <module name="2-java-types.task02.main" target="1.8" />
+      <module name="2-java-types.task02.test" target="1.8" />
+      <module name="2-java-types.task03" target="1.8" />
+      <module name="2-java-types.task03.main" target="1.8" />
+      <module name="2-java-types.task03.test" target="1.8" />
+      <module name="2-java-types.task04" target="1.8" />
+      <module name="2-java-types.task04.main" target="1.8" />
+      <module name="2-java-types.task04.test" target="1.8" />
+      <module name="2-java-types.task05" target="1.8" />
+      <module name="2-java-types.task05.main" target="1.8" />
+      <module name="2-java-types.task05.test" target="1.8" />
+      <module name="2-java-types.task06" target="1.8" />
+      <module name="2-java-types.task06.main" target="1.8" />
+      <module name="2-java-types.task06.test" target="1.8" />
+      <module name="2-java-types.task07" target="1.8" />
+      <module name="2-java-types.task07.main" target="1.8" />
+      <module name="2-java-types.task07.test" target="1.8" />
+      <module name="2-java-types.task08" target="1.8" />
+      <module name="2-java-types.task08.main" target="1.8" />
+      <module name="2-java-types.task08.test" target="1.8" />
+      <module name="2-java-types.task09" target="1.8" />
+      <module name="2-java-types.task09.main" target="1.8" />
+      <module name="2-java-types.task09.test" target="1.8" />
+      <module name="2-java-types.task10" target="1.8" />
+      <module name="2-java-types.task10.main" target="1.8" />
+      <module name="2-java-types.task10.test" target="1.8" />
+      <module name="2-java-types.task11" target="1.8" />
+      <module name="2-java-types.task11.main" target="1.8" />
+      <module name="2-java-types.task11.test" target="1.8" />
+      <module name="2-java-types.task12" target="1.8" />
+      <module name="2-java-types.task12.main" target="1.8" />
+      <module name="2-java-types.task12.test" target="1.8" />
+      <module name="2-java-types.task13" target="1.8" />
+      <module name="2-java-types.task13.main" target="1.8" />
+      <module name="2-java-types.task13.test" target="1.8" />
+      <module name="2-java-types.task14" target="1.8" />
+      <module name="2-java-types.task14.main" target="1.8" />
+      <module name="2-java-types.task14.test" target="1.8" />
+      <module name="8-java-io2.task01" target="1.8" />
+      <module name="8-java-io2.task01.main" target="1.8" />
+      <module name="8-java-io2.task01.test" target="1.8" />
+      <module name="8-java-io2.task02" target="1.8" />
+      <module name="8-java-io2.task02.main" target="1.8" />
+      <module name="8-java-io2.task02.test" target="1.8" />
+      <module name="8-java-io2.task03" target="1.8" />
+      <module name="8-java-io2.task03.main" target="1.8" />
+      <module name="8-java-io2.task03.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
