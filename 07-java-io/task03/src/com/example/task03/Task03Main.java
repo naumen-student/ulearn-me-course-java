@@ -14,8 +14,17 @@ public class Task03Main {
         */
     }
 
-    public static String readAsString(InputStream inputStream, Charset charset) throws IOException {
-        // your implementation here
-        return "";
+    public static String readAsString(InputStream inputStream, Charset charset) throws IOException
+    {
+        if (inputStream==null || charset==null)
+            throw new IllegalArgumentException();
+
+        StringBuilder res= new StringBuilder();
+        byte[] buffer = new byte[1024];
+
+        while ((inputStream.read(buffer))!=-1)
+            res.append((new String(buffer, charset.name())).trim());
+
+        return res.toString();
     }
 }
