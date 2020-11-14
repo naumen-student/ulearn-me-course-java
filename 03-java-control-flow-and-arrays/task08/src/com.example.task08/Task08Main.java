@@ -1,5 +1,8 @@
 package com.example.task08;
 
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 public class Task08Main {
     public static void main(String[] args) {
         //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
@@ -13,13 +16,7 @@ public class Task08Main {
     }
 
     static long mult(int[] arr) {
-        if (arr.length == 0)
-            return 0;
-        long multiply = 1;
-        for (int number : arr) {
-            multiply *= number;
-        }
-        return multiply;
+        return arr.length == 0 ? 0 :Arrays.stream(arr).asLongStream().reduce(1, (x,y) -> (x * y));
     }
 
 }
