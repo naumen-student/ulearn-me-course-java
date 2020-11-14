@@ -22,7 +22,7 @@ public class Pair<T,U> {
         return second;
     }
 
-    public void ifPresent(BiConsumer<T,U> consumer) {
+    public void ifPresent(BiConsumer<? super T,? super U> consumer) {
         if (first!=null && second!=null)
             consumer.accept(first,second);
     }
