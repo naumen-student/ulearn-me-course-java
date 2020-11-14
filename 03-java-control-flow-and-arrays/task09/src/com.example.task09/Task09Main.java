@@ -15,12 +15,7 @@ public class Task09Main {
     }
 
     static int min(int[] arr) {
-        int min = Integer.MAX_VALUE;
-        for (int number : arr) {
-            if (min > number)
-                min = number;
-        }
-        return min;
+        return Arrays.stream(arr).min().getAsInt();
     }
 
 }
