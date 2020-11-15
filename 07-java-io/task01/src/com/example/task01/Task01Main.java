@@ -1,6 +1,7 @@
 package com.example.task01;
 
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -14,7 +15,7 @@ public class Task01Main {
             throw new IllegalArgumentException();
         int currentByte = inputStream.read();
         int count = 0;
-        while (currentByte >= -1) {
+        while (currentByte >= 0) {
             count = Integer.rotateLeft(count, 1) ^ currentByte;
             currentByte = inputStream.read();
         }
