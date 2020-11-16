@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="10-java-functional-stream.task01" target="1.8" />
+      <module name="10-java-functional-stream.task01.main" target="1.8" />
+      <module name="10-java-functional-stream.task01.test" target="1.8" />
+      <module name="10-java-functional-stream.task02" target="1.8" />
+      <module name="10-java-functional-stream.task02.main" target="1.8" />
+      <module name="10-java-functional-stream.task02.test" target="1.8" />
+      <module name="10-java-functional-stream.task03" target="1.8" />
+      <module name="10-java-functional-stream.task03.main" target="1.8" />
+      <module name="10-java-functional-stream.task03.test" target="1.8" />
+      <module name="10-java-functional-stream.task04" target="1.8" />
+      <module name="10-java-functional-stream.task04.main" target="1.8" />
+      <module name="10-java-functional-stream.task04.test" target="1.8" />
+      <module name="10-java-functional-stream.task05" target="1.8" />
+      <module name="10-java-functional-stream.task05.main" target="1.8" />
+      <module name="10-java-functional-stream.task05.test" target="1.8" />
+      <module name="4-java-oop-basic.task01" target="1.8" />
+      <module name="4-java-oop-basic.task01.main" target="1.8" />
+      <module name="4-java-oop-basic.task01.test" target="1.8" />
+      <module name="4-java-oop-basic.task02" target="1.8" />
+      <module name="4-java-oop-basic.task02.main" target="1.8" />
+      <module name="4-java-oop-basic.task02.test" target="1.8" />
+      <module name="4-java-oop-basic.task03" target="1.8" />
+      <module name="4-java-oop-basic.task03.main" target="1.8" />
+      <module name="4-java-oop-basic.task03.test" target="1.8" />
+      <module name="4-java-oop-basic.task04" target="1.8" />
+      <module name="4-java-oop-basic.task04.main" target="1.8" />
+      <module name="4-java-oop-basic.task04.test" target="1.8" />
+      <module name="4-java-oop-basic.task05" target="1.8" />
+      <module name="4-java-oop-basic.task05.main" target="1.8" />
+      <module name="4-java-oop-basic.task05.test" target="1.8" />
+      <module name="java-intro.task01" target="1.8" />
+      <module name="java-intro.task01.main" target="1.8" />
+      <module name="java-intro.task01.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
