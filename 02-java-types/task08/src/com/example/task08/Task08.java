@@ -4,8 +4,8 @@ public class Task08 {
 
     public static boolean solution() {
         // TODO измените тип и значение переменной x, чтобы возвращалось значение true
-
-        int x = 100;
+        
+        float x = Float.MAX_VALUE;
         return x == x + 1;
     }
 
