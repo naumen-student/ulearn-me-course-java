@@ -1,7 +1,6 @@
 package com.example.task03;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.nio.charset.Charset;
 
 public class Task03Main {
@@ -15,7 +14,9 @@ public class Task03Main {
     }
 
     public static String readAsString(InputStream inputStream, Charset charset) throws IOException {
-        // your implementation here
-        return "";
+        if (inputStream == null || charset == null) {
+            throw new IllegalArgumentException("parameter is null");
+        }
+        return new BufferedReader(new InputStreamReader(inputStream, charset)).readLine();
     }
 }
