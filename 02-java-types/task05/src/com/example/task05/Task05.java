@@ -5,7 +5,6 @@ public class Task05 {
     public static String solution(int x) {
 
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
         int number = x;
         while (number != 0) {
             if ((number % 10) % 2 != 0)
@@ -23,3 +22,5 @@ public class Task05 {
         System.out.println(result);
 
     }
+
+}
