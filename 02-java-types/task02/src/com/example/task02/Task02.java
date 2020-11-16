@@ -3,10 +3,18 @@ package com.example.task02;
 public class Task02 {
 
     public static String solution(String input) {
-
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
-        return "";
+        long number = Long.parseLong(input);
+        String result = "";
+        if ((number >= - 128) && (number <= 127)) {
+            result = "byte";
+        } else if ((number >= -Math.pow(2, 15)) && (number <= (Math.pow(2, 15) -1))) {
+            result = "short";
+        } else if ((number >= -Math.pow(2, 31)) && (number <= (Math.pow(2, 31) -1))) {
+            result = "int";
+        } else if ((number >= -Math.pow(2, 63)) && (number <= (Math.pow(2, 63) -1))) {
+            result = "long";
+        }
+        return result;
     }
 
     public static void main(String[] args) {
