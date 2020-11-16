@@ -1,0 +1,4 @@
+com.example.task07/Tests.java
+ com.example.task07.Tests
+com.example.task07/Task07Main.java
+ com.example.task07.Task07Main
