@@ -11,14 +11,17 @@ public class MailMessage implements IMail<String> {
         this.content = content;
     }
 
+    @Override
     public String getFrom() {
         return from;
     }
 
+    @Override
     public String getTo() {
         return to;
     }
 
+    @Override
     public String getContent() {
         return content;
     }
