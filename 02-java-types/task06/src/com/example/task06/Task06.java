@@ -4,9 +4,16 @@ public class Task06 {
 
     public static int solution(int x, int y) {
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
-        return 0;
+        long summa = x + y;
+        if (summa == 0) {
+            return 1;
+        }
+        int result = 0;
+        while (summa != 0) {
+            result++;
+            summa /= 10;
+        }
+        return result;
     }
 
     public static void main(String[] args) {
