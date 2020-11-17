@@ -5,8 +5,21 @@ public class Task05 {
     public static String solution(int x) {
 
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
-        return "FALSE";
+        int length = String.valueOf(x).length();
+        int res = 0;
+        String result;
+        for (int i = 1; i <= length; i++) {
+            if (((x % 10) % 2) == 0) {
+                res++;
+            }
+            x /= 10;
+        }
+        if (res == length) {
+            result = "TRUE";
+        } else {
+            result = "FALSE";
+        }
+        return result;
     }
 
     public static void main(String[] args) {
