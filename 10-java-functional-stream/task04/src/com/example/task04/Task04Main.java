@@ -25,8 +25,6 @@ public class Task04Main {
                     .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
                     .limit(10)
                     .forEach(x -> System.out.print(x.getKey() + "\n"));
-
-
         } catch (IOException e) {
             e.printStackTrace();
         }
