@@ -35,6 +35,13 @@ public class TimeSpan {
         this.seconds = seconds;
     }
 
+    public TimeSpan(int hours, int minutes, int seconds)
+    {
+        this.hours = hours;
+        this.minutes = minutes;
+        this.seconds = seconds;
+    }
+
     void add(TimeSpan time)
     {
         this.hours += hours;
@@ -51,6 +58,6 @@ public class TimeSpan {
 
     public String toString()
     {
-        return String.format("", hours, minutes, seconds);
+        return String.format((hours + " " + minutes + " " + seconds));
     }
 }
