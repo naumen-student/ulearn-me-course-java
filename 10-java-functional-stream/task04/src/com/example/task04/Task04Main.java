@@ -12,12 +12,6 @@ import java.util.stream.Stream;
 public class Task04Main {
 
     public static void main(String[] args) {
-
-        findMostPopularWords();
-
-    }
-
-    public static void findMostPopularWords() {
         try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in))) {
             Stream<String> lines = bufferedReader.lines();
             lines
