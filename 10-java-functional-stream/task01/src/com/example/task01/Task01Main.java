@@ -8,6 +8,9 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Task01Main {
+    public static void main(String[] args) throws IOException {
+    }
+    
     public static <T, U> Function<T, U> ternaryOperator(
             Predicate<? super T> condition,
             Function<? super T, ? extends U> ifTrue,
