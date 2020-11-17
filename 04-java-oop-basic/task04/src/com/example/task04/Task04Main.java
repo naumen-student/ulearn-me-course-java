@@ -2,7 +2,7 @@ package com.example.task04;
 
 import java.awt.*;
 
-public class Line {
+class Line {
 
     private Point p1;
     private Point p2;
