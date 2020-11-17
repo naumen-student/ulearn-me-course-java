@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 import java.util.stream.Stream;
 
 public class Task01Main {
@@ -17,11 +18,16 @@ public class Task01Main {
     }
 
     public static String extractSoundName(File file) throws IOException, InterruptedException {
-        ProcessBuilder processBuilder=new ProcessBuilder();
-        processBuilder.command("ffprobe", "-v" ,"error" ,"-of", "flat" ,"-show_format",file.getAbsolutePath());
-        Process process=processBuilder.start();
-        try (BufferedReader bufferedReader= new BufferedReader(new InputStreamReader(process.getInputStream()))){
-            return bufferedReader.readLine().split("\"")[1];
+        ProcessBuilder processBuilder = new ProcessBuilder("ffprobe", "-v", "error", "-of", "flat", "-show_format", file.getAbsolutePath());
+        String res = "";
+
+
+        Scanner sc = new Scanner(processBuilder.start().getInputStream());
+        while (sc.hasNextLine()) {
+            String curr = sc.nextLine();
+            if (curr.startsWith("format.tags.title"))
+            return curr.split("\"")[1];
         }
+        return null;
     }
 }
