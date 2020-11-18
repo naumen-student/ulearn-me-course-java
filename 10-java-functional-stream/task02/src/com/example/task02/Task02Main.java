@@ -2,9 +2,11 @@ package com.example.task02;
 
 import java.util.stream.IntStream;
 
-public class Task02Main {
+public class Task02Main
+{
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
 
         /*
         cycleGrayCode(2)
@@ -14,10 +16,14 @@ public class Task02Main {
 
     }
 
-    public static IntStream cycleGrayCode(int n) {
+    public static IntStream cycleGrayCode(int n)
+    {
 
-        return null; // your implementation here
-
+        if (n < 1 || n > 16)
+            throw new IllegalArgumentException();
+        int upperBound = (int) Math.pow(2, n);
+        return IntStream.iterate(0, x -> x + 1)
+                .map(x -> (x % upperBound))
+                .map(x -> x ^ (x >> 1));
     }
-
 }
