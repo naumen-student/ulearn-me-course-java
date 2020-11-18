@@ -1,5 +1,7 @@
 package com.example.task09;
 
+import java.util.Arrays;
+
 public class Task09Main {
     public static void main(String[] args) {
         //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
@@ -14,10 +16,7 @@ public class Task09Main {
     }
 
     static int min(int[] arr) {
-        int min = Integer.MAX_VALUE;
-        for (int i = 0; i < arr.length; i++)
-            min = Math.min(min, arr[i]);
-        return min;
+        return Arrays.stream(arr).min().getAsInt();
     }
 
 }
