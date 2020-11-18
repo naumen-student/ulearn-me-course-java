@@ -12,9 +12,6 @@ public class Task06Main {
     }
 
     static int getMax(int a, int b, int c, int d) {
-        int[] numbers = {a, b, c, d};
-        Arrays.sort(numbers);
-        return numbers[3];
+        return Math.max(Math.max(a, b), Math.max(c, d));
     }
-
 }
