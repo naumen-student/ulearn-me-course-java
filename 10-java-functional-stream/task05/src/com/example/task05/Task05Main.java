@@ -9,12 +9,10 @@ public class Task05Main {
 
     public static void main(String[] args) {
 
-        /*
-
         // Random variables
-        String randomFrom = "..."; // Некоторая случайная строка. Можете выбрать ее самостоятельно.
-        String randomTo = "...";  // Некоторая случайная строка. Можете выбрать ее самостоятельно.
-        int randomSalary = 100;  // Некоторое случайное целое положительное число. Можете выбрать его самостоятельно.
+        String randomFrom = "Person1";
+        String randomTo = "Person2";
+        int randomSalary = 10;
 
         // Создание списка из трех почтовых сообщений.
         MailMessage firstMessage = new MailMessage(
@@ -86,9 +84,6 @@ public class Task05Main {
         assert salaries.get(salary1.getTo()).equals(Arrays.asList(1)) : "wrong salaries mailbox content (1)";
         assert salaries.get(salary2.getTo()).equals(Arrays.asList(Integer.MAX_VALUE)) : "wrong salaries mailbox content (2)";
         assert salaries.get(randomTo).equals(Arrays.asList(randomSalary)) : "wrong salaries mailbox content (3)";
-
-
-        */
 
     }
 
