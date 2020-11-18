@@ -45,6 +45,7 @@ public class Pair<T1, T2> {
     }
 
     public void ifPresent(BiConsumer<? super T1, ? super T2> biConsumer) {
+
         if (first != null && second != null) {
             biConsumer.accept(first, second);
         }
