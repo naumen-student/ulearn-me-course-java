@@ -1,6 +1,9 @@
 package com.example.task03;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
+import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.stream.Stream;
 
@@ -21,7 +24,17 @@ public class Task03Main {
             Stream<? extends T> stream,
             Comparator<? super T> order,
             BiConsumer<? super T, ? super T> minMaxConsumer) {
-
-        // your implementation here
+        if (stream == null)
+            throw new IllegalArgumentException();
+        final List<T> pair = new ArrayList<>();
+        stream.forEach(e -> {
+            if (pair.size() == 0) pair.addAll(Arrays.asList(e, e));
+            if(order.compare(e, pair.get(0)) < 0) pair.set(0, e);
+            if(order.compare(e, pair.get(1)) > 0) pair.set(1, e);
+        });
+        if (pair.size() == 0)
+            minMaxConsumer.accept(null, null);
+        else
+            minMaxConsumer.accept(pair.get(0), pair.get(1));
     }
 }
