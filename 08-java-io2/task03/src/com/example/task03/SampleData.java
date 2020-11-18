@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.Objects;
 import java.io.Serializable;
 
-public class SampleData implements Serializable {
+public class SampleData implements Serializable{
     static final long serialVersionUID = 132706691457162967L;
 
     String name;
