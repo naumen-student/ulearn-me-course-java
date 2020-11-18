@@ -1,10 +1,7 @@
 package com.example.task03;
 
-import javafx.util.Pair;
-
 import java.util.Comparator;
 import java.util.Iterator;
-import java.util.Optional;
 import java.util.function.BiConsumer;
 import java.util.stream.Stream;
 
