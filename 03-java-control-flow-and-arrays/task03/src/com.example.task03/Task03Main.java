@@ -10,15 +10,11 @@ public class Task03Main {
     }
 
     static String getNameOfWeekDays(int weekDaysNumber) {
-        switch (weekDaysNumber) {
-            case 1: return "понедельник";
-            case 2: return "вторник";
-            case 3: return "среда";
-            case 4: return "четверг";
-            case 5: return "пятница";
-            case 6: return "суббота";
-            case 7: return "воскресенье";
-            default: return "такого дня недели не существует";
+        if (weekDaysNumber < 1 || weekDaysNumber > 7) {
+            return "такого дня недели не существует";
         }
+        String[] days = new String[]{"понедельник", "вторник", "среда",
+                "четверг", "пятница", "суббота", "воскресенье"};
+        return days[weekDaysNumber - 1];
     }
 }
