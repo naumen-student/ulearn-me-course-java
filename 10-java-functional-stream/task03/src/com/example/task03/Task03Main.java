@@ -37,7 +37,8 @@ public class Task03Main {
             T elem = iterator.next();
             if (order.compare(elem, min) < 0) {
                 min = elem;
-            } else if (order.compare(elem, max) > 0){
+            }
+            if (order.compare(elem, max) > 0){
                 max = elem;
             }
         }
