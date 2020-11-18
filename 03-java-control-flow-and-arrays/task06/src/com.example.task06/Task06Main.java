@@ -12,6 +12,7 @@ public class Task06Main {
     }
 
     static int getMax(int a, int b, int c, int d) {
-        return Math.max(Math.max(a, b), Math.max(c, d));
+        int[] arr = new int[]{a, b, c, d};
+        return Arrays.stream(arr).max().getAsInt();
     }
 }
