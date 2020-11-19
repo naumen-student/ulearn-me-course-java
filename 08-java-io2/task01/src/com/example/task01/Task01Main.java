@@ -16,7 +16,7 @@ public class Task01Main {
         new BufferedReader(
                 new InputStreamReader(
                         new ProcessBuilder()
-                                .command("C:\\ffmpeg\\bin\\ffmpeg", "-i", file.getAbsoluteFile().toString())
+                                .command("ffmpeg", "-i", file.getAbsoluteFile().toString())
                                 .start()
                                 .getErrorStream()))
                 .lines()
