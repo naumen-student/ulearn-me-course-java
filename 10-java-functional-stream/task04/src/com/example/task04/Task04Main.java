@@ -11,17 +11,18 @@ import java.util.stream.Stream;
 public class Task04Main {
 
     public static void main(String[] args) {
-        Stream<String> stream = new BufferedReader(new InputStreamReader(System.in)).lines();
-        stream
-                .filter(x -> x.length() > 0)
-                .map(String::toLowerCase)
-                .flatMap(x -> Arrays.stream(x.split("[^a-zа-яё0-9]+")))
-                .collect(Collectors.groupingBy(x -> x, Collectors.counting()))
-                .entrySet().stream()
-                .sorted(Map.Entry.comparingByKey())
-                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-                .limit(10)
-                .forEach(x -> System.out.print(x.getKey() + '\n'));
+        try (Stream<String> stream = new BufferedReader(new InputStreamReader(System.in)).lines()) {
+            stream
+                    .filter(x -> x.length() > 0)
+                    .map(String::toLowerCase)
+                    .flatMap(x -> Arrays.stream(x.split("[^a-zа-яё0-9]+")))
+                    .collect(Collectors.groupingBy(x -> x, Collectors.counting()))
+                    .entrySet().stream()
+                    .sorted(Map.Entry.comparingByKey())
+                    .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                    .limit(10)
+                    .forEach(x -> System.out.print(x.getKey() + '\n'));
+        }
     }
 
 }
