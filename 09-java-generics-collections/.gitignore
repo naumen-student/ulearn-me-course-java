@@ -32,3 +32,7 @@ hs_err_pid*
 
 # Gradle
 .gradle
+
+task01/build
+task02/build
+task03/build
