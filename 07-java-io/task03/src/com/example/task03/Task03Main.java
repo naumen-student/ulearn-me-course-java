@@ -2,7 +2,10 @@ package com.example.task03;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.StringWriter;
 import java.nio.charset.Charset;
+import java.util.Scanner;
 
 public class Task03Main {
     public static void main(String[] args) throws IOException {
@@ -15,7 +18,13 @@ public class Task03Main {
     }
 
     public static String readAsString(InputStream inputStream, Charset charset) throws IOException {
-        // your implementation here
-        return "";
+        if (inputStream == null | charset == null)
+            throw new IllegalArgumentException();
+        InputStreamReader inputStreamReader = new InputStreamReader(inputStream, charset);
+        Scanner scanner = new Scanner(inputStreamReader);
+        StringWriter stringWriter = new StringWriter();
+        while (scanner.hasNext())
+            stringWriter.write(scanner.next());
+        return stringWriter.toString();
     }
 }
