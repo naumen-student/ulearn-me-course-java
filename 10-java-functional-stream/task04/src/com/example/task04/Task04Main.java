@@ -11,7 +11,7 @@ public class Task04Main {
         StringBuilder input = new StringBuilder("");
         while (scanner.hasNext())
             input.append(scanner.next()).append(" ");
-        Stream<String> stream = Arrays.stream(input.toString().toLowerCase().split("[^a-zа-я0-9ё]+"));
+        Stream<String> stream = Arrays.stream(input.toString().toLowerCase().split("\\P{LD}+"));
             stream.collect(Collectors.groupingBy(x -> x, Collectors.counting()))
                     .entrySet().stream()
                     .sorted(Map.Entry.comparingByKey())
