@@ -13,10 +13,13 @@ public class Task07Main {
         System.out.println(sum(myArray));
          */
     }
-
+ 
     static int sum(int[] arr) {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
-        return 0;
+        int sum = 0;
+        for (int num: arr) {
+            sum += num;
+        }
+        return sum;
     }
 
 }
