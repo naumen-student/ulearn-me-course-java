@@ -23,7 +23,7 @@ public class Task12Main {
                     ind = i;
                 }
             }
-            arr[ind] = arr[j];
+            arr[ind] = arr[j]; 
             arr[j] = min;
         }
     }
