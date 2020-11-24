@@ -14,9 +14,7 @@ public class Task09Main {
     }
 
     static int min(int[] arr) {
-        long result = arr[0];
-        if (arr.length == 0 || arr == null)
-            return 0;
+        int result = arr[0];
         for (int number : arr)
             if (result > number)
                 result = number;
