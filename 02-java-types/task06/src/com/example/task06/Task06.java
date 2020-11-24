@@ -1,12 +1,13 @@
 package com.example.task06;
 
 public class Task06 {
+    public static int checkNegative(int value){
+        if(value < 0)value *= -1;
+        return value;
+    }
 
     public static int solution(int x, int y) {
-
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
-        return 0;
+        return String.valueOf(checkNegative(x + y)).length();
     }
 
     public static void main(String[] args) {
