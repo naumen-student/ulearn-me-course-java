@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.example:code-check:1.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.example/code-check/1.1/86e3ede8810c4c3f8d221bf3c1bb3e7d228785a2/code-check-1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.example/code-check/1.1/3cadd601215314265fe90277a978a4388913d675/code-check-1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
