@@ -9,5 +9,17 @@ public class Task02Main {
         // - направить стандартный вывод программы в файл output.test
         // - запустить программу
         // - и сравнить получившийся файл output.test с expected.test
+
+        int first, next = System.in.read();
+        while (true){
+            if (next == -1)
+                break;
+            first = next;
+            next = System.in.read();
+            if(first == 13 && next == 10)
+                continue;
+            else
+                System.out.write(first);
+        }
     }
 }
