@@ -13,7 +13,7 @@ class TimeSpan {
         return this.hour;
     }
 
-    public int set_hour(int hour) {
+    public void set_hour(int hour) {
         this.hour = hour;
     }
 
@@ -21,7 +21,7 @@ class TimeSpan {
         return this.minute;
     }
 
-    public int set_minute(int minute) {
+    public void set_minute(int minute) {
         this.minute = minute;
     }
 
@@ -29,7 +29,7 @@ class TimeSpan {
         return this.second;
     }
 
-    public int set_second(int second) {
+    public void set_second(int second) {
         this.second = second;
     }
 
