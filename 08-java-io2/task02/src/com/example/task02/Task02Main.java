@@ -1,23 +1,43 @@
-package com.example.task02;
+package com.example.task03;
 
-import java.io.IOException;
-import java.nio.file.Path;
-import java.util.List;
+import java.io.Serializable;
+import java.util.Date;
+import java.util.Objects;
 
-public class Task02Main {
-    public static void main(String[] args) throws IOException, InterruptedException {
-        //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
+public class SampleData implements Serializable {
+    static final long serialVersionUID = 132706691457162967L;
 
-        /*
-        System.out.println(listFiles(Paths.get("task02/src/main/resources/")));
-        */
+    String name;
+    int value;
+    Date date;
 
+    public SampleData(String name, int value, Date date) {
+        this.name = name;
+        this.value = value;
+        this.date = date;
     }
 
-    public static List<Path> listFiles(Path rootDir) throws IOException, InterruptedException {
-        // your implementation here
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SampleData that = (SampleData) o;
+        return value == that.value &&
+                Objects.equals(name, that.name) &&
+                Objects.equals(date, that.date);
+    }
 
-        return null;
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, value, date);
+    }
+
+    @Override
+    public String toString() {
+        return "SampleData{" +
+                "name='" + name + '\'' +
+                ", value=" + value +
+                ", date=" + date +
+                '}';
     }
 }
