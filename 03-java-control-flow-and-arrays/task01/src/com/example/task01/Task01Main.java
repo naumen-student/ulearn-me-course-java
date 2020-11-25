@@ -5,12 +5,16 @@ public class Task01Main {
         //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
         // например вот так:
         /*
-        boolean b = canGetDriverLicense(100);
+        boolean a = canGetDriverLicense(100);
+        boolean b = canGetDriverLicense(15);
+        boolean c = canGetDriverLicense(19);
+        System.out.println(a);
         System.out.println(b);
+        System.out.println(c);
          */
     }
 
     static boolean canGetDriverLicense(int age) {
-        return true;//todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        return age >= 18;
     }
 }
