@@ -3,7 +3,7 @@ package com.example.task05;
 import java.util.*;
 import java.util.function.Consumer;
 
-public class MailService<T> implements Consumer<IMessage<T>> {
+public class MailService<T> implements Consumer<Message<T>> {
     HashMap<String, List<T>> mailBox = new HashMap<String, List<T>>() {
         @Override
         public List<T> get(Object key) {
@@ -15,7 +15,7 @@ public class MailService<T> implements Consumer<IMessage<T>> {
         return mailBox;
     }
 
-    public void accept(IMessage<T> tMessage) {
+    public void accept(Message<T> tMessage) {
         if (mailBox.containsKey(tMessage.getTo())) {
             mailBox.get(tMessage.getTo()).add(tMessage.getContent());
         } else {
@@ -25,9 +25,9 @@ public class MailService<T> implements Consumer<IMessage<T>> {
         }
     }
 
-    public Consumer<IMessage<T>> andThen(Consumer<? super IMessage<T>> after) {
+    public Consumer<Message<T>> andThen(Consumer<? super Message<T>> after) {
         Objects.requireNonNull(after);
-        return (IMessage<T> t) -> {
+        return (Message<T> t) -> {
             accept(t);
             after.accept(t);
         };
