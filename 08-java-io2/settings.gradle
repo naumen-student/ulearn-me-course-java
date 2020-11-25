@@ -1,0 +1,4 @@
+rootProject.name = '8-java-io2'
+include 'task01'
+include 'task02'
+include 'task03'
