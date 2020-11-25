@@ -6,10 +6,21 @@ public class Task03Main {
         // например вот так:
         /*
         System.out.println(getNameOfWeekDays(7));
+        System.out.println(getNameOfWeekDays(2));
+        System.out.println(getNameOfWeekDays(4));
          */
     }
 
     static String getNameOfWeekDays(int weekDaysNumber) {
-        return "";//todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        switch (weekDaysNumber) {
+            case 1: return "понедельник";
+            case 2: return "вторник";
+            case 3: return "среда";
+            case 4: return "четверг";
+            case 5: return "пятница";
+            case 6: return "суббота";
+            case 7: return "воскресенье";
+            default:
+                return "такого дня недели не существует";
     }
 }
