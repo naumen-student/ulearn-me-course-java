@@ -107,11 +107,12 @@ public class Tests {
 
         // remove file
         file.delete();
-
+        System.out.println(file.delete());
         // reload
         list = new SavedList<>(file);
         Assert.assertTrue(list.isEmpty());
         Assert.assertEquals(0, list.size());
+
     }
 
 
