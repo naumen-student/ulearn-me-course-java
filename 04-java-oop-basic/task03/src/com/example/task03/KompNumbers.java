@@ -1,5 +1,4 @@
 package com.example.task03;
-
 public class KompNumbers {
 
     private double real, no_real;
