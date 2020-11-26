@@ -9,10 +9,12 @@ public class Task10Main {
         System.out.println(numMin(arr));
          */
     }
-
     static int numMin(int[] arr) {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
-        return 0;
+        int imin = 0;
+        for (int i = 1; i < arr.length; i++)
+            if (arr[i] <= arr[imin])
+                imin = i;
+        return imin;
     }
-
 }
+
