@@ -1,8 +1,8 @@
 package com.example.task04;
 
 public class Point {
-    private final x;
-    private final y;
+    private final int x;
+    private final int y;
 
     public Point(int x, int y) {
         this.x = x;
