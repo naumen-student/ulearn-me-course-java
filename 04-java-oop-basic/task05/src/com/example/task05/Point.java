@@ -45,7 +45,7 @@ public class Point {
     public double getLength(Point point) {
         double result_x = point.x - x;
         double result_y = point.x - y;
-        return math.sqrt(math.pow(result_x, 2) + math.pow(result_y, 2));
+        return Math.sqrt(Math.pow(result_x, 2) + Math.pow(result_y, 2));
     }
 
 }
