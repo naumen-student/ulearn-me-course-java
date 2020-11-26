@@ -50,8 +50,6 @@ public class PolygonalLine {
      * @return длину ломаной линии
      */
     public double getLength() {
-        // TODO: реализовать
-        throw new AssertionError();
         double res = 0;
         for (int i = 1; i < points.size(); i++) {
             res += points.get(i).getLength(points.get(i - 1));
