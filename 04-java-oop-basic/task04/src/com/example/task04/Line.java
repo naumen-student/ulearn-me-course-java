@@ -1,7 +1,8 @@
 package com.example.task04;
 
 public class Line {
-    private final point_1, point_2;
+    private final point_1;
+    private final point_2;
 
     public Line(Point p1, Point p2) {
         this.p1 = p1;
