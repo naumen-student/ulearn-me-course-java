@@ -4,6 +4,7 @@ import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.Arrays;
 import java.util.Collections;
@@ -11,7 +12,7 @@ import java.util.List;
 
 public class Tests {
 
-    private void check(List<String> words, List<List<String>> result) {
+    private void check(List<String> words, List<List<String>> result) throws IOException {
         String input = String.join("\n", words);
         Assertions.assertThat("" + Task03Main.findAnagrams(new ByteArrayInputStream(input.getBytes()), Charset.defaultCharset()))
                 .as("Input: %s", input)
@@ -19,7 +20,7 @@ public class Tests {
     }
 
     @Test
-    public void testExample() {
+    public void testExample() throws IOException {
         List<String> words = Arrays.asList(
                 "трос",
                 "накал",
@@ -37,7 +38,7 @@ public class Tests {
     }
 
     @Test
-    public void test() {
+    public void test() throws IOException {
         List<String> words = Arrays.asList(
                 "Корт",
                 "Варан",
@@ -54,7 +55,7 @@ public class Tests {
     }
 
     @Test
-    public void testErrors() {
+    public void testErrors() throws IOException {
         List<String> words = Arrays.asList(
                 "а",
                 "а",
@@ -82,7 +83,7 @@ public class Tests {
     }
 
     @Test
-    public void testEmpty() {
+    public void testEmpty() throws IOException {
         List<String> words = Collections.emptyList();
         List<List<String>> result = Collections.emptyList();
         check(words, result);
