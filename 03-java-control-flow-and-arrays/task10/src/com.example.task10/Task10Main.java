@@ -9,7 +9,6 @@ public class Task10Main {
         System.out.println(numMin(arr));
          */
     }
-
     static int numMin(int[] arr) {
         int imin = 0;
         for (int i = 1; i < arr.length; i++)
