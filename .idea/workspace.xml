@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="613eb0b4-5fe4-497d-ba45-9e36e5c1a80d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/02-java-types">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/02-java-types">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1600246654002">
+      <screen x="-283" y="-1080" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1366.738/-283.-1080.1920.1050@-283.-1080.1920.1050" timestamp="1600246654002" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1600246654000">
+      <screen x="-283" y="-1080" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1366.738/-283.-1080.1920.1050@-283.-1080.1920.1050" timestamp="1600246654000" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1600246653999">
+      <screen x="-283" y="-1080" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1366.738/-283.-1080.1920.1050@-283.-1080.1920.1050" timestamp="1600246653999" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1600246654001">
+      <screen x="-283" y="-1080" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1366.738/-283.-1080.1920.1050@-283.-1080.1920.1050" timestamp="1600246654001" />
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1600246653981">
+      <screen x="-283" y="-1080" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.0.1366.738/-283.-1080.1920.1050@-283.-1080.1920.1050" timestamp="1600246653981" />
+    <state width="1877" height="352" key="GridCell.Tab.1.center" timestamp="1600246653980">
+      <screen x="-283" y="-1080" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.center/0.0.1366.738/-283.-1080.1920.1050@-283.-1080.1920.1050" timestamp="1600246653980" />
+    <state width="1877" height="352" key="GridCell.Tab.1.left" timestamp="1600246653980">
+      <screen x="-283" y="-1080" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.left/0.0.1366.738/-283.-1080.1920.1050@-283.-1080.1920.1050" timestamp="1600246653980" />
+    <state width="1877" height="352" key="GridCell.Tab.1.right" timestamp="1600246653981">
+      <screen x="-283" y="-1080" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1366.738/-283.-1080.1920.1050@-283.-1080.1920.1050" timestamp="1600246653981" />
+  </component>
+</project>
