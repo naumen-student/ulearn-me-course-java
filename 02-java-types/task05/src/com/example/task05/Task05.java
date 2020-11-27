@@ -4,9 +4,16 @@ public class Task05 {
 
     public static String solution(int x) {
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
-        return "FALSE";
+        int lengthOfX = String.valueOf(x).length();
+        int k = 0;
+        for (int i = 1; i <= lengthOfX; i++)
+        {
+            int y = x % 10;
+            if (y % 2 == 0)
+            {
+                k++;
+            }
+            x /= 10;
     }
 
     public static void main(String[] args) {
