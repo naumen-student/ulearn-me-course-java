@@ -9,12 +9,7 @@ import java.util.List;
 public class Bill {
     private List<BillItem> items = new ArrayList<>();
 
-    /**
-     * Добавляет товар в корзину
-     *
-     * @param item товар
-     * @param amount количество
-     */
+
     public void add(Item item, int amount) {
         boolean found = false;
         for (BillItem billItem: items) {
