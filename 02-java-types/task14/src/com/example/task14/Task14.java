@@ -7,16 +7,17 @@ public class Task14 {
 
         // TODO напишите здесь код, переставляющий цифры числа в обратном порядке
 
-        return 0;
+        String num1 = Integer.toString(value);
+        String str_num1 = new StringBuilder(num1).reverse().toString();
+        int result_num = new Integer(str_num1);
+        return result_num;
     }
 
     public static void main(String[] args) {
-        // Здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
+
         int result = reverse(345);
         System.out.println(result);
-         */
+
     }
 
 
