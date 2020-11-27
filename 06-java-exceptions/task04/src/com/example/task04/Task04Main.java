@@ -3,15 +3,19 @@ package com.example.task04;
 public class Task04Main {
 
     public static void main(String[] args) {
-        //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
-        System.out.println(getSeason(-5));
-         */
+
+        //System.out.println(getSeason(-1));
+        //...
+        //...
+
     }
 
     static String getSeason(int monthNumber) {
-        return "";//todo напишите здесь свою корректную реализацию этого метода, вместо существующей
-    }
+        if ( monthNumber > 12 || monthNumber < 1) {
+            throw new MyException("monthNumber " + monthNumber
+                    + " is invalid, month number should be between 1..12");
+        }
 
+        return new String[] {"зима", "весна", "лето", "осень"}[monthNumber == 12? 0: monthNumber / 3];
+    }
 }
