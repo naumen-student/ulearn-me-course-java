@@ -5,17 +5,13 @@ import java.io.InputStream;
 import java.nio.charset.Charset;
 
 public class Task03Main {
-    public static void main(String[] args) throws IOException {
-        //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-
-        /*
-        System.out.println(readAsString(new FileInputStream("task03/src/com/example/task03/input.test"), Charset.forName("KOI8-R")));
-        */
-    }
-
     public static String readAsString(InputStream inputStream, Charset charset) throws IOException {
-        // your implementation here
-        return "";
+        if (inputStream == null || charset == null)
+            throw new IllegalArgumentException();
+        StringBuilder result = new StringBuilder();
+        byte[] buffer = new byte[1024];
+        while ((inputStream.read(buffer)) != -1)
+            result.append((new String(buffer, charset.name())));
+        return result.toString().trim();
     }
 }
