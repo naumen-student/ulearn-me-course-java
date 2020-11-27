@@ -1,16 +1,20 @@
 package com.example.task03;
 
+import sun.jvm.hotspot.oops.CheckedExceptionElement;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public class Task03Main {
-    public static void main(String[] args) {
-        //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
+    public static void main(String[] args) throws IOException {
         throwCheckedException();
-         */
     }
 
-    //todo напишите здесь свою корректную реализацию задания
-    public static void throwCheckedException() {
-
+    public static void throwCheckedException() throws IOException {
+        FileInputStream fileI = null;
+        fileI = new FileInputStream(new File(""));
+        fileI.close();
     }
 }
