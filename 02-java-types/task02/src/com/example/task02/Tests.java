@@ -8,6 +8,7 @@ public class Tests {
 
     private void check(String input, String output) {
         Assertions.assertThat(Task02.solution(input)).as("Input: \"%s\"", input).isEqualTo(output);
+
     }
 
     @Test
