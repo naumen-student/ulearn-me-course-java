@@ -13,7 +13,7 @@ public class Tests {
     }
 
     @Test
-    public void test() throws Exception {
+    public void test() {
         check(500, 0.00000001f, 500.00006f);
         check(150, 0.0000001f, 150.00018f);
         check(222, 0.00000179f, 222.00478f);
@@ -31,8 +31,6 @@ public class Tests {
                 .isEqualTo("public static float benefit(float sum, float percent)");
         Assertions.assertThat(method.findAll(VariableDeclarator.class))
                 .as("Declared variables")
-                .allMatch((v) -> {
-                    return v.getType().isPrimitiveType() && !v.getType().asString().equals("double");
-                }, "only int and float types allowed");
+                .allMatch((v) -> v.getType().isPrimitiveType() && !v.getType().asString().equals("double"), "only int and float types allowed");
     }
 }
