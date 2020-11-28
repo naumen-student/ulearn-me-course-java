@@ -8,7 +8,6 @@ import java.util.Map;
 public class Task05Main {
 
     public static void main(String[] args) {
-
         // Random variables
         String randomFrom = "..."; // Некоторая случайная строка. Можете выбрать ее самостоятельно.
         String randomTo = "...";  // Некоторая случайная строка. Можете выбрать ее самостоятельно.
