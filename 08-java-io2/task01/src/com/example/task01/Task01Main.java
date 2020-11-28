@@ -11,15 +11,13 @@ public class Task01Main {
     }
 
     public static String extractSoundName(File file) throws IOException, InterruptedException {
-        ProcessBuilder procBuild = new ProcessBuilder();
-        procBuild.command("ffprobe", "-v error", "-of flat", "-show_format", file.getAbsolutePath());
-        InputStream input = procBuild.start().getInputStream();
+        ProcessBuilder builder = new ProcessBuilder("ffprobe", "-v", "error", "-of", "flat", "-show_format", file.getAbsolutePath());
+        InputStream input = builder.start().getInputStream();
         Scanner sc = new Scanner(input);
-        Scanner scan = new Scanner(input);
-        while (scan.hasNextLine()) {
-            String currentLine = scan.nextLine();
-            if (currentLine.startsWith("format.tags.title")) {
-                return currentLine.split("\"")[1];
+        while (sc.hasNextLine()) {
+            String line = sc.nextLine();
+            if (line.contains("format.tags.title")) {
+                return line.split("\"")[1];
             }
         }
         return null;
