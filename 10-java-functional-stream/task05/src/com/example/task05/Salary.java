@@ -1,6 +1,6 @@
 package com.example.task05;
 
-public class Salary implements InfoMessage<Integer> {
+public class Salary implements Message<Integer> {
     private String employer;
     private String payee;
     private Integer salary;

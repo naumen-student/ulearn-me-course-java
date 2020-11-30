@@ -1,6 +1,6 @@
 package com.example.task05;
 
-public class MailMessage implements InfoMessage<String> {
+public class MailMessage implements Message<String> {
     private String from;
     private String to;
     private String message;

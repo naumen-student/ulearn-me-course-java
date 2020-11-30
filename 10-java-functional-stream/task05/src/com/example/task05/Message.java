@@ -4,4 +4,5 @@ public interface Message<T> {
     String getFrom();
     String getTo();
     T getContent();
+    
 }
