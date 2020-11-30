@@ -1,21 +1,23 @@
 package com.example.task02;
 
-public class Task02Main {
+public class DiscountBill extends Bill {
+    private final double discount;
 
-    private static final Item ITEM1 = new Item("Товар 1", 10);
-    private static final Item ITEM2 = new Item("Товар 2", 20);
-    private static final Item ITEM3 = new Item("Товар 3", 30);
-    private static final Item ITEM4 = new Item("Товар 4", 40);
-    private static final Item ITEM5 = new Item("Товар 5", 50);
-    private static final Item ITEM6 = new Item("Товар 6", 60);
+    public DiscountBill(double discount){
+        if (discount < 0 || discount > 100)
+            throw new Error("Discount must be [0, 100]");
+        this.discount = discount;
+    }
 
-    public static void main(String[] args) {
-        Bill bill = new Bill();
-        bill.add(ITEM1, 10);
-        bill.add(ITEM3, 3);
-        bill.add(ITEM6, 1);
-        System.out.println(bill);
-        bill.add(ITEM3, 3);
-        System.out.println(bill);
+    public double getDiscount(){
+        return discount;
+    }
+
+    public double getFinalPrice(){
+        return super.getPrice() * (1 - discount / 100);
+    }
+
+    public double getAbsolutePrice(){
+        return super.getPrice() - this.getFinalPrice();
     }
 }
