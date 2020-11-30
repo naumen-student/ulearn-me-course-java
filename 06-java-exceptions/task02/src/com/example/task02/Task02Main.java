@@ -3,14 +3,26 @@ package com.example.task02;
 public class Task02Main {
 
     public static void main(String[] args) {
-        //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
-        System.out.println(getSeason(-5));
-         */
+        System.out.println(getSeason(3));
+        try {
+            getSeason(-99999);
+        }
+        catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
     }
 
-    static String getSeason(int monthNumber) {
-        return "";//todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+    static String getSeason(int monthNumber) throws IllegalArgumentException {
+        if(monthNumber > 12 || monthNumber <= 0) {
+            throw new IllegalArgumentException(
+                    String.format("monthNumber %d is invalid, month number should be between 1..12", monthNumber));
+        }
+        if (monthNumber == 12 || monthNumber <= 2)
+            return "зима";
+        if (monthNumber <= 5)
+            return "весна";
+        if (monthNumber <= 8)
+            return "лето";
+        return "осень";
     }
 }
