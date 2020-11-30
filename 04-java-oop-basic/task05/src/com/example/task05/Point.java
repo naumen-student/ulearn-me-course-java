@@ -1,8 +1,5 @@
 package com.example.task05;
 
-/**
- * Точка в двумерном пространстве
- */
 public class Point {
 
     /**
@@ -11,10 +8,12 @@ public class Point {
      * @param x координата по оси абсцисс
      * @param y координата по оси ординат
      */
-    public Point(double x, double y) {
-        throw new AssertionError();
+    private final double x;
+    private final double y;
+    public Point(double x, double y){
+        this.x = x;
+        this.y  =y;
     }
-
     /**
      * Возвращает координату точки по оси абсцисс
      *
@@ -22,7 +21,8 @@ public class Point {
      */
     public double getX() {
         // TODO: реализовать
-        throw new AssertionError();
+        //throw new AssertionError();
+        return x;
     }
 
     /**
@@ -32,7 +32,8 @@ public class Point {
      */
     public double getY() {
         // TODO: реализовать
-        throw new AssertionError();
+        //throw new AssertionError();
+        return y;
     }
 
     /**
@@ -43,7 +44,8 @@ public class Point {
      */
     public double getLength(Point point) {
         // TODO: реализовать
-        throw new AssertionError();
+        //throw new AssertionError();
+        return Math.sqrt(Math.pow(this.x - point.getX(),2) + Math.pow(this.y - point.getY(),2));
     }
 
 }
