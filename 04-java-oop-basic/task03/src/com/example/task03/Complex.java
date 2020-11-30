@@ -17,6 +17,15 @@ public class Complex{ // Re + i * Im
         return new Complex(a.get_re() - b.get_re(),a.get_im() - b.get_im());
     }
 
+    public static Complex multiplication(Complex a, Complex b){
+        int re1 = a.get_re();
+        int re2 = b.get_re();
+        int im1 = a.get_im();
+        int im2 = b.get_im();
+
+        return new Complex(re1*re2 - im2*im1, re1*im2 + re2*im1);
+    }
+
     public void set_re(int re){
         this.re = re;
     }
