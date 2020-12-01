@@ -5,23 +5,20 @@ package com.example.task03;
  */
 public class TimeUnitUtils {
 
-    /**
-     * Конвертирует интервал в секундах в интервал в миллисекундах
-     *
-     * @param seconds интервал в секундах
-     * @return интервал в миллисекундах
-     */
-    public static Milliseconds toMillis(Seconds seconds) {
-        return new Milliseconds(seconds.toMillis());
+    public static Milliseconds toMillis(TimeUnit timeU){
+
+        return new Milliseconds(timeU.toMillis());
     }
 
-    /**
-     * Конвертирует интервал в миллисекундах в интервал в секундах
-     *
-     * @param millis интервал в миллисекундах
-     * @return интервал в секундах
-     */
-    public static Seconds toSeconds(Milliseconds millis) {
-        return new Seconds(millis.toSeconds());
+    public static Seconds toSeconds(TimeUnit timeU){
+
+        return new Seconds(timeU.toSeconds());
+    }
+
+    public static Minutes toMinutes(TimeUnit timeU){
+        return new Minutes(timeU.toMinutes());}
+
+    public static Hours toHours(TimeUnit timeU) {
+        return new Hours(timeU.toHours());
     }
 }
