@@ -26,8 +26,6 @@ public class Logger{
         Date now = new Date();
         SimpleDateFormat format_date = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");
         String to_out = String.format("[%s] %s %s - %s" ,level,format_date.format(now),name,mes);
-        //to_out
-        //System.out.println(String.format("[%s] %s %s - %s" ,level,format_date.format(now),name,mes););
         System.out.println(to_out);
     }
 
@@ -52,11 +50,7 @@ public class Logger{
         if (!flag) {
             log = new Logger(name);
             logs.add(log);
-        }/*
-        else {
-            log = new Logger(name);
-            logs.add(log);
-        }*/
+        }
         return log;
     }
 
