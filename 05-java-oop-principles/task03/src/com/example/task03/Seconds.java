@@ -13,7 +13,7 @@ public class Seconds implements TimeUnit {
 
     @Override
     public long toMillis() {
-        return amount * 1000;
+        return this.toSeconds() * 1000;
     }
 
     @Override
@@ -23,6 +23,11 @@ public class Seconds implements TimeUnit {
 
     @Override
     public long toMinutes() {
-        return Math.round(amount / 60);
+        return Math.round((float) this.toSeconds() / 60);
+    }
+
+    @Override
+    public long getHours() {
+        return Math.round((float) this.toSeconds() / 60 / 60);
     }
 }
