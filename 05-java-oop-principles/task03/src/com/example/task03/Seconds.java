@@ -1,5 +1,7 @@
 package com.example.task03;
 
+import java.math.BigDecimal;
+
 /**
  * Интервал в секундах
  */
@@ -23,6 +25,13 @@ public class Seconds implements TimeUnit {
 
     @Override
     public long toMinutes() {
-        return Math.round(amount / 60);
+        BigDecimal temp = new BigDecimal(amount / 60d);
+        return temp.setScale(0, BigDecimal.ROUND_HALF_UP).longValue();
+    }
+
+    @Override
+    public long getHours() {
+        BigDecimal temp = new BigDecimal(amount / 3600d);
+        return temp.setScale(0, BigDecimal.ROUND_HALF_UP).longValue();
     }
 }
