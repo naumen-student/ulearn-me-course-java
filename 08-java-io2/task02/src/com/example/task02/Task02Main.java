@@ -21,6 +21,7 @@ public class Task02Main {
                 return FileVisitResult.CONTINUE;
             }
         });
+
         return res;
     }
 }
