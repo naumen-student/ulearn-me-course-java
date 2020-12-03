@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/01-java-intro" />
+        <option name="gradleJvm" value="14" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/01-java-intro" />
+            <option value="$PROJECT_DIR$/01-java-intro/task01" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/02-java-types" />
+        <option name="gradleJvm" value="14" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/02-java-types" />
+            <option value="$PROJECT_DIR$/02-java-types/task01" />
+            <option value="$PROJECT_DIR$/02-java-types/task02" />
+            <option value="$PROJECT_DIR$/02-java-types/task03" />
+            <option value="$PROJECT_DIR$/02-java-types/task04" />
+            <option value="$PROJECT_DIR$/02-java-types/task05" />
+            <option value="$PROJECT_DIR$/02-java-types/task06" />
+            <option value="$PROJECT_DIR$/02-java-types/task07" />
+            <option value="$PROJECT_DIR$/02-java-types/task08" />
+            <option value="$PROJECT_DIR$/02-java-types/task09" />
+            <option value="$PROJECT_DIR$/02-java-types/task10" />
+            <option value="$PROJECT_DIR$/02-java-types/task11" />
+            <option value="$PROJECT_DIR$/02-java-types/task12" />
+            <option value="$PROJECT_DIR$/02-java-types/task13" />
+            <option value="$PROJECT_DIR$/02-java-types/task14" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/03-java-control-flow-and-arrays" />
+        <option name="gradleJvm" value="14" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task01" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task02" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task03" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task04" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task05" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task06" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task07" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task08" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task09" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task10" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task11" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task12" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task13" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
