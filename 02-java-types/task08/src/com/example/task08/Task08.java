@@ -7,4 +7,5 @@ public class Task08 {
         float x = 100000000f;
         return x == x + 1;
     }
+    
 }
