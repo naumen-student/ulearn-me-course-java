@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2-java-types.iml" filepath="$PROJECT_DIR$/.idea/modules/2-java-types.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task01/2-java-types.task01.iml" filepath="$PROJECT_DIR$/.idea/modules/task01/2-java-types.task01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task01/2-java-types.task01.main.iml" filepath="$PROJECT_DIR$/.idea/modules/task01/2-java-types.task01.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task01/2-java-types.task01.test.iml" filepath="$PROJECT_DIR$/.idea/modules/task01/2-java-types.task01.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task02/2-java-types.task02.iml" filepath="$PROJECT_DIR$/.idea/modules/task02/2-java-types.task02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task02/2-java-types.task02.main.iml" filepath="$PROJECT_DIR$/.idea/modules/task02/2-java-types.task02.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task02/2-java-types.task02.test.iml" filepath="$PROJECT_DIR$/.idea/modules/task02/2-java-types.task02.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task03/2-java-types.task03.iml" filepath="$PROJECT_DIR$/.idea/modules/task03/2-java-types.task03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task03/2-java-types.task03.main.iml" filepath="$PROJECT_DIR$/.idea/modules/task03/2-java-types.task03.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task03/2-java-types.task03.test.iml" filepath="$PROJECT_DIR$/.idea/modules/task03/2-java-types.task03.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task04/2-java-types.task04.iml" filepath="$PROJECT_DIR$/.idea/modules/task04/2-java-types.task04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task04/2-java-types.task04.main.iml" filepath="$PROJECT_DIR$/.idea/modules/task04/2-java-types.task04.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task04/2-java-types.task04.test.iml" filepath="$PROJECT_DIR$/.idea/modules/task04/2-java-types.task04.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task05/2-java-types.task05.iml" filepath="$PROJECT_DIR$/.idea/modules/task05/2-java-types.task05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task05/2-java-types.task05.main.iml" filepath="$PROJECT_DIR$/.idea/modules/task05/2-java-types.task05.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task05/2-java-types.task05.test.iml" filepath="$PROJECT_DIR$/.idea/modules/task05/2-java-types.task05.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task06/2-java-types.task06.iml" filepath="$PROJECT_DIR$/.idea/modules/task06/2-java-types.task06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task06/2-java-types.task06.main.iml" filepath="$PROJECT_DIR$/.idea/modules/task06/2-java-types.task06.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task06/2-java-types.task06.test.iml" filepath="$PROJECT_DIR$/.idea/modules/task06/2-java-types.task06.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task07/2-java-types.task07.iml" filepath="$PROJECT_DIR$/.idea/modules/task07/2-java-types.task07.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task07/2-java-types.task07.main.iml" filepath="$PROJECT_DIR$/.idea/modules/task07/2-java-types.task07.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task07/2-java-types.task07.test.iml" filepath="$PROJECT_DIR$/.idea/modules/task07/2-java-types.task07.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task08/2-java-types.task08.iml" filepath="$PROJECT_DIR$/.idea/modules/task08/2-java-types.task08.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task08/2-java-types.task08.main.iml" filepath="$PROJECT_DIR$/.idea/modules/task08/2-java-types.task08.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task08/2-java-types.task08.test.iml" filepath="$PROJECT_DIR$/.idea/modules/task08/2-java-types.task08.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task09/2-java-types.task09.iml" filepath="$PROJECT_DIR$/.idea/modules/task09/2-java-types.task09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task09/2-java-types.task09.main.iml" filepath="$PROJECT_DIR$/.idea/modules/task09/2-java-types.task09.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task09/2-java-types.task09.test.iml" filepath="$PROJECT_DIR$/.idea/modules/task09/2-java-types.task09.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task10/2-java-types.task10.iml" filepath="$PROJECT_DIR$/.idea/modules/task10/2-java-types.task10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task10/2-java-types.task10.main.iml" filepath="$PROJECT_DIR$/.idea/modules/task10/2-java-types.task10.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task10/2-java-types.task10.test.iml" filepath="$PROJECT_DIR$/.idea/modules/task10/2-java-types.task10.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task11/2-java-types.task11.iml" filepath="$PROJECT_DIR$/.idea/modules/task11/2-java-types.task11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task11/2-java-types.task11.main.iml" filepath="$PROJECT_DIR$/.idea/modules/task11/2-java-types.task11.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task11/2-java-types.task11.test.iml" filepath="$PROJECT_DIR$/.idea/modules/task11/2-java-types.task11.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task12/2-java-types.task12.iml" filepath="$PROJECT_DIR$/.idea/modules/task12/2-java-types.task12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task12/2-java-types.task12.main.iml" filepath="$PROJECT_DIR$/.idea/modules/task12/2-java-types.task12.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task12/2-java-types.task12.test.iml" filepath="$PROJECT_DIR$/.idea/modules/task12/2-java-types.task12.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task13/2-java-types.task13.iml" filepath="$PROJECT_DIR$/.idea/modules/task13/2-java-types.task13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task13/2-java-types.task13.main.iml" filepath="$PROJECT_DIR$/.idea/modules/task13/2-java-types.task13.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task13/2-java-types.task13.test.iml" filepath="$PROJECT_DIR$/.idea/modules/task13/2-java-types.task13.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task14/2-java-types.task14.iml" filepath="$PROJECT_DIR$/.idea/modules/task14/2-java-types.task14.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task14/2-java-types.task14.main.iml" filepath="$PROJECT_DIR$/.idea/modules/task14/2-java-types.task14.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task14/2-java-types.task14.test.iml" filepath="$PROJECT_DIR$/.idea/modules/task14/2-java-types.task14.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java-intro.iml" filepath="$PROJECT_DIR$/.idea/modules/java-intro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task01/java-intro.task01.iml" filepath="$PROJECT_DIR$/.idea/modules/task01/java-intro.task01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task01/java-intro.task01.main.iml" filepath="$PROJECT_DIR$/.idea/modules/task01/java-intro.task01.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task01/java-intro.task01.test.iml" filepath="$PROJECT_DIR$/.idea/modules/task01/java-intro.task01.test.iml" />
+    </modules>
+  </component>
+</project>
