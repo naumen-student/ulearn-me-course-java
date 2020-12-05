@@ -6,12 +6,16 @@ import java.util.Scanner;
 
 public class Task04Main {
     public static void main(String[] args) throws IOException {
-        double sum = 0.0;
-        try (Scanner scanner = new Scanner(System.in).useLocale(Locale.ENGLISH)) {
-            while (scanner.hasNextDouble()) {
+        double sum = 0;
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.CANADA);
+
+        System.out.println("0.0");
+        while (scanner.hasNext()) {
+            if (scanner.hasNextDouble())
                 sum += scanner.nextDouble();
-            }
+            else
+                scanner.next();
         }
-        System.out.format(Locale.ENGLISH, "%6f", sum);
+        System.out.format(Locale.CANADA," %1.6f", sum);
     }
 }
