@@ -15,6 +15,6 @@ public class Task04Main {
                     scanner.next();
             }
         }
-        System.out.format(Locale.ENGLISH, " %1.6f", sum);
+        System.out.format(Locale.ENGLISH, "%6f", sum);
     }
 }
