@@ -13,9 +13,10 @@ public class Task06Main {
     }
 
     static int getMax(int a, int b, int c, int d) {
-        int[] arr = new int[] {a, b, c, d};
-        Arrays.sort(arr);
-        return arr[arr.length - 1];
+        int[] arr = {a, b ,c, d };
+        int max = arr[0];
+        for (int i = 0; i < 4; i++) if (arr[i] > max) max = arr[i];
+        return max;
     }
 
 }
