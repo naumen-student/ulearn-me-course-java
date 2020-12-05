@@ -8,11 +8,8 @@ public class Task04Main {
     public static void main(String[] args) throws IOException {
         double sum = 0;
         try (Scanner scanner = new Scanner(System.in).useLocale(Locale.ENGLISH)) {
-            while (scanner.hasNext()) {
-                if (scanner.hasNextDouble())
-                    sum += scanner.nextDouble();
-                else
-                    scanner.next();
+            while (scanner.hasNextDouble()) {
+                sum += scanner.nextDouble();
             }
         }
         System.out.format(Locale.ENGLISH, "%6f", sum);
