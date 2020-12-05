@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Task04Main {
     public static void main(String[] args) throws IOException {
-        double sum = 0;
+        double sum = 0.0;
         try (Scanner scanner = new Scanner(System.in).useLocale(Locale.ENGLISH)) {
             while (scanner.hasNextDouble()) {
                 sum += scanner.nextDouble();
