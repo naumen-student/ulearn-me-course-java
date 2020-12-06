@@ -22,8 +22,7 @@ public class Task01Main {
         while (scanner.hasNextLine()) {
             String currentLine = scanner.nextLine();
             if (currentLine.startsWith("format.tags.title")) {
-                result = currentLine.split("format.tags.title=")[1];
-                break;
+                return currentLine.split("\"")[1];
             }
         }
         return result;
