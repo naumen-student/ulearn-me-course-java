@@ -13,7 +13,7 @@ public class Task01Main {
         processBuilder.command("ffprobe", "-v", "error", "-of", "flat", "-show_format", file.getAbsolutePath());
         Scanner scanner = new Scanner(processBuilder.start().getInputStream());
         String newData = scanner.nextLine();
-        while(newData != null){
+        while(scanner.hasNextLine()){
             if(newData.contains("format.tags.title="))
                 return newData.substring("format.tags.title=".length());
             newData = scanner.nextLine();
