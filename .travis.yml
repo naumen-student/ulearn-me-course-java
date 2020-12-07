@@ -16,6 +16,11 @@ script:
     fi
     slot=`echo $diff | cut -f1 -d' '`
     task=`echo $diff | cut -f2 -d' '`
+    if [ $slot == "08-java-io2" ]
+    then
+        sudo apt-get -qq update
+        sudo apt-get install -y ffmpeg
+    fi
     echo "Checking $task"
     cmd="./gradlew :$task:clean :$task:check"
     cd $slot
