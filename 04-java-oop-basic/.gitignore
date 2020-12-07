@@ -1,0 +1,27 @@
+.metadata
+bin/
+tmp/
+*.log
+*.tmp
+*.bak
+*.swp
+*~.nib
+.settings/
+.classpath
+.recommenders
+.gradle/
+
+# Eclipse Core
+.project
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# IDEA artifacts and output dirs
+*.iml
+*.ipr
+*.iws
+.idea
+out
+.gradle
+build
