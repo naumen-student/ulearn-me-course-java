@@ -4,10 +4,18 @@ import java.io.IOException;
 
 public class Task02Main {
     public static void main(String[] args) throws IOException {
-        // чтобы протестировать свое решение, вам нужно:
-        // - направить файл input.test в стандартный ввод программы (в настройках запуска программы в IDE или в консоли)
-        // - направить стандартный вывод программы в файл output.test
-        // - запустить программу
-        // - и сравнить получившийся файл output.test с expected.test
+        if (args == null) throw new IllegalArgumentException();
+        int newData = System.in.read();
+        int previous = -1;
+        while (true) {
+            if(newData == -1) break;
+            previous = newData;
+            newData = System.in.read();
+            if (previous == 13 && newData == 10) {
+                continue;
+            } else {
+                System.out.write(previous);
+            }
+        }
     }
 }
