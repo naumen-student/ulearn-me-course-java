@@ -4,7 +4,6 @@ import java.io.IOException;
 
 public class Task02Main {
     public static void main(String[] args) throws IOException {
-        if (args == null) throw new IllegalArgumentException();
         int newData = System.in.read();
         int previous = -1;
         while (true) {
