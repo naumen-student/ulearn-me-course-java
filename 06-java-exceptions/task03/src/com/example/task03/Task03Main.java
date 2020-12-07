@@ -10,7 +10,8 @@ public class Task03Main {
     }
 
     //todo напишите здесь свою корректную реализацию задания
-    public static void throwCheckedException() {
-
+    public static void throwCheckedException() throws checked {
+        throw new checked ();
     }
 }
+class checked extends Exception{}
