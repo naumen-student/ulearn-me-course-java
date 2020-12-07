@@ -47,9 +47,8 @@ public class TimeSpan {
         this.minutes -= minutes;
         this.seconds -= seconds;
     }
-
     public String toString()
     {
-    return String.format((hours + " " + minutes + " " + seconds));
-}
+        return String.format((hours + " " + minutes + " " + seconds));
+    }
 }
