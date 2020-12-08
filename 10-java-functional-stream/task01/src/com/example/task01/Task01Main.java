@@ -5,6 +5,8 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Task01Main {
+    private static Object NullPointerException;
+
     public static void main(String[] args) throws IOException {
 
         // TODO С корректно реализованным методом ternaryOperator должен компилироваться и успешно работать следующий код:
@@ -22,8 +24,9 @@ public class Task01Main {
             Predicate<? super T> condition,
             Function<? super T, ? extends U> ifTrue,
             Function<? super T, ? extends U> ifFalse) {
-
-        return null; // your implementation here
+        if (condition == null || ifFalse == null || ifTrue == null)
+            throw new NullPointerException();
+        return t -> condition.test(t) ? ifTrue.apply(t) : ifFalse.apply(t); // your implementation here
 
     }
 }
