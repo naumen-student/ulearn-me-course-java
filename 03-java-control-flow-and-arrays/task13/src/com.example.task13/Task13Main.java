@@ -1,6 +1,6 @@
 package com.example.task13;
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class Task13Main {
     public static void main(String[] args) {
@@ -14,27 +14,16 @@ public class Task13Main {
     }
 
     static int[] removeMoreThen1000(int[] arr) {
-        if (arr == null) {
-            return null;
+        if (arr == null || arr.length == 0) {
+            return arr;
         }
-
-        int countElementLessThousand = 0;
-        for (int number : arr) {
-            if (number < 1000) {
-                countElementLessThousand++;
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i : arr) {
+            if (i <= 1000) {
+                list.add(i);
             }
         }
-
-        int[] arr1 = new int[countElementLessThousand];
-        int indexArr1 = 0;
-        for (int number : arr) {
-            if (number < 1000) {
-                arr1[indexArr1] = number;
-                indexArr1++;
-            }
-        }
-
-        return  arr1;
+        return list.stream().mapToInt(Integer::intValue).toArray();;
     }
     }
 
