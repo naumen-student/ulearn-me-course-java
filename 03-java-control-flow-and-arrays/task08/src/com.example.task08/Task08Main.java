@@ -11,6 +11,9 @@ public class Task08Main {
     }
 
     static long mult(int[] arr) {
-        return arr == null || arr.length == 0 ? 0 : Arrays.stream(arr).reduce(1, (a, b) -> a * b);
+        if (arr == null || arr.length == 0) {
+            return 0;
+        }
+        return Arrays.stream(arr).mapToLong(e -> e).reduce(1, (a, b) -> a * b);
     }
 }
