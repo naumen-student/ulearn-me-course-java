@@ -1,5 +1,7 @@
 package com.example.task01;
 
+import jdk.nashorn.internal.parser.JSONParser;
+
 public class Task01Main {
     public static void main(String[] args) {
         //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
@@ -10,6 +12,7 @@ public class Task01Main {
     }
 
     static void codeWithNPE() {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        String str = null;
+        System.out.println(str.contains(" "));
     }
 }
