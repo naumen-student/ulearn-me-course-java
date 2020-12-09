@@ -6,7 +6,7 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Task01Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Predicate<Object> condition = Objects::isNull;
         Function<Object, Integer> ifTrue = obj -> 0;
         Function<CharSequence, Integer> ifFalse = CharSequence::length;
