@@ -13,10 +13,11 @@ public class Task02Main {
             throw new IllegalArgumentException(String.format("monthNumber %d is invalid, month number should be between 1..12", monthNumber));
         if (monthNumber < 3 || monthNumber == 12)
             return("зима");
-        if (monthNumber < 6)
+        if (monthNumber < 6 && monthNumber > 3)
             return("весна");
-        if (monthNumber < 9)
+        if (monthNumber < 9 && monthNumber > 6)
             return("лето");
-        return "осень";
+        if (monthNumber < 12 && monthNumber > 9)
+            return("осень");
     }
 }
