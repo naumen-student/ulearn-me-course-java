@@ -3,6 +3,7 @@ package com.example.task01;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+
 public class Logger {
 
     private String name;
