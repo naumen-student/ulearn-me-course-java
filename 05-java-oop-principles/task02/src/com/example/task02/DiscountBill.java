@@ -7,9 +7,7 @@ public class DiscountBill extends Bill {
         this.sale = sale;
     }
 
-    public int get_DiscountBill
-
-    {
+    public int getSaleBill() {
         return sale;
     }
 
@@ -17,7 +15,7 @@ public class DiscountBill extends Bill {
         return super.getPrice() - super.getPrice() * sale / 100;
     }
 
-    public long getAbsoluteDiscount() {
+    public long getAbsoluteSale() {
         return super.getPrice() - getPrice();
     }
 }
