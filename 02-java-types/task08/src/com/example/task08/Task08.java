@@ -1,18 +1,20 @@
-package com.example.task08;
+package com.example.task07;
 
-public class Task08 {
+public class Task07 {
 
-    public static boolean solution() {
-        // TODO измените тип и значение переменной x, чтобы возвращалось значение true
+    public static int solution(int n, int m, int k) {
 
-        int x = 100;
-        return x == x + 1;
+        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
+
+        return 0;
     }
 
     public static void main(String[] args) {
-        // Здесь вы можете вручную протестировать ваше решение
+        // Здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
+        // например вот так:
         /*
-        System.out.println(solution());
+        int result = solution(10, 20, 5);
+        System.out.println(result);
         */
     }
 
