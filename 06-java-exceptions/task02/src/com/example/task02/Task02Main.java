@@ -18,13 +18,13 @@ public class Task02Main {
             case (monthNumber < 3 || monthNumber == 12):
                 return ("зима");
             break;
-            case (monthNumber < 6 && monthNumber > 3):
+            case (monthNumber < 6):
                 return ("весна");
             break;
-            case (monthNumber < 9 && monthNumber > 6):
+            case (monthNumber < 9):
                 return("лето");
                 break;
-            case (monthNumber < 12 && monthNumber > 9):
+            case (monthNumber < 12):
                 return("осень");
                 break;
         }
