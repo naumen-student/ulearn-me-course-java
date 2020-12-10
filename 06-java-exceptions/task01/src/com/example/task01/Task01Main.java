@@ -10,6 +10,8 @@ public class Task01Main {
     }
 
     static void codeWithNPE() {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        String[] a = new String[2];
+        String upcase = a[1].toUpperCase();
+        System.out.print(upcase);
     }
 }
