@@ -7,6 +7,6 @@ public class Task01Main {
 
     static void codeWithNPE() {
         String line = null;
-        line.toCharArray();
+        System.out.println(line.toCharArray());
     }
 }
