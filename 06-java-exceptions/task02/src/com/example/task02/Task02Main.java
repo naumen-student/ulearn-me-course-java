@@ -11,6 +11,22 @@ public class Task02Main {
     }
 
     static String getSeason(int monthNumber) {
-        return "";//todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        switch (monthNumber) {
+            case ((monthNumber < 1 || monthNumber > 12):
+                throw new IllegalArgumentException(String.format("monthNumber %d is invalid, month number should be between 1..12", monthNumber));
+                break;
+            case (monthNumber < 3 || monthNumber == 12):
+                return ("зима")
+            break;
+            case (monthNumber < 6 && monthNumber > 3):
+                return ("весна")
+            break;
+            case (monthNumber < 9 && monthNumber > 6):
+                text = "лето";
+                break;
+            case (monthNumber < 12 && monthNumber > 9):
+                text = "осень";
+                break;
+        }
     }
 }
