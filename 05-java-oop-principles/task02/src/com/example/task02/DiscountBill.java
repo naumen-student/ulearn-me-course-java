@@ -1,13 +1,15 @@
 package com.example.task02;
 
-public class DiscountBill extends Bill{
+public class DiscountBill extends Bill {
     private int sale;
 
-    public DiscountBill(int sale){
+    public DiscountBill(int sale) {
         this.sale = sale;
     }
 
-    public int get_DiscountBill{
+    public int get_DiscountBill
+
+    {
         return sale;
     }
 
@@ -15,7 +17,7 @@ public class DiscountBill extends Bill{
         return super.getPrice() - super.getPrice() * sale / 100;
     }
 
-    public long getAbsoluteDiscount(){
+    public long getAbsoluteDiscount() {
         return super.getPrice() - getPrice();
     }
 }
