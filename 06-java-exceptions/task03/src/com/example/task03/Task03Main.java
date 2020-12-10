@@ -5,10 +5,8 @@ public class Task03Main {
         throwCheckedException();
     }
 
-    //todo напишите здесь свою корректную реализацию задания
-    public static void throwCheckedException() {
 
-        public static void throwCheckedException () throws Exception {
-            throw new Exception();
-        }
+    public static void throwCheckedException() throws Exception {
+        throw new Exception();
     }
+}
