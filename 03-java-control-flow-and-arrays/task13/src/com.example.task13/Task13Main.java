@@ -19,5 +19,4 @@ public class Task13Main {
             res[j] = list.get(j);
         return res;
     }
-
 }
