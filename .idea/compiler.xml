@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="8-java-io2.task01" target="1.8" />
+      <module name="8-java-io2.task01.main" target="1.8" />
+      <module name="8-java-io2.task01.test" target="1.8" />
+      <module name="8-java-io2.task02" target="1.8" />
+      <module name="8-java-io2.task02.main" target="1.8" />
+      <module name="8-java-io2.task02.test" target="1.8" />
+      <module name="8-java-io2.task03" target="1.8" />
+      <module name="8-java-io2.task03.main" target="1.8" />
+      <module name="8-java-io2.task03.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
