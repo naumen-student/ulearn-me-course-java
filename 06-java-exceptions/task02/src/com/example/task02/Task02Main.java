@@ -27,3 +27,4 @@ public class Task02Main {
             return ("осень");
     }
 }
+}
