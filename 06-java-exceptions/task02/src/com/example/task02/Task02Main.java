@@ -11,22 +11,19 @@ public class Task02Main {
     }
 
     static String getSeason(int monthNumber) {
-        switch (monthNumber) {
-            case ((monthNumber < 1 || monthNumber > 12)):
-                throw new IllegalArgumentException(String.format("monthNumber %d is invalid, month number should be between 1..12", monthNumber));
-                break;
-            case (monthNumber < 3 || monthNumber == 12):
-                return ("зима");
-            break;
-            case (monthNumber < 6):
-                return ("весна");
-            break;
-            case (monthNumber < 9):
-                return("лето");
-                break;
-            case (monthNumber < 12):
-                return("осень");
-                break;
-        }
+        if ((monthNumber < 1 || monthNumber > 12)):
+        throw new IllegalArgumentException(String.format("monthNumber %d is invalid, month number should be between 1..12", monthNumber));
+
+        if (monthNumber < 3 || monthNumber == 12)
+            return ("зима");
+
+        if (monthNumber < 6 && monthNumber > 3)
+            return ("весна");
+
+        if (monthNumber < 9 && monthNumber > 6)
+            return ("лето");
+
+        if (monthNumber < 12 && monthNumber > 9)
+            return ("осень");
     }
 }
