@@ -15,7 +15,9 @@ public class Task03Main {
     }
 
     public static String readAsString(InputStream inputStream, Charset charset) throws IOException {
-        // your implementation here
-        return "";
+        if (inputStream == null || charset == null)
+            throw new IllegalArgumentException();
+        String result = new String(inputStream.readAllBytes(),charset);
+        return result;
     }
 }
