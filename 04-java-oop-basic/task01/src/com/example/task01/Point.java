@@ -4,7 +4,6 @@ package com.example.task01;
 public class Point {
     int x;
     int y;
-
     public Point(){
 
     }
