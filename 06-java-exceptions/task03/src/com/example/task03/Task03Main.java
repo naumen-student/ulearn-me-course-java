@@ -5,7 +5,6 @@ public class Task03Main {
         throwCheckedException();
     }
 
-
     public static void throwCheckedException() throws Exception {
         throw new Exception();
     }
