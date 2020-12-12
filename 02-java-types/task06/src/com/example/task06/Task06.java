@@ -1,5 +1,4 @@
 package com.example.task06;
-
 public class Task06 {
 
     public static int solution(int x, int y) {
@@ -7,6 +6,13 @@ public class Task06 {
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
 
         return 0;
+        int sum = (x + y)/10;
+        int result = 1;
+        while (sum != 0) {
+            sum = sum / 10;
+            result++;
+        }
+        return result;
     }
 
     public static void main(String[] args) {
