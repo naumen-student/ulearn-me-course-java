@@ -14,6 +14,7 @@ public class Task03Main {
         List<Set<String>> anagrams = findAnagrams(new FileInputStream("task03/resources/singular.txt"), Charset.forName("windows-1251"));
         for (Set<String> anagram : anagrams) {
             System.out.println(anagram);
+
         }
 
     }
