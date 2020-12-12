@@ -12,6 +12,6 @@ public class Task02Main {
                 System.out.write(previous);
             previous = current;
         }
-        System.out.flush();        System.out.flush();
+        System.out.flush();
     }
 }
