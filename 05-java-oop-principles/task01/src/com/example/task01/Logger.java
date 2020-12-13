@@ -2,6 +2,7 @@ package com.example.task01;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+
 public class Logger {
     private final String logName;
     private Level level;
