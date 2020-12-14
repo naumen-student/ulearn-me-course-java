@@ -24,3 +24,4 @@ public class MailMessage implements IContent<String> {
         return content;
     }
 }
+

@@ -27,3 +27,4 @@ public class MailService<T> implements Consumer<IContent<T>> {
         }
     }
 }
+

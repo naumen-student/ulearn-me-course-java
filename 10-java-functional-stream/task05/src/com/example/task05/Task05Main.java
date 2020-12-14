@@ -87,3 +87,4 @@ public class Task05Main {
 
     }
 }
+

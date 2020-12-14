@@ -27,3 +27,4 @@ public class Salary implements IContent<Integer> {
     }
 }
 
+
