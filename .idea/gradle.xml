@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/01-java-intro" />
+        <option name="gradleJvm" value="liberica-14" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/01-java-intro" />
+            <option value="$PROJECT_DIR$/01-java-intro/task01" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/02-java-types" />
+        <option name="gradleJvm" value="liberica-14" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/02-java-types" />
+            <option value="$PROJECT_DIR$/02-java-types/task01" />
+            <option value="$PROJECT_DIR$/02-java-types/task02" />
+            <option value="$PROJECT_DIR$/02-java-types/task03" />
+            <option value="$PROJECT_DIR$/02-java-types/task04" />
+            <option value="$PROJECT_DIR$/02-java-types/task05" />
+            <option value="$PROJECT_DIR$/02-java-types/task06" />
+            <option value="$PROJECT_DIR$/02-java-types/task07" />
+            <option value="$PROJECT_DIR$/02-java-types/task08" />
+            <option value="$PROJECT_DIR$/02-java-types/task09" />
+            <option value="$PROJECT_DIR$/02-java-types/task10" />
+            <option value="$PROJECT_DIR$/02-java-types/task11" />
+            <option value="$PROJECT_DIR$/02-java-types/task12" />
+            <option value="$PROJECT_DIR$/02-java-types/task13" />
+            <option value="$PROJECT_DIR$/02-java-types/task14" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/03-java-control-flow-and-arrays" />
+        <option name="gradleJvm" value="liberica-14" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task01" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task02" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task03" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task04" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task05" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task06" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task07" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task08" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task09" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task10" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task11" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task12" />
+            <option value="$PROJECT_DIR$/03-java-control-flow-and-arrays/task13" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/04-java-oop-basic" />
+        <option name="gradleJvm" value="liberica-14" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/04-java-oop-basic" />
+            <option value="$PROJECT_DIR$/04-java-oop-basic/task01" />
+            <option value="$PROJECT_DIR$/04-java-oop-basic/task02" />
+            <option value="$PROJECT_DIR$/04-java-oop-basic/task03" />
+            <option value="$PROJECT_DIR$/04-java-oop-basic/task04" />
+            <option value="$PROJECT_DIR$/04-java-oop-basic/task05" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/05-java-oop-principles" />
+        <option name="gradleJvm" value="liberica-14" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/05-java-oop-principles" />
+            <option value="$PROJECT_DIR$/05-java-oop-principles/task01" />
+            <option value="$PROJECT_DIR$/05-java-oop-principles/task02" />
+            <option value="$PROJECT_DIR$/05-java-oop-principles/task03" />
+            <option value="$PROJECT_DIR$/05-java-oop-principles/task04" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/06-java-exceptions" />
+        <option name="gradleJvm" value="liberica-14" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/06-java-exceptions" />
+            <option value="$PROJECT_DIR$/06-java-exceptions/task01" />
+            <option value="$PROJECT_DIR$/06-java-exceptions/task02" />
+            <option value="$PROJECT_DIR$/06-java-exceptions/task03" />
+            <option value="$PROJECT_DIR$/06-java-exceptions/task04" />
+            <option value="$PROJECT_DIR$/06-java-exceptions/task05" />
+            <option value="$PROJECT_DIR$/06-java-exceptions/task06" />
+            <option value="$PROJECT_DIR$/06-java-exceptions/task07" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/07-java-io" />
+        <option name="gradleJvm" value="liberica-14" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/07-java-io" />
+            <option value="$PROJECT_DIR$/07-java-io/task01" />
+            <option value="$PROJECT_DIR$/07-java-io/task02" />
+            <option value="$PROJECT_DIR$/07-java-io/task03" />
+            <option value="$PROJECT_DIR$/07-java-io/task04" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/08-java-io2" />
+        <option name="gradleJvm" value="liberica-14" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/08-java-io2" />
+            <option value="$PROJECT_DIR$/08-java-io2/task01" />
+            <option value="$PROJECT_DIR$/08-java-io2/task02" />
+            <option value="$PROJECT_DIR$/08-java-io2/task03" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/09-java-generics-collections" />
+        <option name="gradleJvm" value="liberica-14" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/09-java-generics-collections" />
+            <option value="$PROJECT_DIR$/09-java-generics-collections/task01" />
+            <option value="$PROJECT_DIR$/09-java-generics-collections/task02" />
+            <option value="$PROJECT_DIR$/09-java-generics-collections/task03" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/10-java-functional-stream" />
+        <option name="gradleJvm" value="liberica-14" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/10-java-functional-stream" />
+            <option value="$PROJECT_DIR$/10-java-functional-stream/task01" />
+            <option value="$PROJECT_DIR$/10-java-functional-stream/task02" />
+            <option value="$PROJECT_DIR$/10-java-functional-stream/task03" />
+            <option value="$PROJECT_DIR$/10-java-functional-stream/task04" />
+            <option value="$PROJECT_DIR$/10-java-functional-stream/task05" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
