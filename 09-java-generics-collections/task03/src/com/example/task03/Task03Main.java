@@ -1,6 +1,5 @@
 package com.example.task03;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -24,8 +23,6 @@ public class Task03Main {
             else words.put(key, new TreeSet<String>() {{ add(str); }});
         }
         return getSortedList(words);
-
-
     }
 
     private static List<Set<String>> getSortedList(Map<String, TreeSet<String>> words) {
