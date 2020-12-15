@@ -1,7 +1,6 @@
-package com.example.task02;
+//package com.example.task02;
 
-public class Task02Main {
-    public static void main(String[] args) {
+  //  public static void main(String[] args) {
 
-    }
-}
+    //}
+
