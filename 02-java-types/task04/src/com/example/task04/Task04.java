@@ -7,6 +7,16 @@ public class Task04 {
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
 
         return 0;
+        float result = 0;
+        if (operation.equals("+"))
+            result = a + b;
+        if (operation.equals("-"))
+            result = a - b;
+        if (operation.equals("/"))
+            result = (float) a / b;
+        if (operation.equals("*"))
+            result = a * b;
+        return result;
     }
 
     public static void main(String[] args) {
