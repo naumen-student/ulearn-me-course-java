@@ -33,6 +33,7 @@ public class Pair<TFirst, TSecond> {
         return  31 * (first.hashCode() + second.hashCode());
     }
 
+
     public static <TFirst, TSecond> Pair<TFirst, TSecond> of(TFirst first, TSecond second){
         return new Pair<>(first, second);
     }
