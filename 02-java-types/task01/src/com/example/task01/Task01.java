@@ -10,5 +10,4 @@ public class Task01 {
         String result = solution();
         System.out.println(result);
     }
-
 }
