@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/01-java-intro.iml" filepath="$PROJECT_DIR$/.idea/modules/01-java-intro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/02-java-types.iml" filepath="$PROJECT_DIR$/.idea/modules/02-java-types.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/03-java-control-flow-and-arrays.iml" filepath="$PROJECT_DIR$/.idea/modules/03-java-control-flow-and-arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/04-java-oop-basic.iml" filepath="$PROJECT_DIR$/.idea/modules/04-java-oop-basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/06-java-exceptions.iml" filepath="$PROJECT_DIR$/.idea/modules/06-java-exceptions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/07-java-io.iml" filepath="$PROJECT_DIR$/.idea/modules/07-java-io.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/08-java-io2.iml" filepath="$PROJECT_DIR$/.idea/modules/08-java-io2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/09-java-generics-collections.iml" filepath="$PROJECT_DIR$/.idea/modules/09-java-generics-collections.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ulearn-me-course-java1.iml" filepath="$PROJECT_DIR$/.idea/ulearn-me-course-java1.iml" />
+    </modules>
+  </component>
+</project>
