@@ -8,8 +8,9 @@ public class Task01Main {
         codeWithNPE();
          */
     }
-
     static void codeWithNPE() {
         //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        Object nullResult = null;
+        nullResult.toString();
     }
 }
