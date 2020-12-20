@@ -7,6 +7,11 @@ public class Task05 {
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
 
         return "FALSE";
+        for (char c : String.valueOf(x).toCharArray()) {
+            if ((c - '0') % 2 != 0)
+                return "FALSE";
+        }
+        return "TRUE";
     }
 
     public static void main(String[] args) {
