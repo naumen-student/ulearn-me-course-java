@@ -7,6 +7,7 @@ public class Task06 {
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
 
         return 0;
+        return x + y == 0 ? 1 : (int) Math.floor(Math.log10(Math.abs(x + y))) + 1;
     }
 
     public static void main(String[] args) {
