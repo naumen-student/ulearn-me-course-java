@@ -13,5 +13,8 @@ public class Task06Main {
         //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
         return 0;
     }
+    int x = Integer.compare(a, b) == 1 ? a : b;
+    int y = Integer.compare(c, d) == 1 ? c : d;
+        return Integer.compare(x, y) == 1 ? x : y;
 
 }
