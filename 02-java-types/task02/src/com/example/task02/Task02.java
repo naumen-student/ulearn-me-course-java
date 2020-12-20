@@ -4,8 +4,15 @@ public class Task02 {
 
     public static String solution(String input) {
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
+        long l = Long.valueOf(input);
+        if (l <= Byte.MAX_VALUE && l >= Byte.MIN_VALUE)
+            return "byte";
+        if (l <= Short.MAX_VALUE && l >= Short.MIN_VALUE)
+            return "short";
+        if (l <= Integer.MAX_VALUE && l >= Integer.MIN_VALUE)
+            return "int";
+        if (l <= Long.MAX_VALUE && l >= Long.MIN_VALUE)
+            return "long";
         return "";
     }
 
