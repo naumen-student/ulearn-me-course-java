@@ -1,5 +1,9 @@
 package com.example.task13;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Task13Main {
     public static void main(String[] args) {
         //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
@@ -14,6 +18,19 @@ public class Task13Main {
     static int[] removeMoreThen1000(int[] arr) {
         //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
         return  null;
+        if(arr == null ) return null;
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        for (int i : arr) {
+            if (i < 1000){
+                numbers.add(i);
+            }
+        }
+        int[] res = new int[numbers.size()];
+
+        for (int i = 0; i < numbers.size(); i++) {
+            res[i] = numbers.get(i);
+        }
+        return res;
     }
 
 }
