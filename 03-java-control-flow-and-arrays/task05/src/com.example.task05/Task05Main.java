@@ -12,5 +12,7 @@ public class Task05Main {
     static int getMin(int a, int b, int c) {
         //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
         return 0;
+        int x = Integer.compare(a, b) == 1 ? b : a;
+        return Integer.compare(x, c) == 1 ? c : x;
     }
 }
