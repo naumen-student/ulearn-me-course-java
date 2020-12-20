@@ -6,6 +6,7 @@ public class Task08 {
         // TODO измените тип и значение переменной x, чтобы возвращалось значение true
 
         int x = 100;
+        float x = Float.MAX_VALUE;
         return x == x + 1;
     }
 
