@@ -18,5 +18,11 @@ public class Task07Main {
         //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
         return 0;
     }
+    int sum = 0;
+
+        for (int a : arr) {
+        sum += a;
+    }
+        return sum;
 
 }
