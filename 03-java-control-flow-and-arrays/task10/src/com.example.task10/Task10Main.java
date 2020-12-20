@@ -14,5 +14,17 @@ public class Task10Main {
         //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
         return 0;
     }
+    int min = Integer.MAX_VALUE;
+    int position = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+        if (min >= arr[i]) {
+            min = arr[i];
+            position = i;
+        }
+    }
+
+        return position;
+}
 
 }

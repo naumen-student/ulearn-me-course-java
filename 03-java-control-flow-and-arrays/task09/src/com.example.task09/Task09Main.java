@@ -18,4 +18,9 @@ public class Task09Main {
         return 0;
     }
 
+     Arrays.sort(arr);
+
+        return arr[0];
+
+
 }
