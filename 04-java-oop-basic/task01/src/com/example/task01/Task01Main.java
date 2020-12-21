@@ -8,7 +8,6 @@ public class Task01Main {
         Point p2 = new Point();
         p2.x = 78;
         p2.y = 12;
-
         System.out.println("Point 1:");
         p1.print();
         System.out.println(p1);

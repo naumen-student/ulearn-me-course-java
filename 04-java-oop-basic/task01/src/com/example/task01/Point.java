@@ -11,4 +11,25 @@ public class Point {
         String pointToString = String.format("(%d, %d)", x, y);
         System.out.println(pointToString);
     }
+
+    public Point(int newX, int newY){
+        x = newX;
+        y = newY;
+    }
+
+    public void flip(){
+        int temp = x;
+        x = -y;
+        y = -temp;
+    }
+
+    public Point(){}
+
+    public double distance(Point point){
+        return Math.abs(Math.sqrt(Math.pow(point.x - x, 2) + Math.pow(point.y - y, 2)));
+    }
+
+    public String toString(){
+        return "(" + x + "," + y + ")";
+    }
 }
