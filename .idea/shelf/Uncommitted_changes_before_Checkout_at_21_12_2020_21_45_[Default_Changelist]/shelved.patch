@@ -1,0 +1,52 @@
+Index: 03-java-control-flow-and-arrays/task04/src/com.example.task04/Task04Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.task04;\r\n\r\npublic class Task04Main {\r\n    public static void main(String[] args) {\r\n        //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат\r\n        // например вот так:\r\n        /*\r\n        from0to10000();\r\n         */\r\n    }\r\n\r\n    static void from0to10000() {\r\n        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей\r\n    }\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/03-java-control-flow-and-arrays/task04/src/com.example.task04/Task04Main.java b/03-java-control-flow-and-arrays/task04/src/com.example.task04/Task04Main.java
+--- a/03-java-control-flow-and-arrays/task04/src/com.example.task04/Task04Main.java	(revision d186970eaf0a21faf1e9510bf4ce8de32e4e7711)
++++ b/03-java-control-flow-and-arrays/task04/src/com.example.task04/Task04Main.java	(date 1608569100740)
+@@ -1,16 +1,19 @@
+ package com.example.task04;
+-
+ public class Task04Main {
+     public static void main(String[] args) {
+         //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
+         // например вот так:
+         /*
++
+         from0to10000();
+          */
++
+     }
+ 
+     static void from0to10000() {
+         //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
++        for(int i = 0; i < 10000; i++)
++            System.out.println(i);
+     }
+ 
+-}
+\ No newline at end of file
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e960195f-1df6-40f8-a11c-28b2d01a9220\" name=\"Default Changelist\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"03_task01\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1lyPe19XEK9og9VWEkL11x68u9M\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/03-java-control-flow-and-arrays/task01/src/com/example/task01/Tests.java</url>\r\n          <line>7</line>\r\n          <option name=\"timeStamp\" value=\"2\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/03-java-control-flow-and-arrays/task01/src/com/example/task01/Tests.java</url>\r\n          <line>5</line>\r\n          <option name=\"timeStamp\" value=\"3\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d186970eaf0a21faf1e9510bf4ce8de32e4e7711)
++++ b/.idea/workspace.xml	(date 1608569029154)
+@@ -10,7 +10,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="03_task01" />
++        <entry key="$PROJECT_DIR$" value="03_task02" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
