@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e960195f-1df6-40f8-a11c-28b2d01a9220" name="Default Changelist" comment="" />
+    <list default="true" id="e960195f-1df6-40f8-a11c-28b2d01a9220" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/03-java-control-flow-and-arrays/task01/src/com/example/task01/Task01Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-java-control-flow-and-arrays/task01/src/com/example/task01/Task01Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,5 +44,21 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/03-java-control-flow-and-arrays/task01/src/com/example/task01/Tests.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/03-java-control-flow-and-arrays/task01/src/com/example/task01/Tests.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
