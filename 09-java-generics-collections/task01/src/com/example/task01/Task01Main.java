@@ -1,28 +1,39 @@
 package com.example.task01;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.util.Objects;
+import java.util.function.BiConsumer;
 
-public class Task01Main {
-    public static void main(String[] args) throws IOException {
+public class Pair<TFirst, TSecond> {
+    private final TFirst first;
+    private final TSecond second;
 
-        // TODO С корректно реализованным классом Pair должен компилироваться и успешно работать следующий код:
-
-        /*
-        Pair<Integer, String> pair = Pair.of(1, "hello");
-        Integer i = pair.getFirst(); // 1
-        String s = pair.getSecond(); // "hello"
-
-        pair.ifPresent((first, second) -> {
-            System.out.println(first);
-            System.out.println(second);
-        });
-
-        Pair<Integer, String> pair2 = Pair.of(1, "hello");
-        boolean mustBeTrue = pair.equals(pair2); // true!
-        boolean mustAlsoBeTrue = pair.hashCode() == pair2.hashCode(); // true!
-        */
-
+    private Pair(TFirst first, TSecond second){
+        this.first = first;
+        this.second = second;
     }
 
+    public TFirst getFirst() {
+        return first;
+    }
+
+    public TSecond getSecond(){
+        return second;
+    }
+
+    public void ifPresent(BiConsumer<? super TFirst, ? super TSecond> biConsumer){
+        if (first != null && second != null)
+            biConsumer.accept(first, second);
+    }
+
+    public boolean equals(Pair<TFirst, TSecond> pair){
+        return pair.first.equals(first) && pair.second.equals(second);
+    }
+
+    public int hashCode() {
+        return  31 * (first.hashCode() + second.hashCode());
+    }
+
+    public static <TFirst, TSecond> Pair<TFirst, TSecond> of(TFirst first, TSecond second){
+        return new Pair<>(first, second);
+    }
 }
