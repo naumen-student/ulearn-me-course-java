@@ -6,7 +6,13 @@ public class Task05 {
 
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
 
-        return "FALSE";
+        for(int i = 0; i < String.valueOf(x).length() + 1; i++) {
+            int number = x % 10;
+            if (number % 2 != 0)
+                return "FALSE";
+            x = x / 10;
+        }
+        return "TRUE";
     }
 
     public static void main(String[] args) {
