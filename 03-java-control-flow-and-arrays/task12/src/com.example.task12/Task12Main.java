@@ -14,5 +14,4 @@ public class Task12Main {
     static void selectionSort(int[] arr) {
         //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
     }
-
 }
