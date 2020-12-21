@@ -1,0 +1,49 @@
+Index: 03-java-control-flow-and-arrays/task01/src/com/example/task01/Task01Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.task01;\r\n\r\npublic class Task01Main {\r\n    public static void main(String[] args) {\r\n        //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат\r\n        // например вот так:\r\n        /*\r\n        boolean b = canGetDriverLicense(100);\r\n        System.out.println(b);\r\n         */\r\n    }\r\n\r\n    static boolean canGetDriverLicense(int age) {\r\n        return true;//todo напишите здесь свою корректную реализацию этого метода, вместо существующей\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/03-java-control-flow-and-arrays/task01/src/com/example/task01/Task01Main.java b/03-java-control-flow-and-arrays/task01/src/com/example/task01/Task01Main.java
+--- a/03-java-control-flow-and-arrays/task01/src/com/example/task01/Task01Main.java	(revision 8b0272faaec3de40fd0dab45998ad06227d3c1df)
++++ b/03-java-control-flow-and-arrays/task01/src/com/example/task01/Task01Main.java	(date 1608566530913)
+@@ -12,5 +12,6 @@
+ 
+     static boolean canGetDriverLicense(int age) {
+         return true;//todo напишите здесь свою корректную реализацию этого метода, вместо существующей
++        return age >= 18;//todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+     }
+-}
++}
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e960195f-1df6-40f8-a11c-28b2d01a9220\" name=\"Default Changelist\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"02_task09\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 8b0272faaec3de40fd0dab45998ad06227d3c1df)
++++ b/.idea/workspace.xml	(date 1608052865587)
+@@ -1,7 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="e960195f-1df6-40f8-a11c-28b2d01a9220" name="Default Changelist" comment="" />
++    <list default="true" id="e960195f-1df6-40f8-a11c-28b2d01a9220" name="Default Changelist" comment="">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -10,7 +12,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="02_task09" />
++        <entry key="$PROJECT_DIR$" value="02_task12" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
