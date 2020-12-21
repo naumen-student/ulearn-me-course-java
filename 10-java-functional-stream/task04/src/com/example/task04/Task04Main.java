@@ -1,3 +1,5 @@
+package com.example.task04;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Comparator;
