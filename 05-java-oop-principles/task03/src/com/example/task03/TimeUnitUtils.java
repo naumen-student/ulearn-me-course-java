@@ -24,4 +24,28 @@ public class TimeUnitUtils {
     public static Seconds toSeconds(Milliseconds millis) {
         return new Seconds(millis.toSeconds());
     }
+
+    public static Minutes toMinutes(Seconds seconds) { return new Minutes(seconds.toMinutes()); }
+
+    public static Minutes toMinutes(Milliseconds millis) { return new Minutes(millis.toMinutes()); }
+
+    public static Hours toHours(Milliseconds millis) { return new Hours(millis.toHours()); }
+
+    public static Seconds toSeconds(Seconds seconds) { return seconds; }
+
+    public static Hours toHours(Seconds seconds) { return new Hours(seconds.toHours()); }
+
+    public static Milliseconds toMillis(Minutes minutes) { return new Milliseconds(minutes.toMillis()); }
+
+    public static Seconds toSeconds(Minutes minutes) { return new Seconds(minutes.toSeconds()); }
+
+    public static Minutes toMinutes(Minutes minutes) { return minutes; }
+
+    public static Milliseconds toMillis(Hours hours) { return new Milliseconds(hours.toMillis()); }
+
+    public static Seconds toSeconds(Hours hours) { return new Seconds(hours.toSeconds()); }
+
+    public static Minutes toMinutes(Hours hours) { return new Minutes(hours.toMinutes()); }
+
+    public static Hours toHours(Hours hours) { return hours; }
 }
