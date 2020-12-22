@@ -39,12 +39,30 @@ public class TimeSpan {
         seconds += time.seconds;
         minutes += time.minutes;
         hours += time.hours;
+        checkAddTime(this.minutes, this.hours);
+        checkAddTime(this.seconds, this.minutes);
     }
 
     void subtract(TimeSpan time) {
         seconds -= time.seconds;
         minutes -= time.minutes;
         hours -= time.hours;
+        checkSubtractTime(this.minutes, this.hours);
+        checkSubtractTime(this.seconds, this.minutes);
+    }
+
+    void checkAddTime(int checkingTime, int bTime){
+        if (checkingTime > 59){
+            bTime += 1;
+            checkingTime -= 60;
+        }
+    }
+
+    void checkSubtractTime(int checkingTime, int bTime){
+        if (checkingTime < 1){
+            bTime -= 1;
+            checkingTime += 60;
+        }
     }
 
     public String toString() {
