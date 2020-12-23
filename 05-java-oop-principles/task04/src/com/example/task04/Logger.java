@@ -1,0 +1,114 @@
+package com.example.task04;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Logger {
+    private static final Map<String, Logger> loggersDictionary = new HashMap<>();
+    private final String name;
+    private Levels level;
+    private final ArrayList<MessageHandler> messageHandlers = new ArrayList<>();
+    private MessageHandler messageHandler;
+
+    enum Levels{
+        DEBUG,
+        INFO,
+        WARNING,
+        ERROR
+    }
+
+    public void addMessageHandler(MessageHandler handler){
+        messageHandlers.add(handler);
+    }
+
+    public void deleteMessageHandler(MessageHandler handler){
+        messageHandlers.remove(handler);
+    }
+
+    public ArrayList<MessageHandler> listMessageHandler(){
+        ArrayList<MessageHandler> newList = new ArrayList<>(messageHandlers);
+        return newList;
+    }
+
+    public void clearMessageHandler(){
+        messageHandlers.clear();
+        messageHandler = null;
+    }
+
+    public void setMessageHandler(MessageHandler handler){
+        messageHandler = handler;
+    }
+
+    public Logger(String name){
+        this.name = name;
+    }
+    public String getName(){
+        return name;
+    }
+
+    public static Logger getLogger(String name){
+        if(loggersDictionary.containsKey(name)){
+            return loggersDictionary.get(name);
+        }
+        loggersDictionary.put(name, new Logger(name));
+        return loggersDictionary.get(name);
+    }
+
+    public void setLevel(Levels level){
+        this.level = level;
+    }
+
+    public int getLevel(){
+        return level.ordinal();
+    }
+
+    public void error(String message){
+        log(level.ERROR, message);
+    }
+
+    public void info(String message){
+        log(level.INFO, message);
+    }
+
+    public void warning(String message){
+        log(level.WARNING, message);
+    }
+
+    public void debug(String message){
+        log(level.DEBUG, message);
+    }
+
+    public void error(String template, Object... message){
+        log(level.ERROR, template, message);
+    }
+
+    public void info(String template, Object... message){
+        log(level.INFO, template, message);
+    }
+
+    public void warning(String template, Object... message){
+        log(level.WARNING, template, message);
+    }
+
+    public void debug(String template, Object... message){
+        log(level.DEBUG, template, message);
+    }
+
+    public void log(Levels level, String message){
+        if(messageHandler == null){
+            throw new Error("set messageHandler");
+        }
+        if( level != null && getLevel() > level.ordinal())
+            return;
+        messageHandler.handler("[" + level + "]" +
+                new SimpleDateFormat("yyyy.MM.dd HH:mm:ss").format(Calendar.getInstance().getTime()) +
+                message);
+    }
+
+    public void log(Levels level, String template, Object message){
+        log(level, String.format(template, message));
+    }
+}
