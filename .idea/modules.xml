@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/03-java-control-flow-and-arrays.iml" filepath="$PROJECT_DIR$/.idea/modules/03-java-control-flow-and-arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/04-java-oop-basic.iml" filepath="$PROJECT_DIR$/.idea/modules/04-java-oop-basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/06-java-exceptions.iml" filepath="$PROJECT_DIR$/.idea/modules/06-java-exceptions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/09-java-generics-collections.iml" filepath="$PROJECT_DIR$/.idea/modules/09-java-generics-collections.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ulearn-me-course-java.iml" filepath="$PROJECT_DIR$/.idea/ulearn-me-course-java.iml" />
+    </modules>
+  </component>
+</project>
