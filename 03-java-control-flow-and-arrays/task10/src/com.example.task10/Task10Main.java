@@ -12,7 +12,15 @@ public class Task10Main {
 
     static int numMin(int[] arr) {
         //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
-        return 0;
+        int count = 0;
+        int num = Integer.MAX_VALUE;
+        for(int i = 0; i < arr.length; i++) {
+            if (arr[i] <= num) {
+                num = arr[i];
+                count = i;
+            }
+        }
+        return count;
     }
 
 }
