@@ -6,6 +6,8 @@ import java.io.InputStream;
 import java.nio.charset.Charset;
 import java.util.List;
 import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Task03Main {
 
@@ -19,6 +21,23 @@ public class Task03Main {
     }
 
     public static List<Set<String>> findAnagrams(InputStream inputStream, Charset charset) {
-        return null;
+        TreeMap<String, TreeSet<String>> anagrams = new TreeMap<>();
+        Scanner scanner = new Scanner(inputStream, charset.name());
+        while (scanner.hasNext()) {
+            String line = scanner.nextLine().toLowerCase();
+            if (line.matches("[а-я]{3,}")) {
+                char[] symbols = line.toCharArray();
+                Arrays.sort(symbols);
+                String sorted = new String(symbols);
+                if (!anagrams.containsKey(sorted)) {
+                    anagrams.put(sorted, new TreeSet<>());
+                }
+                anagrams.get(sorted).add(line);
+            }
+        }
+
+        return anagrams.values().stream()
+                .filter(value -> value.size() > 1)
+                .collect(Collectors.toList());
     }
 }
