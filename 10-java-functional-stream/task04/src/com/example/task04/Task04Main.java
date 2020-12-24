@@ -14,12 +14,8 @@ public class Task04Main {
         reader.lines().map(String::toLowerCase)
                 .flatMap(y -> Arrays.stream(y.split("[^a-zа-яё0-9]+").clone()))
                 .filter(str -> !str.isEmpty())
-                .forEach(key -> {
-                    if (!countWords.containsKey(key))
-                        countWords.put(key, 1);
-                    else
-                        countWords.put(key, countWords.get(key) + 1);
-                });
+                .forEach(key -> countWords.compute(key, (string, integer)
+                        -> integer == null ? 1 : integer + 1));
 
         countWords.entrySet()
                 .stream()
