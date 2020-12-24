@@ -3,9 +3,10 @@ package com.example.task03;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.charset.Charset;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Task03Main {
 
@@ -19,6 +20,28 @@ public class Task03Main {
     }
 
     public static List<Set<String>> findAnagrams(InputStream inputStream, Charset charset) {
-        return null;
+        Scanner scanner = new Scanner(new InputStreamReader(inputStream, charset));
+        Map<String, TreeSet<String>> anagrams = new TreeMap<>();
+        while (scanner.hasNextLine()) {
+            String word = scanner.next().toLowerCase();
+            if (word.matches("[а-я]{3,}")) {
+                char[] chars = word.toCharArray();
+                Arrays.sort(chars);
+                String sortedWord = new String(chars);
+                if (!anagrams.containsKey(sortedWord))
+                    anagrams.put(sortedWord, new TreeSet<>());
+                anagrams.get(sortedWord).add(word);
+            }
+        }
+        return filterAnagrams(anagrams);
+    }
+
+    private static List<Set<String>> filterAnagrams(Map<String, TreeSet<String>> anagrams) {
+        List<Set<String>> result = new ArrayList<>();
+        for (Set<String> set : anagrams.values()) {
+            if (set.size() > 1)
+                result.add(set);
+        }
+        return result;
     }
 }
