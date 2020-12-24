@@ -6,7 +6,8 @@ public class Task06 {
 
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
 
-        return 0;
+        String numbers = Integer.toString(x + y);
+        return x + y < 0 ? numbers.length () - 1 : numbers.length ();
     }
 
     public static void main(String[] args) {
