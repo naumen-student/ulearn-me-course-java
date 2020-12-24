@@ -2,11 +2,17 @@ package com.example.task05;
 
 public class Task05 {
 
-    public static String solution(int x) {
+    public static String solution(int number) {
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
-        return "FALSE";
+        if (number < 0 || number > 99999) {
+            return "Неподходящее число";
+        }
+        while (number != 0) {
+            if ((number % 10) % 2 != 0)
+                return "FALSE";
+            number /= 10;
+        }
+        return "TRUE";
     }
 
     public static void main(String[] args) {
