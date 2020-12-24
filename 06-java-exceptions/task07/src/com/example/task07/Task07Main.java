@@ -16,9 +16,9 @@ public class Task07Main {
         try {
             processor.process(); //todo вы можете заменить реализацию этого метода для ручного дебага
         } catch (Exception e) {
-
+            return e instanceof RuntimeException ? UNCHECKED : CHECKED;
         }
-        return null;
+        return NONE;
     }
 
 }
