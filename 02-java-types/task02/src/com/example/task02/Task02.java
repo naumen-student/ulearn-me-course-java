@@ -5,8 +5,18 @@ public class Task02 {
     public static String solution(String input) {
 
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
+        long value = Long.parseLong(input);
+        double bites = value > 0 ? Math.log(value) / Math.log(2) : Math.log(Math.abs(value) - 1) / Math.log(2);
+        if (value == 0 || bites < 7)
+            return "byte";
+        else if (bites < 15)
+            return "short";
+        else if (bites < 31)
+            return "int";
+        else
+            return "long";
 
-        return "";
+
     }
 
     public static void main(String[] args) {
