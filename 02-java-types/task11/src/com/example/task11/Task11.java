@@ -7,10 +7,7 @@ public class Task11 {
         // TODO исправьте функцию, чтобы избежать накопления ошибки
 
         // Считаем проценты за год
-        for (int i = 1; i <= 12; i++) {
-            sum += sum * percent;
-        }
-        return sum;
+        return (float) (sum * Math.pow(1.0 + percent, 12));
     }
 
     public static void main(String[] args) {
