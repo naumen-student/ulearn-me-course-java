@@ -1,7 +1,8 @@
 package com.example.task04;
 
-public class MyExpection extends IllegalArgumentException {
-    public MyExpection(String message) {
+public class MyException extends IllegalArgumentException {
+
+    public MyException(String message) {
         super(message);
     }
 }
