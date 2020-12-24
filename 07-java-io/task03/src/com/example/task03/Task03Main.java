@@ -15,7 +15,14 @@ public class Task03Main {
     }
 
     public static String readAsString(InputStream inputStream, Charset charset) throws IOException {
-        // your implementation here
-        return "";
+        if (inputStream == null ||charset == null)
+            throw new IllegalArgumentException();
+
+        java.util.Scanner scanner = new java.util.Scanner(new java.io.InputStreamReader(inputStream, charset));
+        StringBuilder result = new StringBuilder();
+        while (scanner.hasNext()) {
+            result.append(scanner.next());
+        }
+        return result.toString();
     }
 }
