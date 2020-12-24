@@ -3,22 +3,14 @@ package com.example.task02;
 public class Task02 {
 
     public static String solution(String input) {
-        try {
-            Byte.parseByte(input);
-        } catch (NumberFormatException e){
-            try {
-                Short.parseShort(input);
-            } catch (NumberFormatException g){
-                try {
-                    Integer.parseInt(input);
-                } catch (NumberFormatException d){
-                    return "long";
-                }
-                return "int";
-            }
+        long number = Long.parseLong(input);
+        if (Byte.MAX_VALUE >= number & number >= Byte.MIN_VALUE)
+            return "byte";
+        else if (Short.MAX_VALUE >= number & number >= Short.MIN_VALUE)
             return "short";
-        }
-        return "byte";
+        else if (Integer.MAX_VALUE >= number & number >= Integer.MIN_VALUE)
+            return "int";
+        else return "long";
     }
 
     public static void main(String[] args) {
