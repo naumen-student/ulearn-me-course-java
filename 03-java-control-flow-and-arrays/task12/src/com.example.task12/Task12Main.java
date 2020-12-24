@@ -1,5 +1,7 @@
 package com.example.task12;
 
+import java.util.Arrays;
+
 public class Task12Main {
     public static void main(String[] args) {
         //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
@@ -10,35 +12,21 @@ public class Task12Main {
         System.out.println(java.util.Arrays.toString(arr));
          */
     }
-    static void HoareSort(int[] array, int start, int end)
-    {
-        if (end == start) return;
-        int pivot = array[end];
-        int storeIndex = start;
-        for (int i = start; i <= end - 1; i++)
-            if (array[i] <= pivot)
-            {
-                int t = array[i];
-                array[i] = array[storeIndex];
-                array[storeIndex] = t;
-                storeIndex++;
-            }
-
-        int n = array[storeIndex];
-        array[storeIndex] = array[end];
-        array[end] = n;
-        if (storeIndex > start) HoareSort(array, start, storeIndex - 1);
-        if (storeIndex < end) HoareSort(array, storeIndex + 1, end);
-    }
-
-    static void HoareSort(int[] array)
-    {
-        HoareSort(array, 0, array.length - 1);
-    }
     static void selectionSort(int[] arr) {
         if(arr==null||arr.length==0)
             return;
-        HoareSort(arr);
+        for (int i = 0; i < arr.length; i++) {
+            int position = i;
+            int min = arr[i];
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < min) {
+                    position = j;
+                    min = arr[j];
+                }
+            }
+            arr[position] = arr[i];
+            arr[i] = min;
+        }
     }
 
 }
