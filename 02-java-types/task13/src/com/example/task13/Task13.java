@@ -10,5 +10,4 @@ public class Task13 {
         char result = toUpperCase('x');
         System.out.println(result);
     }
-
 }
