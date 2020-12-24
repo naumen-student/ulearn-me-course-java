@@ -5,8 +5,14 @@ public class Task05 {
     public static String solution(int x) {
 
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
+        for(int i = 0; i < String.valueOf(x).length() + 1; i++) {
+            int number = x % 10;
+            if (number % 2 != 0)
+                return "FALSE";
+            x = x / 10;
+        }
+        return "TRUE";
 
-        return "FALSE";
     }
 
     public static void main(String[] args) {
