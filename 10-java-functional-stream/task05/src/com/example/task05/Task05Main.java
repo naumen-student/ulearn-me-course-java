@@ -9,7 +9,6 @@ public class Task05Main {
 
     public static void main(String[] args) {
 
-        /*
 
         // Random variables
         String randomFrom = "..."; // Некоторая случайная строка. Можете выбрать ее самостоятельно.
@@ -87,8 +86,6 @@ public class Task05Main {
         assert salaries.get(salary2.getTo()).equals(Arrays.asList(Integer.MAX_VALUE)) : "wrong salaries mailbox content (2)";
         assert salaries.get(randomTo).equals(Arrays.asList(randomSalary)) : "wrong salaries mailbox content (3)";
 
-
-        */
 
     }
 
