@@ -16,8 +16,10 @@ public class Task02Main {
     }
 
     public static List<Path> listFiles(Path rootDir) throws IOException, InterruptedException {
-        // your implementation here
-
-        return null;
+        java.util.ArrayList<Path> pathArrayList = new java.util.ArrayList<>();
+        java.nio.file.Files.walk(rootDir)
+                .filter(java.nio.file.Files::isRegularFile)
+                .forEach(pathArrayList::add);
+        return pathArrayList;
     }
 }
