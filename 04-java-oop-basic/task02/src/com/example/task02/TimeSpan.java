@@ -47,8 +47,8 @@ public class TimeSpan {
         seconds -= time.seconds;
         minutes -= time.minutes;
         hours -= time.hours;
-        checkSubtractTime(this.minutes, this.hours);
-        checkSubtractTime(this.seconds, this.minutes);
+        checkSubtract(this.minutes, this.hours);
+        checkSubtract(this.seconds, this.minutes);
     }
 
     void checkAddTime(int checkingTime, int bTime){
@@ -58,7 +58,7 @@ public class TimeSpan {
         }
     }
 
-    void checkSubtractTime(int checkingTime, int bTime){
+    void checkSubtract(int checkingTime, int bTime){
         if (checkingTime < 1){
             bTime -= 1;
             checkingTime += 60;
