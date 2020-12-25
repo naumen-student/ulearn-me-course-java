@@ -2,10 +2,13 @@ package com.example.task02;
 
 public class Task02Main {
     public static void main(String[] args) {
+
         System.out.println(getSeason(12));
+
     }
 
     static String getSeason(int monthNumber) {
+
         if (monthNumber >= 1 && monthNumber <= 2) {
             return "зима";
         }
@@ -19,5 +22,6 @@ public class Task02Main {
             return "осень";
         }
         else return "зима";
+
     }
 }
