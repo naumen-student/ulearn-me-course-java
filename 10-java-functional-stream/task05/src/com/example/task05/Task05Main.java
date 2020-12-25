@@ -9,13 +9,9 @@ public class Task05Main {
 
     public static void main(String[] args) {
 
-        /*
-
-        // Random variables
-        String randomFrom = "..."; // Некоторая случайная строка. Можете выбрать ее самостоятельно.
-        String randomTo = "...";  // Некоторая случайная строка. Можете выбрать ее самостоятельно.
-        int randomSalary = 100;  // Некоторое случайное целое положительное число. Можете выбрать его самостоятельно.
-
+ String randomFrom = "Joe Biden";
+        String randomTo = "Donald Trump";
+        int randomSalary = 666;
         // Создание списка из трех почтовых сообщений.
         MailMessage firstMessage = new MailMessage(
                 "Robert Howard",
@@ -47,7 +43,7 @@ public class Task05Main {
         MailService<String> mailService = new MailService<>();
 
         // Обработка списка писем почтовым сервисом
-        messages.stream().forEachOrdered(mailService);
+        messages.forEach(mailService);
 
         // Получение и проверка словаря "почтового ящика",
         //   где по получателю можно получить список сообщений, которые были ему отправлены
@@ -88,7 +84,7 @@ public class Task05Main {
         assert salaries.get(randomTo).equals(Arrays.asList(randomSalary)) : "wrong salaries mailbox content (3)";
 
 
-        */
+
 
     }
 
