@@ -6,21 +6,22 @@ import java.util.Scanner;
 
 public class Task01Main {
     public static void main(String[] args) throws IOException {
-        System.out.println(extractSoundName(new File("task01/src/main/resources/3727.mp3")));
+        System.out.println(extractSoundName(new File("08-java-io2/task01/src/main/resources/3727.mp3")));
 
     }
 
-    public static String extractSoundName(File file) throws IOException, InterruptedException {
+    public static String extractSoundName(File file) throws IOException {
         ProcessBuilder processBuilder = new ProcessBuilder();
+        String result = "";
+
         processBuilder.command("ffprobe", "-v", "error", "-of", "flat", "-show_format", file.getAbsolutePath());
         Scanner scanner = new Scanner(processBuilder.start().getInputStream());
         while (scanner.hasNextLine()) {
-            String line = scanner.nextLine();
-            if (line.contains("format.tags.title=")) {
-                return line.split("\"")[1];
-            }
+            String currentLine = scanner.nextLine();
+            if (currentLine.startsWith("format.tags.title"))
+                result = currentLine.replace("format.tags.title=", "");
         }
-        return null;
+        return result.substring(1, result.length() - 1);
     }
 }
 
