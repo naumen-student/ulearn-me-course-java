@@ -21,7 +21,23 @@ public class Task03Main {
             Stream<? extends T> stream,
             Comparator<? super T> order,
             BiConsumer<? super T, ? super T> minMaxConsumer) {
-
-        // your implementation here
+        final boolean[] firstElement = {true};
+        final Object max[] = {null};
+        final Object min[] = {null};
+        stream.forEach(x -> {
+            if (firstElement[0]) {
+                max[0] = x;
+                min[0] = x;
+                firstElement[0] = false;
+            }
+            if (order.compare(x, (T) max[0]) > 0) {
+                max[0] = x;
+                return;
+            }
+            if (order.compare(x, (T) min[0]) < 0) {
+                min[0] = x;
+            }
+        });
+        minMaxConsumer.accept((T) min[0], (T) max[0]);
     }
 }
