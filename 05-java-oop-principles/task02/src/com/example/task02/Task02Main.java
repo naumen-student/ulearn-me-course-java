@@ -6,7 +6,6 @@ public class DiscountBill extends Bill{
     public double getDiscount(){
         return discount;
     }
-
     public DiscountBill(double discount){
         if (discount < 0 || discount > 100)
             throw new IllegalArgumentException("Скидка может быть от 0 до 100");
