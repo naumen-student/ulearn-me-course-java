@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.task01.Tests" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-12-25T11:58:05" hostname="ENG-OMAR" time="0.071">
+<testsuite name="com.example.task01.Tests" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-12-25T12:12:24" hostname="ENG-OMAR" time="0.088">
   <properties/>
-  <testcase name="testIfPresent" classname="com.example.task01.Tests" time="0.063"/>
-  <testcase name="testEmpty" classname="com.example.task01.Tests" time="0.004"/>
-  <testcase name="testHalfEmpty" classname="com.example.task01.Tests" time="0.0"/>
-  <testcase name="testEquals" classname="com.example.task01.Tests" time="0.0"/>
-  <testcase name="testNonEmpty" classname="com.example.task01.Tests" time="0.001"/>
+  <testcase name="testIfPresent" classname="com.example.task01.Tests" time="0.055"/>
+  <testcase name="testEmpty" classname="com.example.task01.Tests" time="0.01"/>
+  <testcase name="testHalfEmpty" classname="com.example.task01.Tests" time="0.004"/>
+  <testcase name="testEquals" classname="com.example.task01.Tests" time="0.002"/>
+  <testcase name="testNonEmpty" classname="com.example.task01.Tests" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
