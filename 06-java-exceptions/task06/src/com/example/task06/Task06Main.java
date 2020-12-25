@@ -7,7 +7,7 @@ public class Task06Main {
 
         new Task06Main().printMethodName();
          */
-
+ 
     }
 
     void printMethodName() {
