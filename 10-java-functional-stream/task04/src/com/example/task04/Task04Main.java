@@ -1,29 +1,40 @@
 package com.example.task04;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Map;
+import java.util.Scanner;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Task04Main {
 
     public static void main(String[] args) {
 
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        reader.lines()
-                .flatMap(x -> Stream.of(x.split("[\\P{L}]"))
-                        .filter(t -> !t.isEmpty())
-                        .map(String::toLowerCase))
-                .collect(Collectors.groupingBy(t -> t, Collectors.counting()))
+        Comparator<Map.Entry<String, Long>> comparator = Comparator.comparing(x->-x.getValue());
+        comparator = comparator.thenComparing(Map.Entry::getKey);
+
+        readAll()
+                .stream()
+                .collect(Collectors.groupingBy(x->x, Collectors.counting()))
                 .entrySet()
                 .stream()
-                .sorted(Map.Entry.comparingByKey())
-                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                .sorted(comparator)
                 .limit(10)
-                .map(Map.Entry::getKey)
-                .forEach(t -> System.out.print(t + '\n'));
+                .forEach(x-> System.out.print(x.getKey()+"\n"));
+    }
+
+    private  static ArrayList<String> readAll()
+    {
+        Pattern pattern = Pattern.compile("\\W+",Pattern.UNICODE_CHARACTER_CLASS);
+        ArrayList<String> result = new ArrayList<>();
+
+        new Scanner(System.in)
+                .useDelimiter(pattern)
+                .forEachRemaining(x->result.add(x.toLowerCase()));
+
+
+        return result;
     }
 }
 
