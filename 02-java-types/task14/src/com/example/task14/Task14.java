@@ -1,22 +1,20 @@
 package com.example.task14;
 
+import org.junit.Assert;
+
 public class Task14 {
 
 
     public static int reverse(int value) {
-
-        // TODO напишите здесь код, переставляющий цифры числа в обратном порядке
-
-        return 0;
+        String input = Integer.toString(value);
+        if (input.isEmpty()) return 0;
+        input = new StringBuilder(input).reverse().toString();
+        return Integer.parseInt(input);
     }
 
     public static void main(String[] args) {
-        // Здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
         int result = reverse(345);
         System.out.println(result);
-         */
     }
 
 
