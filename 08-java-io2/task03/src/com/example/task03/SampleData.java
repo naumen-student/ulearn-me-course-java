@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.Objects;
 
 public class SampleData implements Serializable {
-    static final long serialVersionUID = 132706691457162967L;
+    static transient final long serialVersionUID = 132706691457162967L;
 
     String name;
     int value;
