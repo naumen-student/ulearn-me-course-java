@@ -1,35 +1,61 @@
 package com.example.task02;
 
-import java.io.File;
-import java.io.Serializable;
-import java.util.AbstractList;
 
-public class SavedList<E extends Serializable> extends AbstractList<E> {
+import java.io.*;
+import java.util.*;
 
-    public SavedList(File file) {
-    }
+    public class SavedList<E extends Serializable> extends AbstractList<E> implements Serializable{
 
-    @Override
-    public E get(int index) {
-        return null;
-    }
+        ArrayList<E> list;
+        private final File file;
 
-    @Override
-    public E set(int index, E element) {
-        return null;
-    }
+        public SavedList(File file){
+            this.file = file;
+            list = new ArrayList<>();
+            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
+                list = ((SavedList<E>) ois.readObject()).list;
+            }
+            catch (Exception e){
+                e.printStackTrace();
+            }
+        }
 
-    @Override
-    public int size() {
-        return 0;
-    }
 
-    @Override
-    public void add(int index, E element) {
-    }
+            private void update(){
+                try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
+                    oos.writeObject(this);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
 
-    @Override
-    public E remove(int index) {
-        return null;
-    }
-}
+            @Override
+            public E get(int index) {
+                return list.get(index);
+            }
+
+            @Override
+            public E set(int index, E element) {
+                E el = list.set(index, element);
+                update();
+                return el;
+            }
+
+            @Override
+            public int size() {
+                return list.size();
+            }
+
+            @Override
+            public void add(int index, E element) {
+                list.add(index, element);
+                update();
+            }
+
+            @Override
+            public E remove(int index) {
+                E el = list.remove(index);
+                update();
+                return el;
+            }
+        }
