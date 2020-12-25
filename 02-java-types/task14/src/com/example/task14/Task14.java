@@ -5,18 +5,19 @@ public class Task14 {
 
     public static int reverse(int value) {
 
-        // TODO напишите здесь код, переставляющий цифры числа в обратном порядке
+        int inverseNumber = 0;
+        while (value != 0) {
+            inverseNumber = inverseNumber * 10 + (value % 10);
+            value /= 10;
+        }
 
-        return 0;
+        return inverseNumber;
     }
 
     public static void main(String[] args) {
-        // Здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
+
         int result = reverse(345);
         System.out.println(result);
-         */
     }
 
 
