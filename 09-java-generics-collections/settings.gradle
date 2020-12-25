@@ -1,0 +1,5 @@
+rootProject.name = '9-java-generics-collections'
+include 'task01'
+include 'task02'
+include 'task03'
+//include 'task04'

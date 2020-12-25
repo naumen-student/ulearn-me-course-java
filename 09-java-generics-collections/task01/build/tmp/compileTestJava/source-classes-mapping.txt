@@ -1,0 +1,8 @@
+com/example/task01/Pair.java
+ com.example.task01.Pair
+com/example/task01/Tests.java
+ com.example.task01.Tests
+com/example/task01/Task01Main.java
+ com.example.task01.Task01Main
+com/example/task01/ITests.java
+ com.example.task01.ITests
