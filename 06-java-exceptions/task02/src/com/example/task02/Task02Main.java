@@ -8,7 +8,7 @@ public class Task02Main {
         /*
         System.out.println(getSeason(-5));
          */
-    }
+    } 
 
     static String getSeason(int monthNumber) {
         if(monthNumber < 1 || monthNumber > 12){
