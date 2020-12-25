@@ -1,0 +1,108 @@
+Index: 04-java-oop-basic/task01/src/com/example/task01/Task01Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.task01;\r\n\r\npublic class Task01Main {\r\n    public static void main(String[] args) {\r\n        Point p1 = new Point();\r\n        p1.x = 10;\r\n        p1.y = 45;\r\n        Point p2 = new Point();\r\n        p2.x = 78;\r\n        p2.y = 12;\r\n\r\n        System.out.println(\"Point 1:\");\r\n        p1.print();\r\n        System.out.println(p1);\r\n        System.out.println(\"Point 2:\");\r\n        p2.print();\r\n        System.out.println(p2);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/04-java-oop-basic/task01/src/com/example/task01/Task01Main.java b/04-java-oop-basic/task01/src/com/example/task01/Task01Main.java
+--- a/04-java-oop-basic/task01/src/com/example/task01/Task01Main.java	(revision 7c441a4d1f87140a13611022a32908ddc5693353)
++++ b/04-java-oop-basic/task01/src/com/example/task01/Task01Main.java	(date 1608927590699)
+@@ -1,19 +1,33 @@
+ package com.example.task01;
+ 
+-public class Task01Main {
+-    public static void main(String[] args) {
+-        Point p1 = new Point();
+-        p1.x = 10;
+-        p1.y = 45;
+-        Point p2 = new Point();
+-        p2.x = 78;
+-        p2.y = 12;
++public class Point {
++    int x;
++    int y;
++
++    Point() {
++    }
+ 
+-        System.out.println("Point 1:");
+-        p1.print();
+-        System.out.println(p1);
+-        System.out.println("Point 2:");
+-        p2.print();
+-        System.out.println(p2);
++    Point(int x, int y) {
++        this.x = x;
++        this.y = y;
+     }
+-}
++
++    void flip() {
++        int a = x;
++        x = -y;
++        y = -a;
++    }
++
++    double distance(Point point) {
++        return Math.sqrt(Math.pow(x-point.x, 2) + Math.pow(y-point.y, 2));
++    }
++
++    public String toString() {
++        return String.format("{0}, {1}", x,y);
++    }
++
++    void print() {
++        String pointToString = String.format("(%d, %d)", x, y);
++        System.out.println(pointToString);
++    }
++}
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e960195f-1df6-40f8-a11c-28b2d01a9220\" name=\"Default Changelist\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/03-java-control-flow-and-arrays/task13/src/com.example.task13/Task13Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/03-java-control-flow-and-arrays/task13/src/com.example.task13/Task13Main.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"03_task12\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 7c441a4d1f87140a13611022a32908ddc5693353)
++++ b/.idea/workspace.xml	(date 1608572142282)
+@@ -2,7 +2,7 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="e960195f-1df6-40f8-a11c-28b2d01a9220" name="Default Changelist" comment="">
+-      <change beforePath="$PROJECT_DIR$/03-java-control-flow-and-arrays/task13/src/com.example.task13/Task13Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-java-control-flow-and-arrays/task13/src/com.example.task13/Task13Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+Index: .idea/.name
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.name b/.idea/.name
+new file mode 100644
+--- /dev/null	(date 1608927554034)
++++ b/.idea/.name	(date 1608927554034)
+@@ -0,0 +1,1 @@
++Task01Main.java
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1608927554767)
++++ b/.idea/vcs.xml	(date 1608927554767)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
