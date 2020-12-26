@@ -1,5 +1,4 @@
 package com.example.task03;
-
 public class Task03 {
 
     public static int getMetreFromCentimetre(int centimetre) {
@@ -7,6 +6,7 @@ public class Task03 {
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
 
         return 0;
+        return centimetre / 100;
     }
 
     public static void main(String[] args) {
@@ -17,5 +17,4 @@ public class Task03 {
         System.out.println(result);
          */
     }
-
 }
