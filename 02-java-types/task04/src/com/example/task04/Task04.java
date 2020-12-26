@@ -6,7 +6,17 @@ public class Task04 {
 
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
 
-        return 0;
+        switch (operation) {
+            case "+":
+                return a + b;
+            case "-":
+                return a - b;
+            case "*":
+                return a * b;
+            case "/":
+                return (float) a / b;
+        }
+        return 0f;
     }
 
     public static void main(String[] args) {
