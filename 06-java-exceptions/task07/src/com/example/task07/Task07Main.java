@@ -19,5 +19,4 @@ public class Task07Main {
         }
         return NONE;
     }
-
 }
