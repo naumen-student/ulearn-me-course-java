@@ -1,5 +1,6 @@
 package com.example.task03;
 
+import java.io.ObjectInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -15,7 +16,10 @@ public class Task03Main {
     }
 
     public static SampleData deserialize(InputStream inputStream) throws IOException, ClassNotFoundException {
-        // your implementation here
-        return null;
+        SampleData deserializedSampleData;
+        try(ObjectInputStream objectInputStream = new ObjectInputStream(inputStream)) {
+            deserializedSampleData = (SampleData) objectInputStream.readObject();
+        }
+        return deserializedSampleData;
     }
 }
