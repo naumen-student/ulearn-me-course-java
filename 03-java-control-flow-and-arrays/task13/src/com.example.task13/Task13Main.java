@@ -14,6 +14,7 @@ public class Task13Main {
         //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
 
         if (arr == null || arr.length == 0)
+
             return arr;
         int count = 0;
         for (int e : arr) {
