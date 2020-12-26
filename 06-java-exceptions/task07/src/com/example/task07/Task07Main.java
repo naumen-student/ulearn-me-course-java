@@ -12,13 +12,11 @@ public class Task07Main {
     public Processor processor;
 
     public String getExceptionType() {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        String res = NONE;
         try {
-            processor.process(); //todo вы можете заменить реализацию этого метода для ручного дебага
-        } catch (Exception e) {
-
-        }
-        return null;
+            processor.process();
+        } catch (Exception e) { res = e instanceof RuntimeException ? UNCHECKED : CHECKED; }
+        return res;
     }
 
 }
