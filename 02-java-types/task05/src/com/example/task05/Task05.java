@@ -6,7 +6,18 @@ public class Task05 {
 
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
 
-        return "FALSE";
+        int maxOdd = 0;
+        while (x > 0) {
+            if ((x % 2) > 0) {
+                maxOdd = 1;
+            }
+            x /= 10;
+        }
+        if (maxOdd > 0) {
+            return "FALSE";
+        } else {
+            return "TRUE";
+        }
     }
 
     public static void main(String[] args) {
