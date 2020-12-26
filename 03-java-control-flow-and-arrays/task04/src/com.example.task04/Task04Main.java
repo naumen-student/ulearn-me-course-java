@@ -12,5 +12,9 @@ public class Task04Main {
     static void from0to10000() {
         //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
     }
+    for (int i = 0; i < 1e4; i++) {
+        System.out.println(i);
+    }
 
 }
+
