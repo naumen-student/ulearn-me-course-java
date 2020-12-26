@@ -1,0 +1,110 @@
+Index: 06-java-exceptions/task05/src/com/example/task05/Task05Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.task05;\r\n\r\nimport java.io.BufferedReader;\r\nimport java.io.FileReader;\r\nimport java.io.IOException;\r\n\r\npublic class Task05Main {\r\n    public static void main(String[] args) throws IOException {\r\n        String pathToFile = args[0]; // \"/home/user/file.txt\"\r\n\r\n        String s = readFile(pathToFile);\r\n        System.out.println(s);\r\n    }\r\n\r\n    public static String readFile(String pathToFile) throws IOException {\r\n        FileReader fileReader = new FileReader(pathToFile);\r\n        BufferedReader bufferedReader = new BufferedReader(fileReader);\r\n\r\n        StringBuilder stringBuilder = new StringBuilder();\r\n        String currentLine;\r\n        while ((currentLine = bufferedReader.readLine()) != null) {\r\n            stringBuilder.append(currentLine);\r\n            stringBuilder.append(\"\\n\");\r\n        }\r\n        bufferedReader.close();\r\n\r\n        return stringBuilder.toString();\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/06-java-exceptions/task05/src/com/example/task05/Task05Main.java b/06-java-exceptions/task05/src/com/example/task05/Task05Main.java
+--- a/06-java-exceptions/task05/src/com/example/task05/Task05Main.java	(revision a6ecfbb008ff2e90f6be330f85de7daba0da871f)
++++ b/06-java-exceptions/task05/src/com/example/task05/Task05Main.java	(date 1608973314074)
+@@ -3,27 +3,36 @@
+ import java.io.BufferedReader;
+ import java.io.FileReader;
+ import java.io.IOException;
++import java.io.FileNotFoundException;
+ 
+ public class Task05Main {
+     public static void main(String[] args) throws IOException {
+-        String pathToFile = args[0]; // "/home/user/file.txt"
+-
+-        String s = readFile(pathToFile);
+-        System.out.println(s);
+-    }
++        public static void main (String[]args){
++            String pathToFile = args[0]; // "/home/user/file.txt"
++            String s = readFile(pathToFile);
++            System.out.println(s);
++            try {
++                String str = readFile(pathToFile);
++                System.out.println(str);
++            } catch (FileNotFoundException exception) {
++                System.out.printf("файл \"%s\" не найден\n", pathToFile);
++            } catch (IOException ioException) {
++                System.out.printf("произошла ошибка при чтении файла %s\n", pathToFile);
++            }
++
++        }
+ 
+-    public static String readFile(String pathToFile) throws IOException {
+-        FileReader fileReader = new FileReader(pathToFile);
+-        BufferedReader bufferedReader = new BufferedReader(fileReader);
+-
+-        StringBuilder stringBuilder = new StringBuilder();
+-        String currentLine;
+-        while ((currentLine = bufferedReader.readLine()) != null) {
+-            stringBuilder.append(currentLine);
+-            stringBuilder.append("\n");
+-        }
+-        bufferedReader.close();
+-
+-        return stringBuilder.toString();
++        public static String readFile (String pathToFile) throws IOException {
++            FileReader fileReader = new FileReader(pathToFile);
++            BufferedReader bufferedReader = new BufferedReader(fileReader);
++            StringBuilder stringBuilder = new StringBuilder();
++            String currentLine;
++            while ((currentLine = bufferedReader.readLine()) != null) {
++                stringBuilder.append(currentLine);
++                stringBuilder.append("\n");
++            }
++            bufferedReader.close();
++            return stringBuilder.toString();
++        }
+     }
+ }
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"9f822c73-c081-4990-bbca-d8046a5cf6d4\" name=\"Default Changelist\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"05_task01\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1mAGAOaZYpKYK5SHidAmOojdAN5\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision a6ecfbb008ff2e90f6be330f85de7daba0da871f)
++++ b/.idea/workspace.xml	(date 1608973316939)
+@@ -1,7 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="9f822c73-c081-4990-bbca-d8046a5cf6d4" name="Default Changelist" comment="" />
++    <list default="true" id="9f822c73-c081-4990-bbca-d8046a5cf6d4" name="Default Changelist" comment="">
++      <change beforePath="$PROJECT_DIR$/06-java-exceptions/task05/src/com/example/task05/Task05Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/06-java-exceptions/task05/src/com/example/task05/Task05Main.java" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -10,7 +12,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="05_task01" />
++        <entry key="$PROJECT_DIR$" value="05_task02" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -29,6 +31,13 @@
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="9f822c73-c081-4990-bbca-d8046a5cf6d4" name="Default Changelist" comment="" />
++      <created>1608972468562</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1608972468562</updated>
++    </task>
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
