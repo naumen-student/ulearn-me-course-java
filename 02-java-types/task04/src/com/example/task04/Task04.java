@@ -6,13 +6,13 @@ public class Task04 {
 
         switch (operation) {
             case "+":
-                return (a + b);
+                return a + b;
             case "-":
-                return (a - b);
+                return a - b;
             case "*":
-                return (a * b);
+                return a * b;
             case "/":
-                return (float)(a / b);
+                return (float)a / b;
         }
         return 0;
     }
