@@ -4,8 +4,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.Charset;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
+
 
 public class Task03Main {
 
@@ -18,7 +19,30 @@ public class Task03Main {
 
     }
 
-    public static List<Set<String>> findAnagrams(InputStream inputStream, Charset charset) {
-        return null;
+    public static List<Set<String>> findAnagrams(InputStream inputStream, Charset charset){
+
+        TreeMap<String, TreeSet<String>> anagrams = new TreeMap<>();
+        Scanner scanner = new Scanner(inputStream, charset.name());
+
+        while (scanner.hasNext()) {
+
+            String str = scanner.nextLine().toLowerCase();
+            if (str.matches("[а-я]{3,}")) {
+
+                char[] lineSymbols = str.toCharArray();
+                Arrays.sort(lineSymbols);
+                String sorted = new String(lineSymbols);
+                if (!anagrams.containsKey(sorted)) {
+
+                    anagrams.put(sorted, new TreeSet<>());
+
+                }
+                anagrams.get(sorted).add(str);
+
+            }
+        }
+        return anagrams.values().stream()
+                .filter(value -> value.size() > 1)
+                .collect(Collectors.toList());
     }
 }
