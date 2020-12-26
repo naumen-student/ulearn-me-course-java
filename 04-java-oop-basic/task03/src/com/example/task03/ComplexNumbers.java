@@ -24,6 +24,6 @@ public class ComplexNumbers {
         return "ComplexNumbers{" +
                 "re=" + re +
                 ", im=" + im +
-                '}' ;
+                '}';
     }
 }
