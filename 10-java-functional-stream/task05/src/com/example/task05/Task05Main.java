@@ -9,8 +9,6 @@ public class Task05Main {
 
     public static void main(String[] args) {
 
-        /*
-
         // Random variables
         String randomFrom = "..."; // Некоторая случайная строка. Можете выбрать ее самостоятельно.
         String randomTo = "...";  // Некоторая случайная строка. Можете выбрать ее самостоятельно.
@@ -22,7 +20,6 @@ public class Task05Main {
                 "H.P. Lovecraft",
                 "This \"The Shadow over Innsmouth\" story is real masterpiece, Howard!"
         );
-
         assert firstMessage.getFrom().equals("Robert Howard") : "Wrong firstMessage from address";
         assert firstMessage.getTo().equals("H.P. Lovecraft") : "Wrong firstMessage to address";
         assert firstMessage.getContent().endsWith("Howard!") : "Wrong firstMessage content ending";
@@ -68,7 +65,6 @@ public class Task05Main {
 
         assert mailBox.get(randomTo).equals(Collections.<String>emptyList()) : "wrong mailService mailbox content (3)";
 
-
         // Создание списка из трех зарплат.
         Salary salary1 = new Salary("Facebook", "Mark Zuckerberg", 1);
         Salary salary2 = new Salary("FC Barcelona", "Lionel Messi", Integer.MAX_VALUE);
@@ -88,7 +84,7 @@ public class Task05Main {
         assert salaries.get(randomTo).equals(Arrays.asList(randomSalary)) : "wrong salaries mailbox content (3)";
 
 
-        */
+
 
     }
 
