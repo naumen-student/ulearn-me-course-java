@@ -1,5 +1,7 @@
 package com.example.task02;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.stream.IntStream;
 
 public class Task02Main {
@@ -15,9 +17,26 @@ public class Task02Main {
     }
 
     public static IntStream cycleGrayCode(int n) {
+        if (n < 1 || n > 16) throw new IllegalArgumentException();
+        ArrayList<Integer> grayCodeList = new ArrayList<>();
+        grayCodeList.add(0);
+        grayCodeList.add(1);
+        for (int power = 1; power < n; power++) {
+            grayCodeList = getGrayCode(grayCodeList, power);
+        }
 
-        return null; // your implementation here
+        final ArrayList<Integer> result = new ArrayList<>(grayCodeList);
+        return IntStream.iterate(0, x -> x + 1).map(x -> result.get(x % result.size()));
+    }
 
+    private static ArrayList<Integer> getGrayCode(ArrayList<Integer> lastStepList, int power) {
+        ArrayList<Integer> my_reslt = new ArrayList<>(lastStepList);
+        Collections.reverse(lastStepList);
+        my_reslt.addAll(lastStepList);
+        for (int i = my_reslt.size() / 2; i < my_reslt.size(); i++) {
+            my_reslt.set(i, my_reslt.get(i) + (int) Math.pow(2, power));
+        }
+        return my_reslt;
     }
 
 }
