@@ -1,5 +1,4 @@
 package com.example.task05;
-
 public class Task05 {
 
     public static String solution(int x) {
@@ -7,6 +6,16 @@ public class Task05 {
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
 
         return "FALSE";
+        boolean flag = true;
+        while (x > 0) {
+            int n = x % 10;
+            if (n % 2 != 0) {
+                flag = false;
+                break;
+            }
+            x /= 10;
+        }
+        return flag ? "TRUE" : "FALSE";
     }
 
     public static void main(String[] args) {
@@ -17,5 +26,4 @@ public class Task05 {
         System.out.println(result);
         */
     }
-
 }
