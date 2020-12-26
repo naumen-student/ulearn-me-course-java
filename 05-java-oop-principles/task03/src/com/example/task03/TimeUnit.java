@@ -1,8 +1,5 @@
 package com.example.task03;
 
-/**
- * Интерфейс для интервалов времени в определенных единицах
- */
 public interface TimeUnit {
 
     /**
@@ -28,4 +25,8 @@ public interface TimeUnit {
      */
     long toMinutes();
 
+    /**
+     * Возвращает количество часов в интервале.
+     **/
+    long getHours();
 }
