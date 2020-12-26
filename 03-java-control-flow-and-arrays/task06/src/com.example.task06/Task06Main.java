@@ -1,4 +1,5 @@
 package com.example.task06;
+import java.util.Arrays;
 
 public class Task06Main {
     public static void main(String[] args) {
@@ -11,7 +12,7 @@ public class Task06Main {
 
     static int getMax(int a, int b, int c, int d) {
         //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
-        return 0;
+        return Arrays.stream(new int[] {a, b, c, d}).max().getAsInt();
     }
 
 }
