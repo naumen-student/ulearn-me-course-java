@@ -12,5 +12,4 @@ public class Task09Main {
             min = Integer.min (i, min);
         return min;
     }
-
 }
