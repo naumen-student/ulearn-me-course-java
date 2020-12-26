@@ -1,5 +1,4 @@
 package com.example.task09;
-
 public class Task09 {
 
     public static double solution() {
@@ -9,7 +8,8 @@ public class Task09 {
         float b = 3.0f;
         double x = (a / b - 1.0 / 3.0) * 1.0e9;
 
-        return x;
+
+        return (a / b - 1.0f / 3.0f) * 1.0e9;
     }
 
     public static void main(String[] args) {
