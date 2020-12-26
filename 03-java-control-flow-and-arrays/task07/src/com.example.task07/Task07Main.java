@@ -1,7 +1,8 @@
 package com.example.task07;
-
-public class Task07Main {
-    public static void main(String[] args) {
+public class Task07Main
+{
+    public static void main(String[] args)
+    {
         //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
         // например вот так:
         /*
@@ -14,9 +15,10 @@ public class Task07Main {
          */
     }
 
-    static int sum(int[] arr) {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
-        return 0;
+    static int sum(int[] arr)
+    {
+        int sum = 0;
+        for (int i : arr) sum += i;
+        return sum;
     }
-
 }
