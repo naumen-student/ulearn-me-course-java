@@ -3,14 +3,7 @@ package com.example.task11;
 public class Task11 {
 
     public static float benefit(float sum, float percent) {
-
-        // TODO исправьте функцию, чтобы избежать накопления ошибки
-
-        // Считаем проценты за год
-        for (int i = 1; i <= 12; i++) {
-            sum += sum * percent;
-        }
-        return sum;
+        return (float) (Math.pow((percent + 1.0), 12) * sum);
     }
 
     public static void main(String[] args) {
