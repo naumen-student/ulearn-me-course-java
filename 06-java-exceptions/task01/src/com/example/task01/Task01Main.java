@@ -10,6 +10,8 @@ public class Task01Main {
     }
 
     static void codeWithNPE() {
+        String line = null;
+        System.out.print(line.toCharArray());
         //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
     }
 }
