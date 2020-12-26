@@ -13,5 +13,4 @@ public class Task06Main {
         StackTraceElement element = new Exception().getStackTrace()[1];
         System.out.print(element.getMethodName());
     }
-
 }
