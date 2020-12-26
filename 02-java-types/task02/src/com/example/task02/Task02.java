@@ -1,5 +1,4 @@
 package com.example.task02;
-
 public class Task02 {
 
     public static String solution(String input) {
@@ -7,6 +6,14 @@ public class Task02 {
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
 
         return "";
+        long line = Long.parseLong(input);
+        if (Byte.MIN_VALUE <= line && line <= Byte.MAX_VALUE)
+            return "byte";
+        if (Short.MIN_VALUE <= line && line <= Short.MAX_VALUE)
+            return "short";
+        if (Integer.MIN_VALUE <= line && line <= Integer.MAX_VALUE)
+            return "int";
+        return "long";
     }
 
     public static void main(String[] args) {
