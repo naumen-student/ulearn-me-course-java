@@ -12,7 +12,7 @@ public class Task01Main {
         System.out.println(checkSumOfStream(new ByteArrayInputStream(new byte[]{0x33, 0x45, 0x01})));
         */
 
-    }
+    } 
 
     public static int checkSumOfStream(InputStream inputStream) throws IOException {
         // your implementation here
