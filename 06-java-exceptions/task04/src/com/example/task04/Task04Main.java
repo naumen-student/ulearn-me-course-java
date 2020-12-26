@@ -22,5 +22,3 @@ public class Task04Main {
         throw new MyException(
                 String.format("monthNumber %d is invalid, month number should be between 1..12", monthNumber));
     }
-
-}
