@@ -23,7 +23,8 @@ public class Task01Main {
             Function<? super T, ? extends U> ifTrue,
             Function<? super T, ? extends U> ifFalse) {
 
-        return null; // your implementation here
-
+        if (ifFalse == null || ifTrue == null || condition == null)
+            throw new NullPointerException();
+        return x -> condition.test(x) ? ifTrue.apply(x) : ifFalse.apply(x);
     }
 }
