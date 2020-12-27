@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.task04.Tests" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-12-27T11:10:03" hostname="DESKTOP-QRP1CHS" time="0.005">
+  <properties/>
+  <testcase name="testGetSeason_shouldFailWhenTooBigMonthNumber" classname="com.example.task04.Tests" time="0.004"/>
+  <testcase name="testGetSeason_withCorrectInput" classname="com.example.task04.Tests" time="0.0"/>
+  <testcase name="testGetSeason_shouldFailWhenNegativeMonthNumber" classname="com.example.task04.Tests" time="0.001"/>
+  <testcase name="testGetSeason_shouldFailWhenZeroMonthNumber" classname="com.example.task04.Tests" time="0.0"/>
+  <system-out><![CDATA[com.example.task04.MyException
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
