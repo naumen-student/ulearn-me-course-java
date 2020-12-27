@@ -1,13 +1,24 @@
 package com.example.task02;
 
 import java.io.IOException;
+import static java.lang.System.out;
 
 public class Task02Main {
     public static void main(String[] args) throws IOException {
-        // чтобы протестировать свое решение, вам нужно:
-        // - направить файл input.test в стандартный ввод программы (в настройках запуска программы в IDE или в консоли)
-        // - направить стандартный вывод программы в файл output.test
-        // - запустить программу
-        // - и сравнить получившийся файл output.test с expected.test
+        byte[] allBytes = System.in.readAllBytes();
+        for(int i = 0; i < allBytes.length; i++) {
+            if (i != allBytes.length - 1) {
+                if (allBytes[i] != 13 || allBytes[i + 1] != 10) {
+                    out.write(allBytes[i]);
+                } else {
+                    out.write(10);
+                    i++;
+                }
+            } else {
+                out.write(allBytes[i]);
+                break;
+            }
+        }
+        out.flush();
     }
 }
