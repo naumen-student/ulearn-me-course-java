@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.task01.Tests" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-12-27T00:27:35" hostname="DESKTOP-UF4O55G" time="0.068">
+  <properties/>
+  <testcase name="testException" classname="com.example.task01.Tests" time="0.002"/>
+  <testcase name="testExample" classname="com.example.task01.Tests" time="0.064"/>
+  <testcase name="testNull" classname="com.example.task01.Tests" time="0.001"/>
+  <testcase name="testArrays" classname="com.example.task01.Tests" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
