@@ -27,5 +27,6 @@ public interface TimeUnit {
      * @return количество минут в текущем интервале
      */
     long toMinutes();
+    long toHours();
 
 }
