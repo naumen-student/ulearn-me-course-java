@@ -15,7 +15,21 @@ public class Task01Main {
     }
 
     public static int checkSumOfStream(InputStream inputStream) throws IOException {
-        // your implementation here
-        return 0;
+        int sum = 0;
+
+        try {
+            int lastByte = inputStream.read();
+            while (lastByte != -1) {
+                sum = Integer.rotateLeft(sum,   1) ^ lastByte;
+                lastByte = inputStream.read();
+            }
+        }
+        catch (IOException e){
+            throw new IOException();
+        }
+        catch (RuntimeException e){
+            throw new IllegalArgumentException();
+        }
+        return sum;
     }
 }
