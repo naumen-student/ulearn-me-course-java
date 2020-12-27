@@ -13,8 +13,8 @@ public class Task03Main {
     public static SampleData deserialize(InputStream inputStream) throws IOException, ClassNotFoundException {
         try (ObjectInputStream ois = new ObjectInputStream(inputStream)) {
             SampleData result = (SampleData) ois.readObject();
-            ois.close();
-            return result;
+            ois.close();  // без закрытия стрима был не полный балл за решение
+            return result; // хотя здесь используется блок try с ресурсами, зачем закрывать stream явно - я немного не понимаю...
         }
     }
 }
