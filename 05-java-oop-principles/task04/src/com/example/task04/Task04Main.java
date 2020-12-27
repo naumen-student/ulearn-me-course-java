@@ -1,7 +1,10 @@
 package com.example.task04;
 
-public class Task04Main {
-    public static void main(String[] args) {
-
+public class ConsoleHandler implements MessageHandler
+{
+    @Override
+    public void logMes(String message)
+    {
+        System.out.println(message);
     }
 }
