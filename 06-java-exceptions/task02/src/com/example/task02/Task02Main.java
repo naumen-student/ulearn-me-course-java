@@ -11,6 +11,11 @@ public class Task02Main {
     }
 
     static String getSeason(int monthNumber) {
-        return "";//todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        public static void throwCheckedException () throws checked {
+            throw new checked();
+        }
+    }
+
+    class checked extends Exception {
     }
 }
