@@ -9,14 +9,11 @@ public class Task05Main {
 
     public static void main(String[] args) {
 
-        /*
+        String randomFrom = "123";
+        String randomTo = "456";
+        int randomSalary = 153;
 
-        // Random variables
-        String randomFrom = "..."; // Некоторая случайная строка. Можете выбрать ее самостоятельно.
-        String randomTo = "...";  // Некоторая случайная строка. Можете выбрать ее самостоятельно.
-        int randomSalary = 100;  // Некоторое случайное целое положительное число. Можете выбрать его самостоятельно.
 
-        // Создание списка из трех почтовых сообщений.
         MailMessage firstMessage = new MailMessage(
                 "Robert Howard",
                 "H.P. Lovecraft",
@@ -43,14 +40,13 @@ public class Task05Main {
                 firstMessage, secondMessage, thirdMessage
         );
 
-        // Создание почтового сервиса.
+
         MailService<String> mailService = new MailService<>();
 
-        // Обработка списка писем почтовым сервисом
-        messages.stream().forEachOrdered(mailService);
 
-        // Получение и проверка словаря "почтового ящика",
-        //   где по получателю можно получить список сообщений, которые были ему отправлены
+        messages.forEach(mailService);
+
+
         Map<String, List<String>> mailBox = mailService.getMailBox();
 
         assert mailBox.get("H.P. Lovecraft").equals(
@@ -86,10 +82,6 @@ public class Task05Main {
         assert salaries.get(salary1.getTo()).equals(Arrays.asList(1)) : "wrong salaries mailbox content (1)";
         assert salaries.get(salary2.getTo()).equals(Arrays.asList(Integer.MAX_VALUE)) : "wrong salaries mailbox content (2)";
         assert salaries.get(randomTo).equals(Arrays.asList(randomSalary)) : "wrong salaries mailbox content (3)";
-
-
-        */
-
     }
 
 }
