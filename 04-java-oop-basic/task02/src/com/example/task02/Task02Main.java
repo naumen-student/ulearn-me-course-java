@@ -1,44 +1,44 @@
 package com.example.task02;
 
 class TimeSpan {
-    private int hours;
-    private int minutes;
-    private int seconds;
-    public TimeSpan(int hours, int minutes, int seconds) {
-        this.hours = hours;
-        this.minutes = minutes;
-        this.seconds = seconds;
+    private int h;
+    private int m;
+    private int s;
+    public TimeSpan(int h, int m, int s) {
+        this.h = h;
+        this.m = m;
+        this.s = s;
     }
 
     public int getHours() {
-        return hours;
+        return h;
     }
 
-    public void setHours(int hours) {
-        this.hours = hours;
+    public void setHours(int h) {
+        this.h = h;
     }
 
     public int getMinutes() {
-        return minutes;
+        return m;
     }
 
-    public void setMinutes(int minutes) {
-        this.minutes = minutes;
+    public void setMinutes(int m) {
+        this.m = m;
     }
 
     public int getSeconds() {
-        return seconds;
+        return s;
     }
 
-    public void setSeconds(int seconds) {
-        this.seconds = seconds;
+    public void setSeconds(int s) {
+        this.s = s;
     }
 
     void getNormalizeTime() {
-        minutes += seconds / 60;
-        seconds = seconds % 60;
-        hours += minutes / 60;
-        minutes = minutes % 60;
+        m += s / 60;
+        s = s % 60;
+        h += m / 60;
+        m = m % 60;
     }
 
     void add(TimeSpan time) {
