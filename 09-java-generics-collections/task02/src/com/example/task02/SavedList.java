@@ -1,72 +1,64 @@
-package com.example.task02;
-
-import java.util.AbstractList;
 import java.io.*;
+import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
 
 public class SavedList<E extends Serializable> extends AbstractList<E> {
     private final File file;
-    private List<E> items;
+    public List<E> collection;
 
     public SavedList(File file) {
         this.file = file;
-        items = new ArrayList<>();
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
-            items = ((SavedList<E>) ois.readObject()).items;
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
+        collection = new ArrayList<>();
+        readCollectionInFile();
     }
 
     @Override
-    public E get(int index) {
-        return items.get(index);
-    }
-
+    public E get(int index) { return collection.get(index); }
+    
     @Override
     public E set(int index, E element) {
-        E item = items.set(index, element);
-        try {
-            FileOutputStream fileOutputStream = new FileOutputStream(file);
-            try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
-                objectOutputStream.writeObject(items);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return item;
+        E elem = collection.set(index, element);
+        writeCollectionInFile();
+        return elem;
     }
 
     @Override
     public int size() {
-        return items.size();
+        return collection.size();
     }
 
     @Override
     public void add(int index, E element) {
-        items.add(index, element);
-        try {
-            FileOutputStream fileOutputStream = new FileOutputStream(file);
-            try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
-                objectOutputStream.writeObject(items);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        collection.add(index, element);
+        writeCollectionInFile();
     }
 
     @Override
     public E remove(int index) {
-        E item = items.remove(index);
+        E elem = collection.remove(index);
+        writeCollectionInFile();
+        return elem;
+    }
+
+    private void writeCollectionInFile() {
         try {
             FileOutputStream outputFile = new FileOutputStream(file);
             try (ObjectOutputStream inputFile = new ObjectOutputStream(outputFile)) {
-                inputFile.writeObject(items);
+                inputFile.writeObject(collection);
             }
         } catch (IOException ignored) {
         }
-        return item;
+    }
+
+    private void readCollectionInFile() {
+        try {
+            FileInputStream fileInputStream = new FileInputStream(file);
+            try (ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
+                collection = (ArrayList<E>) objectInputStream.readObject();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
