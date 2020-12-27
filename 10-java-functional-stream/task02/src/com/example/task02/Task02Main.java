@@ -16,8 +16,12 @@ public class Task02Main {
 
     public static IntStream cycleGrayCode(int n) {
 
-        return null; // your implementation here
-
+        if (n > 0 && n < 17) {
+            return IntStream.iterate(0, i -> i + 1)
+                    .map(x -> (x % (int) Math.pow(2, n)) ^ ((x % (int) Math.pow(2, n)) >> 1));
+        } else {
+            throw new IllegalArgumentException();
+        }
     }
 
 }
