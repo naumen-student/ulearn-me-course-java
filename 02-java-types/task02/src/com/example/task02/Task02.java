@@ -2,12 +2,16 @@ package com.example.task02;
 
 public class Task02 {
 
-    public static String solution(String input) {
+    public static float benefit(float sum, float percent) {
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
+            // TODO исправьте функцию, чтобы избежать накопления ошибки
 
-        return "";
-    }
+            for (int i = 1; i <= 12; i++) {
+                sum += sum * percent;
+            }
+            return (float) (sum * Math.exp(12 * Math.log(1.0 + percent)));
+        }
+
 
     public static void main(String[] args) {
         // Здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
