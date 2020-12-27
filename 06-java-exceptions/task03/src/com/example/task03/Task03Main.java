@@ -11,6 +11,6 @@ public class Task03Main {
 
     //todo напишите здесь свою корректную реализацию задания
     public static void throwCheckedException() throws Exception {
-        throw new Exception("Epstein didn't kill himself");
+        throw new Exception();
     }
 }
