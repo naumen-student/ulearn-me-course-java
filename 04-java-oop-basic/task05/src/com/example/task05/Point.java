@@ -5,15 +5,12 @@ package com.example.task05;
  */
 public class Point {
 
-    /**
-     * Конструктор, инициализирующий координаты точки
-     *
-     * @param x координата по оси абсцисс
-     * @param y координата по оси ординат
-     */
-    public Point(double x, double y) {
-        throw new AssertionError();
-    }
+    private final double x;
+    private  final double y;
+
+    public Point(double x, double y)
+        this.x = x;
+        this.y = y;
 
     /**
      * Возвращает координату точки по оси абсцисс
@@ -21,8 +18,7 @@ public class Point {
      * @return координату точки по оси X
      */
     public double getX() {
-        // TODO: реализовать
-        throw new AssertionError();
+        return x;
     }
 
     /**
@@ -31,8 +27,7 @@ public class Point {
      * @return координату точки по оси Y
      */
     public double getY() {
-        // TODO: реализовать
-        throw new AssertionError();
+        return y;
     }
 
     /**
@@ -42,8 +37,8 @@ public class Point {
      * @return расстояние от текущей точки до переданной
      */
     public double getLength(Point point) {
-        // TODO: реализовать
-        throw new AssertionError();
+        return (Math.sqrt((this.x - point.x) * (this.x - point.x)
+                + (this.y - point.y) * (this.y - point.y)));
     }
 
 }
