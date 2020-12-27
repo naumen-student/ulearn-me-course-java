@@ -1,24 +1,16 @@
-package com.example.task07;
+package com.example.task06;
 
-public class Task07Main {
-
-    public static final String CHECKED = "checked";
-    public static final String UNCHECKED = "unchecked";
-    public static final String NONE = "none";
-
+public class Task06Main {
     public static void main(String[] args) {
+        //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
+        // например вот так:
+        /*
+        new Task06Main().printMethodName();
+         */
     }
 
-    public Processor processor;
-
-    public String getExceptionType() {
+    void printMethodName() {
         //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
-        try {
-            processor.process(); //todo вы можете заменить реализацию этого метода для ручного дебага
-        } catch (Exception e) {
-
-        }
-        return null;
     }
 
 }
