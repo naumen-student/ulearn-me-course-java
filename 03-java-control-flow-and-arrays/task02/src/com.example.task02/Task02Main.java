@@ -11,7 +11,7 @@ public class Task02Main {
             return "лето";
         else if (monthNumber > 8 && monthNumber < 12)
             return "осень";
-        return "зима";
+        else return "зима";
 
     }
 }
