@@ -9,5 +9,14 @@ public class Task02Main {
         // - направить стандартный вывод программы в файл output.test
         // - запустить программу
         // - и сравнить получившийся файл output.test с expected.test
+        int previousByte = System.in.read();
+        int currentByte;
+        while (previousByte >= 0) {
+            currentByte = System.in.read();
+            if (currentByte != 10  ||  previousByte != 13)
+                System.out.write(previousByte);
+            previousByte = currentByte;
+        }
+        System.out.flush();
     }
 }
