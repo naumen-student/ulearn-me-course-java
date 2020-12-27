@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:01_task01" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c68d27d2-0be4-43ea-89f9-4a22e91595d6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/01-java-intro">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/02-java-types">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/03-java-control-flow-and-arrays">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/04-java-oop-basic">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/05-java-oop-principles">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/06-java-exceptions">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/07-java-io">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/08-java-io2">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/09-java-generics-collections">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/10-java-functional-stream">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1mEKwWQxdmAS4qLsOlGyYjLpSBt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="JUnit.Tests (1)">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="01-java-intro" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/01-java-intro" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="2-java-types.task02.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.task02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.task02" />
+      <option name="MAIN_CLASS_NAME" value="com.example.task02.Tests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="2-java-types.task03.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.task03.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.task03" />
+      <option name="MAIN_CLASS_NAME" value="com.example.task03.Tests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Tests (1)" />
+        <item itemvalue="JUnit.Tests" />
+        <item itemvalue="Gradle.01-java-intro" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c68d27d2-0be4-43ea-89f9-4a22e91595d6" name="Default Changelist" comment="" />
+      <created>1609053548785</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609053548785</updated>
+      <workItem from="1609053550219" duration="4476000" />
+      <workItem from="1609066712470" duration="472000" />
+      <workItem from="1609068769677" duration="2878000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="01_task01" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="642" y="220" key="FileChooserDialogImpl" timestamp="1609067182098">
+      <screen x="0" y="0" width="1723" height="930" />
+    </state>
+    <state x="642" y="220" key="FileChooserDialogImpl/0.0.1723.930@0.0.1723.930" timestamp="1609067182098" />
+    <state width="1680" height="245" key="GridCell.Tab.0.bottom" timestamp="1609071563620">
+      <screen x="0" y="0" width="1723" height="930" />
+    </state>
+    <state width="1680" height="245" key="GridCell.Tab.0.bottom/0.0.1723.930/0.-1080.1723.930@0.0.1723.930" timestamp="1609066812968" />
+    <state width="1680" height="245" key="GridCell.Tab.0.bottom/0.0.1723.930@0.0.1723.930" timestamp="1609071563620" />
+    <state width="1680" height="245" key="GridCell.Tab.0.center" timestamp="1609071563619">
+      <screen x="0" y="0" width="1723" height="930" />
+    </state>
+    <state width="1680" height="245" key="GridCell.Tab.0.center/0.0.1723.930/0.-1080.1723.930@0.0.1723.930" timestamp="1609066812968" />
+    <state width="1680" height="245" key="GridCell.Tab.0.center/0.0.1723.930@0.0.1723.930" timestamp="1609071563619" />
+    <state width="1680" height="245" key="GridCell.Tab.0.left" timestamp="1609071563619">
+      <screen x="0" y="0" width="1723" height="930" />
+    </state>
+    <state width="1680" height="245" key="GridCell.Tab.0.left/0.0.1723.930/0.-1080.1723.930@0.0.1723.930" timestamp="1609066812968" />
+    <state width="1680" height="245" key="GridCell.Tab.0.left/0.0.1723.930@0.0.1723.930" timestamp="1609071563619" />
+    <state width="1680" height="245" key="GridCell.Tab.0.right" timestamp="1609071563620">
+      <screen x="0" y="0" width="1723" height="930" />
+    </state>
+    <state width="1680" height="245" key="GridCell.Tab.0.right/0.0.1723.930/0.-1080.1723.930@0.0.1723.930" timestamp="1609066812968" />
+    <state width="1680" height="245" key="GridCell.Tab.0.right/0.0.1723.930@0.0.1723.930" timestamp="1609071563620" />
+  </component>
+</project>
