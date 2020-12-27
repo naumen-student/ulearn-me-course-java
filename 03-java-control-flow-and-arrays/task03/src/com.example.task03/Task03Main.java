@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Task03Main {
-    private static Map<Integer, String> numbersOfDays = new HashMap <Integer, String>();
+    private static Map<Integer, String> numbersOfDays = new HashMap<Integer, String>();
 
     static String getNameOfWeekDays(int weekDaysNumber) {
         numbersOfDays.put(1, "понедельник");
