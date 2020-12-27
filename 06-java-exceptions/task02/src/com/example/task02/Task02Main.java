@@ -11,26 +11,21 @@ public class Task02Main {
     }
 
     static String getSeason(int monthNumber) {
-        witch (monthNumber){
-            case 1:
-            case 2:
-            case 12:
-                return "зима";
-            case 3:
-            case 4:
-            case 5:
-                return "весна";
-            case 6:
-            case 7:
-            case 8:
-                return "лето";
-            case 9:
-            case 10:
-            case 11:
-                return "осень";
-            default:
-                throw new IllegalArgumentException ("monthNumber " + monthNumber +
-                        " is invalid, month number should be between 1..12");
-        }
+        if (monthNumber > 12 || monthNumber < 1)
+            throw new IllegalArgumentException(
+                    String.format("monthNumber %d is invalid, month number should be between 1..12", monthNumber)
+            );
+
+        if (inBetween(monthNumber, 3, 5))
+            return "весна";
+        if (inBetween(monthNumber, 6, 8))
+            return "лето";
+        if (inBetween(monthNumber, 9, 11))
+            return "осень";
+        return "зима";
+    }
+
+    private static boolean inBetween(int value, int start, int end) {
+        return value >= start && value <= end;
     }
 }
