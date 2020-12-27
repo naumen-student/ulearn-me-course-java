@@ -14,8 +14,10 @@ public class Task09Main {
     }
 
     static int min(int[] arr) {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
-        return 0;
+        int minim = Integer.MAX_VALUE;
+        for (int i : arr)
+            minim = Math.min(i, minim);
+        return minim;
     }
 
 }
