@@ -9,5 +9,14 @@ public class Task02Main {
         // - направить стандартный вывод программы в файл output.test
         // - запустить программу
         // - и сравнить получившийся файл output.test с expected.test
+        int currentSymbol = System.in.read();
+        while (currentSymbol > -1) {
+            int nextSymbol = System.in.read();
+            if (!(currentSymbol == 13 && nextSymbol == 10))
+                System.out.write(currentSymbol);
+            currentSymbol = nextSymbol;
+            System.out.flush();
+
+        }
     }
 }
