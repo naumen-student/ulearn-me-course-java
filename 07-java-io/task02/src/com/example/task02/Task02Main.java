@@ -18,7 +18,7 @@ public class Task02Main {
         while (true){
             if(next == -1){
                 break;
-            }
+            } 
             first = next;
             next = System.in.read();
             if(first == 13 && next == 10){
