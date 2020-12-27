@@ -1,7 +1,9 @@
 package com.example.task01;
 
-public class Task01Main {
-    public static void main(String[] args) {
-
-    }
+public enum LoggerLevel
+{
+    DEBUG,      // - отладка
+    INFO,       // - информационные сообщения
+    WARNING,    // - предупреждение
+    ERROR       // - ошибка
 }
