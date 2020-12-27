@@ -3,10 +3,11 @@ package com.example.task02;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.List;
-import java.nio.file.DirectoryStream;
+import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.nio.file.SimpleFileVisitor;
+import java.nio.file.attribute.BasicFileAttributes;
 
 public class Task02Main {
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -14,16 +15,13 @@ public class Task02Main {
        }
 
     public static List<Path> listFiles(Path rootDir) throws IOException, InterruptedException {
-        ArrayList<Path> result = new ArrayList<>();
-        DirectoryStream<Path> dirStream = Files.newDirectoryStream(rootDir);
-        for(Path child: dirStream) {
-            if(Files.isRegularFile(child)) {
-                result.add(child);
+        List<Path> files = new ArrayList<>();
+        Files.walkFileTree(rootDir, new SimpleFileVisitor<Path>() {
+            public FileVisitResult visitFile(Path file, BasicFileAttributes attributes) {
+                files.add(file);
+                return FileVisitResult.CONTINUE;
             }
-            else {
-                result.addAll(listFiles(child));
-            }
-        }
-        return result;
+        });
+        return files;
     }
 }
