@@ -3,6 +3,7 @@ package com.example.task04;
 public class Task04Main {
 
     public static void main(String[] args) {
+
         System.out.println(getSeason(-1));
     }
 
