@@ -1,26 +1,22 @@
 package com.example.task02;
 
-@SuppressWarnings("unused")
 public class DiscountBill extends Bill {
-    long discount;
+    private final double discount;
 
-    public DiscountBill(long discount) {
-        super();
-        if (discount < 0 || discount > 100) throw new ArithmeticException(
-                String.format("Incorrect discount: %s", discount));
+    public DiscountBill(double discount) {
         this.discount = discount;
     }
 
     @Override
     public long getPrice() {
-        return super.getPrice() * (1 - discount);
+        return (long) (super.getPrice() * (100 - discount) / 100);
     }
 
-    public long getAbsoluteDiscount() {
+    public long GetAbsDiscount() {
         return super.getPrice() - getPrice();
     }
 
-    public long getPercDiscount() {
-        return discount * 100;
+    public double getDiscount() {
+        return discount;
     }
 }
