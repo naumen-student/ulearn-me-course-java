@@ -2,7 +2,7 @@ package com.example.task01;
 
 import java.util.function.BiConsumer;
 
-public class Pair {
+public class Pair<T1, T2> {
     private final T1 firstElement;
     private final T2 secondElement;
 
