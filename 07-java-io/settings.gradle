@@ -1,0 +1,5 @@
+rootProject.name = '7-java-io'
+include 'task01'
+include 'task02'
+include 'task03'
+include 'task04'
