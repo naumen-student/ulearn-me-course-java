@@ -1,0 +1,17 @@
+com/example/task05/ITests.java
+ com.example.task05.ITests
+com/example/task05/IContent.java
+ com.example.task05.IContent
+com/example/task05/Tests.java
+ com.example.task05.Tests
+com/example/task05/Task05Main.java
+ com.example.task05.Task05Main
+com/example/task05/MyMap.java
+ com.example.task05.MyMap
+com/example/task05/MailMessage.java
+ com.example.task05.MailMessage
+com/example/task05/MailService.java
+ com.example.task05.MailService
+ com.example.task05.MailService$1
+com/example/task05/Salary.java
+ com.example.task05.Salary
