@@ -1,0 +1,21 @@
+package com.example.task03;
+
+public class ComplexNumber {
+
+    private double real;
+    private double imagine;
+
+    public ComplexNumber(double real, double imagine){
+        this.real = real;
+        this.imagine = imagine;
+    }
+
+    public ComplexNumber Sum(ComplexNumber number){
+        return new ComplexNumber(real + number.real, imagine + number.imagine);
+    }
+
+    public ComplexNumber Multiply(ComplexNumber number){
+        return new ComplexNumber(real * number.real, imagine * number.imagine);
+    }
+
+}
