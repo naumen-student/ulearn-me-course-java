@@ -4,26 +4,32 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
+package com.example.task05;
 
-public class MailService<T> implements Consumer<IContent<T>> {
-    private final Map<String, List<T>> mailBox;
+import java.util.*;
+import java.util.function.Consumer;
 
-    public MailService() {
-        mailBox = new MyMap<>();
-    }
-
-    public Map<String, List<T>> getMailBox() {
-        return mailBox;
-    }
-
+public class MailService<T> implements Consumer<Message<T>> {
+    private final Map<String, List<T>> mailBox = new HashMap<String, List<T>>() {
     @Override
-    public void accept(IContent<T> tiContent) {
-    if (mailBox.containsKey(tiContent.getTo())) {
-    mailBox.get(tiContent.getTo()).add(tiContent.getContent());
-} else {
-    mailBox.put(tiContent.getTo(), new ArrayList<T>() {{
-        add(tiContent.getContent());
-    }});
+    public List<T> get(Object key) {
+    return super.getOrDefault(key, Collections.emptyList());
 }
+};
+
+@Override
+public void accept(Message<T> tMessage) {
+    if (!mailBox.containsKey(tMessage.getTo())) {
+        ArrayList<T> tList = new ArrayList<>();
+        tList.add(tMessage.getContent());
+        mailBox.put(tMessage.getTo(), tList);
+    }
+    else {
+        mailBox.get(tMessage.getTo()).add(tMessage.getContent());
+    }
+}
+
+public Map<String, List<T>> getMailBox() {
+    return mailBox;
 }
 }
