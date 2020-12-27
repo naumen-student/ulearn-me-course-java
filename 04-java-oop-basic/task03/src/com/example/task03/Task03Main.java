@@ -1,41 +1,12 @@
-package com.example.task03;
+public class Task03Main {
+    public static void main(String[] args) {
 
-class Complex {
-    private double real, imag;
+        Complex a = new Complex(4, 5);
+        Complex b = new Complex(12, 23);
 
-    public Complex() {
-    }
-
-    public Complex(double realNum, double imagNum) {
-        this.imag = imagNum;
-        this.real = realNum;
-    }
-
-    public Complex add(Complex complexNum) {
-        return new Complex(this.real + complexNum.real, this.imag + complexNum.imag);
-    }
-
-    public Complex multiply(Complex complexNum) {
-        return new Complex(real * complexNum.real - imag * complexNum.imag, real * complexNum.imag + complexNum.real * imag);
-    }
-
-    public double getImag() {
-        return this.imag;
-    }
-
-    public void setImag(double imag) {
-        this.imag = imag;
-    }
-
-    public double getReal() {
-        return this.real;
-    }
-
-    public void setReal(double real) {
-        this.real = real;
-    }
-
-    public String toString() {
-        return String.format("%s + %si", real, imag);
+        System.out.println(a.toString());
+        System.out.println(b.toString());
+        System.out.println(a.Add(b).toString());
+        System.out.println(a.Multiply(b).toString());
     }
 }
