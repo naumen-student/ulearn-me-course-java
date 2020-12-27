@@ -18,7 +18,7 @@ public class Task04Main {
                 res += scanner.nextDouble();
             else
                 scanner.next();
-        }
+        } 
         System.out.format(Locale.CANADA," %1.6f", res);
     }
 }
