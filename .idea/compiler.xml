@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="3-java-control-flow-and-arrays.task01" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task01.main" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task01.test" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task02" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task02.main" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task02.test" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task03" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task03.main" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task03.test" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task04" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task04.main" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task04.test" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task05" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task05.main" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task05.test" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task06" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task06.main" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task06.test" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task07" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task07.main" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task07.test" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task08" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task08.main" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task08.test" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task09" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task09.main" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task09.test" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task10" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task10.main" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task10.test" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task11" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task11.main" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task11.test" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task12" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task12.main" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task12.test" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task13" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task13.main" target="1.8" />
+      <module name="3-java-control-flow-and-arrays.task13.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
