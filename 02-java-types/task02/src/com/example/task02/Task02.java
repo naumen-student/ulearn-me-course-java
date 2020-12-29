@@ -6,7 +6,7 @@ public class Task02 {
 
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
 
-        return "";
+        return input;
     }
 
     public static void main(String[] args) {
