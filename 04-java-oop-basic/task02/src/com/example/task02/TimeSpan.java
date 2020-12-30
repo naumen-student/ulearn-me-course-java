@@ -35,16 +35,34 @@ public class TimeSpan {
         this.seconds = seconds;
     }
 
+    void checkAdding(int checkingTime, int bTime){
+        if (checkingTime > 59){
+            bTime += 1;
+            checkingTime -= 60;
+        }
+    }
+
+    void checkSubtracting(int checkingTime, int bTime){
+        if (checkingTime < 1){
+            bTime -= 1;
+            checkingTime += 60;
+        }
+    }
+
     private void add(TimeSpan time) {
         hours += time.getHours();
         minutes += time.getMinutes();
         seconds += time.getSeconds();
+        checkAdding(this.minutes, this.hours);
+        checkAdding(this.seconds, this.minutes);
     }
 
     private void subtract(TimeSpan time) {
         hours -= time.getHours();
         minutes -= time.getMinutes();
         seconds -= time.getSeconds();
+        checkSubtracting(this.minutes, this.hours);
+        checkSubtracting(this.seconds, this.minutes);
     }
 
     public String toString() {
