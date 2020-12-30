@@ -1,15 +1,23 @@
 package com.example.task02;
 
 public class Task02Main {
-    public static void main(String[] args) {
-        //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
-        System.out.println(getSeason(12));
-         */
-    }
+	public static void main(String[] args) {
 
-    static String getSeason(int monthNumber) {
-        return "";//todo напишите здесь свою корректную реализацию этого метода, вместо существующей
-    }
+		System.out.println(getSeason(9));
+
+	}
+
+	static String getSeason(int monthNumber) {
+		if (monthNumber == 12 || monthNumber < 3) {
+			return "зима";
+		} else if (monthNumber < 6) {
+			return "весна";
+		} else if (monthNumber < 9) {
+			return "лето";
+		} else if (monthNumber < 12) {
+			return "осень";
+		}
+		return "";
+
+	}
 }
