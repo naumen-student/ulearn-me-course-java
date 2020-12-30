@@ -10,6 +10,27 @@ public class Task02Main {
     }
 
     static String getSeason(int monthNumber) {
-        return "";//todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        String output;
+        switch (monthNumber) {
+            default:
+                output = "зима";
+                break;
+            case (3):
+            case (4):
+            case (5):
+                output = "весна";
+                break;
+            case (6):
+            case (7):
+            case (8):
+                output = "лето";
+                break;
+            case (9):
+            case (10):
+            case (11):
+                output = "осень";
+                break;
+        }
+        return output;
     }
 }
