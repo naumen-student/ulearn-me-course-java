@@ -1,28 +1,47 @@
 package com.example.task01;
 
-import java.io.IOException;
-import java.io.InputStream;
+public class Pair {
+    // TODO напишите реализацию
+import java.util.Objects;
+import java.util.function.BiConsumer;
 
-public class Task01Main {
-    public static void main(String[] args) throws IOException {
+    public class Pair<T1, T2> {
+        private final T1 value1;
+        private final T2 value2;
 
-        // TODO С корректно реализованным классом Pair должен компилироваться и успешно работать следующий код:
+        private Pair(T1 value1, T2 value2) {
+            this.value1 = value1;
+            this.value2 = value2;
+        }
 
-        /*
-        Pair<Integer, String> pair = Pair.of(1, "hello");
-        Integer i = pair.getFirst(); // 1
-        String s = pair.getSecond(); // "hello"
+        public static <T1, T2> Pair<T1, T2> of(T1 value1, T2 value2) {
+            return new Pair<>(value1, value2);
+        }
 
-        pair.ifPresent((first, second) -> {
-            System.out.println(first);
-            System.out.println(second);
-        });
+        public T1 getFirst() {
+            return value1;
+        }
 
-        Pair<Integer, String> pair2 = Pair.of(1, "hello");
-        boolean mustBeTrue = pair.equals(pair2); // true!
-        boolean mustAlsoBeTrue = pair.hashCode() == pair2.hashCode(); // true!
-        */
+        public T2 getSecond() {
+            return value2;
+        }
 
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Pair<?, ?> pair = (Pair<?, ?>) o;
+            return Objects.equals(value1, pair.value1) &&
+                    Objects.equals(value2, pair.value2);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(value1, value2);
+        }
+
+        public void ifPresent(BiConsumer<? super T1, ? super T2> consumer) {
+            if (this.value1 != null && this.value2 != null)
+                consumer.accept(this.value1, this.value2);
+        }
     }
-
-}
