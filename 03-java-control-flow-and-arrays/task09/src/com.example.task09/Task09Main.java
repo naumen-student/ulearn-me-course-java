@@ -13,8 +13,6 @@ public class Task09Main {
     }
 
     static int min(int[] arr) {
-        if (arr == null || arr.length == 0)
-            return 0;
         return Arrays.stream(arr).min().getAsInt();
     }
 }
