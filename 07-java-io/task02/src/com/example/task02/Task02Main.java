@@ -10,6 +10,7 @@ public class Task02Main {
             if (!(current == 13 && next == 10))
                 System.out.write(current);
             current = next;
+            System.out.flush();
         }
     }
 }
