@@ -6,11 +6,7 @@ public class Task11 {
 
         // TODO исправьте функцию, чтобы избежать накопления ошибки
 
-        // Считаем проценты за год
-        for (int i = 1; i <= 12; i++) {
-            sum += sum * percent;
-        }
-        return sum;
+        return (float) ((float) ((double) sum)* Math.pow(1.0d + percent, 12.0)); //(float) sum1;
     }
 
     public static void main(String[] args) {
@@ -21,6 +17,7 @@ public class Task11 {
         sum = benefit(sum, percent);
 
         System.out.println("Сумма на счете через год: " + sum);
+        //System.out.println(Float.toString(0.0000111f));
 
     }
 
