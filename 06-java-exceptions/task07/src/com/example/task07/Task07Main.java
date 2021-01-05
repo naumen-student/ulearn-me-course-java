@@ -1,6 +1,5 @@
+  
 package com.example.task07;
-
-import java.io.IOException;
 
 public class Task07Main {
 
@@ -14,14 +13,13 @@ public class Task07Main {
     public Processor processor;
 
     public String getExceptionType() {
-
         try {
             processor.process();
-        } catch (Exception e) {
-            if (e instanceof IOException) return CHECKED;
-            return UNCHECKED;
+        } catch (Throwable e) {
+            if (e instanceof Exception && !(e instanceof RuntimeException))
+                return "checked";
+            return "unchecked";
         }
-        return NONE;
+        return "none";
     }
-
 }
