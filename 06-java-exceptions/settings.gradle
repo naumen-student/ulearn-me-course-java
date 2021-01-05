@@ -1,0 +1,8 @@
+rootProject.name = 'java-exceptions'
+include 'task01'
+include 'task02'
+include 'task03'
+include 'task04'
+include 'task05'
+include 'task06'
+include 'task07'
