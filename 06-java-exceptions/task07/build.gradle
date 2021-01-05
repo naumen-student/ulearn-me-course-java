@@ -1,0 +1,4 @@
+dependencies {
+    // https://mvnrepository.com/artifact/org.mockito/mockito-core
+    compile group: 'org.mockito', name: 'mockito-core', version: '2.23.0'
+}
