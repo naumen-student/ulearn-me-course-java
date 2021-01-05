@@ -1,3 +1,4 @@
+  
 package com.example.task07;
 
 public class Task07Main {
@@ -12,13 +13,13 @@ public class Task07Main {
     public Processor processor;
 
     public String getExceptionType() {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
         try {
-            processor.process(); //todo вы можете заменить реализацию этого метода для ручного дебага
-        } catch (Exception e) {
-
+            processor.process();
+        } catch (Throwable e) {
+            if (e instanceof Exception && !(e instanceof RuntimeException))
+                return "checked";
+            return "unchecked";
         }
-        return null;
+        return "none";
     }
-
 }
