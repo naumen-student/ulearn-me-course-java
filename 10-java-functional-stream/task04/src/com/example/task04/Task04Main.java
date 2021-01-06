@@ -8,26 +8,26 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.stream.Collectors;
 
 public class Task04Main {
 
     public static void main(String[] args) {
 
         InputStream input = System.in;
-        TreeMap<String, Integer> result = new TreeMap<>();
         try (BufferedReader br = new BufferedReader(new InputStreamReader(input))) {
             br.lines().map(x -> x.split("[,.\\-! ]"))
                     .flatMap(x -> Arrays.stream(x.clone()))
-                    .filter(x -> x.compareTo("") != 0 && x.compareTo(" ") != 0).map(x -> x.toLowerCase()).forEach(x -> {
-                if (result.containsKey(x))
-                    result.put(x, result.get(x) + 1);
-                else result.put(x, 1);
-            });
-            result.entrySet().stream().sorted(Comparator.comparing(Map.Entry::getValue, Comparator.reverseOrder()))
-                    .map(x -> x.getKey()).limit(10)
-                    .forEach(x -> System.out.print(x + "\n"));
-        } catch (IOException ioException) {
-            ioException.printStackTrace();
+                    .filter(x -> x.compareTo("") != 0 && x.compareTo(" ") != 0).map(x -> x.toLowerCase())
+                    .collect(Collectors.groupingBy(x -> x, Collectors.counting()))
+                    .entrySet()
+                    .stream()
+                    .sorted(Map.Entry.comparingByKey())
+                    .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                    .limit(10)
+                    .forEach(x -> System.out.print(x.getKey() + "\n"));
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
