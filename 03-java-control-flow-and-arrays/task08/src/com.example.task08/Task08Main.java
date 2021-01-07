@@ -1,4 +1,5 @@
 package com.example.task08;
+import java.util.Arrays;
 
 public class Task08Main {
     public static void main(String[] args) {
@@ -6,13 +7,7 @@ public class Task08Main {
     }
 
     static long mult(int[] arr) {
-        long result = 1;
-        if(arr.length == 0)
-            return 0;
-        for (int j : arr) {
-            result *= j;
-        }
-        return result;
+        return Arrays.stream(arr).asLongStream().reduce((a, b) -> a * b).orElse(0);
     }
 
 }
