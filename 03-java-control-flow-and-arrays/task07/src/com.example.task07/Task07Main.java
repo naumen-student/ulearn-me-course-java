@@ -1,4 +1,5 @@
 package com.example.task07;
+import java.util.Arrays;
 
 public class Task07Main {
     public static void main(String[] args) {
