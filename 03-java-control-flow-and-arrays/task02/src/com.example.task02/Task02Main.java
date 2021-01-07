@@ -5,7 +5,7 @@ public class Task02Main {
     }
 
     static String getSeason(int number) {
-        if (number > 8 && number < 11)
+        if (number > 8 && number < 12)
             return "осень";
         else if (number > 5 && number < 9)
             return "лето";
