@@ -4,9 +4,13 @@ public class Task02Main {
     public static void main(String[] args) {
     }
 
-    static String getSeason(int monthNumber) {
-        return monthNumber == 1 || monthNumber == 2 || monthNumber == 12 ? "зима" :
-                monthNumber == 3 || monthNumber == 4 || monthNumber == 5 ? "весна" :
-                monthNumber == 6 || monthNumber == 7 || monthNumber == 8 ? "лето" : "осень";
+    static String getSeason(int number) {
+        if (number > 8 && number < 11)
+            return "осень";
+        else if (number > 5 && number < 9)
+            return "лето";
+        else if (number > 2 && number < 6)
+            return "весна";
+        else return "зима";
     }
 }
