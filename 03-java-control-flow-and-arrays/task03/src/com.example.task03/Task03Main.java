@@ -14,7 +14,7 @@ public class Task03Main {
                 "суббота",
                 "воскресенье",
         };
-        if(weekDaysNumber > days.length)
+        if(weekDaysNumber > days.length || weekDaysNumber < 1)
             return "такого дня недели не существует";
         else
             return days[weekDaysNumber - 1];
