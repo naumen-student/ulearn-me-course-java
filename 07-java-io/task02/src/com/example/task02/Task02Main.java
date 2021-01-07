@@ -17,5 +17,6 @@ public class Task02Main {
             firstByte = secondByte;
             secondByte = System.in.read();
         }
+        System.out.flush();
     }
 }
