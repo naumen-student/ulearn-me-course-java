@@ -5,12 +5,19 @@ public class Task03Main {
     }
 
     static String getNameOfWeekDays(int weekDaysNumber) {
-        return weekDaysNumber == 1 ? "понедельник":
-                weekDaysNumber == 2 ? "вторник":
-                        weekDaysNumber == 3 ? "среда":
-                                weekDaysNumber == 4 ? "четверг" :
-                                        weekDaysNumber == 5 ? "пятница" :
-                                                weekDaysNumber == 6 ? "суббота" :
-                                                        weekDaysNumber == 7 ? "воскресенье" : "такого дня недели не существует";
+        String[] days=new String[]{
+                "понедельник",
+                "вторник",
+                "среда",
+                "четверг",
+                "пятница",
+                "суббота",
+                "воскресенье",
+        };
+        if(weekDaysNumber > days.length)
+            return "такого дня недели не существует";
+        else
+            return days[weekDaysNumber - 1]
+
     }
 }
