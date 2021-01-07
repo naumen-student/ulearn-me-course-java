@@ -5,11 +5,7 @@ public class Task07Main {
     }
 
     static int sum(int[] arr) {
-        int sum = 0;
-        for (int j : arr) {
-            sum += j;
-        }
-        return sum;
+        return Arrays.stream(arr).sum();
     }
 
 }
