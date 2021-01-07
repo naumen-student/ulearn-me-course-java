@@ -11,6 +11,7 @@ public class Task02Main {
             return "лето";
         else if (number > 2 && number < 6)
             return "весна";
-        else return "зима";
+        else
+            return "зима";
     }
 }
