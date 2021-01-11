@@ -1,6 +1,7 @@
 package com.example.task01;
 
 import java.io.IOException;
+import java.util.Objects;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
@@ -25,5 +26,9 @@ public class Task01Main {
 
         return null; // your implementation here
 
+        if (condition != null && ifTrue != null && ifFalse != null)
+            return x -> condition.test(x) ? ifTrue.apply(x) : ifFalse.apply(x);
+        throw new NullPointerException();
     }
+}
 }
