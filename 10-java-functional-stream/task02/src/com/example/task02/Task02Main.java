@@ -18,6 +18,11 @@ public class Task02Main {
 
         return null; // your implementation here
 
+        if (n < 1 || n > 16)
+            throw new IllegalArgumentException();
+        return IntStream.iterate(0, i -> i + 1)
+                .map(x -> (x % (int) Math.pow(2, n)) ^ ((x % (int) Math.pow(2, n)) >> 1));
     }
 
+}
 }
