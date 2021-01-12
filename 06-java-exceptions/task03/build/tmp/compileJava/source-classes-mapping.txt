@@ -2,3 +2,4 @@ com/example/task03/Tests.java
  com.example.task03.Tests
 com/example/task03/Task03Main.java
  com.example.task03.Task03Main
+ com.example.task03.checked
