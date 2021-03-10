@@ -3,88 +3,121 @@ package com.example.task01;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Map;
-
-enum Level{
-    DEBUG,
-    INFO,
-    WARNING,
-    ERROR
-}
 
 public class Logger {
-    private Level  level;
-    private final String name;
-    private static final Map<String, Logger> logDictionary = new HashMap<>();
 
-    public Logger(String name){
+    private static final String[] levels = new String[]{"DEBUG", "INFO", "WARNING", "ERROR"};
+    private static final HashMap<String, Logger> loggers = new HashMap<>();
+
+    private final String name;
+    private int level;
+
+    private Logger(String name) {
         this.name = name;
-        logDictionary.put(name, this);
+    }
+
+    public static Logger getLogger(String name) {
+        if (loggers.containsKey(name)) {
+            return loggers.get(name);
+        } else {
+            Logger logger = new Logger(name);
+            loggers.put(name, logger);
+            return logger;
+        }
     }
 
     public String getName() {
         return name;
     }
 
-    public static Logger getLogger(String name){
-        if (logDictionary.containsKey(name))
-            return logDictionary.get(name);
-        Logger logger = new Logger(name);
-        logDictionary.put(name, logger);
-        return logger;
+    public String getLevel() {
+        return levels[level];
     }
 
-    public void debug(String message){
-        log(Level.DEBUG, message);
+    public void setLevel(String level) {
+        this.level = levelAsInt(level);
     }
 
-    public void debug(String message, Object...args){
-        log(Level.DEBUG, message, args);
+    public void debug(String message) {
+        if (level > 0) return;
+        String date = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
+        String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
+        System.out.printf("[DEBUG] %s %s %s - %s%n", date, time, name, message);
     }
 
-    public  void info(String message){
-        log(Level.INFO, message);
+    public void debug(String pattern, Object... elements) {
+        if (level > 0) return;
+        String date = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
+        String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
+        System.out.printf("[DEBUG] %s %s %s - %s%n", date, time, name, String.format(pattern, elements));
     }
 
-    public  void info(String message, Object...args){
-        log(Level.INFO, message, args);
+    public void info(String message) {
+        if (level > 1) return;
+        String date = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
+        String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
+        System.out.printf("[INFO] %s %s %s - %s%n", date, time, name, message);
     }
 
-    public void warning(String message){
-        log(Level.WARNING, message);
+    public void info(String pattern, Object... elements) {
+        if (level > 1) return;
+        String date = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
+        String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
+        System.out.printf("[INFO] %s %s %s - %s%n", date, time, name, String.format(pattern, elements));
     }
 
-    public void warning(String message, Object...args){
-        log(Level.WARNING, message, args);
+    public void warning(String message) {
+        if (level > 2) return;
+        String date = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
+        String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
+        System.out.printf("[WARNING] %s %s %s - %s%n", date, time, name, message);
     }
 
-    public  void error(String message){
-        log(Level.ERROR, message);
+    public void warning(String pattern, Object... elements) {
+        if (level > 2) return;
+        String date = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
+        String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
+        System.out.printf("[WARNING] %s %s %s - %s%n", date, time, name, String.format(pattern, elements));
     }
 
-    public  void error(String message, Object...args){
-        log(Level.ERROR, message, args);
+    public void error(String message) {
+        String date = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
+        String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
+        System.out.printf("[ERROR] %s %s %s - %s%n", date, time, name, message);
     }
 
-    public void log(Level level, String message){
-        if(this.level != null && this.level.ordinal() > level.ordinal())
-            return;
-        Date dateBase = new Date();
-        SimpleDateFormat date = new SimpleDateFormat("yyyy.MM.d");
-        SimpleDateFormat time = new SimpleDateFormat("hh:mm:ss");
-        System.out.printf("[%s] %s %s %s - %s", level, date.format(dateBase),
-                time.format(dateBase), this.name, message);
+    public void error(String pattern, Object... elements) {
+        String date = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
+        String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
+        System.out.printf("[ERROR] %s %s %s - %s%n", date, time, name, String.format(pattern, elements));
     }
 
-    public void log(Level level, String message, Object...args){
-        log(level, String.format(message, args));
+    public void log(String level, String message) {
+        if (levelAsInt(level) < this.level) return;
+        String date = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
+        String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
+        System.out.printf("[%s] %s %s %s - %s%n", level, date, time, name, message);
     }
 
-    public void setLevel(Level level){
-        this.level = level;
+    public void log(String level, String pattern, Object... elements) {
+        if (levelAsInt(level) < this.level) return;
+        String date = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
+        String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
+        System.out.printf("[%s] %s %s %s - %s%n", level, date, time, name, String.format(pattern, elements));
     }
 
-    public Level getLevel(){
-        return level;
+    private int levelAsInt(String level){
+        switch (level) {
+            case "DEBUG":
+                return 0;
+            case "INFO":
+                return 1;
+            case "WARNING":
+                return 2;
+            case "ERROR":
+                return 3;
+            default:
+                throw new IllegalArgumentException("Неправильно указан уровень логгирования");
+        }
     }
 }
