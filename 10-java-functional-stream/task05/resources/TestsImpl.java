@@ -69,7 +69,7 @@ public class TestsImpl implements ITests {
                 )
         ) : "wrong mailService mailbox content (2)";
 
-        assert mailBox.get(randomTo).equals(Collections.<String>emptyList()) : "wrong mailService mailbox content (3)";
+        assert ((mailBox.get(randomTo) == null ? Collections.<String>emptyList() : mailBox.get(randomFrom))).equals(Collections.<String>emptyList()) : "wrong mailService mailbox content (3)";
 
 
         // Создание списка из трех зарплат.
