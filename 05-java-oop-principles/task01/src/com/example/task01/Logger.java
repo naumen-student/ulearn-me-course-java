@@ -71,7 +71,7 @@ public class Logger {
 
     public String log(Level level, String message){
         DateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");
-        return String.format("[%s] %s %s %s",level, dateFormat.format(new Date()), name, message);
+        return String.format("[%s] %d %s %s",level, dateFormat.format(new Date()), name, message);
     }
     public String log(Level level, String message, Object... args){
         return log(level, String.format(message, args));
