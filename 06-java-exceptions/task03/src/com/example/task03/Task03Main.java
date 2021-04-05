@@ -1,16 +1,16 @@
 package com.example.task03;
 
-public class Task03Main {
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class Main {
+
     public static void main(String[] args) {
-        //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
-        throwCheckedException();
-         */
     }
 
-    //todo напишите здесь свою корректную реализацию задания
-    public static void throwCheckedException() {
-
+    public static void throwCheckedException() throws FileNotFoundException {
+        File file = new File("not_existing_file.txt");
+        FileInputStream stream = new FileInputStream(file);
     }
 }
