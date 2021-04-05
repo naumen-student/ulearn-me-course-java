@@ -5,25 +5,41 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Task05Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         String pathToFile = args[0]; // "/home/user/file.txt"
-
-        String s = readFile(pathToFile);
-        System.out.println(s);
+        try {
+            String s = readFile(pathToFile);
+            System.out.println(s);
+        }
+        catch (Exception e){
+            System.out.println("файл" + pathToFile + "не найден");
+        }
     }
 
-    public static String readFile(String pathToFile) throws IOException {
-        FileReader fileReader = new FileReader(pathToFile);
-        BufferedReader bufferedReader = new BufferedReader(fileReader);
+    public static String readFile(String pathToFile)  {
+        try {
+            try {
+                FileReader fileReader = new FileReader(pathToFile);
+            }
+            catch (Exception e){
+                System.out.println("файл" + pathToFile + "не найден");
+            }
+            FileReader fileReader = new FileReader(pathToFile);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
 
-        StringBuilder stringBuilder = new StringBuilder();
-        String currentLine;
-        while ((currentLine = bufferedReader.readLine()) != null) {
-            stringBuilder.append(currentLine);
-            stringBuilder.append("\n");
+            StringBuilder stringBuilder = new StringBuilder();
+            String currentLine;
+            while ((currentLine = bufferedReader.readLine()) != null) {
+                stringBuilder.append(currentLine);
+                stringBuilder.append("\n");
+            }
+            bufferedReader.close();
+
+            return stringBuilder.toString();
         }
-        bufferedReader.close();
-
-        return stringBuilder.toString();
+        catch (Exception e) {
+            System.out.println("произошла ошибка при чтении файла" + pathToFile);
+        }
+        return null;
     }
 }
