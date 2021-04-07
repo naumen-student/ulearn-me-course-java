@@ -7,6 +7,5 @@ public class Task03Main {
         ComplexNum num2 = new ComplexNum(3, 6);
         System.out.println(num1.add(num2));
         System.out.println(num1.multiply(num2));
-
     }
 }

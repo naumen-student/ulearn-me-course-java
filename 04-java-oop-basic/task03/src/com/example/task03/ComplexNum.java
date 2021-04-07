@@ -9,7 +9,6 @@ public class ComplexNum {
         this.real = real;
         this.imaginary = imaginary;
     }
-
     public double getReal() {
         return real;
     }
