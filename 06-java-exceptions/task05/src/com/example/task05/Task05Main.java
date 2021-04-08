@@ -13,17 +13,29 @@ public class Task05Main {
     }
 
     public static String readFile(String pathToFile) throws IOException {
-        FileReader fileReader = new FileReader(pathToFile);
-        BufferedReader bufferedReader = new BufferedReader(fileReader);
-
-        StringBuilder stringBuilder = new StringBuilder();
-        String currentLine;
-        while ((currentLine = bufferedReader.readLine()) != null) {
-            stringBuilder.append(currentLine);
-            stringBuilder.append("\n");
+        try {
+            FileReader fileReader = new FileReader(pathToFile);
+        }catch (Exception e) {
+            System.out.println("файл " + pathToFile +" не найден");
         }
-        bufferedReader.close();
+        try {
 
-        return stringBuilder.toString();
+            FileReader fileReader = new FileReader(pathToFile);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+            StringBuilder stringBuilder = new StringBuilder();
+            String currentLine;
+            while ((currentLine = bufferedReader.readLine()) != null) {
+                stringBuilder.append(currentLine);
+                stringBuilder.append("\n");
+            }
+            bufferedReader.close();
+            return stringBuilder.toString();
+        }catch (Exception e2){
+            System.out.println("произошла ошибка при чтении файла " + pathToFile);
+        }
+        return null;
+
+
     }
 }
