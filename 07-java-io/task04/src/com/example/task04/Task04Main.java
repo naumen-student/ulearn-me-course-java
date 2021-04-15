@@ -4,11 +4,16 @@ import java.io.IOException;
 
 public class Task04Main {
     public static void main(String[] args) throws IOException {
-        // чтобы протестировать свое решение, вам нужно:
-        // - направить файл input.test в стандартный ввод программы (в настройках запуска программы в IDE или в консоли)
-        // - запустить программу
-        // - проверить, что получилось 351.731900
-
-        System.out.println("0.0");
+        double result = 0;
+        try (Scanner scanner = new Scanner(System.in).useDelimiter(" |\\n")) {
+            while (scanner.hasNext()) {
+                if (scanner.hasNextDouble()) {
+                    result += scanner.nextDouble();
+                }
+                else
+                    scanner.next();
+            }
+        }
+        System.out.format(Locale.US, "%.6f", result);
     }
 }
