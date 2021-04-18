@@ -3,8 +3,9 @@ package com.example.task08;
 public class Task08 {
 
     public static boolean solution() {
-        float x = Float.POSITIVE_INFINITY;
+        // TODO измените тип и значение переменной x, чтобы возвращалось значение true
 
+        int x = 100;
         return x == x + 1;
     }
 
