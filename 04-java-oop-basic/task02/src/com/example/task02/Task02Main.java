@@ -28,3 +28,4 @@ class TimeSpan {
         return String.format("(ч:м:с)", hours, minutes, seconds);
     }
 }
+
