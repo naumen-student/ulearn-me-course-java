@@ -12,5 +12,4 @@ public class Task06Main {
     void printMethodName() {
         System.out.print(new IllegalArgumentException().getStackTrace()[1].getMethodName());
     }
-
 }
