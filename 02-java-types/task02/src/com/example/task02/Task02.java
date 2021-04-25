@@ -3,7 +3,7 @@ package com.example.task02;
 public class Task02 {
 
     public static String solution(String input) {
-        long x = Long.parseLong(input);
+        long x=Long.parseLong(input);
 
         if (x >= Byte.MIN_VALUE && x <= Byte.MAX_VALUE)
             return "byte";
