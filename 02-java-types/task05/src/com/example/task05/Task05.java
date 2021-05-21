@@ -4,9 +4,10 @@ public class Task05 {
 
     public static String solution(int x) {
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
-        return "FALSE";
+        for (char numb_x: Integer.toString(x).toCharArray())
+        if ((int) numb_x % 2 != 0)
+            return "FALSE";
+        return "TRUE";
     }
 
     public static void main(String[] args) {
