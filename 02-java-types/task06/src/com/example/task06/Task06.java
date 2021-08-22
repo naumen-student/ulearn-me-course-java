@@ -6,7 +6,12 @@ public class Task06 {
 
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
 
-        return 0;
+        int sum = x + y;
+        String result = Integer.toString(sum);
+        if (result.contains("-"))
+            return result.length() - 1;
+        else
+            return result.length();
     }
 
     public static void main(String[] args) {
