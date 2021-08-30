@@ -14,8 +14,16 @@ public class Task09Main {
     }
 
     static int min(int[] arr) {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
-        return 0;
+        int swap = 0;
+        for (int i = 0 ; i < arr.length - 1; i++) {
+            for (int j = 1 ; j < arr.length; j++) {
+                if (arr[j] < arr[i]) {
+                    swap = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = swap;
+                }
+            }
+        }
+        return arr[0];
     }
-
 }
