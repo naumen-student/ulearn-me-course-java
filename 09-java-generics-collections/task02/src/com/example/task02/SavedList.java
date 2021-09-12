@@ -1,35 +1,60 @@
 package com.example.task02;
 
-import java.io.File;
-import java.io.Serializable;
-import java.util.AbstractList;
+import java.io.*;
+import java.util.*;
 
-public class SavedList<E extends Serializable> extends AbstractList<E> {
+public class SavedList<E extends Serializable> extends AbstractList<E> implements Serializable{
 
-    public SavedList(File file) {
+    ArrayList<E> list;
+    private final File file;
+
+    public SavedList(File file){
+        this.file = file;
+        list = new ArrayList<>();
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
+            list = ((SavedList<E>) ois.readObject()).list;
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
-    @Override
-    public E get(int index) {
-        return null;
+
+    private void update(){
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
+            oos.writeObject(this);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
-    @Override
-    public E set(int index, E element) {
-        return null;
-    }
+        @Override
+        public E get(int index) {
+            return list.get(index);
+        }
 
-    @Override
-    public int size() {
-        return 0;
-    }
+        @Override
+        public E set(int index, E element) {
+            E el = list.set(index, element);
+            update();
+            return el;
+        }
 
-    @Override
-    public void add(int index, E element) {
-    }
+        @Override
+        public int size() {
+            return list.size();
+        }
 
-    @Override
-    public E remove(int index) {
-        return null;
+        @Override
+        public void add(int index, E element) {
+            list.add(index, element);
+            update();
+        }
+
+        @Override
+        public E remove(int index) {
+            E el = list.remove(index);
+            update();
+            return el;
+        }
     }
-}
