@@ -11,5 +11,6 @@ public class Task01Main {
 
     static void codeWithNPE() {
         //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        throw new NullPointerException();
     }
 }
