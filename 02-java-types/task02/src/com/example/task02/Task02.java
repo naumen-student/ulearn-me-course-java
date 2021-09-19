@@ -1,10 +1,19 @@
 package com.example.task02;
+import static java.lang.Long.parseLong;
 
 public class Task02 {
 
     public static String solution(String input) {
-
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
+        long num = parseLong(input);
+        if(num >= -128 && num <= 127) {
+            return ("byte");
+        } else if(num <= Math.pow(2, 15) - 1 && num >= Math.pow(2, 15) * -1) {
+            return ("short");
+        } else if(num <= Math.pow(2, 31) - 1 && num >= Math.pow(2, 31) * -1) {
+            return ("int");
+        } else if(num <= Math.pow(2, 63) - 1 && num >= Math.pow(2, 63) * -1) {
+            return ("long");
+        }
 
         return "";
     }
