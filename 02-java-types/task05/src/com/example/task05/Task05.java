@@ -3,10 +3,16 @@ package com.example.task05;
 public class Task05 {
 
     public static String solution(int x) {
+        String onlyEven = "TRUE";
+        while(x > 0) {
+            int digit = x % 10;
+            if(digit % 2 != 0) {
+                onlyEven = "FALSE";
+            }
+            x /= 10;
+        }
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
-        return "FALSE";
+        return onlyEven;
     }
 
     public static void main(String[] args) {
