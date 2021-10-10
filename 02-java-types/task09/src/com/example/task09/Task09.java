@@ -1,5 +1,7 @@
 package com.example.task09;
 
+import java.math.BigDecimal;
+
 public class Task09 {
 
     public static double solution() {
@@ -7,16 +9,14 @@ public class Task09 {
 
         float a = 1.0f;
         float b = 3.0f;
-        double x = (a / b - 1.0 / 3.0) * 1.0e9;
+        double x = ((double) a / (double) b - 1.0 / 3.0) * 1.0e9;
 
         return x;
     }
 
     public static void main(String[] args) {
         // Здесь вы можете вручную протестировать ваше решение
-        /*
         System.out.println(solution());
-        */
     }
 
 }
