@@ -1,9 +1,10 @@
 package com.example.task03;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
-public class SampleData {
+public class SampleData implements Serializable {
     static final long serialVersionUID = 132706691457162967L;
 
     String name;
