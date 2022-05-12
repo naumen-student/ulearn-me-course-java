@@ -3,63 +3,74 @@ package com.example.task02;
 import java.io.*;
 import java.util.AbstractList;
 import java.util.ArrayList;
+import java.util.List;
 
 public class SavedList<E extends Serializable> extends AbstractList<E> {
 
-    private ArrayList<E> list;
-    private final File file;
+    private List<E> data;
+    private final File currentFile;
 
-    public SavedList(File file) {
-        this.file = file;
-        list = new ArrayList<>();
-        if (file.exists())
-            load();
+    public SavedList(File file){
+        currentFile = file;
+
+        if (!file.exists()) {
+            try{
+                file.createNewFile();
+                data = new ArrayList<>();
+            }
+            catch (Exception e){
+                e.getStackTrace();
+            }
+        }
+        else loadFromFile();
     }
 
-    @Override
-    public E get(int index) {
-        return list.get(index);
-    }
-
-    @Override
-    public E set(int index, E element) {
-        E item = list.set(index, element);
-        update();
-        return item;
-    }
-
-    @Override
-    public int size() {
-        return list.size();
-    }
-
-    @Override
-    public void add(int index, E element) {
-        list.add(index, element);
-        update();
-    }
-
-    @Override
-    public E remove(int index) {
-        E item = list.remove(index);
-        update();
-        return item;
-    }
-
-    private void update() {
-        try (ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream(file))) {
-            output.writeObject(list);
-            output.flush();
-            output.close();
-        } catch (IOException ignored) {
+    private void loadFromFile(){
+        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(currentFile))){
+            data = (List<E>) inputStream.readObject();
+        }
+        catch (Exception e){
+            e.getStackTrace();
         }
     }
 
-    private void load(){
-        try (ObjectInputStream input = new ObjectInputStream(new FileInputStream(file))) {
-            list = (ArrayList<E>) input.readObject();
-            input.close();
-        } catch (Exception ignored) {;
+    private void saveToFile(){
+        try (ObjectOutputStream stream = new ObjectOutputStream(new FileOutputStream(currentFile))){
+            stream.writeObject(data);
+        }
+        catch (Exception e){
+            e.getStackTrace();
         }
     }
+
+    @Override
+    public E get(int index){
+        return data.get(index)
+    }
+
+    @Override
+    public E set(int index, E element){
+        E value = data.set(index, element);
+        saveToFile();
+        return value;
+    }
+
+    @Override
+    public int size(){
+        return data.size();
+    }
+
+    @Override
+    public void add(int index, E element){
+        data.add(index, element);
+        saveToFile();
+    }
+
+    @Override
+    public E remove(int index){
+        E value = data.remove(index);
+        saveToFile();
+        return value;
+    }
+
 }
