@@ -7,6 +7,15 @@ public class Task02 {
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
 
         return "";
+        Long num = Long.parseLong((String) input);
+        if (num >= Byte.MIN_VALUE && num <= Byte.MAX_VALUE)
+            return "byte";
+        if (num >= Short.MIN_VALUE && num <= Short.MAX_VALUE)
+            return "short";
+        if (num >= Integer.MIN_VALUE && num <= Integer.MAX_VALUE)
+            return "int";
+        else
+            return "long";
     }
 
     public static void main(String[] args) {
