@@ -5,7 +5,7 @@ public class Task01 {
     public static String solution() {
 
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
+        //pull request
         return "Я думаю, быть программистом - это круто";
     }
 
