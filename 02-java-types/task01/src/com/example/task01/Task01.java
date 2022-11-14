@@ -13,7 +13,7 @@ public class Task01 {
         // Здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
         // например вот так:
 
-        String result = solution();
+        String result = solution(); //
         System.out.println(result);
 
     }
