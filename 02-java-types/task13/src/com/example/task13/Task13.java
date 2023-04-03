@@ -6,7 +6,8 @@ public class Task13 {
 
         // TODO привести букву к верхнему регистру
 
-        return c;
+
+        return Character.toUpperCase(c);
     }
 
     public static void main(String[] args) {
