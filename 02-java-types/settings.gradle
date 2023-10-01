@@ -1,4 +1,4 @@
-rootProject.name = '2-java-types'
+rootProject.name = '02-java-types'
 include 'task01'
 include 'task02'
 include 'task03'
