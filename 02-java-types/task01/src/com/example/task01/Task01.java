@@ -1,5 +1,5 @@
 package com.example.task01;
-//package
+
 public class Task01 {
 
     public static String solution() {
